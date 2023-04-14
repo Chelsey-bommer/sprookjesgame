@@ -5,11 +5,12 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
-    public float horizontalMovement;
-    public float verticalMovement;
+    private float horizontalInput;
+    private float verticalInput;
     private Rigidbody rb;
     // A field editable from inside Unity with a default value of 5
-    public float speed = 2f;
+    public float movementSpeed = 2f;
+    public float drag;
 
     void Start()
     {
@@ -24,13 +25,16 @@ public class PlayerMovement : MonoBehaviour
     {
 
         // This will detect forward and backward movement
-        horizontalMovement = Input.GetAxis("Horizontal");
+        horizontalInput = Input.GetAxis("Horizontal");
         // This will detect sideways movement
-        verticalMovement = Input.GetAxis("Vertical");
+        verticalInput = Input.GetAxis("Vertical");
 
         // Calculate the direction to move the player
-        Vector3 movementDirection = transform.forward * verticalMovement + transform.right * horizontalMovement;
+        Vector3 movementDirection = transform.forward * verticalInput + transform.right * horizontalInput;
         // Move the player
-        rb.AddForce(movementDirection * speed, ForceMode.Force);
+        rb.AddForce(movementDirection * movementSpeed, ForceMode.Force);
+        
+        // Apply drag
+        rb.drag = drag;
     }
 }
