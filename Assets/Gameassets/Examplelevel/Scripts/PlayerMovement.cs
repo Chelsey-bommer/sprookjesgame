@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     private float horizontalInput;
     private float verticalInput;
     private Rigidbody rb;
-    // A field editable from inside Unity with a default value of 5
+    private SpriteRenderer sprite;
     public float movementSpeed = 2f;
     public float drag;
 
@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     {
 
         rb = GetComponent<Rigidbody>();
+        sprite = GetComponent<SpriteRenderer>();
         // This will stop the player game object from rotating
         // Try to comment this line and see what happens
         rb.freezeRotation = true;
@@ -36,5 +37,18 @@ public class PlayerMovement : MonoBehaviour
         
         // Apply drag
         rb.drag = drag;
+
+        UpdateAnimation();
+    }
+
+    void UpdateAnimation(){
+        if (horizontalInput > 0.1f)
+        {
+            sprite.flipX = false;
+        }
+        else if (horizontalInput < 0f)
+        {
+            sprite.flipX = true;
+        }
     }
 }
