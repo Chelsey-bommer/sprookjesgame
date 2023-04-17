@@ -224,6 +224,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 10
+  WhatIsGround:
+    serializedVersion: 2
+    m_Bits: 0
   drag: 10
 --- !u!54 &82174798
 Rigidbody:
@@ -519,7 +522,7 @@ GameObject:
   - component: {fileID: 806673326}
   - component: {fileID: 806673325}
   - component: {fileID: 806673324}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}

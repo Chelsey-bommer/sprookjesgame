@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody rb;
     private SpriteRenderer sprite;
     public float movementSpeed = 2f;
+    [SerializeField] private LayerMask WhatIsGround;
     public float drag;
 
     void Start()
@@ -39,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
         rb.drag = drag;
 
         UpdateAnimation();
+        SurfaceAlignment();
     }
 
     void UpdateAnimation(){
@@ -49,6 +51,15 @@ public class PlayerMovement : MonoBehaviour
         else if (horizontalInput < 0f)
         {
             sprite.flipX = true;
+        }
+    }
+
+    void SurfaceAlignment(){
+
+        Ray ray = new Ray(transform.position, -transform.up);
+        RaycastHit info = new RaycastHit();
+        if(Physics.Raycast(ray, out info, WhatIsGround)){
+          transform.rotation = Quaternion.FromToRotation(Vector3.up, info.normal);
         }
     }
 }
