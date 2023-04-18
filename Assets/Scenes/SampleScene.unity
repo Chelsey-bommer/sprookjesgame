@@ -133,9 +133,9 @@ GameObject:
   m_Component:
   - component: {fileID: 82174795}
   - component: {fileID: 82174796}
-  - component: {fileID: 82174799}
   - component: {fileID: 82174798}
   - component: {fileID: 82174797}
+  - component: {fileID: 82174799}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -269,8 +269,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &82174799
-SphereCollider:
+--- !u!65 &82174799
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -280,8 +280,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.16000004
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.32, y: 0.31999996, z: 0.4459568}
+  m_Center: {x: 0, y: 0.0000000011698457, z: -0.122978404}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -436,7 +436,7 @@ MonoBehaviour:
   endRight: 0
   endTop: 0
   endBottom: 0
-  offset: {x: 0, y: 2, z: -10}
+  offset: {x: 0, y: 4, z: -6}
 --- !u!114 &565278768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -505,7 +505,7 @@ Camera:
   far clip plane: 1000
   field of view: 42.42973
   orthographic: 0
-  orthographic size: 5
+  orthographic size: 3
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -528,14 +528,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 565278766}
-  m_LocalRotation: {x: 0.09328113, y: -0.02158909, z: 0.0020231537, w: 0.9954037}
-  m_LocalPosition: {x: 458.61206, y: 1.1792998, z: 234.67}
+  m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
+  m_LocalPosition: {x: 458.51, y: 6.87, z: 236.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 10.707, y: -2.485, z: 0}
+  m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
 --- !u!1 &806673323
 GameObject:
   m_ObjectHideFlags: 0

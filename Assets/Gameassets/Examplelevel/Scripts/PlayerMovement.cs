@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float time;
 
     public float drag;
+    
 
     void Start()
     {
@@ -22,20 +23,18 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         sprite = GetComponent<SpriteRenderer>();
         // This will stop the player game object from rotating
-        // Try to comment this line and see what happens
         rb.freezeRotation = true;
     }
 
     void Update()
     {
-
         // This will detect forward and backward movement
         horizontalInput = Input.GetAxis("Horizontal");
         // This will detect sideways movement
         verticalInput = Input.GetAxis("Vertical");
 
         // Calculate the direction to move the player
-        Vector3 movementDirection = transform.forward * verticalInput + transform.right * horizontalInput;
+        Vector3 movementDirection = Vector3.forward * verticalInput + Vector3.right * horizontalInput;
         // Move the player
         rb.AddForce(movementDirection * movementSpeed, ForceMode.Force);
         
@@ -46,7 +45,8 @@ public class PlayerMovement : MonoBehaviour
         SurfaceAlignment();
     }
 
-    void UpdateAnimation(){
+    void UpdateAnimation()
+    {
         if (horizontalInput > 0.1f)
         {
             sprite.flipX = false;
@@ -58,16 +58,18 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-    void SurfaceAlignment(){
+    void SurfaceAlignment()
+    {
 
         Ray ray = new Ray(transform.position, -transform.up);
         RaycastHit info = new RaycastHit();
         Quaternion RotationRef = Quaternion.Euler(0, 0, 0);
 
 
-        if(Physics.Raycast(ray, out info, WhatIsGround)){
-          RotationRef = Quaternion.Lerp(transform.rotation, Quaternion.FromToRotation(Vector3.up, info.normal), animCurve.Evaluate(time));
-          transform.rotation = Quaternion.Euler(RotationRef.eulerAngles.x, transform.eulerAngles.y, RotationRef.eulerAngles.z );
+        if (Physics.Raycast(ray, out info, WhatIsGround))
+        {
+            RotationRef = Quaternion.Lerp(transform.rotation, Quaternion.FromToRotation(Vector3.up, info.normal), animCurve.Evaluate(time));
+            transform.rotation = Quaternion.Euler(45, transform.eulerAngles.y, RotationRef.eulerAngles.z);
         }
     }
 }

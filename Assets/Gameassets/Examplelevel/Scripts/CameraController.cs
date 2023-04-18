@@ -21,7 +21,7 @@ public class CameraController : MonoBehaviour
     private float targetY;
 
    
-    public Vector3 offset = new Vector3(0, 2, -10);
+    public Vector3 offset = new Vector3(0, 2, 0);
     private void LateUpdate()
     {
         transform.position = target.position + offset;
