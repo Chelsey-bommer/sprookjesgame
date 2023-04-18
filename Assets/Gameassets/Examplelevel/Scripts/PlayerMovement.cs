@@ -11,6 +11,9 @@ public class PlayerMovement : MonoBehaviour
     private SpriteRenderer sprite;
     public float movementSpeed = 2f;
     [SerializeField] private LayerMask WhatIsGround;
+    [SerializeField] private AnimationCurve animCurve;
+    [SerializeField] private float time;
+
     public float drag;
 
     void Start()
@@ -54,12 +57,17 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+
     void SurfaceAlignment(){
 
         Ray ray = new Ray(transform.position, -transform.up);
         RaycastHit info = new RaycastHit();
+        Quaternion RotationRef = Quaternion.Euler(0, 0, 0);
+
+
         if(Physics.Raycast(ray, out info, WhatIsGround)){
-          transform.rotation = Quaternion.FromToRotation(Vector3.up, info.normal);
+          RotationRef = Quaternion.Lerp(transform.rotation, Quaternion.FromToRotation(Vector3.up, info.normal), animCurve.Evaluate(time));
+          transform.rotation = Quaternion.Euler(RotationRef.eulerAngles.x, transform.eulerAngles.y, RotationRef.eulerAngles.z );
         }
     }
 }

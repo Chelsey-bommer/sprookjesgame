@@ -32,26 +32,26 @@ public class CameraController : MonoBehaviour
 
 
 
-        // if(target.position.x < endLeft) {
-        // 	targetX = endLeft + offset.x;
-        // } else if(target.position.x > endRight) {
-        // 	targetX = endRight + offset.x;
-        // } else {
-        // 	targetX = target.position.x + offset.x;
-        // }
+        if(target.position.x < endLeft) {
+        	targetX = endLeft + offset.x;
+        } else if(target.position.x > endRight) {
+        	targetX = endRight + offset.x;
+        } else {
+        	targetX = target.position.x + offset.x;
+        }
 
-        // if(target.position.y > endTop) {
-        // 	targetY = endTop + offset.y;
-        // } else if(target.position.y < endBottom) {
-        // 	targetY = endBottom + offset.y;
-        // } else {
-        // 	targetY = target.position.y + offset.y;
-        // }
+        if(target.position.y > endTop) {
+        	targetY = endTop + offset.y;
+        } else if(target.position.y < endBottom) {
+        	targetY = endBottom + offset.y;
+        } else {
+        	targetY = target.position.y + offset.y;
+        }
 
-        // if (onlyFollowX) {
-        // 	transform.position = Vector3.Lerp (transform.position, new Vector3 (targetX, transform.position.y, transform.position.z), smoothing);
-        // } else {
-        // 	transform.position = Vector3.Lerp (transform.position, new Vector3 (targetX, targetY, transform.position.z), smoothing);
-        // }
+        if (onlyFollowX) {
+        	transform.position = Vector3.Lerp (transform.position, new Vector3 (targetX, transform.position.y, transform.position.z), smoothing);
+        } else {
+        	transform.position = Vector3.Lerp (transform.position, new Vector3 (targetX, targetY, transform.position.z), smoothing);
+        }
     }
 }
