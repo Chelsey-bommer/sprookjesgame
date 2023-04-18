@@ -34,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
         verticalInput = Input.GetAxis("Vertical");
 
         // Calculate the direction to move the player
-        Vector3 movementDirection = Vector3.forward * verticalInput + Vector3.right * horizontalInput;
+        Vector3 movementDirection = Vector3.forward * verticalInput + transform.right * horizontalInput;
         // Move the player
         rb.AddForce(movementDirection * movementSpeed, ForceMode.Force);
         
