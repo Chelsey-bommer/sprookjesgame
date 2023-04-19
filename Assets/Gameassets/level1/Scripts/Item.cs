@@ -6,20 +6,14 @@ using UnityEngine;
 
 public class Item : ScriptableObject
 {
+   // Be able to make item in unity with following components
 
    public int id;
    public string itemName;
    public int value;
    public Sprite icon;
-    
-    void Start()
-    {
-        
-    }
 
-   
-    void Update()
-    {
-        
-    }
+   public GameObject prefab;
+    
+
 }
