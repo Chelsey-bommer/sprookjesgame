@@ -10,6 +10,8 @@ public class InventoryManager : MonoBehaviour
     public List<Item> Items = new List<Item>();
     public Transform ItemContent;
     public GameObject InventoryItem;
+
+    public Toggle EnableRemove;
     
     private void Awake()
     {
@@ -27,13 +29,13 @@ public class InventoryManager : MonoBehaviour
 
     public void ListItems(){
 
-         // clean content before open
+        // clean inventory content before open
         foreach (Transform item in ItemContent)
         {
             Destroy(item.gameObject);
         }
       
-      foreach (var item in Items)
+      foreach (var item in Items)  // for every item you pick up
       {
         GameObject obj = Instantiate(InventoryItem, ItemContent);
         var itemName = obj.transform.Find("itemName").GetComponent<TextMeshProUGUI>();
@@ -42,5 +44,20 @@ public class InventoryManager : MonoBehaviour
         itemName.text = item.itemName;
         itemIcon.sprite = item.icon;
       }
+    }
+
+    public void EnableItemsRemove(){
+        if(EnableRemove.isOn){
+            foreach (Transform item in ItemContent)
+            {
+                item.Find("removeitem").gameObject.SetActive(true);
+
+            }
+        } else{
+            foreach (Transform item in ItemContent)
+            {
+                item.Find("removeitem").gameObject.SetActive(false);
+
+        }}
     }
 }
