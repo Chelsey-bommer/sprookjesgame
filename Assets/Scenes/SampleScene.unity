@@ -1615,9 +1615,9 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1354545271}
-        m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
-        m_MethodName: EnableItemsRemove
+      - m_Target: {fileID: 1354779135}
+        m_TargetAssemblyTypeName: InventoryItemController, Assembly-CSharp
+        m_MethodName: RemoveItem
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5516,6 +5516,7 @@ MonoBehaviour:
   InventoryItem: {fileID: 6938403510569471268, guid: 03caa69b2ac253c45872781820508483,
     type: 3}
   EnableRemove: {fileID: 383666330}
+  InventoryItems: []
 --- !u!4 &1354545272
 Transform:
   m_ObjectHideFlags: 0
@@ -5537,6 +5538,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 584595813}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1354779135 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1820351886427325935, guid: 03caa69b2ac253c45872781820508483,
+    type: 3}
+  m_PrefabInstance: {fileID: 584595813}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88aaf944b1475f84986bfb54ae383a9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1375879924
 PrefabInstance:
   m_ObjectHideFlags: 0
