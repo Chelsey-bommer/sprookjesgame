@@ -688,6 +688,12 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.16
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &87551548 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 7297721155626127032, guid: 45f3cb19b858c274bb51d3d1fd0f1340,
+    type: 3}
+  m_PrefabInstance: {fileID: 5270214662809568591}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &91621756 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1623978532943002205, guid: 03caa69b2ac253c45872781820508483,
@@ -2521,6 +2527,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1820351886427325935, guid: 03caa69b2ac253c45872781820508483,
+        type: 3}
+      propertyPath: myPrefab
+      value: 
+      objectReference: {fileID: 2560288404871882206, guid: 9dd527f7e70ec8c45a628fee1fe90223,
+        type: 3}
     - target: {fileID: 2344287766049868105, guid: 03caa69b2ac253c45872781820508483,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -6510,6 +6522,12 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 776467777}
   m_PrefabAsset: {fileID: 0}
+--- !u!23 &1850766305 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2560288404871882204, guid: 9dd527f7e70ec8c45a628fee1fe90223,
+    type: 3}
+  m_PrefabInstance: {fileID: 2560288404107574163}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1855822657 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1623978532943002205, guid: 03caa69b2ac253c45872781820508483,
@@ -7325,6 +7343,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 78ef601c954772847a12c00ce0506b1d,
         type: 2}
+    - target: {fileID: 6340199211760283788, guid: 9dd527f7e70ec8c45a628fee1fe90223,
+        type: 3}
+      propertyPath: rend
+      value: 
+      objectReference: {fileID: 1850766305}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9dd527f7e70ec8c45a628fee1fe90223, type: 3}
 --- !u!1001 &5270214662809568591
@@ -7334,6 +7357,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 898224840048264777, guid: 45f3cb19b858c274bb51d3d1fd0f1340,
+        type: 3}
+      propertyPath: rend
+      value: 
+      objectReference: {fileID: 87551548}
     - target: {fileID: 6368630554527656914, guid: 45f3cb19b858c274bb51d3d1fd0f1340,
         type: 3}
       propertyPath: m_RootOrder
