@@ -20,8 +20,13 @@ public class InventoryItemController : MonoBehaviour
     public void RemoveItem()
     {
         InventoryManager.Instance.Remove(item);
+        if(item.name == "ToDoList"){
+            Instantiate(myPrefab, playerPos.position + playerPos.forward * dropOffset, Quaternion.identity);
+        }
         Destroy(gameObject);
-        Instantiate(myPrefab, playerPos.position + playerPos.forward * dropOffset, Quaternion.identity);
+
+        
+        //Instantiate(myPrefab, playerPos.position + playerPos.forward * dropOffset, Quaternion.identity);
     }
 
     public void AddItem(Item newItem){
