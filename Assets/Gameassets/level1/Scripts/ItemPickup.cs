@@ -11,7 +11,7 @@ public class ItemPickup : MonoBehaviour
         Destroy(gameObject);  // Make object disappear
     }
 
-    // Update is called once per frame
+    // Update is called once per fram
     private void OnMouseDown()
     {
         Pickup();
