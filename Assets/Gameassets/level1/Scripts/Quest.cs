@@ -9,15 +9,19 @@ public class Quest : MonoBehaviour
 
     public Image questItem;
     public Color completedColor;
-    
-    void Start()
-    {
-        
-    }
+    public Color activeColor;
 
-    
-    void Update()
+   private void OnTriggerEnter(Collider other){
+
+      // can add gamemanager logic (if bool is true, then complete quest)
+      if(other.tag == "Player"){
+        FinishQuest();
+        Destroy(gameObject);
+      }
+
+   }
+    void FinishQuest()
     {
-        
+        questItem.color = completedColor;
     }
 }
