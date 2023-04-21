@@ -8,13 +8,11 @@ public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager Instance;
     public List<Item> Items = new List<Item>();
-    public Transform ItemContent; 
+    public Transform ItemContent;
     public GameObject InventoryItem;
 
     //public Toggle EnableRemove;
     public InventoryItemController[] InventoryItems;
-
-    //[SerializeField] private ItemInfo itemDescription;
     
     private void Start(){
         clearInv();
@@ -22,7 +20,6 @@ public class InventoryManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-        //itemDescription.ResetDescription();
     }
 
     public void Add(Item item)
@@ -40,7 +37,6 @@ public class InventoryManager : MonoBehaviour
         {
             Destroy(item.gameObject);
         }
-      //itemDescription.ResetDescription();
     }
 
     public void ListItems(){
