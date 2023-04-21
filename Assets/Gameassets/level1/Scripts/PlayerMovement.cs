@@ -57,6 +57,12 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private void OnCollisionStay(Collision other){
+      if(other.gameObject.tag.Contains("Collectible1")){
+         Destroy(other.gameObject);
+      }
+    }
+
 
     void SurfaceAlignment()
     {

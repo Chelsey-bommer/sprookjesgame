@@ -14,6 +14,6 @@ public class GameManager : MonoBehaviour
     
     void Update()
     {
-        
+        //logic for quests
     }
 }
