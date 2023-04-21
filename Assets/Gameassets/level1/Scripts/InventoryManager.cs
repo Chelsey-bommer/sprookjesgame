@@ -52,11 +52,7 @@ public class InventoryManager : MonoBehaviour
         itemName.text = item.itemName;
         itemIcon.sprite = item.icon;
 
-        // if(EnableRemove.isOn){
-        //     removeButton.gameObject.SetActive(true);
-        // }else{
-        //     removeButton.gameObject.SetActive(false);
-        // }
+        
       }
       
 
@@ -64,20 +60,6 @@ public class InventoryManager : MonoBehaviour
       
     }
 
-    // public void EnableItemsRemove(){
-    //     if(EnableRemove.isOn){
-    //         foreach (Transform item in ItemContent)
-    //         {
-    //             item.Find("removeitem").gameObject.SetActive(true);
-
-    //         }
-    //     } else{
-    //         foreach (Transform item in ItemContent)
-    //         {
-    //             item.Find("removeitem").gameObject.SetActive(false);
-
-    //     }}
-    // }
 
     public void SetInventoryItems(){
         InventoryItems = ItemContent.GetComponentsInChildren<InventoryItemController>();
