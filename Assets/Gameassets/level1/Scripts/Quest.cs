@@ -13,11 +13,20 @@ public class Quest : MonoBehaviour
 
     public Color currentColor;
 
+    public TMP_Text percentage;
+
+
+
     public Quest[] allQuests;
 
     private void Start(){
         allQuests = FindObjectsOfType<Quest>();  // all objects with quest script attached
         currentColor = questItem.color;
+        
+        
+
+
+        QuestOne();
     }
 
    private void OnTriggerEnter(Collider other){
@@ -27,8 +36,15 @@ public class Quest : MonoBehaviour
         FinishQuest();
         Destroy(gameObject);
       }
-
    }
+
+   void QuestOne(){
+       if(GameManager.instance.questOne){  //if quest is finished
+          percentage = GameManager.instance.percentage1;
+          FinishQuest();  
+       }
+    }
+
     void FinishQuest()
     {
         questItem.color = completedColor;
