@@ -707,6 +707,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38d77cc17b07baf49bcdc91d01586b60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  script: {fileID: 1059584604}
 --- !u!23 &87551548 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 7297721155626127032, guid: 45f3cb19b858c274bb51d3d1fd0f1340,
@@ -4826,9 +4827,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questItem: {fileID: 1642591511}
-  completedColor: {r: 0.099371314, g: 1, b: 0, a: 1}
-  activeColor: {r: 1, g: 0.6862556, b: 0, a: 1}
-  currentColor: {r: 0, g: 0, b: 0, a: 1}
+  completedColor: {r: 0, g: 1, b: 0.05771327, a: 1}
+  activeColor: {r: 1, g: 0.763355, b: 0, a: 1}
+  currentColor: {r: 0.6037736, g: 0.6037736, b: 0.6037736, a: 0.80784315}
   percentage: {fileID: 2094301692}
   allQuests: []
 --- !u!224 &1113358546 stripped
@@ -7902,7 +7903,7 @@ GameObject:
   - component: {fileID: 1933105193}
   m_Layer: 0
   m_Name: Capsule2
-  m_TagString: Collectible1
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7999,9 +8000,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questItem: {fileID: 1571542725}
-  completedColor: {r: 0.215384, g: 1, b: 0, a: 1}
-  activeColor: {r: 1, g: 0.8160319, b: 0, a: 1}
-  currentColor: {r: 0, g: 0, b: 0, a: 1}
+  completedColor: {r: 0, g: 1, b: 0.05771327, a: 1}
+  activeColor: {r: 1, g: 0.763355, b: 0, a: 1}
+  currentColor: {r: 0.4528302, g: 0.44599503, b: 0.44599503, a: 1}
   percentage: {fileID: 2084423214}
   allQuests: []
 --- !u!1001 &1975929597
@@ -9150,6 +9151,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1059584604}
+    - target: {fileID: 5486772916312116285, guid: c90fd62be11f0224284a9e2adf0c93b8,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnQuestClick
+      objectReference: {fileID: 0}
     - target: {fileID: 5486772916312116286, guid: c90fd62be11f0224284a9e2adf0c93b8,
         type: 3}
       propertyPath: m_Pivot.x

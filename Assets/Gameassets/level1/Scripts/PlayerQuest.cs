@@ -4,10 +4,17 @@ using UnityEngine;
 
 public class PlayerQuest : MonoBehaviour
 {
-    
+    public Quest script;
+
+    private Color completedColor;
+    private Color activeColor;
+
+    private Color currentColor;
+
+   
     void Start()
     {
-        
+       script = GameObject.FindGameObjectWithTag("Collectible1").GetComponent<Quest>();
     }
 
    
@@ -21,7 +28,9 @@ public class PlayerQuest : MonoBehaviour
         //Quest One
       if(other.gameObject.tag.Contains("Collectible1")){
          GameManager.instance.questOne = true;
+         script.FinishQuest();
          Destroy(other.gameObject); 
+         
       }
     }
 }

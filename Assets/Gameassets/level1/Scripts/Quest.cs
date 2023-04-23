@@ -22,21 +22,18 @@ public class Quest : MonoBehaviour
     private void Start(){
         allQuests = FindObjectsOfType<Quest>();  // all objects with quest script attached
         currentColor = questItem.color;
-        
-        
-
 
         QuestOne();
     }
 
-   private void OnTriggerEnter(Collider other){
+//     private void OnTriggerEnter(Collider other){
 
-      // can add gamemanager logic (if bool is true, then complete quest)
-      if(other.tag == "Player"){
-        FinishQuest();
-        Destroy(gameObject);
-      }
-   }
+//       // can add gamemanager logic (if bool is true, then complete quest)
+//       if(other.tag == "Player"){
+//         FinishQuest();
+//         Destroy(gameObject);
+//       }
+//    }
 
    void QuestOne(){
        if(GameManager.instance.questOne){  //if quest is finished
@@ -44,7 +41,7 @@ public class Quest : MonoBehaviour
        }
     }
 
-    void FinishQuest()
+    public void FinishQuest()
     {
         questItem.color = completedColor;
         currentColor = completedColor;
