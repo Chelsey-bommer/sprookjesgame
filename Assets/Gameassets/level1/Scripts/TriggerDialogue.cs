@@ -7,7 +7,8 @@ public class TriggerDialogue : MonoBehaviour
     public GameObject DialogueBox;
     private Collider2D getCollider;
 
-    private bool dialogue = false;
+    public bool dialogue = false;
+    public bool dialogue1 = false;
 
     private void Start()
     {
@@ -17,9 +18,14 @@ public class TriggerDialogue : MonoBehaviour
  
     private void OnTriggerEnter(Collider collision)
     {
+        
+        
         if(dialogue == false){
            DialogueBox.SetActive(true);
            dialogue = true;
         }
+
+
+        
     }
 }
