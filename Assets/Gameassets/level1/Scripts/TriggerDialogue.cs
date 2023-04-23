@@ -15,7 +15,7 @@ public class TriggerDialogue : MonoBehaviour
         
     }
  
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter(Collider collision)
     {
         if(dialogue == false){
            DialogueBox.SetActive(true);
