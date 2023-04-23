@@ -40,7 +40,6 @@ public class Quest : MonoBehaviour
 
    void QuestOne(){
        if(GameManager.instance.questOne){  //if quest is finished
-          percentage = GameManager.instance.percentage1;
           FinishQuest();  
        }
     }

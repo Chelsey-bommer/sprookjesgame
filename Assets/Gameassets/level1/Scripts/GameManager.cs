@@ -10,14 +10,16 @@ public class GameManager : MonoBehaviour
 
     public bool questOne = false;
 
-    public TMP_Text percentage1;
+    public TMP_Text Percentage1;
+    public TMP_Text Percentage2;
     
     
     void Start()
     {
         instance = this;
 
-        percentage1.text = "100%";
+        Percentage1.text = "1%";
+        Percentage2.text = "1%";
         
     }
 
@@ -25,5 +27,9 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         //logic for quests
+
+        if(questOne == true){
+            Percentage1.text = "100%";
+        }
     }
 }

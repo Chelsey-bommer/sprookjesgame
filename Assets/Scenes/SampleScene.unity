@@ -547,6 +547,7 @@ GameObject:
   - component: {fileID: 82174796}
   - component: {fileID: 82174798}
   - component: {fileID: 82174797}
+  - component: {fileID: 82174800}
   - component: {fileID: 82174799}
   m_Layer: 0
   m_Name: Player
@@ -694,6 +695,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.16
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &82174800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82174794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38d77cc17b07baf49bcdc91d01586b60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!23 &87551548 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 7297721155626127032, guid: 45f3cb19b858c274bb51d3d1fd0f1340,
@@ -1068,7 +1081,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questOne: 0
-  percentage1: {fileID: 2094301692}
+  Percentage1: {fileID: 2094301692}
+  Percentage2: {fileID: 2084423214}
 --- !u!4 &213925332
 Transform:
   m_ObjectHideFlags: 0
