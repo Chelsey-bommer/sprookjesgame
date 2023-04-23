@@ -6,7 +6,7 @@ using TMPro;
 
 public class Quest : MonoBehaviour
 {
-
+    // Quest list color and percentage logic
     public Image questItem;
     public Color completedColor;
     public Color activeColor;
@@ -15,30 +15,11 @@ public class Quest : MonoBehaviour
 
     public TMP_Text percentage;
 
-
-
     public Quest[] allQuests;
 
     private void Start(){
         allQuests = FindObjectsOfType<Quest>();  // all objects with quest script attached
         currentColor = questItem.color;
-
-        QuestOne();
-    }
-
-//     private void OnTriggerEnter(Collider other){
-
-//       // can add gamemanager logic (if bool is true, then complete quest)
-//       if(other.tag == "Player"){
-//         FinishQuest();
-//         Destroy(gameObject);
-//       }
-//    }
-
-   void QuestOne(){
-       if(GameManager.instance.questOne){  //if quest is finished
-          FinishQuest();  
-       }
     }
 
     public void FinishQuest()

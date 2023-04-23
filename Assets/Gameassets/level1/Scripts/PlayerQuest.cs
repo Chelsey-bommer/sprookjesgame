@@ -4,17 +4,13 @@ using UnityEngine;
 
 public class PlayerQuest : MonoBehaviour
 {
+    //All quests?
     public Quest script;
-
-    private Color completedColor;
-    private Color activeColor;
-
-    private Color currentColor;
 
    
     void Start()
     {
-       script = GameObject.FindGameObjectWithTag("Collectible1").GetComponent<Quest>();
+       script = GameObject.FindGameObjectWithTag("Collectible1").GetComponent<Quest>();  //get quest logic
     }
 
    
@@ -25,12 +21,13 @@ public class PlayerQuest : MonoBehaviour
 
     private void OnTriggerEnter(Collider other){
 
-        //Quest One
+        //Quest 1: test quest
       if(other.gameObject.tag.Contains("Collectible1")){
          GameManager.instance.questOne = true;
          script.FinishQuest();
          Destroy(other.gameObject); 
-         
       }
     }
+
+    // quest 2 talk to a friend
 }
