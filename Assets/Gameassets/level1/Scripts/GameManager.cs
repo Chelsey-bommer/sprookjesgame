@@ -23,8 +23,8 @@ public class GameManager : MonoBehaviour
         instance = this;
         dialoguescript = GameObject.FindGameObjectWithTag("Dialoguetriggers").GetComponent<TriggerDialogue>();
 
-        Percentage1.text = "1%";
-        Percentage2.text = "1%";
+        Percentage1.text = "0%";
+        Percentage2.text = "0%";
         
     }
 

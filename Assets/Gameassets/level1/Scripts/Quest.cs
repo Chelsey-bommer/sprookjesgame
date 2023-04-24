@@ -20,11 +20,14 @@ public class Quest : MonoBehaviour
 
     private TriggerDialogue dialoguescript;
 
+    public GameObject child;
+
     void Start()
     {
         allQuests = FindObjectsOfType<Quest>();  // all objects with quest script attached
         dialoguescript = GetComponent<TriggerDialogue>();
         currentColor = questItem.color;
+        child = transform.Find("list").gameObject;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -69,5 +72,16 @@ public class Quest : MonoBehaviour
             quest.questItem.color = quest.currentColor;
         }
         questItem.color = activeColor;
+
+        if (child.activeInHierarchy)
+        {
+            child.SetActive(false);
+        }
+        else
+        {
+            child.SetActive(true);
+        }
     }
+
+
 }
