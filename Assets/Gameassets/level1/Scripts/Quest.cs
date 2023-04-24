@@ -21,7 +21,11 @@ public class Quest : MonoBehaviour
     private TriggerDialogue dialoguescript;
 
     public GameObject child;
+
+    public TMP_Text childText;
     private bool activeQuest = false;
+
+    private bool onaclick = false;
 
     void Start()
     {
@@ -58,23 +62,31 @@ public class Quest : MonoBehaviour
         }
     }
 
+    public void FinishTask(){
+      childText.text = "<color=green>Done</color>";
+
+      //works!!
+    }
+
     public void FinishQuest()
     {
-        questItem.color = completedColor;
-        currentColor = completedColor;
-        questItem.GetComponent<Button>().interactable = false;  //set quest inactive when completed
+        FinishTask();
+        // questItem.color = completedColor;
+        // currentColor = completedColor;
+        // questItem.GetComponent<Button>().interactable = false;  //set quest inactive when completed
+        // child.SetActive(false); 
     }
 
     public void OnQuestClick()
     {
-
+       
         foreach (Quest quest in allQuests)
         {
-            
+
             quest.questItem.color = quest.currentColor;
         }
         questItem.color = activeColor;
-       
+
 
         if (child.activeInHierarchy)
         {
@@ -83,8 +95,9 @@ public class Quest : MonoBehaviour
         else
         {
             child.SetActive(true);
-            
+
         } 
+        
     }
 
 

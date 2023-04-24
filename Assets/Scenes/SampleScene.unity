@@ -752,6 +752,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 368608552}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &134032328 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8517534405793208294, guid: c90fd62be11f0224284a9e2adf0c93b8,
+    type: 3}
+  m_PrefabInstance: {fileID: 5486772916880374059}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &182229198
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2129,6 +2141,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 387726971}
   m_CullTransparentMesh: 1
+--- !u!114 &406214452 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8517534405793208294, guid: c90fd62be11f0224284a9e2adf0c93b8,
+    type: 3}
+  m_PrefabInstance: {fileID: 1571542723}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -2677,6 +2701,7 @@ MonoBehaviour:
   percentage: {fileID: 2084423214}
   allQuests: []
   child: {fileID: 19837124}
+  childText: {fileID: 406214452}
 --- !u!114 &527821547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4903,6 +4928,7 @@ MonoBehaviour:
   percentage: {fileID: 2094301692}
   allQuests: []
   child: {fileID: 897381572}
+  childText: {fileID: 134032328}
 --- !u!224 &1113358546 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1623978532943002205, guid: 03caa69b2ac253c45872781820508483,
@@ -7929,6 +7955,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 122
+      objectReference: {fileID: 0}
+    - target: {fileID: 8517534405793208294, guid: c90fd62be11f0224284a9e2adf0c93b8,
+        type: 3}
+      propertyPath: m_text
+      value: praat met de gewonde makker
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c90fd62be11f0224284a9e2adf0c93b8, type: 3}
