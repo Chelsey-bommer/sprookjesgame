@@ -7740,6 +7740,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 207
       objectReference: {fileID: 0}
+    - target: {fileID: 1597866187800818813, guid: c90fd62be11f0224284a9e2adf0c93b8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1971308062199914363, guid: c90fd62be11f0224284a9e2adf0c93b8,
         type: 3}
       propertyPath: m_text
@@ -9466,6 +9471,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1421430428}
     m_Modifications:
+    - target: {fileID: 1597866187800818813, guid: c90fd62be11f0224284a9e2adf0c93b8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5486772916312116285, guid: c90fd62be11f0224284a9e2adf0c93b8,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -9620,6 +9630,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 122
+      objectReference: {fileID: 0}
+    - target: {fileID: 8517534405793208294, guid: c90fd62be11f0224284a9e2adf0c93b8,
+        type: 3}
+      propertyPath: m_text
+      value: 1 capsule graag
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c90fd62be11f0224284a9e2adf0c93b8, type: 3}

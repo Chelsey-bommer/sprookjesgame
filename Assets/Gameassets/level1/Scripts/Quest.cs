@@ -21,6 +21,7 @@ public class Quest : MonoBehaviour
     private TriggerDialogue dialoguescript;
 
     public GameObject child;
+    private bool activeQuest = false;
 
     void Start()
     {
@@ -73,15 +74,17 @@ public class Quest : MonoBehaviour
             quest.questItem.color = quest.currentColor;
         }
         questItem.color = activeColor;
+       
 
         if (child.activeInHierarchy)
         {
             child.SetActive(false);
-        }
+        } 
         else
         {
             child.SetActive(true);
-        }
+            
+        } 
     }
 
 
