@@ -9,12 +9,14 @@ public class PlayerMovement : MonoBehaviour
     private float verticalInput;
     private Rigidbody rb;
     private SpriteRenderer sprite;
+    private Animator anim;
     public float movementSpeed = 2f;
     [SerializeField] private LayerMask WhatIsGround;
     [SerializeField] private AnimationCurve animCurve;
     [SerializeField] private float time;
 
     public float drag;
+    enum MovementState { idle, running, jumping, falling };
     
 
     void Start()
@@ -22,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
 
         rb = GetComponent<Rigidbody>();
         sprite = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
         // This will stop the player game object from rotating
         rb.freezeRotation = true;
     }
@@ -47,14 +50,25 @@ public class PlayerMovement : MonoBehaviour
 
     void UpdateAnimation()
     {
+        MovementState state;
+
         if (horizontalInput > 0.1f)
         {
+            state = MovementState.running;
             sprite.flipX = false;
         }
         else if (horizontalInput < 0f)
         {
+            state = MovementState.running;
             sprite.flipX = true;
+        }else
+        {
+            state = MovementState.idle;
+            //anim.SetBool("walking", false);
+
         }
+
+        anim.SetInteger("state", (int)state);
     }
 
 

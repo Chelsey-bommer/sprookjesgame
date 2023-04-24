@@ -14,6 +14,7 @@ public class TriggerDialogue : MonoBehaviour
     {
         DialogueBox.SetActive(false);
         
+        
     }
  
     private void OnTriggerEnter(Collider collision)

@@ -18,10 +18,10 @@ public class Quest : MonoBehaviour
     public Quest[] allQuests;
     public TriggerDialogue dialoguescript;
 
-    private void Start()
+    void Start()
     {
         allQuests = FindObjectsOfType<Quest>();  // all objects with quest script attached
-        dialoguescript = GameObject.FindGameObjectWithTag("Dialoguetriggers").GetComponent<TriggerDialogue>();
+        //dialoguescript = GameObject.FindGameObjectWithTag("Dialoguetriggers").GetComponent<TriggerDialogue>();
         currentColor = questItem.color;
     }
 
