@@ -42,9 +42,6 @@ public class GameManager : MonoBehaviour
             Percentage2.text = "100%";
         }
 
-        if(dialoguescript.dialogue1){
-           Percentage2.text = "50%";
-        }
         
     }
 }

@@ -43,7 +43,6 @@ public class Quest : MonoBehaviour
 
         if (other.gameObject.name.Contains("Player"))
         {
-            
             if (dialoguescript.dialogue)
             {
                 GameManager.instance.questTwo = true;
