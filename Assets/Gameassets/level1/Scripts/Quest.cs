@@ -27,7 +27,7 @@ public class Quest : MonoBehaviour
         allQuests = FindObjectsOfType<Quest>();  // all objects with quest script attached
         dialoguescript = GetComponent<TriggerDialogue>();
         currentColor = questItem.color;
-        child = transform.Find("list").gameObject;
+        //child = transform.Find("list").gameObject;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -69,6 +69,7 @@ public class Quest : MonoBehaviour
 
         foreach (Quest quest in allQuests)
         {
+            
             quest.questItem.color = quest.currentColor;
         }
         questItem.color = activeColor;
