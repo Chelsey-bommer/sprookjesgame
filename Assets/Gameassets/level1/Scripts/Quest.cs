@@ -16,12 +16,14 @@ public class Quest : MonoBehaviour
     public TMP_Text percentage;
 
     public Quest[] allQuests;
-    public TriggerDialogue dialoguescript;
+    //public TriggerDialogue dialoguescript;
+
+    private TriggerDialogue dialoguescript;
 
     void Start()
     {
         allQuests = FindObjectsOfType<Quest>();  // all objects with quest script attached
-        //dialoguescript = GameObject.FindGameObjectWithTag("Dialoguetriggers").GetComponent<TriggerDialogue>();
+        dialoguescript = GetComponent<TriggerDialogue>();
         currentColor = questItem.color;
     }
 
