@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float time;
 
     public float drag;
-    enum MovementState { idle, running, jumping, falling, backward };
+    enum MovementState { idle, running, jumping, falling, backward, forward };
 
 
     void Start()
@@ -81,6 +81,19 @@ public class PlayerMovement : MonoBehaviour
             {
                 sprite.flipX = false;
             }
+        }
+        if (verticalInput < 0f)
+        {
+            state = MovementState.forward;
+
+            // if (horizontalInput > 0.1f)
+            // {
+            //     sprite.flipX = true;
+            // }
+            // else if (horizontalInput < 0f)
+            // {
+            //     sprite.flipX = false;
+            // }
         }
 
 

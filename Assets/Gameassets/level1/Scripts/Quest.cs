@@ -55,15 +55,19 @@ public class Quest : MonoBehaviour
         //////////// Quest 2: Talk to this guy
         if (other.gameObject.name.Contains("Player"))
         {
-            if (dialoguescript.dialogue)
-            {
+            if (gameObject.name.Contains("WoundedFriend")){
+
+                if (dialoguescript.dialogue){
                 GameManager.instance.questTwo = true;
-                FinishQuest();
+                FinishQuest(); 
+                }
             }
+            
         }
 
        //////////////////Quest 3:
       // Part one: Locate hole
+      
       if(gameObject.name.Contains("Hole")){
           GameManager.instance.questThreePartOne = true;
           childText.color = Color.magenta;
@@ -75,10 +79,21 @@ public class Quest : MonoBehaviour
 
             if(findWood.activeInHierarchy == false){ //if all the wood is collected
                 GameManager.instance.questThreePartTwo = true;
-                childText.color = Color.magenta;
+                childText2.color = Color.magenta;
+                
+            }
+            
+        }
+        //Part three: Go to the carpenter
+        dialoguescript.dialogue = true;
+        if(gameObject.name.Contains("Carpenter") && GameManager.instance.questThreePartOne && GameManager.instance.questThreePartTwo){
+            dialoguescript.dialogue = false;
+
+            if (dialoguescript.dialogue){
+                GameManager.instance.questThreePartThree = true;
+                Debug.Log("gepraat");
             }
         }
-      
 
 
 

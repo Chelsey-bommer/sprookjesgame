@@ -20,7 +20,6 @@ public class TriggerDialogue : MonoBehaviour
     private void OnTriggerEnter(Collider collision)
     {
         
-        
         if(dialogue == false){
            DialogueBox.SetActive(true);
            dialogue = true;
@@ -28,7 +27,5 @@ public class TriggerDialogue : MonoBehaviour
  
     }
 
-    // void OnTriggerExit(Collider other){
-    //     dialogue = true;
-    // }
+
 }
