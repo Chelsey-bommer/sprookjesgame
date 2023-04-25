@@ -26,6 +26,10 @@ public class Quest : MonoBehaviour
     public TMP_Text childText2;
 
     private GameObject findWood;
+
+    public SpriteRenderer spriteRenderer;
+    public Sprite newSprite;
+            
     void Start()
     {
         allQuests = FindObjectsOfType<Quest>();  // all objects with quest script attached
@@ -36,7 +40,7 @@ public class Quest : MonoBehaviour
         findWood = GameObject.FindGameObjectWithTag("Wood");
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
 
         //Quest 1: test quest
@@ -97,22 +101,17 @@ public class Quest : MonoBehaviour
         if(gameObject.name.Contains("Fence") && GameManager.instance.questThreePartOne 
         && GameManager.instance.questThreePartTwo && GameManager.instance.questThreePartThree){
 
-            //public SpriteRenderer spriteRenderer;
-            //public Sprite newSprite;
             
+            if (Input.GetKey(KeyCode.R))
+            {
+                spriteRenderer.sprite = newSprite; 
+                GameManager.instance.questThreePartFour = true;
+            }
 
-            // if (Input.GetKeyDown("space"))
-            // {
-                //spriteRenderer.sprite = newSprite; 
-                //GameManager.instance.questThreePartFour = true;
-            // }
-
-            // if(GameManager.instance.questThree){
-            //     FinishQuest(); 
-            // }
+            if(GameManager.instance.questThree){
+                FinishQuest(); 
+            }
         }
-
-
 
     }
 
