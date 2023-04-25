@@ -50,14 +50,14 @@ public class Quest : MonoBehaviour
             }
 
         }
-
+        // Quest 2: Talk to this guy
         if (other.gameObject.name.Contains("Player"))
         {
             if (dialoguescript.dialogue)
             {
                 GameManager.instance.questTwo = true;
                 FinishQuest();
-
+            }
             //     GameObject Dialoguebox1 = GameObject.Find("DialogueBox1");
 
             //     if(Dialoguebox1.activeInHierarchy){
@@ -68,9 +68,21 @@ public class Quest : MonoBehaviour
             //         GameManager.instance.questTwo = true;
             //         FinishQuest();
             //    //}
-             }
-
+            
         }
+
+        //Quest 3?
+
+        //Quest 3:
+      // Part one: Locate hole
+      if(gameObject.name.Contains("Hole")){
+          GameManager.instance.questThreePartOne = true;
+          Debug.Log("Looked at hole");
+          
+      }
+
+
+
     }
 
     public void FinishTask(){
