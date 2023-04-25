@@ -87,9 +87,10 @@ public class Quest : MonoBehaviour
         //Part three: Go to the carpenter
         dialoguescript.dialogue = true;
         if(gameObject.name.Contains("Carpenter") && GameManager.instance.questThreePartOne && GameManager.instance.questThreePartTwo){
+            
             dialoguescript.dialogue = false;
 
-            if (dialoguescript.dialogue){
+            if (!dialoguescript.dialogue){
                 GameManager.instance.questThreePartThree = true;
                 Debug.Log("gepraat");
             }
