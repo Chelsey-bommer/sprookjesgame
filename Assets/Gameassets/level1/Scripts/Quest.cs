@@ -23,6 +23,7 @@ public class Quest : MonoBehaviour
     public GameObject child;
 
     public TMP_Text childText;
+    public TMP_Text childText2;
     private bool activeQuest = false;
 
     private GameObject findWood;
@@ -65,6 +66,7 @@ public class Quest : MonoBehaviour
       // Part one: Locate hole
       if(gameObject.name.Contains("Hole")){
           GameManager.instance.questThreePartOne = true;
+          childText.color = Color.magenta;
           Debug.Log("Looked at hole");
        }
       //Part two: Collect wood
@@ -73,6 +75,7 @@ public class Quest : MonoBehaviour
 
             if(findWood.activeInHierarchy == false){ //if all the wood is collected
                 GameManager.instance.questThreePartTwo = true;
+                childText.color = Color.magenta;
             }
         }
       
@@ -83,6 +86,7 @@ public class Quest : MonoBehaviour
 
     public void FinishTask(){
       childText.text = "<color=green>Done</color>";
+      childText.color = Color.green;
 
       //works!!
     }
