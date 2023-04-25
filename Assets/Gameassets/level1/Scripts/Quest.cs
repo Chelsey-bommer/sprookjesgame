@@ -51,7 +51,7 @@ public class Quest : MonoBehaviour
             }
 
         }
-        // Quest 2: Talk to this guy
+        //////////// Quest 2: Talk to this guy
         if (other.gameObject.name.Contains("Player"))
         {
             if (dialoguescript.dialogue)
@@ -59,40 +59,22 @@ public class Quest : MonoBehaviour
                 GameManager.instance.questTwo = true;
                 FinishQuest();
             }
-            //     GameObject Dialoguebox1 = GameObject.Find("DialogueBox1");
-
-            //     if(Dialoguebox1.activeInHierarchy){
-            //         GameManager.instance.questTwo1 = true;
-            //     }
-
-            //     if(dialoguescript.dialogue){
-            //         GameManager.instance.questTwo = true;
-            //         FinishQuest();
-            //    //}
-            
         }
 
-        //Quest 3?
-
-        //Quest 3:
+       //////////////////Quest 3:
       // Part one: Locate hole
       if(gameObject.name.Contains("Hole")){
           GameManager.instance.questThreePartOne = true;
           Debug.Log("Looked at hole");
-      }
+       }
       //Part two: Collect wood
-      
         if(gameObject.name.Contains("wood") && GameManager.instance.questThreePartOne) {
             gameObject.SetActive(false);
 
-            if(findWood.activeInHierarchy == false){
+            if(findWood.activeInHierarchy == false){ //if all the wood is collected
                 GameManager.instance.questThreePartTwo = true;
             }
         }
-
-        // if(!findWood.activeSelf){
-        //     GameManager.instance.questThreePartTwo = true;
-        // }
       
 
 
