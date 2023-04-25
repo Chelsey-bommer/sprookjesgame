@@ -44,13 +44,9 @@ public class Quest : MonoBehaviour
 
             if (gameObject.name.Contains("Capsule"))
             {
-                GameObject Dialoguebox1 = GameObject.Find("DialogueBox1");
-                if(Dialoguebox1.activeInHierarchy){
-
-                }
-                GameManager.instance.questOne = true;
-                FinishQuest();
-                Destroy(gameObject);
+              GameManager.instance.questOne = true;
+              FinishQuest();
+              Destroy(gameObject);  
             }
 
         }
@@ -61,7 +57,18 @@ public class Quest : MonoBehaviour
             {
                 GameManager.instance.questTwo = true;
                 FinishQuest();
-            }
+
+            //     GameObject Dialoguebox1 = GameObject.Find("DialogueBox1");
+
+            //     if(Dialoguebox1.activeInHierarchy){
+            //         GameManager.instance.questTwo1 = true;
+            //     }
+
+            //     if(dialoguescript.dialogue){
+            //         GameManager.instance.questTwo = true;
+            //         FinishQuest();
+            //    //}
+             }
 
         }
     }

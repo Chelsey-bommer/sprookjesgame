@@ -25,8 +25,10 @@ public class TriggerDialogue : MonoBehaviour
            DialogueBox.SetActive(true);
            dialogue = true;
         }
-
-
-        
+ 
     }
+
+    // void OnTriggerExit(Collider other){
+    //     dialogue = true;
+    // }
 }

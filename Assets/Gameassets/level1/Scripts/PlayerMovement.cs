@@ -51,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
     void UpdateAnimation()
     {
         MovementState state;
-
+        //side to side walking
         if (horizontalInput > 0.1f)
         {
             state = MovementState.running;
@@ -68,7 +68,7 @@ public class PlayerMovement : MonoBehaviour
             //anim.SetBool("walking", false);
 
         }
-
+        //backwards walking
         if (verticalInput > 0.1f)
         {
             state = MovementState.backward;
