@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public bool questThreePartOne = false;
     public bool questThreePartTwo = false;
     public bool questThreePartThree = false;
+    public bool questThreePartFour = false;
 
     public TMP_Text Percentage1;
     public TMP_Text Percentage2;
@@ -63,8 +64,12 @@ public class GameManager : MonoBehaviour
         if(questThreePartThree){
             Percentage3.text = "75%";
         }
-        // if( questThreePartOne && questThreePartTwo){
-        //     questThree = true;
-        // }
+        if(questThree){
+            Percentage3.text = "100%";
+        }
+        
+        if( questThreePartOne && questThreePartTwo && questThreePartThree && questThreePartFour){
+            questThree = true;
+        }
     }
 }

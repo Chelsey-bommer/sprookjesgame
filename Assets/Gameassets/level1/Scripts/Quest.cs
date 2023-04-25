@@ -24,7 +24,6 @@ public class Quest : MonoBehaviour
 
     public TMP_Text childText;
     public TMP_Text childText2;
-    private bool activeQuest = false;
 
     private GameObject findWood;
     void Start()
@@ -87,13 +86,30 @@ public class Quest : MonoBehaviour
         //Part three: Go to the carpenter
         dialoguescript.dialogue = true;
         if(gameObject.name.Contains("Carpenter") && GameManager.instance.questThreePartOne && GameManager.instance.questThreePartTwo){
-            
             dialoguescript.dialogue = false;
 
             if (!dialoguescript.dialogue){
                 GameManager.instance.questThreePartThree = true;
                 Debug.Log("gepraat");
             }
+        }
+        //Part four: Replace the wall
+        if(gameObject.name.Contains("Fence") && GameManager.instance.questThreePartOne 
+        && GameManager.instance.questThreePartTwo && GameManager.instance.questThreePartThree){
+
+            //public SpriteRenderer spriteRenderer;
+            //public Sprite newSprite;
+            
+
+            // if (Input.GetKeyDown("space"))
+            // {
+                //spriteRenderer.sprite = newSprite; 
+                //GameManager.instance.questThreePartFour = true;
+            // }
+
+            // if(GameManager.instance.questThree){
+            //     FinishQuest(); 
+            // }
         }
 
 
