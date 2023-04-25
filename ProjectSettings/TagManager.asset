@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Collectible1
   - Dialoguetriggers
+  - Wood
   layers:
   - Default
   - TransparentFX

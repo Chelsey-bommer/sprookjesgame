@@ -25,14 +25,15 @@ public class Quest : MonoBehaviour
     public TMP_Text childText;
     private bool activeQuest = false;
 
-    private bool onaclick = false;
-
+    private GameObject findWood;
     void Start()
     {
         allQuests = FindObjectsOfType<Quest>();  // all objects with quest script attached
         dialoguescript = GetComponent<TriggerDialogue>();
         currentColor = questItem.color;
         //child = transform.Find("list").gameObject;
+
+        findWood = GameObject.FindGameObjectWithTag("Wood");
     }
 
     private void OnTriggerEnter(Collider other)
@@ -78,8 +79,21 @@ public class Quest : MonoBehaviour
       if(gameObject.name.Contains("Hole")){
           GameManager.instance.questThreePartOne = true;
           Debug.Log("Looked at hole");
-          
       }
+      //Part two: Collect wood
+      
+        if(gameObject.name.Contains("wood") && GameManager.instance.questThreePartOne) {
+            gameObject.SetActive(false);
+
+            if(findWood.activeInHierarchy == false){
+                GameManager.instance.questThreePartTwo = true;
+            }
+        }
+
+        // if(!findWood.activeSelf){
+        //     GameManager.instance.questThreePartTwo = true;
+        // }
+      
 
 
 
