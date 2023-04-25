@@ -16,8 +16,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float time;
 
     public float drag;
-    enum MovementState { idle, running, jumping, falling };
-    
+    enum MovementState { idle, running, jumping, falling, backward };
+
 
     void Start()
     {
@@ -40,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 movementDirection = Vector3.forward * verticalInput + transform.right * horizontalInput;
         // Move the player
         rb.AddForce(movementDirection * movementSpeed, ForceMode.Force);
-        
+
         // Apply drag
         rb.drag = drag;
 
@@ -61,12 +61,28 @@ public class PlayerMovement : MonoBehaviour
         {
             state = MovementState.running;
             sprite.flipX = true;
-        }else
+        }
+        else
         {
             state = MovementState.idle;
             //anim.SetBool("walking", false);
 
         }
+
+        if (verticalInput > 0.1f)
+        {
+            state = MovementState.backward;
+
+            if (horizontalInput > 0.1f)
+            {
+                sprite.flipX = true;
+            }
+            else if (horizontalInput < 0f)
+            {
+                sprite.flipX = false;
+            }
+        }
+
 
         anim.SetInteger("state", (int)state);
     }

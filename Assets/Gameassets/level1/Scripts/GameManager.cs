@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
 
     public bool questOne = false;
     public bool questTwo = false;
+    public bool questTwo1 = false;
 
     public TMP_Text Percentage1;
     public TMP_Text Percentage2;
@@ -40,6 +41,10 @@ public class GameManager : MonoBehaviour
         //Quest 2
         if(questTwo == true){
             Percentage2.text = "100%";
+        }
+
+        if(questTwo1 == true){
+            Percentage2.text = "50%";
         }
 
         

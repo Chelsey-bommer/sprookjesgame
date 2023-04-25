@@ -44,6 +44,10 @@ public class Quest : MonoBehaviour
 
             if (gameObject.name.Contains("Capsule"))
             {
+                GameObject Dialoguebox1 = GameObject.Find("DialogueBox1");
+                if(Dialoguebox1.activeInHierarchy){
+
+                }
                 GameManager.instance.questOne = true;
                 FinishQuest();
                 Destroy(gameObject);
@@ -70,11 +74,11 @@ public class Quest : MonoBehaviour
 
     public void FinishQuest()
     {
-        FinishTask();
-        // questItem.color = completedColor;
-        // currentColor = completedColor;
-        // questItem.GetComponent<Button>().interactable = false;  //set quest inactive when completed
-        // child.SetActive(false); 
+        //FinishTask();
+        questItem.color = completedColor;
+        currentColor = completedColor;
+        questItem.GetComponent<Button>().interactable = false;  //set quest inactive when completed
+        child.SetActive(false); 
     }
 
     public void OnQuestClick()
@@ -95,7 +99,6 @@ public class Quest : MonoBehaviour
         else
         {
             child.SetActive(true);
-
         } 
         
     }
