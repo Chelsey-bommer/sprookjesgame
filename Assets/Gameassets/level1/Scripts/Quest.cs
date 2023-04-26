@@ -16,14 +16,14 @@ public class Quest : MonoBehaviour
     public TMP_Text percentage;
 
     public Quest[] allQuests;
-    //public TriggerDialogue dialoguescript;
 
     private TriggerDialogue dialoguescript;
 
     public GameObject child;
-
     public TMP_Text childText;
     public TMP_Text childText2;
+    public TMP_Text childText3;
+    public TMP_Text childText4;
 
     private GameObject findWood;
 
@@ -43,45 +43,33 @@ public class Quest : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
 
-        //Quest 1: test quest
-        if (other.gameObject.name.Contains("Player"))
-        {
-
-            if (gameObject.name.Contains("Capsule"))
-            {
-              GameManager.instance.questOne = true;
-              FinishQuest();
-              Destroy(gameObject);  
-            }
-
-        }
-        //////////// Quest 2: Talk to this guy
+        //////////// Quest 1: Talk to this guy
         if (other.gameObject.name.Contains("Player"))
         {
             if (gameObject.name.Contains("WoundedFriend")){
 
                 if (dialoguescript.dialogue){
-                GameManager.instance.questTwo = true;
+                GameManager.instance.questOne = true;
                 FinishQuest(); 
                 }
             }
             
         }
 
-       //////////////////Quest 3:
+       //////////////////Quest 2:
       // Part one: Locate hole
       
       if(gameObject.name.Contains("Hole")){
-          GameManager.instance.questThreePartOne = true;
+          GameManager.instance.questTwoPartOne = true;
           childText.color = Color.magenta;
           Debug.Log("Looked at hole");
        }
       //Part two: Collect wood
-        if(gameObject.name.Contains("wood") && GameManager.instance.questThreePartOne) {
+        if(gameObject.name.Contains("wood") && GameManager.instance.questTwoPartOne) {
             gameObject.SetActive(false);
 
             if(findWood.activeInHierarchy == false){ //if all the wood is collected
-                GameManager.instance.questThreePartTwo = true;
+                GameManager.instance.questTwoPartTwo = true;
                 childText2.color = Color.magenta;
                 
             }
@@ -89,30 +77,30 @@ public class Quest : MonoBehaviour
         }
         //Part three: Go to the carpenter
         dialoguescript.dialogue = true;
-        if(gameObject.name.Contains("Carpenter") && GameManager.instance.questThreePartOne && GameManager.instance.questThreePartTwo){
+        if(gameObject.name.Contains("Carpenter") && GameManager.instance.questTwoPartOne && GameManager.instance.questTwoPartTwo){
             dialoguescript.dialogue = false;
 
             if (!dialoguescript.dialogue){
-                GameManager.instance.questThreePartThree = true;
+                GameManager.instance.questTwoPartThree = true;
             }
         }
         //Part four: Replace the wall
-        if(gameObject.name.Contains("Fence") && GameManager.instance.questThreePartOne 
-        && GameManager.instance.questThreePartTwo && GameManager.instance.questThreePartThree){
+        if(gameObject.name.Contains("Fence") && GameManager.instance.questTwoPartOne 
+        && GameManager.instance.questTwoPartTwo && GameManager.instance.questTwoPartThree){
 
             
             if (Input.GetKey(KeyCode.R))
             {
                 spriteRenderer.sprite = newSprite; 
-                GameManager.instance.questThreePartFour = true;
+                GameManager.instance.questTwoPartFour = true;
             }
 
-            if(GameManager.instance.questThree){
+            if(GameManager.instance.questTwo){
                 FinishQuest(); 
             }
         }
 
-        ///////////////Quest Three: Find the lost kid
+        ///////////////Quest 3: Find the lost kid
         // Task one: Talk to the parents
 
 
@@ -153,6 +141,7 @@ public class Quest : MonoBehaviour
         else
         {
             child.SetActive(true);
+            
         } 
         
     }

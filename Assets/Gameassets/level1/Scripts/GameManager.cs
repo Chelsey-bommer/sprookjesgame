@@ -13,10 +13,10 @@ public class GameManager : MonoBehaviour
     public bool questTwo1 = false;
 
     public bool questThree = false;
-    public bool questThreePartOne = false;
-    public bool questThreePartTwo = false;
-    public bool questThreePartThree = false;
-    public bool questThreePartFour = false;
+    public bool questTwoPartOne = false;
+    public bool questTwoPartTwo = false;
+    public bool questTwoPartThree = false;
+    public bool questTwoPartFour = false;
 
     public TMP_Text Percentage1;
     public TMP_Text Percentage2;
@@ -45,31 +45,22 @@ public class GameManager : MonoBehaviour
             Percentage1.text = "100%";
         }
 
-        //Quest 2
-        if(questTwo == true){
-            Percentage2.text = "100%";
+        // Quest 2
+        if(questTwoPartOne){
+            Percentage2.text = "25%";
         }
-
-        if(questTwo1 == true){
+        if(questTwoPartTwo){
             Percentage2.text = "50%";
         }
-
-        // Quest 3
-        if(questThreePartOne){
-            Percentage3.text = "25%";
+        if(questTwoPartThree){
+            Percentage2.text = "75%";
         }
-        if(questThreePartTwo){
-            Percentage3.text = "50%";
-        }
-        if(questThreePartThree){
-            Percentage3.text = "75%";
-        }
-        if(questThree){
-            Percentage3.text = "100%";
+        if(questTwo){
+            Percentage2.text = "100%";
         }
         
-        if( questThreePartOne && questThreePartTwo && questThreePartThree && questThreePartFour){
-            questThree = true;
+        if( questTwoPartOne && questTwoPartTwo && questTwoPartThree && questTwoPartFour){
+            questTwo = true;
         }
     }
 }
