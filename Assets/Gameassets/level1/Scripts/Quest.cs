@@ -35,8 +35,10 @@ public class Quest : MonoBehaviour
     void Start()
     {
         allQuests = FindObjectsOfType<Quest>();  // all objects with quest script attached
-        dialoguescript = GameObject.Find("WoundedFriend").GetComponent<TriggerDialogue>();
+        //dialoguescript = gameObject.GetComponent<TriggerDialogue>();
+        //dialoguescript = GameObject.Find("WoundedFriend").GetComponent<TriggerDialogue>();
         //dialoguescript = GameObject.FindGameObjectWithTag("Dialoguetriggers").GetComponent<TriggerDialogue>();
+        //ERROR!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         currentColor = questItem.color;
         //child = transform.Find("list").gameObject;
 
@@ -86,7 +88,7 @@ public class Quest : MonoBehaviour
             if (!dialoguescript.dialogue){
                 GameManager.instance.questTwoPartThree = true;
                 childText3.color = Color.magenta;
-                dialoguescript.dialogue = false;
+                
 
             }
         }
@@ -114,6 +116,30 @@ public class Quest : MonoBehaviour
             if (dialoguescript.dialogue){
                 GameManager.instance.questThreePartOne = true;
                 childText.color = Color.magenta;
+            }
+        }
+            
+        // Task two: Talk to the postguard
+        dialoguescript.dialogue = true;
+        if(gameObject.name.Contains("Postguard") && GameManager.instance.questThreePartOne == true){
+            dialoguescript.dialogue = false;
+
+            if (dialoguescript.dialogue){
+                GameManager.instance.questThreePartTwo = true;
+                childText.color = Color.magenta;
+            }
+        }
+        // Task three: Find the kid
+        dialoguescript.dialogue = true;
+        if(gameObject.name.Contains("Kid") && GameManager.instance.questThreePartOne && GameManager.instance.questThreePartTwo){
+            dialoguescript.dialogue = false;
+
+            if (dialoguescript.dialogue){
+                GameManager.instance.questThreePartThree = true;
+                
+            }
+            if(GameManager.instance.questThree){
+                FinishQuest(); 
             }
         }
 

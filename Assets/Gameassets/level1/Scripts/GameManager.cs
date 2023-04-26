@@ -67,5 +67,13 @@ public class GameManager : MonoBehaviour
         if(questThreePartOne == true){
             Percentage3.text = "33%";
         }
+
+        if(questThreePartTwo == true){
+            Percentage3.text = "66%";
+        }
+
+        if(questThreePartOne && questThreePartTwo && questThreePartThree){
+            questThree = true;
+        }
     }
 }
