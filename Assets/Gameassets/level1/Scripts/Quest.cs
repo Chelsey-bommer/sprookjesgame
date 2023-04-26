@@ -94,7 +94,6 @@ public class Quest : MonoBehaviour
 
             if (!dialoguescript.dialogue){
                 GameManager.instance.questThreePartThree = true;
-                Debug.Log("gepraat");
             }
         }
         //Part four: Replace the wall
@@ -112,6 +111,11 @@ public class Quest : MonoBehaviour
                 FinishQuest(); 
             }
         }
+
+        ///////////////Quest Three: Find the lost kid
+        // Task one: Talk to the parents
+
+
 
     }
 
