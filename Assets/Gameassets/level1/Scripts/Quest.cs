@@ -8,6 +8,7 @@ public class Quest : MonoBehaviour
 {
     // Quest list color and percentage logic
     public Image questItem;
+
     public Color completedColor;
     public Color activeColor;
 
@@ -29,11 +30,13 @@ public class Quest : MonoBehaviour
 
     public SpriteRenderer spriteRenderer;
     public Sprite newSprite;
+
             
     void Start()
     {
         allQuests = FindObjectsOfType<Quest>();  // all objects with quest script attached
-        dialoguescript = GetComponent<TriggerDialogue>();
+        dialoguescript = GameObject.Find("WoundedFriend").GetComponent<TriggerDialogue>();
+        //dialoguescript = GameObject.FindGameObjectWithTag("Dialoguetriggers").GetComponent<TriggerDialogue>();
         currentColor = questItem.color;
         //child = transform.Find("list").gameObject;
 
@@ -82,6 +85,9 @@ public class Quest : MonoBehaviour
 
             if (!dialoguescript.dialogue){
                 GameManager.instance.questTwoPartThree = true;
+                childText3.color = Color.magenta;
+                dialoguescript.dialogue = false;
+
             }
         }
         //Part four: Replace the wall
@@ -93,6 +99,7 @@ public class Quest : MonoBehaviour
             {
                 spriteRenderer.sprite = newSprite; 
                 GameManager.instance.questTwoPartFour = true;
+                childText4.color = Color.magenta;
             }
 
             if(GameManager.instance.questTwo){
@@ -102,7 +109,13 @@ public class Quest : MonoBehaviour
 
         ///////////////Quest 3: Find the lost kid
         // Task one: Talk to the parents
-
+        if(gameObject.name.Contains("Parent")){
+            
+            if (dialoguescript.dialogue){
+                GameManager.instance.questThreePartOne = true;
+                childText.color = Color.magenta;
+            }
+        }
 
 
     }
@@ -141,7 +154,7 @@ public class Quest : MonoBehaviour
         else
         {
             child.SetActive(true);
-            
+
         } 
         
     }
