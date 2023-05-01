@@ -22,7 +22,12 @@ public class GameManager : MonoBehaviour
     public TMP_Text Percentage1;
     public TMP_Text Percentage2;
     public TMP_Text Percentage3;
-    public TriggerDialogue dialoguescript;
+    private TriggerDialogue dialoguescript;
+    public GameObject scriptObject;
+
+    public bool dialogue = false;
+    public bool dialogue2 = false;
+     public bool dialogue3 = false;
 
     
     
@@ -53,6 +58,11 @@ public class GameManager : MonoBehaviour
         if(questTwoPartTwo){
             Percentage2.text = "50%";
         }
+
+        if(questTwoPartOne && questTwoPartTwo){
+            dialogue = true;
+        }
+
         if(questTwoPartThree){
             Percentage2.text = "75%";
         }
@@ -66,6 +76,7 @@ public class GameManager : MonoBehaviour
 
         if(questThreePartOne == true){
             Percentage3.text = "33%";
+            
         }
 
         if(questThreePartTwo == true){

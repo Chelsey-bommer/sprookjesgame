@@ -32,16 +32,13 @@ public class Quest : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public Sprite newSprite;
 
-            
+
     void Start()
     {
         allQuests = FindObjectsOfType<Quest>();  // all objects with quest script attached
-        //dialoguescript = gameObject.GetComponent<TriggerDialogue>();
-        //dialoguescript = GameObject.Find("WoundedFriend").GetComponent<TriggerDialogue>();
         dialoguescript = scriptObject.GetComponent<TriggerDialogue>();
-        
+
         currentColor = questItem.color;
-        //child = transform.Find("list").gameObject;
 
         findWood = GameObject.FindGameObjectWithTag("Wood");
     }
@@ -50,107 +47,118 @@ public class Quest : MonoBehaviour
     {
 
         //////////// Quest 1: Talk to this guy
-        if (other.gameObject.name.Contains("Player"))
+        if (gameObject.name.Contains("WoundedFriend"))
         {
-            if (gameObject.name.Contains("WoundedFriend")){
-
-                if (dialoguescript.dialogue){
+            GameManager.instance.dialogue = true;
+            if (GameManager.instance.dialogue)
+            {
                 GameManager.instance.questOne = true;
-                FinishQuest(); 
-                }
+                FinishQuest();
             }
-            
         }
 
-       //////////////////Quest 2:
-      // Part one: Locate hole
-      
-      if(gameObject.name.Contains("Hole")){
-          GameManager.instance.questTwoPartOne = true;
-          childText.color = Color.magenta;
-          Debug.Log("Looked at hole");
-       }
-      //Part two: Collect wood
-        if(gameObject.name.Contains("wood") && GameManager.instance.questTwoPartOne) {
+        //////////////////Quest 2:
+        // Part one: Locate hole
+
+        if (gameObject.name.Contains("Hole"))
+        {
+            GameManager.instance.questTwoPartOne = true;
+            childText.color = Color.magenta;
+            Debug.Log("Looked at hole");
+        }
+        //Part two: Collect wood
+        if (gameObject.name.Contains("wood") && GameManager.instance.questTwoPartOne)
+        {
             gameObject.SetActive(false);
 
-            if(findWood.activeInHierarchy == false){ //if all the wood is collected
+            if (findWood.activeInHierarchy == false)
+            { //if all the wood is collected
                 GameManager.instance.questTwoPartTwo = true;
                 childText2.color = Color.magenta;
-                
             }
-            
+
         }
         //Part three: Go to the carpenter
-        dialoguescript.dialogue = true;
-        if(gameObject.name.Contains("Carpenter") && GameManager.instance.questTwoPartOne && GameManager.instance.questTwoPartTwo){
-            dialoguescript.dialogue = false;
+        if (gameObject.name.Contains("Carpenter") && GameManager.instance.questTwoPartOne && GameManager.instance.questTwoPartTwo)
+        {
 
-            if (!dialoguescript.dialogue){
+            
+            if (GameManager.instance.dialogue)
+            {
                 GameManager.instance.questTwoPartThree = true;
                 childText3.color = Color.magenta;
-    
+
             }
         }
         //Part four: Replace the wall
-        if(gameObject.name.Contains("Fence") && GameManager.instance.questTwoPartOne 
-        && GameManager.instance.questTwoPartTwo && GameManager.instance.questTwoPartThree){
+        if(gameObject.name.Contains("Fence") && GameManager.instance.questTwoPartOne
+        && GameManager.instance.questTwoPartTwo && GameManager.instance.questTwoPartThree)
+        {
 
-            
+
             if (Input.GetKey(KeyCode.R))
             {
-                spriteRenderer.sprite = newSprite; 
+                spriteRenderer.sprite = newSprite;
                 GameManager.instance.questTwoPartFour = true;
                 childText4.color = Color.magenta;
             }
 
-            if(GameManager.instance.questTwo){
-                FinishQuest(); 
+            if (GameManager.instance.questTwo)
+            {
+                FinishQuest();
             }
         }
 
         ///////////////Quest 3: Find the lost kid
         // Task one: Talk to the parents
-        if(gameObject.name.Contains("Parent")){
-            
-            if (dialoguescript.dialogue){
+        if (gameObject.name.Contains("Parent"))
+        {
+            GameManager.instance.dialogue2 = true;
+
+            if (GameManager.instance.dialogue2)
+            {
                 GameManager.instance.questThreePartOne = true;
                 childText.color = Color.magenta;
+                GameManager.instance.dialogue3 = false;
             }
         }
-            
-        // Task two: Talk to the postguard
-        dialoguescript.dialogue = true;
-        if(gameObject.name.Contains("Postguard") && GameManager.instance.questThreePartOne == true){
-            dialoguescript.dialogue = false;
 
-            if (!dialoguescript.dialogue){
+        // Task two: Talk to the postguard
+        if (gameObject.name.Contains("Postguard") && GameManager.instance.questThreePartOne == true)
+        {
+            GameManager.instance.dialogue3 = true;
+
+            if (GameManager.instance.dialogue3)
+            {
                 GameManager.instance.questThreePartTwo = true;
                 childText.color = Color.magenta;
             }
         }
         // Task three: Find the kid
-        dialoguescript.dialogue = true;
-        if(gameObject.name.Contains("Kid") && GameManager.instance.questThreePartOne && GameManager.instance.questThreePartTwo){
-            dialoguescript.dialogue = false;
+        if (gameObject.name.Contains("Kid") && GameManager.instance.questThreePartOne && GameManager.instance.questThreePartTwo)
+        {
 
-            if (dialoguescript.dialogue){
+
+            if (GameManager.instance.dialogue2)
+            {
                 GameManager.instance.questThreePartThree = true;
-                
+
             }
-            if(GameManager.instance.questThree){
-                FinishQuest(); 
+            if (GameManager.instance.questThree)
+            {
+                FinishQuest();
             }
         }
 
 
     }
 
-    public void FinishTask(){
-      childText.text = "<color=green>Done</color>";
-      childText.color = Color.green;
+    public void FinishTask()
+    {
+        childText.text = "<color=green>Done</color>";
+        childText.color = Color.green;
 
-      //works!!
+        //works!!
     }
 
     public void FinishQuest()
@@ -159,12 +167,12 @@ public class Quest : MonoBehaviour
         questItem.color = completedColor;
         currentColor = completedColor;
         questItem.GetComponent<Button>().interactable = false;  //set quest inactive when completed
-        child.SetActive(false); 
+        child.SetActive(false);
     }
 
     public void OnQuestClick()
     {
-       
+
         foreach (Quest quest in allQuests)
         {
 
@@ -176,13 +184,13 @@ public class Quest : MonoBehaviour
         if (child.activeInHierarchy)
         {
             child.SetActive(false);
-        } 
+        }
         else
         {
             child.SetActive(true);
 
-        } 
-        
+        }
+
     }
 
 

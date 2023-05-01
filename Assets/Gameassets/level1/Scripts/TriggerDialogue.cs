@@ -5,24 +5,29 @@ using UnityEngine;
 public class TriggerDialogue : MonoBehaviour
 {
     public GameObject DialogueBox;
-    private Collider2D getCollider;
 
-    public bool dialogue = false;
-    public bool dialogue1 = false;
+
+
 
     public void Start()
     {
-        DialogueBox.SetActive(false);
-        
+     DialogueBox.SetActive(false);
         
     }
  
-    public void OnTriggerStay(Collider collision)
+    public void OnTriggerEnter(Collider collision)
     {
         
-        if(dialogue == false){
+        if(GameManager.instance.dialogue == true){
            DialogueBox.SetActive(true);
-           dialogue = true;
+        }
+
+        if(GameManager.instance.dialogue2 == true){
+           DialogueBox.SetActive(true);
+        }
+
+        if(GameManager.instance.dialogue3 == true){
+           DialogueBox.SetActive(true);
         }
  
     }

@@ -1586,7 +1586,8 @@ MonoBehaviour:
   Percentage1: {fileID: 2084423214}
   Percentage2: {fileID: 394842269}
   Percentage3: {fileID: 1926670776}
-  dialoguescript: {fileID: 527821552}
+  scriptObject: {fileID: 527821545}
+  dialogue: 0
 --- !u!4 &213925332
 Transform:
   m_ObjectHideFlags: 0
@@ -2604,8 +2605,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DialogueBox: {fileID: 1062346163}
-  dialogue: 0
-  dialogue1: 0
 --- !u!1001 &344153084
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4304,8 +4303,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DialogueBox: {fileID: 3328933}
-  dialogue: 0
-  dialogue1: 0
 --- !u!1 &565278766
 GameObject:
   m_ObjectHideFlags: 0
@@ -4770,8 +4767,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DialogueBox: {fileID: 836571962}
-  dialogue: 0
-  dialogue1: 0
 --- !u!224 &629408072 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1623978532943002205, guid: 03caa69b2ac253c45872781820508483,
@@ -12332,8 +12327,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DialogueBox: {fileID: 840476640}
-  dialogue: 0
-  dialogue1: 0
 --- !u!114 &1743225359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13840,8 +13833,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DialogueBox: {fileID: 296873754}
-  dialogue: 0
-  dialogue1: 0
 --- !u!1 &2096571668
 GameObject:
   m_ObjectHideFlags: 0
