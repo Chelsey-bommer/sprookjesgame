@@ -1007,6 +1007,7 @@ MonoBehaviour:
   currentColor: {r: 1, g: 1, b: 1, a: 1}
   percentage: {fileID: 394842269}
   allQuests: []
+  scriptObject: {fileID: 527821545}
   child: {fileID: 310468588}
   childText: {fileID: 632880861}
   childText2: {fileID: 1040502810}
@@ -2262,6 +2263,7 @@ MonoBehaviour:
   currentColor: {r: 1, g: 1, b: 1, a: 1}
   percentage: {fileID: 394842269}
   allQuests: []
+  scriptObject: {fileID: 527821545}
   child: {fileID: 310468588}
   childText: {fileID: 632880861}
   childText2: {fileID: 1040502810}
@@ -3895,6 +3897,7 @@ MonoBehaviour:
   currentColor: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
   percentage: {fileID: 2084423214}
   allQuests: []
+  scriptObject: {fileID: 527821545}
   child: {fileID: 1356511206}
   childText: {fileID: 1059630294}
   childText2: {fileID: 1408129973}
@@ -4425,6 +4428,7 @@ MonoBehaviour:
   currentColor: {r: 1, g: 1, b: 1, a: 1}
   percentage: {fileID: 1926670776}
   allQuests: []
+  scriptObject: {fileID: 527821545}
   child: {fileID: 1896949008}
   childText: {fileID: 1370315592}
   childText2: {fileID: 1931516087}
@@ -4776,6 +4780,7 @@ MonoBehaviour:
   currentColor: {r: 1, g: 1, b: 1, a: 1}
   percentage: {fileID: 394842269}
   allQuests: []
+  scriptObject: {fileID: 527821545}
   child: {fileID: 310468588}
   childText: {fileID: 632880861}
   childText2: {fileID: 1040502810}
@@ -5285,6 +5290,7 @@ MonoBehaviour:
   currentColor: {r: 1, g: 1, b: 1, a: 1}
   percentage: {fileID: 394842269}
   allQuests: []
+  scriptObject: {fileID: 527821545}
   child: {fileID: 310468588}
   childText: {fileID: 632880861}
   childText2: {fileID: 1040502810}
@@ -8778,6 +8784,7 @@ MonoBehaviour:
   currentColor: {r: 1, g: 1, b: 1, a: 1}
   percentage: {fileID: 394842269}
   allQuests: []
+  scriptObject: {fileID: 527821545}
   child: {fileID: 310468588}
   childText: {fileID: 632880861}
   childText2: {fileID: 1040502810}
@@ -10455,6 +10462,7 @@ MonoBehaviour:
   currentColor: {r: 1, g: 0.94716984, b: 0.94716984, a: 1}
   percentage: {fileID: 1926670776}
   allQuests: []
+  scriptObject: {fileID: 527821545}
   child: {fileID: 1896949008}
   childText: {fileID: 1370315592}
   childText2: {fileID: 1931516087}
@@ -11153,6 +11161,7 @@ MonoBehaviour:
   currentColor: {r: 1, g: 1, b: 1, a: 1}
   percentage: {fileID: 394842269}
   allQuests: []
+  scriptObject: {fileID: 527821545}
   child: {fileID: 310468588}
   childText: {fileID: 632880861}
   childText2: {fileID: 1040502810}
@@ -11626,6 +11635,7 @@ MonoBehaviour:
   currentColor: {r: 1, g: 1, b: 1, a: 1}
   percentage: {fileID: 1926670776}
   allQuests: []
+  scriptObject: {fileID: 527821545}
   child: {fileID: 1896949008}
   childText: {fileID: 1370315592}
   childText2: {fileID: 1931516087}

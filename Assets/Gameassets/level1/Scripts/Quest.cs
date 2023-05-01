@@ -19,6 +19,7 @@ public class Quest : MonoBehaviour
     public Quest[] allQuests;
 
     private TriggerDialogue dialoguescript;
+    public GameObject scriptObject;
 
     public GameObject child;
     public TMP_Text childText;
@@ -37,8 +38,8 @@ public class Quest : MonoBehaviour
         allQuests = FindObjectsOfType<Quest>();  // all objects with quest script attached
         //dialoguescript = gameObject.GetComponent<TriggerDialogue>();
         //dialoguescript = GameObject.Find("WoundedFriend").GetComponent<TriggerDialogue>();
-        //dialoguescript = GameObject.FindGameObjectWithTag("Dialoguetriggers").GetComponent<TriggerDialogue>();
-        //ERROR!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        dialoguescript = scriptObject.GetComponent<TriggerDialogue>();
+        
         currentColor = questItem.color;
         //child = transform.Find("list").gameObject;
 
@@ -88,8 +89,7 @@ public class Quest : MonoBehaviour
             if (!dialoguescript.dialogue){
                 GameManager.instance.questTwoPartThree = true;
                 childText3.color = Color.magenta;
-                
-
+    
             }
         }
         //Part four: Replace the wall
@@ -124,7 +124,7 @@ public class Quest : MonoBehaviour
         if(gameObject.name.Contains("Postguard") && GameManager.instance.questThreePartOne == true){
             dialoguescript.dialogue = false;
 
-            if (dialoguescript.dialogue){
+            if (!dialoguescript.dialogue){
                 GameManager.instance.questThreePartTwo = true;
                 childText.color = Color.magenta;
             }

@@ -10,14 +10,14 @@ public class TriggerDialogue : MonoBehaviour
     public bool dialogue = false;
     public bool dialogue1 = false;
 
-    private void Start()
+    public void Start()
     {
         DialogueBox.SetActive(false);
         
         
     }
  
-    private void OnTriggerEnter(Collider collision)
+    public void OnTriggerStay(Collider collision)
     {
         
         if(dialogue == false){
