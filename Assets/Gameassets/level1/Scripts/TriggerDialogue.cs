@@ -5,7 +5,7 @@ using UnityEngine;
 public class TriggerDialogue : MonoBehaviour
 {
     public GameObject DialogueBox;
-    private Collider2D getCollider;
+    private Collider getCollider;
 
     public bool dialogue = false;
     public bool dialogue1 = false;
@@ -13,18 +13,17 @@ public class TriggerDialogue : MonoBehaviour
     public void Start()
     {
         DialogueBox.SetActive(false);
-        
+       // dialogue = true;
         
     }
  
-    public void OnTriggerStay(Collider collision)
+    public void dialogueThing()
     {
         
-        if(dialogue == false){
+        if(dialogue == true){
            DialogueBox.SetActive(true);
-           dialogue = true;
-        }
- 
+           
+        } 
     }
 
 
