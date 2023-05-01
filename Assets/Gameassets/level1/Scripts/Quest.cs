@@ -36,17 +36,17 @@ public class Quest : MonoBehaviour
     void Start()
     {
         allQuests = FindObjectsOfType<Quest>();  // all objects with quest script attached
+        //dialoguescript = gameObject.GetComponent<TriggerDialogue>();
+        //dialoguescript = GameObject.Find("WoundedFriend").GetComponent<TriggerDialogue>();
         dialoguescript = scriptObject.GetComponent<TriggerDialogue>();
+        
         currentColor = questItem.color;
+        //child = transform.Find("list").gameObject;
+
         findWood = GameObject.FindGameObjectWithTag("Wood");
-       
     }
 
-    void Update(){
-        //
-    }
-
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
 
         //////////// Quest 1: Talk to this guy
@@ -77,16 +77,16 @@ public class Quest : MonoBehaviour
             if(findWood.activeInHierarchy == false){ //if all the wood is collected
                 GameManager.instance.questTwoPartTwo = true;
                 childText2.color = Color.magenta;
+                
             }
-            if(GameManager.instance.questTwoPartTwo){
-                dialoguescript.dialogue = true;
-            }
+            
         }
         //Part three: Go to the carpenter
-        if(gameObject.name.Contains("Carpenter") && GameManager.instance.questTwoPartOne && GameManager.instance.questTwoPartTwo){   
-            dialoguescript.dialogueThing();
+        dialoguescript.dialogue = true;
+        if(gameObject.name.Contains("Carpenter") && GameManager.instance.questTwoPartOne && GameManager.instance.questTwoPartTwo){
+            dialoguescript.dialogue = false;
 
-            if (dialoguescript.dialogue){
+            if (!dialoguescript.dialogue){
                 GameManager.instance.questTwoPartThree = true;
                 childText3.color = Color.magenta;
     
@@ -155,6 +155,7 @@ public class Quest : MonoBehaviour
 
     public void FinishQuest()
     {
+        //FinishTask();
         questItem.color = completedColor;
         currentColor = completedColor;
         questItem.GetComponent<Button>().interactable = false;  //set quest inactive when completed

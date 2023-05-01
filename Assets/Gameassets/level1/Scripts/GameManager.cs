@@ -12,7 +12,6 @@ public class GameManager : MonoBehaviour
     public bool questTwo = false;
     public bool questTwoPartOne = false;
     public bool questTwoPartTwo = false;
-    public bool dialogon = false;
     public bool questTwoPartThree = false;
     public bool questTwoPartFour = false;
     public bool questThree = false;
@@ -24,7 +23,6 @@ public class GameManager : MonoBehaviour
     public TMP_Text Percentage2;
     public TMP_Text Percentage3;
     public TriggerDialogue dialoguescript;
-    public GameObject scriptObject;
 
     
     
@@ -32,7 +30,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         instance = this;
-        dialoguescript = scriptObject.GetComponent<TriggerDialogue>();
+        dialoguescript = GameObject.FindGameObjectWithTag("Dialoguetriggers").GetComponent<TriggerDialogue>();
 
         Percentage1.text = "0%";
         Percentage2.text = "0%";
@@ -55,14 +53,6 @@ public class GameManager : MonoBehaviour
         if(questTwoPartTwo){
             Percentage2.text = "50%";
         }
-
-        if(dialoguescript.dialogue){
-            dialogon = true;
-        }
-        if(!dialoguescript.dialogue){
-            dialogon = false;
-        }
-
         if(questTwoPartThree){
             Percentage2.text = "75%";
         }

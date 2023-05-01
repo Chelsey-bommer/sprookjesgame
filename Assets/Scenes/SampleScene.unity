@@ -1577,7 +1577,6 @@ MonoBehaviour:
   questTwo: 0
   questTwoPartOne: 0
   questTwoPartTwo: 0
-  dialogon: 0
   questTwoPartThree: 0
   questTwoPartFour: 0
   questThree: 0
@@ -1588,7 +1587,6 @@ MonoBehaviour:
   Percentage2: {fileID: 394842269}
   Percentage3: {fileID: 1926670776}
   dialoguescript: {fileID: 527821552}
-  scriptObject: {fileID: 527821545}
 --- !u!4 &213925332
 Transform:
   m_ObjectHideFlags: 0
