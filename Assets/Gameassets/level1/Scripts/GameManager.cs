@@ -30,10 +30,12 @@ public class GameManager : MonoBehaviour
     public bool dialogue2 = false;
     public bool dialogue3 = false;
     public bool dialogue4 = false;
+     public bool dialogue5 = false;
     public bool touchDialogue = false;
     public bool touchDialogue2 = false;
     public bool touchDialogue3 = false;
     public bool touchDialogue4 = false;
+    public bool touchDialogue5 = false;
 
     
     
@@ -45,7 +47,6 @@ public class GameManager : MonoBehaviour
 
         Percentage1.text = "0%";
         Percentage2.text = "0%";
-        touchDialogue = true;
     }
 
     
@@ -63,10 +64,6 @@ public class GameManager : MonoBehaviour
         }
         if(questTwoPartTwo){
             Percentage2.text = "50%";
-        }
-
-        if(questTwoPartOne && questTwoPartTwo){
-           touchDialogue2 = true;
         }
 
         if(questTwoPartThree){

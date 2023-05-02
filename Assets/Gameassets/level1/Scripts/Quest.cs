@@ -50,14 +50,17 @@ public class Quest : MonoBehaviour
         if (gameObject.name.Contains("WoundedFriend"))
         {
             GameManager.instance.touchDialogue = true;
-            dialoguescript.cheese();
+            if(GameManager.instance.questOne == false){
+                dialoguescript.dialogue1();
+            }
             if (GameManager.instance.dialogue1)
             {
                 GameManager.instance.questOne = true;
                 FinishQuest();
             }
-            GameManager.instance.touchDialogue = false;
+            
         }
+        
 
         //////////////////Quest 2:
         // Part one: Locate hole
@@ -84,7 +87,9 @@ public class Quest : MonoBehaviour
         {
 
            GameManager.instance.touchDialogue2 = true;
-           dialoguescript.cheese();
+           if(GameManager.instance.questTwoPartThree == false){
+                dialoguescript.dialogue2();
+            }
 
             if (GameManager.instance.dialogue2)
             {
@@ -92,7 +97,6 @@ public class Quest : MonoBehaviour
                 childText3.color = Color.magenta;
 
             }
-            GameManager.instance.touchDialogue2 = false;
         }
         //Part four: Replace the wall
         if(gameObject.name.Contains("Fence") && GameManager.instance.questTwoPartOne
@@ -117,8 +121,11 @@ public class Quest : MonoBehaviour
         // Task one: Talk to the parents
         if (gameObject.name.Contains("Parent"))
         {   
-            
-            if (GameManager.instance.touchDialogue)
+            GameManager.instance.touchDialogue3 = true;
+            if(GameManager.instance.questThreePartOne == false){
+                dialoguescript.dialogue3();
+            }
+            if (GameManager.instance.touchDialogue3)
             {
                 GameManager.instance.questThreePartOne = true;
                 childText.color = Color.magenta;
@@ -128,11 +135,12 @@ public class Quest : MonoBehaviour
         // Task two: Talk to the postguard
         if (gameObject.name.Contains("Postguard") && GameManager.instance.questThreePartOne == true)
         {
-            if(GameManager.instance.questThreePartOne == true){
-                GameManager.instance.touchDialogue2 = true;
+            GameManager.instance.touchDialogue4 = true;
+            if(GameManager.instance.questThreePartTwo == false){
+                dialoguescript.dialogue4();
             }
 
-            if (GameManager.instance.dialogue1)
+            if (GameManager.instance.touchDialogue4)
             {
                 GameManager.instance.questThreePartTwo = true;
                 childText.color = Color.magenta;
@@ -143,10 +151,9 @@ public class Quest : MonoBehaviour
         {
 
 
-            if (GameManager.instance.dialogue1)
-            {
-                GameManager.instance.questThreePartThree = true;
-
+            GameManager.instance.touchDialogue5 = true;
+            if(GameManager.instance.questThreePartThree == false){
+                dialoguescript.dialogue5();
             }
             if (GameManager.instance.questThree)
             {

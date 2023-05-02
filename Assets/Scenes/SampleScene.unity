@@ -1592,10 +1592,12 @@ MonoBehaviour:
   dialogue2: 0
   dialogue3: 0
   dialogue4: 0
+  dialogue5: 0
   touchDialogue: 0
   touchDialogue2: 0
   touchDialogue3: 0
   touchDialogue4: 0
+  touchDialogue5: 0
 --- !u!4 &213925332
 Transform:
   m_ObjectHideFlags: 0
@@ -2616,6 +2618,7 @@ MonoBehaviour:
   DialogueBox2: {fileID: 1062346163}
   DialogueBox3: {fileID: 836571962}
   DialogueBox4: {fileID: 296873754}
+  DialogueBox5: {fileID: 840476640}
 --- !u!1001 &344153084
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4317,6 +4320,7 @@ MonoBehaviour:
   DialogueBox2: {fileID: 1062346163}
   DialogueBox3: {fileID: 836571962}
   DialogueBox4: {fileID: 296873754}
+  DialogueBox5: {fileID: 840476640}
 --- !u!1 &565278766
 GameObject:
   m_ObjectHideFlags: 0
@@ -4784,6 +4788,7 @@ MonoBehaviour:
   DialogueBox2: {fileID: 1062346163}
   DialogueBox3: {fileID: 836571962}
   DialogueBox4: {fileID: 296873754}
+  DialogueBox5: {fileID: 840476640}
 --- !u!224 &629408072 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1623978532943002205, guid: 03caa69b2ac253c45872781820508483,
@@ -6557,6 +6562,7 @@ MonoBehaviour:
   DialogueBox2: {fileID: 1062346163}
   DialogueBox3: {fileID: 836571962}
   DialogueBox4: {fileID: 296873754}
+  DialogueBox5: {fileID: 840476640}
 --- !u!114 &777710444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12489,6 +12495,7 @@ MonoBehaviour:
   DialogueBox2: {fileID: 1062346163}
   DialogueBox3: {fileID: 836571962}
   DialogueBox4: {fileID: 296873754}
+  DialogueBox5: {fileID: 840476640}
 --- !u!114 &1743225359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12523,7 +12530,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1743225357}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}

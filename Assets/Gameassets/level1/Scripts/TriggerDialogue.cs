@@ -8,6 +8,7 @@ public class TriggerDialogue : MonoBehaviour
     public GameObject DialogueBox2;
     public GameObject DialogueBox3;
     public GameObject DialogueBox4;
+    public GameObject DialogueBox5;
 
 
 
@@ -18,49 +19,56 @@ public class TriggerDialogue : MonoBehaviour
       DialogueBox2.SetActive(false);
       DialogueBox3.SetActive(false);
       DialogueBox4.SetActive(false);
+      DialogueBox5.SetActive(false);
 
     }
 
  
 
-    public void cheese()
+    public void dialogue1()
     {
 
         if (GameManager.instance.touchDialogue == true) //aanraking boolean
         {
             DialogueBox1.SetActive(true);
             GameManager.instance.dialogue1 = true; //active conversation boolean
-        }
+        } 
+    }
 
+    public void dialogue2(){
         if (GameManager.instance.touchDialogue2 == true) //aanraking boolean
         {
             DialogueBox2.SetActive(true);
             GameManager.instance.dialogue2 = true; //active conversation boolean
         }
-
-        if (GameManager.instance.touchDialogue3 == true) //aanraking boolean
-        {
-            DialogueBox2.SetActive(true);
-            GameManager.instance.dialogue3 = true; //active conversation boolean
-        }
-
-        if (GameManager.instance.touchDialogue4 == true) //aanraking boolean
-        {
-            DialogueBox2.SetActive(true);
-            GameManager.instance.dialogue4 = true; //active conversation boolean
-        }
-
-      //   if (GameManager.instance.dialogue2 == true)
-      //   {
-      //       DialogueBox.SetActive(true);
-      //   }
-
-      //   if (GameManager.instance.dialogue3 == true)
-      //   {
-      //       DialogueBox.SetActive(true);
-      //   }
-
     }
 
 
+    public void dialogue3(){
+        if (GameManager.instance.touchDialogue3 == true) //aanraking boolean
+        {
+            DialogueBox3.SetActive(true);
+            GameManager.instance.dialogue3 = true; //active conversation boolean
+        }
+     }
+
+     public void dialogue4(){
+         if (GameManager.instance.touchDialogue4 == true) //aanraking boolean
+        {
+            DialogueBox4.SetActive(true);
+            GameManager.instance.dialogue4 = true; //active conversation boolean
+        }
+     }
+
+      public void dialogue5(){
+         if (GameManager.instance.touchDialogue5 == true) //aanraking boolean
+        {
+            DialogueBox5.SetActive(true);
+            GameManager.instance.dialogue5 = true; //active conversation boolean
+        }
+     }
+
 }
+
+
+
