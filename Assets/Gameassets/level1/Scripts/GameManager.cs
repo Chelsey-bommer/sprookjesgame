@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public bool questTwoPartFour = false;
     public bool questThree = false;
     public bool questThreePartOne = false;
+    public bool contact = false;
     public bool questThreePartTwo = false;
     public bool questThreePartThree = false;
 
@@ -25,9 +26,14 @@ public class GameManager : MonoBehaviour
     private TriggerDialogue dialoguescript;
     public GameObject scriptObject;
 
-    public bool dialogue = false;
+    public bool dialogue1 = false;
     public bool dialogue2 = false;
-     public bool dialogue3 = false;
+    public bool dialogue3 = false;
+    public bool dialogue4 = false;
+    public bool touchDialogue = false;
+    public bool touchDialogue2 = false;
+    public bool touchDialogue3 = false;
+    public bool touchDialogue4 = false;
 
     
     
@@ -39,7 +45,7 @@ public class GameManager : MonoBehaviour
 
         Percentage1.text = "0%";
         Percentage2.text = "0%";
-        
+        touchDialogue = true;
     }
 
     
@@ -51,7 +57,7 @@ public class GameManager : MonoBehaviour
             Percentage1.text = "100%";
         }
 
-        // Quest 2
+        ///////////////////////////////////////// Quest 2
         if(questTwoPartOne){
             Percentage2.text = "25%";
         }
@@ -60,7 +66,7 @@ public class GameManager : MonoBehaviour
         }
 
         if(questTwoPartOne && questTwoPartTwo){
-            dialogue = true;
+           touchDialogue2 = true;
         }
 
         if(questTwoPartThree){
@@ -74,8 +80,10 @@ public class GameManager : MonoBehaviour
             questTwo = true;
         }
 
+        /////////////////////////////////////
+
         if(questThreePartOne == true){
-            Percentage3.text = "33%";
+            Percentage3.text = "33%";  
             
         }
 

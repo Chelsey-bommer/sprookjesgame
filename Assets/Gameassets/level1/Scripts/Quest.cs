@@ -43,23 +43,24 @@ public class Quest : MonoBehaviour
         findWood = GameObject.FindGameObjectWithTag("Wood");
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
 
         //////////// Quest 1: Talk to this guy
         if (gameObject.name.Contains("WoundedFriend"))
         {
-            GameManager.instance.dialogue = true;
-            if (GameManager.instance.dialogue)
+            GameManager.instance.touchDialogue = true;
+            dialoguescript.cheese();
+            if (GameManager.instance.dialogue1)
             {
                 GameManager.instance.questOne = true;
                 FinishQuest();
             }
+            GameManager.instance.touchDialogue = false;
         }
 
         //////////////////Quest 2:
         // Part one: Locate hole
-
         if (gameObject.name.Contains("Hole"))
         {
             GameManager.instance.questTwoPartOne = true;
@@ -82,13 +83,16 @@ public class Quest : MonoBehaviour
         if (gameObject.name.Contains("Carpenter") && GameManager.instance.questTwoPartOne && GameManager.instance.questTwoPartTwo)
         {
 
-            
-            if (GameManager.instance.dialogue)
+           GameManager.instance.touchDialogue2 = true;
+           dialoguescript.cheese();
+
+            if (GameManager.instance.dialogue2)
             {
                 GameManager.instance.questTwoPartThree = true;
                 childText3.color = Color.magenta;
 
             }
+            GameManager.instance.touchDialogue2 = false;
         }
         //Part four: Replace the wall
         if(gameObject.name.Contains("Fence") && GameManager.instance.questTwoPartOne
@@ -112,23 +116,23 @@ public class Quest : MonoBehaviour
         ///////////////Quest 3: Find the lost kid
         // Task one: Talk to the parents
         if (gameObject.name.Contains("Parent"))
-        {
-            GameManager.instance.dialogue2 = true;
-
-            if (GameManager.instance.dialogue2)
+        {   
+            
+            if (GameManager.instance.touchDialogue)
             {
                 GameManager.instance.questThreePartOne = true;
                 childText.color = Color.magenta;
-                GameManager.instance.dialogue3 = false;
             }
         }
 
         // Task two: Talk to the postguard
         if (gameObject.name.Contains("Postguard") && GameManager.instance.questThreePartOne == true)
         {
-            GameManager.instance.dialogue3 = true;
+            if(GameManager.instance.questThreePartOne == true){
+                GameManager.instance.touchDialogue2 = true;
+            }
 
-            if (GameManager.instance.dialogue3)
+            if (GameManager.instance.dialogue1)
             {
                 GameManager.instance.questThreePartTwo = true;
                 childText.color = Color.magenta;
@@ -139,7 +143,7 @@ public class Quest : MonoBehaviour
         {
 
 
-            if (GameManager.instance.dialogue2)
+            if (GameManager.instance.dialogue1)
             {
                 GameManager.instance.questThreePartThree = true;
 
@@ -163,7 +167,6 @@ public class Quest : MonoBehaviour
 
     public void FinishQuest()
     {
-        //FinishTask();
         questItem.color = completedColor;
         currentColor = completedColor;
         questItem.GetComponent<Button>().interactable = false;  //set quest inactive when completed
