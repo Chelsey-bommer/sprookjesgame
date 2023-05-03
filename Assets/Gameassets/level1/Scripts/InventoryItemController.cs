@@ -9,6 +9,8 @@ public class InventoryItemController : MonoBehaviour
     public Button RemoveButton;
     public GameObject myPrefab;
 
+    
+
     private Transform playerPos;
     private float dropOffset = 1f;
     void Start()
@@ -25,6 +27,8 @@ public class InventoryItemController : MonoBehaviour
         }
         if(item.name == "Arrows"){
             Instantiate(myPrefab, playerPos.position + playerPos.forward * dropOffset, Quaternion.identity);
+            // change position
+            GameManager.instance.arrowsDropped = true;
         }
         Destroy(gameObject);
 
