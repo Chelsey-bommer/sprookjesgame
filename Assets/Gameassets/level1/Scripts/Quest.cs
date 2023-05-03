@@ -99,7 +99,7 @@ public class Quest : MonoBehaviour
             }
         }
         //Part four: Replace the wall
-        if(gameObject.name.Contains("Fence") && GameManager.instance.questTwoPartOne
+        if(gameObject.name.Contains("Fence") /* HOLE???? */ && GameManager.instance.questTwoPartOne
         && GameManager.instance.questTwoPartTwo && GameManager.instance.questTwoPartThree)
         {
 
