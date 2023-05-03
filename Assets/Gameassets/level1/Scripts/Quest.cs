@@ -103,6 +103,7 @@ public class Quest : MonoBehaviour
         && GameManager.instance.questTwoPartTwo && GameManager.instance.questTwoPartThree)
         {
 
+            ////////////////// REMOVE ITEMS FROM INVENTORY?????????
 
             if (Input.GetKey(KeyCode.R))
             {
@@ -150,14 +151,29 @@ public class Quest : MonoBehaviour
         if (gameObject.name.Contains("Kid") && GameManager.instance.questThreePartOne && GameManager.instance.questThreePartTwo)
         {
 
-
             GameManager.instance.touchDialogue5 = true;
             if(GameManager.instance.questThreePartThree == false){
                 dialoguescript.dialogue5();
             }
+
             if (GameManager.instance.questThree)
             {
                 FinishQuest();
+            }
+        }
+
+        //////////////////// Quest Four: Resupply the arrows
+        // Part one: Talk to fletcher to get arrows
+        if(gameObject.name.Contains("Fletcher")){
+
+            GameManager.instance.touchDialogue6 = true;
+            if(GameManager.instance.questFourPartOne == false){
+                dialoguescript.dialogue6();
+            }
+
+            if (GameManager.instance.touchDialogue6){
+                GameManager.instance.questFourPartOne = true;
+                childText.color = Color.magenta;
             }
         }
 

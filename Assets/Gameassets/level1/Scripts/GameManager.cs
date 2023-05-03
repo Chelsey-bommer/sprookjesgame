@@ -19,6 +19,9 @@ public class GameManager : MonoBehaviour
     public bool contact = false;
     public bool questThreePartTwo = false;
     public bool questThreePartThree = false;
+    public bool questFour = false;
+    public bool questFourPartOne = false;
+    public bool questFourPartTwo = false;
 
     public TMP_Text Percentage1;
     public TMP_Text Percentage2;
@@ -30,12 +33,14 @@ public class GameManager : MonoBehaviour
     public bool dialogue2 = false;
     public bool dialogue3 = false;
     public bool dialogue4 = false;
-     public bool dialogue5 = false;
+    public bool dialogue5 = false;
+    public bool dialogue6 = false;
     public bool touchDialogue = false;
     public bool touchDialogue2 = false;
     public bool touchDialogue3 = false;
     public bool touchDialogue4 = false;
     public bool touchDialogue5 = false;
+    public bool touchDialogue6 = false;
 
     
     
