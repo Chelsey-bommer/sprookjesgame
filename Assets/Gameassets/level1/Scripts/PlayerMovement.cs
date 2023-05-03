@@ -9,19 +9,22 @@ public class PlayerMovement : MonoBehaviour
     private float verticalInput;
     private Rigidbody rb;
     private SpriteRenderer sprite;
+    private Animator anim;
     public float movementSpeed = 2f;
     [SerializeField] private LayerMask WhatIsGround;
     [SerializeField] private AnimationCurve animCurve;
     [SerializeField] private float time;
 
     public float drag;
-    
+    enum MovementState { idle, running, jumping, falling, backward, forward };
+
 
     void Start()
     {
 
         rb = GetComponent<Rigidbody>();
         sprite = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
         // This will stop the player game object from rotating
         rb.freezeRotation = true;
     }
@@ -37,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 movementDirection = Vector3.forward * verticalInput + transform.right * horizontalInput;
         // Move the player
         rb.AddForce(movementDirection * movementSpeed, ForceMode.Force);
-        
+
         // Apply drag
         rb.drag = drag;
 
@@ -47,14 +50,54 @@ public class PlayerMovement : MonoBehaviour
 
     void UpdateAnimation()
     {
+        MovementState state;
+        //side to side walking
         if (horizontalInput > 0.1f)
         {
+            state = MovementState.running;
             sprite.flipX = false;
         }
         else if (horizontalInput < 0f)
         {
+            state = MovementState.running;
             sprite.flipX = true;
         }
+        else
+        {
+            state = MovementState.idle;
+            //anim.SetBool("walking", false);
+
+        }
+        //backwards walking
+        if (verticalInput > 0.1f)
+        {
+            state = MovementState.backward;
+
+            if (horizontalInput > 0.1f)
+            {
+                sprite.flipX = true;
+            }
+            else if (horizontalInput < 0f)
+            {
+                sprite.flipX = false;
+            }
+        }
+        if (verticalInput < 0f)
+        {
+            state = MovementState.forward;
+
+            // if (horizontalInput > 0.1f)
+            // {
+            //     sprite.flipX = true;
+            // }
+            // else if (horizontalInput < 0f)
+            // {
+            //     sprite.flipX = false;
+            // }
+        }
+
+
+        anim.SetInteger("state", (int)state);
     }
 
 

@@ -23,6 +23,9 @@ public class InventoryItemController : MonoBehaviour
         if(item.name == "ToDoList"){
             Instantiate(myPrefab, playerPos.position + playerPos.forward * dropOffset, Quaternion.identity);
         }
+        if(item.name == "Arrows"){
+            Instantiate(myPrefab, playerPos.position + playerPos.forward * dropOffset, Quaternion.identity);
+        }
         Destroy(gameObject);
 
         

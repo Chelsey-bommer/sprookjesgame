@@ -6,11 +6,12 @@ TagManager:
   tags:
   - Collectible1
   - Dialoguetriggers
+  - Wood
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - UI 2
   - Water
   - UI
   - terrain
