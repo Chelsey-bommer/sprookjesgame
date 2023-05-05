@@ -8,14 +8,10 @@ public class Quest : MonoBehaviour
 {
     // Quest list color and percentage logic
     public Image questItem;
-
     public Color completedColor;
     public Color activeColor;
-
     public Color currentColor;
-
     public TMP_Text percentage;
-
     public Quest[] allQuests;
 
     private TriggerDialogue dialoguescript;
