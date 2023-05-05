@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour
         Percentage2.text = "0%";
     }
 
-    
+   
     void Update()
     {
         //logic for quests
@@ -109,4 +109,11 @@ public class GameManager : MonoBehaviour
             Percentage4.text = "100%";    
         }
     }
+
+
+    //////// Level 2
+
+    public bool pickedUp = false;
+    public bool questOnePartOne = false;
+    public bool questOnePartTwo = false;
 }

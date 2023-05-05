@@ -5,10 +5,12 @@ using UnityEngine;
 public class ItemPickup : MonoBehaviour
 {
     [SerializeField] public Item item;
-    void Pickup()
+  
+    private void Pickup()
     {
         InventoryManager.Instance.Add(item);  // Add item to Item list
         Destroy(gameObject);  // Make object disappear
+        GameManager.instance.pickedUp = true;
     }
 
     // Update is called once per fram
