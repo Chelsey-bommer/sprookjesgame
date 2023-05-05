@@ -113,7 +113,7 @@ public class PlayerMovement : MonoBehaviour
         if (Physics.Raycast(ray, out info, WhatIsGround))
         {
             RotationRef = Quaternion.Lerp(transform.rotation, Quaternion.FromToRotation(Vector3.up, info.normal), animCurve.Evaluate(time));
-            transform.rotation = Quaternion.Euler(45, transform.eulerAngles.y, RotationRef.eulerAngles.z);
-        }
+            transform.rotation = Quaternion.Euler(RotationRef.eulerAngles.x, transform.eulerAngles.y, RotationRef.eulerAngles.z);
+        }                                           //^^ 45
     }
 }
