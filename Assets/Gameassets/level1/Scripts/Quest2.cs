@@ -37,11 +37,12 @@ public class Quest2 : MonoBehaviour
     private void OnTriggerEnter(Collider other){
 
         ////////// Quest 1: Grab a pair of cups
-        // Task 1:
+        // Task 1: zie inventory item controller
 
 
-        // Task 2: 
-           //zie gamemanager r.115
+        // Task 2://zie gamemanager r.115
+        
+        // Task 3: zie inventory item controller
         
     }
 

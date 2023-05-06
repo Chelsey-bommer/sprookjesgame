@@ -7,10 +7,20 @@ public class PlayerMovement : MonoBehaviour
 
     private float horizontalInput;
     private float verticalInput;
+    private bool doJump;
+    private bool isGrounded;
+    private bool canDoubleJump;
+    public bool enableDoubleJump;
+    public Transform top_left;
+    public Transform bottom_right;
+    public LayerMask ground_layers;
+
+
     private Rigidbody rb;
     private SpriteRenderer sprite;
     private Animator anim;
     public float movementSpeed = 2f;
+    public float jumpingPower = 600f;
     [SerializeField] private LayerMask WhatIsGround;
     [SerializeField] private AnimationCurve animCurve;
     [SerializeField] private float time;
@@ -31,10 +41,29 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        Collider[] hitColliders = Physics.OverlapSphere(top_left.position, 2.5f, ground_layers);
+        bool isGrounded = hitColliders.Length > 0;
         // This will detect forward and backward movement
         horizontalInput = Input.GetAxis("Horizontal");
         // This will detect sideways movement
         verticalInput = Input.GetAxis("Vertical");
+
+        if (Input.GetButtonDown("Jump"))
+        {   //If jump button is pressed,
+            if (isGrounded)
+            {               // and player is on ground
+                doJump = true;              // player will jump (in FixedUpdate),
+                canDoubleJump = true;       // and player can double jump.
+            }
+            else if (enableDoubleJump)
+            {   //If jump button is pressed, player is not on ground, but double jump is enabled in inspector,
+                if (canDoubleJump)
+                {       // and player has not used double jump yet,
+                    doJump = true;          // player will jump again (in FixedUpdate),
+                    canDoubleJump = false;  // and cannot jump again until he touches ground.
+                }
+            }
+        }
 
         // Calculate the direction to move the player
         Vector3 movementDirection = Vector3.forward * verticalInput + transform.right * horizontalInput;
@@ -44,8 +73,21 @@ public class PlayerMovement : MonoBehaviour
         // Apply drag
         rb.drag = drag;
 
+        
+
         UpdateAnimation();
         SurfaceAlignment();
+    }
+
+    void FixedUpdate(){
+
+        if (doJump)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, 0);    //Set upwards velocity to 0 to prevent double jump from jumping very high
+            rb.AddForce(new Vector2(0, jumpingPower));  //Apply upwards force to player (jump)
+            doJump = false;
+            isGrounded = false;
+        }
     }
 
     void UpdateAnimation()
@@ -85,17 +127,14 @@ public class PlayerMovement : MonoBehaviour
         if (verticalInput < 0f)
         {
             state = MovementState.forward;
-
-            // if (horizontalInput > 0.1f)
-            // {
-            //     sprite.flipX = true;
-            // }
-            // else if (horizontalInput < 0f)
-            // {
-            //     sprite.flipX = false;
-            // }
         }
-
+        //jumping
+        if(rb.velocity.y > .1f){
+            state = MovementState.jumping;
+        }
+        else if(rb.velocity.y < -.1f){
+        	state = MovementState.falling;
+        }
 
         anim.SetInteger("state", (int)state);
     }
@@ -105,15 +144,24 @@ public class PlayerMovement : MonoBehaviour
     void SurfaceAlignment()
     {
 
-        Ray ray = new Ray(transform.position, -transform.up);
-        RaycastHit info = new RaycastHit();
-        Quaternion RotationRef = Quaternion.Euler(0, 0, 0);
+        // Ray ray = new Ray(transform.position, -transform.up);
+        // RaycastHit info = new RaycastHit();
+        // Quaternion RotationRef = Quaternion.Euler(0, 0, 0);
 
 
-        if (Physics.Raycast(ray, out info, WhatIsGround))
-        {
-            RotationRef = Quaternion.Lerp(transform.rotation, Quaternion.FromToRotation(Vector3.up, info.normal), animCurve.Evaluate(time));
-            transform.rotation = Quaternion.Euler(RotationRef.eulerAngles.x, transform.eulerAngles.y, RotationRef.eulerAngles.z);
-        }                                           //^^ 45
+        // if (Physics.Raycast(ray, out info, WhatIsGround))
+        // {
+        //     RotationRef = Quaternion.Lerp(transform.rotation, Quaternion.FromToRotation(Vector3.up, info.normal), animCurve.Evaluate(time));
+        //     transform.rotation = Quaternion.Euler(RotationRef.eulerAngles.x, transform.eulerAngles.y, RotationRef.eulerAngles.z);
+        // }                                           //^^ 45
+    }
+
+
+    void OnDrawGizmosSelected(){
+            // Draw a semitransparent red cube at the transforms position
+            Gizmos.color = new Color(1, 0, 0, 0.5f);
+            //Vector3 gizmoPosition = new Vector3(bottom_right.position.x + top_left.position.x, top_left.position.y, top_left.position.z);
+            Vector3 gizmoPosition = (bottom_right.position + top_left.position) / 2;
+            Gizmos.DrawCube(gizmoPosition, new Vector3(Mathf.Abs(bottom_right.position.x - top_left.position.x), Mathf.Abs(top_left.position.y - bottom_right.position.y), 1));
     }
 }
