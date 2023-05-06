@@ -3392,6 +3392,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1887546268513660209, guid: 600d5299473f5344d99984267c04467a,
         type: 3}
+      propertyPath: bottom_right
+      value: 
+      objectReference: {fileID: 1133806205}
+    - target: {fileID: 1887546268513660209, guid: 600d5299473f5344d99984267c04467a,
+        type: 3}
       propertyPath: jumpingPower
       value: 614.89
       objectReference: {fileID: 0}
@@ -3463,12 +3468,12 @@ PrefabInstance:
     - target: {fileID: 6919715200323346814, guid: 600d5299473f5344d99984267c04467a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.18
+      value: 0.117
       objectReference: {fileID: 0}
     - target: {fileID: 6919715200323346814, guid: 600d5299473f5344d99984267c04467a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.63
+      value: -0.683
       objectReference: {fileID: 0}
     - target: {fileID: 9153718042188226410, guid: 600d5299473f5344d99984267c04467a,
         type: 3}
@@ -5935,6 +5940,7 @@ GameObject:
   - component: {fileID: 529868673}
   - component: {fileID: 529868672}
   - component: {fileID: 529868671}
+  - component: {fileID: 529868674}
   m_Layer: 0
   m_Name: Mand
   m_TagString: Untagged
@@ -6020,6 +6026,31 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 529868669}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &529868674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529868669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 625d03e7f5ee955499bb13c335253f0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questItem: {fileID: 1831123144}
+  completedColor: {r: 0.12312651, g: 1, b: 0, a: 1}
+  activeColor: {r: 1, g: 0.920928, b: 0, a: 1}
+  currentColor: {r: 1, g: 0.95660377, b: 0.95660377, a: 1}
+  percentage: {fileID: 1831123143}
+  allQuests: []
+  scriptObject: {fileID: 1012443344}
+  scriptObject2: {fileID: 1525925041}
+  child: {fileID: 1703074143}
+  childText: {fileID: 1796486986}
+  childText2: {fileID: 204284946}
+  childText3: {fileID: 1754598510}
+  childText4: {fileID: 247466768}
 --- !u!1001 &592817871
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11364,6 +11395,12 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1132012804}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1133806205 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6919715200323346814, guid: 600d5299473f5344d99984267c04467a,
+    type: 3}
+  m_PrefabInstance: {fileID: 284050093}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1135854817
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14947,6 +14984,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1524511164}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1525925041 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2560288404871882206, guid: 9dd527f7e70ec8c45a628fee1fe90223,
+    type: 3}
+  m_PrefabInstance: {fileID: 1605837714}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1526549967
 GameObject:
   m_ObjectHideFlags: 0
@@ -16816,7 +16859,8 @@ MonoBehaviour:
   touchDialogue5: 0
   touchDialogue6: 0
   touchDialogue7: 0
-  pickedUp: 0
+  ladderDropped: 0
+  cupsDropped: 0
   questOnePartOne: 0
   questOnePartTwo: 0
 --- !u!4 &1686571846
@@ -22494,3 +22538,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Item: {fileID: 11400000, guid: 09593343a33c11f479d6a297379e9a7b, type: 2}
+--- !u!114 &4323795139989601149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1095120019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 625d03e7f5ee955499bb13c335253f0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questItem: {fileID: 1831123144}
+  completedColor: {r: 0.12312651, g: 1, b: 0, a: 1}
+  activeColor: {r: 1, g: 0.920928, b: 0, a: 1}
+  currentColor: {r: 1, g: 0.95660377, b: 0.95660377, a: 1}
+  percentage: {fileID: 1831123143}
+  allQuests: []
+  scriptObject: {fileID: 1012443344}
+  scriptObject2: {fileID: 1525925041}
+  child: {fileID: 1703074143}
+  childText: {fileID: 1796486986}
+  childText2: {fileID: 204284946}
+  childText3: {fileID: 1754598510}
+  childText4: {fileID: 247466768}

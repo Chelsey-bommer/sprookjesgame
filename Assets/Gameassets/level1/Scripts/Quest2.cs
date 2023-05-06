@@ -37,16 +37,22 @@ public class Quest2 : MonoBehaviour
     private void OnTriggerEnter(Collider other){
 
         ////////// Quest 1: Grab a pair of cups
-        // Task 1: zie inventory item controller
+        // Task 1: move ladder -- zie inventory item controller
 
 
-        // Task 2://zie gamemanager r.115
+        // Task 2: grab cups -- //zie gamemanager r.115
         
-        // Task 3: zie inventory item controller
+        // Task 3: put cups in basket -- zie inventory item controller
         
     }
 
-        public void FinishQuest()
+    public void Update(){
+        if(GameManager.instance.questOne){
+            FinishQuest();
+        }
+    }
+
+    public void FinishQuest()
     {
         questItem.color = completedColor;
         currentColor = completedColor;

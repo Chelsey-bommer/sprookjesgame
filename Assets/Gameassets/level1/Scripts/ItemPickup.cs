@@ -10,7 +10,6 @@ public class ItemPickup : MonoBehaviour
     {
         InventoryManager.Instance.Add(item);  // Add item to Item list
         Destroy(gameObject);  // Make object disappear
-        GameManager.instance.pickedUp = true;
     }
 
     // Update is called once per fram

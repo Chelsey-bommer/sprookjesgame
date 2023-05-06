@@ -112,18 +112,26 @@ public class GameManager : MonoBehaviour
 
         //////// Level 2
 
-        if(pickedUp){
+        if(cupsDropped){
+            questOnePartOne = true; 
+        }
+        if(ladderDropped){
             questOnePartTwo = true; 
         }
-        if(questOnePartTwo == true){
-            Percentage1.text = "66%";
+        if(questOnePartOne){
+            Percentage1.text = "50%";
         }
+        if(questOnePartOne && questOnePartTwo){
+            questOne = true;
+        }
+
     }
 
 
     //////// Level 2
 
-    public bool pickedUp = false;
+    public bool ladderDropped = false;
+    public bool cupsDropped = false;
     public bool questOnePartOne = false;
     public bool questOnePartTwo = false;
 
