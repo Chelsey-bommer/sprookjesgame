@@ -7,7 +7,10 @@ public class InventoryItemController : MonoBehaviour
 {
     Item item;
     public Button RemoveButton;
-    public GameObject myPrefab;
+    public GameObject myPrefabList;
+    public GameObject myPrefabArrows;
+    public GameObject myPrefabCups;
+    public GameObject myPrefabLadder;
 
     
 
@@ -23,17 +26,25 @@ public class InventoryItemController : MonoBehaviour
     {
         InventoryManager.Instance.Remove(item);
         if(item.name == "ToDoList"){
-            Instantiate(myPrefab, playerPos.position + playerPos.forward * dropOffset, Quaternion.identity);
+            Instantiate(myPrefabList, playerPos.position + playerPos.forward * dropOffset, Quaternion.identity);
         }
         if(item.name == "Arrows"){
-            Instantiate(myPrefab, playerPos.position + playerPos.forward * dropOffset, Quaternion.identity);
+            Instantiate(myPrefabArrows, playerPos.position + playerPos.forward * dropOffset, Quaternion.identity);
             // change position
             GameManager.instance.arrowsDropped = true;
         }
-        if(item.name == "Cups"){
-            Instantiate(myPrefab, new Vector3(335, -105, 700), Quaternion.identity);
+
+
+        if(item.name == "Ladder"){
+            Instantiate(myPrefabLadder, new Vector3(346, -105, 700), Quaternion.identity);
             // change position
-            GameManager.instance.arrowsDropped = true;
+            
+        }
+
+        if(item.name == "Cups"){
+            Instantiate(myPrefabCups, new Vector3(335, -105, 700), Quaternion.identity);
+            // change position
+            
         }
         Destroy(gameObject);
 
