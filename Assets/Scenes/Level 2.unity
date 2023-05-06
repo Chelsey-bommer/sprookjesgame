@@ -6045,7 +6045,7 @@ MonoBehaviour:
   percentage: {fileID: 1831123143}
   allQuests: []
   scriptObject: {fileID: 1012443344}
-  scriptObject2: {fileID: 1525925041}
+  scriptObject2: {fileID: 2059777657}
   child: {fileID: 1703074143}
   childText: {fileID: 1796486986}
   childText2: {fileID: 204284946}
@@ -9464,7 +9464,6 @@ GameObject:
   - component: {fileID: 1012443348}
   - component: {fileID: 1012443347}
   - component: {fileID: 1012443346}
-  - component: {fileID: 1012443345}
   m_Layer: 0
   m_Name: WoundedFriend
   m_TagString: Dialoguetriggers
@@ -9472,32 +9471,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1012443345
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1012443344}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6abcd4b232e546d4c8aca0faa05945eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questItem: {fileID: 1831123144}
-  completedColor: {r: 0.016892314, g: 1, b: 0, a: 1}
-  activeColor: {r: 1, g: 0.85695124, b: 0, a: 1}
-  currentColor: {r: 1, g: 1, b: 1, a: 1}
-  percentage: {fileID: 1831123143}
-  allQuests: []
-  scriptObject: {fileID: 1012443344}
-  child: {fileID: 1703074143}
-  childText: {fileID: 1796486986}
-  childText2: {fileID: 204284946}
-  childText3: {fileID: 1754598510}
-  childText4: {fileID: 247466768}
-  spriteRenderer: {fileID: 0}
-  newSprite: {fileID: 0}
 --- !u!114 &1012443346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14984,12 +14957,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1524511164}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1525925041 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2560288404871882206, guid: 9dd527f7e70ec8c45a628fee1fe90223,
-    type: 3}
-  m_PrefabInstance: {fileID: 1605837714}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1526549967
 GameObject:
   m_ObjectHideFlags: 0
@@ -19185,7 +19152,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1012443345}
+      objectReference: {fileID: 0}
     - target: {fileID: 5486772916312116285, guid: c90fd62be11f0224284a9e2adf0c93b8,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -22557,7 +22524,7 @@ MonoBehaviour:
   percentage: {fileID: 1831123143}
   allQuests: []
   scriptObject: {fileID: 1012443344}
-  scriptObject2: {fileID: 1525925041}
+  scriptObject2: {fileID: 2059777657}
   child: {fileID: 1703074143}
   childText: {fileID: 1796486986}
   childText2: {fileID: 204284946}

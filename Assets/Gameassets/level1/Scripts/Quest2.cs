@@ -38,19 +38,27 @@ public class Quest2 : MonoBehaviour
 
         ////////// Quest 1: Grab a pair of cups
         // Task 1: move ladder -- zie inventory item controller
-
-
         // Task 2: grab cups -- //zie gamemanager r.115
-        
         // Task 3: put cups in basket -- zie inventory item controller
         
+        
     }
 
-    public void Update(){
+   public void Update(){
+
         if(GameManager.instance.questOne){
-            FinishQuest();
+             FinishQuest();
         }
-    }
+        if(GameManager.instance.questTwo){
+             FinishQuest();
+        }
+        if(GameManager.instance.questThree){
+             FinishQuest();
+        }
+        if(GameManager.instance.questFour){
+             FinishQuest();
+        }
+   }
 
     public void FinishQuest()
     {

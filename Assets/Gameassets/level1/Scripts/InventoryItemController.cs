@@ -47,11 +47,19 @@ public class InventoryItemController : MonoBehaviour
 
         // if(item.name == "apples"){
         //     Instantiate(myPrefabApples, new Vector3(335, -105, 700), Quaternion.identity);
-        //     // change position 
+        //     // GameManager.instance.applesDropped = true;
         // }
-         // if(item.name == "Grapes"){
+        // if(item.name == "Grapes"){
         //     Instantiate(myPrefabApples, new Vector3(335, -105, 700), Quaternion.identity);
-        //     // change position 
+        //     GameManager.instance.grapesDropped = true;
+        // }
+        // if(item.name == "Cakes"){
+        //     Instantiate(myPrefabCakes, new Vector3(335, -105, 700), Quaternion.identity);
+        //     GameManager.instance.cakesDropped = true;
+        // }
+        // if(item.name == "dogfood"){
+        //     Instantiate(myPrefabDog, new Vector3(335, -105, 700), Quaternion.identity);
+        //     GameManager.instance.dogDropped = true;
         // }
         Destroy(gameObject);
 
