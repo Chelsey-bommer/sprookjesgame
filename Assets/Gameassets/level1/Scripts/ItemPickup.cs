@@ -6,7 +6,7 @@ public class ItemPickup : MonoBehaviour
 {
     [SerializeField] public Item item;
   
-    private void Pickup()
+    public void Pickup()
     {
         InventoryManager.Instance.Add(item);  // Add item to Item list
         Destroy(gameObject);  // Make object disappear

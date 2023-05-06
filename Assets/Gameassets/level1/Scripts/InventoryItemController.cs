@@ -30,6 +30,11 @@ public class InventoryItemController : MonoBehaviour
             // change position
             GameManager.instance.arrowsDropped = true;
         }
+        if(item.name == "Cups"){
+            Instantiate(myPrefab, new Vector3(335, -105, 700), Quaternion.identity);
+            // change position
+            GameManager.instance.arrowsDropped = true;
+        }
         Destroy(gameObject);
 
         

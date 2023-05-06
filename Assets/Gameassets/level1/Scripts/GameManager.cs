@@ -108,6 +108,16 @@ public class GameManager : MonoBehaviour
         if(questFour == true){
             Percentage4.text = "100%";    
         }
+
+
+        //////// Level 2
+
+        if(pickedUp){
+            questOnePartTwo = true; 
+        }
+        if(questOnePartTwo == true){
+            Percentage1.text = "66%";
+        }
     }
 
 
@@ -116,4 +126,7 @@ public class GameManager : MonoBehaviour
     public bool pickedUp = false;
     public bool questOnePartOne = false;
     public bool questOnePartTwo = false;
+
+
+  
 }

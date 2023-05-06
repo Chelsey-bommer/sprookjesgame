@@ -41,11 +41,8 @@ public class Quest2 : MonoBehaviour
 
 
         // Task 2: 
-        if(gameObject.name.Contains("Cups")){
-           if(GameManager.instance.pickedUp){
-             GameManager.instance.questOnePartTwo = true;
-           }
-        }
+           //zie gamemanager r.115
+        
     }
 
         public void FinishQuest()
