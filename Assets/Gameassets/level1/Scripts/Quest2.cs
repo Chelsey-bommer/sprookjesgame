@@ -40,6 +40,17 @@ public class Quest2 : MonoBehaviour
         // Task 1: move ladder -- zie inventory item controller
         // Task 2: grab cups -- //zie gamemanager r.115
         // Task 3: put cups in basket -- zie inventory item controller
+
+        if(gameObject.name.Contains("dog")){
+            //quest something voltooid
+        }
+
+        if(gameObject.name.Contains("path1")){
+            //quest something voltooid
+        }
+        if(gameObject.name.Contains("path2")){
+            //quest something voltooid
+        }
         
         
     }
