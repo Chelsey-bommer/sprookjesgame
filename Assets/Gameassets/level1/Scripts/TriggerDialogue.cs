@@ -10,6 +10,7 @@ public class TriggerDialogue : MonoBehaviour
     public GameObject DialogueBox4;
     public GameObject DialogueBox5;
     public GameObject DialogueBox6;
+    public GameObject DialogueBox7;
 
 
 
@@ -22,6 +23,7 @@ public class TriggerDialogue : MonoBehaviour
       DialogueBox4.SetActive(false);
       DialogueBox5.SetActive(false);
       DialogueBox6.SetActive(false);
+      DialogueBox7.SetActive(false);
 
     }
 
@@ -75,6 +77,13 @@ public class TriggerDialogue : MonoBehaviour
         {
             DialogueBox6.SetActive(true);
             GameManager.instance.dialogue6 = true; //active conversation boolean
+        }
+     }
+      public void dialogue7(){
+         if (GameManager.instance.touchDialogue7 == true) //aanraking boolean
+        {
+            DialogueBox7.SetActive(true);
+            GameManager.instance.dialogue7 = true; //active conversation boolean
         }
      }
 

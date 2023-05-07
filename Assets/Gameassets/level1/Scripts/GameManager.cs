@@ -22,10 +22,12 @@ public class GameManager : MonoBehaviour
     public bool questFour = false;
     public bool questFourPartOne = false;
     public bool questFourPartTwo = false;
+    public bool arrowsDropped = false;
 
     public TMP_Text Percentage1;
     public TMP_Text Percentage2;
     public TMP_Text Percentage3;
+    public TMP_Text Percentage4;
     private TriggerDialogue dialoguescript;
     public GameObject scriptObject;
 
@@ -35,12 +37,14 @@ public class GameManager : MonoBehaviour
     public bool dialogue4 = false;
     public bool dialogue5 = false;
     public bool dialogue6 = false;
+    public bool dialogue7 = false;
     public bool touchDialogue = false;
     public bool touchDialogue2 = false;
     public bool touchDialogue3 = false;
     public bool touchDialogue4 = false;
     public bool touchDialogue5 = false;
     public bool touchDialogue6 = false;
+    public bool touchDialogue7 = false;
 
     
     
@@ -54,7 +58,7 @@ public class GameManager : MonoBehaviour
         Percentage2.text = "0%";
     }
 
-    
+   
     void Update()
     {
         //logic for quests
@@ -96,5 +100,70 @@ public class GameManager : MonoBehaviour
         if(questThreePartOne && questThreePartTwo && questThreePartThree){
             questThree = true;
         }
+
+        ///////////////////
+        if(questFourPartOne == true){
+            Percentage4.text = "50%";    
+        }
+        if(questFour == true){
+            Percentage4.text = "100%";    
+        }
+
+
+        //////// Level 2
+
+        if(cupsDropped){
+            questOnePartTwo = true; 
+        }
+        if(ladderDropped){
+            questOnePartOne = true; 
+        }
+        if(questOnePartOne){
+            Percentage1.text = "50%";
+        }
+        if(questOnePartOne && questOnePartTwo){
+            questOne = true;
+            Percentage1.text = "100%";
+        }
+
+        //quest 2
+        if(applesDropped){
+            TwoPartOne = true; 
+        }
+        if(grapesDropped){
+            TwoPartTwo = true; 
+        }
+        if(TwoPartOne){
+            Percentage2.text = "50%";
+        }
+        if(TwoPartOne && TwoPartTwo){
+            questTwo = true;
+            Percentage1.text = "100%";
+        }
+        //quest 3
+        if(cakesDropped){
+            questThree = true; 
+        }
+        if(dogDropped){
+            questFour = true; 
+        }
     }
+
+
+    //////// Level 2
+
+    public bool ladderDropped = false;
+    public bool cupsDropped = false;
+    public bool applesDropped = false;
+    public bool grapesDropped = false;
+    public bool cakesDropped = false;
+    public bool dogDropped = false;
+    public bool questOnePartOne = false;
+    public bool questOnePartTwo = false;
+    
+    public bool TwoPartOne = false;
+    public bool TwoPartTwo = false;
+    
+
+  
 }

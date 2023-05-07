@@ -8,14 +8,10 @@ public class Quest : MonoBehaviour
 {
     // Quest list color and percentage logic
     public Image questItem;
-
     public Color completedColor;
     public Color activeColor;
-
     public Color currentColor;
-
     public TMP_Text percentage;
-
     public Quest[] allQuests;
 
     private TriggerDialogue dialoguescript;
@@ -99,7 +95,7 @@ public class Quest : MonoBehaviour
             }
         }
         //Part four: Replace the wall
-        if(gameObject.name.Contains("Fence") && GameManager.instance.questTwoPartOne
+        if(gameObject.name.Contains("Fence") /* HOLE???? */ && GameManager.instance.questTwoPartOne
         && GameManager.instance.questTwoPartTwo && GameManager.instance.questTwoPartThree)
         {
 
@@ -174,6 +170,22 @@ public class Quest : MonoBehaviour
             if (GameManager.instance.touchDialogue6){
                 GameManager.instance.questFourPartOne = true;
                 childText.color = Color.magenta;
+            }
+        }
+        // Part Two:Bring arrows to the guards post
+        if(gameObject.name.Contains("Guardspost")){
+            GameManager.instance.touchDialogue7 = true;
+            if(GameManager.instance.arrowsDropped && !GameManager.instance.questFourPartTwo){
+                dialoguescript.dialogue7();
+            }
+            if (GameManager.instance.touchDialogue7){
+                GameManager.instance.questFourPartTwo = true;
+                GameManager.instance.questFour = true;
+                childText.color = Color.magenta; 
+            }
+            if (GameManager.instance.questFour)
+            {
+                FinishQuest();
             }
         }
 
