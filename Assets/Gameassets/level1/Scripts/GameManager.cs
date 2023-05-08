@@ -99,6 +99,7 @@ public class GameManager : MonoBehaviour
 
         if(questThreePartOne && questThreePartTwo && questThreePartThree){
             questThree = true;
+            Percentage3.text = "100%";
         }
 
         ///////////////////

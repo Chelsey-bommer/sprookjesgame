@@ -94,6 +94,8 @@ public class Quest : MonoBehaviour
 
             }
         }
+
+        // SEE TRIGGERSTAY for part four
         
 
         /////////////////////Quest 3: Find the lost kid
@@ -132,6 +134,10 @@ public class Quest : MonoBehaviour
             GameManager.instance.touchDialogue5 = true;
             if(GameManager.instance.questThreePartThree == false){
                 dialoguescript.dialogue5();
+                
+            }
+            if (GameManager.instance.touchDialogue5){
+                GameManager.instance.questThreePartThree = true;
             }
 
             if (GameManager.instance.questThree)

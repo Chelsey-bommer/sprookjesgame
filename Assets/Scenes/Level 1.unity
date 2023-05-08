@@ -906,8 +906,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 1526431283}
   lines:
-  - Hello
-  - I think i saw the child over there
+  - 'You: Guard! I have an emergency. A couple of have lost their son, can you confirm
+    he has not left the town?'
+  - 'Guard: Negative sir, I''ve seen nobody other than the usual folks go through
+    that gate.'
+  - 'Guard: Although, I did hear some commotion near the back left of the town...'
+  - 'You: Good to know, great work.'
   textSpeed: 0
 --- !u!114 &81310925
 MonoBehaviour:
@@ -1110,8 +1114,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 1494558264}
   lines:
-  - Hello
-  - Where are my parents? help
+  - 'You: Hey there little man, I don''t think you''re supposed to be playing here.'
+  - 'Kid: Huh, but it''s so much fun here. Look I built a cool fort with all the
+    stuff here.'
+  - 'You: Oh lord of the castle, I come to tell you that your parents are looking
+    for you. They are very worried, you have to go home.'
+  - 'Kid: Ok sir, but can I play here again.'
+  - 'You: Haha, go ask your parents.'
   textSpeed: 0
 --- !u!114 &130216701
 MonoBehaviour:
@@ -5310,7 +5319,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 20
-  far clip plane: 3000
+  far clip plane: 10000
   field of view: 13.883755
   orthographic: 0
   orthographic size: 3
@@ -8837,6 +8846,8 @@ GameObject:
   - component: {fileID: 1030135964}
   - component: {fileID: 1030135968}
   - component: {fileID: 1030135965}
+  - component: {fileID: 1030135970}
+  - component: {fileID: 1030135969}
   m_Layer: 0
   m_Name: Postguard
   m_TagString: Untagged
@@ -8852,7 +8863,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1030135963}
   m_LocalRotation: {x: -0, y: 0.69745517, z: -0, w: 0.7166285}
-  m_LocalPosition: {x: -89.33, y: -2.31, z: 21}
+  m_LocalPosition: {x: -88.8, y: -2.31, z: 3.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8924,6 +8935,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1030135969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1030135963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4810533247c8a2f45b060031fa5e5bf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogueBox1: {fileID: 90949671}
+  DialogueBox2: {fileID: 612178288}
+  DialogueBox3: {fileID: 1682534312}
+  DialogueBox4: {fileID: 81310922}
+  DialogueBox5: {fileID: 130216698}
+  DialogueBox6: {fileID: 899513368}
+  DialogueBox7: {fileID: 977049272}
+--- !u!114 &1030135970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1030135963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6abcd4b232e546d4c8aca0faa05945eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questItem: {fileID: 1768123929}
+  completedColor: {r: 0.09862375, g: 1, b: 0, a: 1}
+  activeColor: {r: 1, g: 0.94317573, b: 0, a: 1}
+  currentColor: {r: 1, g: 1, b: 1, a: 1}
+  percentage: {fileID: 2140846178}
+  allQuests: []
+  scriptObject: {fileID: 1130137758}
+  child: {fileID: 2034642814}
+  childText: {fileID: 2066675}
+  childText2: {fileID: 1102132421}
+  childText3: {fileID: 410752853}
+  childText4: {fileID: 534564765}
+  spriteRenderer: {fileID: 0}
+  newSprite: {fileID: 0}
 --- !u!1 &1033150579
 GameObject:
   m_ObjectHideFlags: 0
@@ -11438,7 +11494,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1180456351}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 38.2, y: -3.3934631, z: 80.7}
+  m_LocalPosition: {x: 65, y: -3.3934631, z: 66.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16002,8 +16058,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 1946945267}
   lines:
-  - Help
-  - I have lost my child
+  - 'Worried Mother: Mr. Mayor! This is horrible! My husband and I went to the smith
+    to to have some farm tools repaired. '
+  - 'Worried Mother: Our son was with us but- *sob*'
+  - 'Farmer Dad: But we lost him. I''m scared, please don''t tell me he went into
+    the forest.'
+  - 'You: I will have a look and ask the guard.'
   textSpeed: 0
 --- !u!114 &1682534315
 MonoBehaviour:
@@ -17209,6 +17269,7 @@ Transform:
   - {fileID: 1090159615}
   - {fileID: 1158503550}
   - {fileID: 222901177}
+  - {fileID: 1878821261}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: -88.446, z: 0}
@@ -18112,6 +18173,104 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1874416846}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1878821260
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1878821261}
+  - component: {fileID: 1878821264}
+  - component: {fileID: 1878821263}
+  - component: {fileID: 1878821262}
+  m_Layer: 0
+  m_Name: villagewall (38)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1878821261
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1878821260}
+  m_LocalRotation: {x: -0, y: 0.712769, z: -0, w: 0.70139885}
+  m_LocalPosition: {x: -81.4, y: 2.1, z: 19.7}
+  m_LocalScale: {x: 20.02, y: 8.008, z: 8.008}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1762263021}
+  m_RootOrder: 30
+  m_LocalEulerAnglesHint: {x: 0, y: 90.921, z: 0}
+--- !u!64 &1878821262
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1878821260}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &1878821263
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1878821260}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 052dfe44e43d2664c91d8fce086611a3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1878821264
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1878821260}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1880317893
 PrefabInstance:
