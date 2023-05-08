@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9bc43fcbbdb1ae944bb6c9771fc0ac13
+guid: 392e2d34988bacd41b22500ff3b07f67
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -115,49 +115,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: MicrosoftTeams-image (26)_0
-      rect:
-        serializedVersion: 2
-        x: 84
-        y: 118
-        width: 866
-        height: 1752
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 78b5c2fcefdba714cb76da21b196fd3e
-      internalID: 445561378
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MicrosoftTeams-image (26)_1
-      rect:
-        serializedVersion: 2
-        x: 1035
-        y: 117
-        width: 866
-        height: 1753
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b0ba525f1b286164ab62d1949505e2b7
-      internalID: -1109898955
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -168,9 +126,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      MicrosoftTeams-image (26)_0: 445561378
-      MicrosoftTeams-image (26)_1: -1109898955
+    nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
