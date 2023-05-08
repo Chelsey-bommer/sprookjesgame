@@ -60,7 +60,7 @@ public class Quest : MonoBehaviour
 
         //////////////////Quest 2:
         // Part one: Locate hole
-        if (gameObject.name.Contains("Hole"))
+        if (gameObject.name.Contains("Hole") && !GameManager.instance.questTwoPartOne)
         {
             GameManager.instance.questTwoPartOne = true;
             childText.color = Color.magenta;
@@ -94,27 +94,9 @@ public class Quest : MonoBehaviour
 
             }
         }
-        //Part four: Replace the wall
-        if(gameObject.name.Contains("Fence") /* HOLE???? */ && GameManager.instance.questTwoPartOne
-        && GameManager.instance.questTwoPartTwo && GameManager.instance.questTwoPartThree)
-        {
+        
 
-            ////////////////// REMOVE ITEMS FROM INVENTORY?????????
-
-            if (Input.GetKey(KeyCode.R))
-            {
-                spriteRenderer.sprite = newSprite;
-                GameManager.instance.questTwoPartFour = true;
-                childText4.color = Color.magenta;
-            }
-
-            if (GameManager.instance.questTwo)
-            {
-                FinishQuest();
-            }
-        }
-
-        ///////////////Quest 3: Find the lost kid
+        /////////////////////Quest 3: Find the lost kid
         // Task one: Talk to the parents
         if (gameObject.name.Contains("Parent"))
         {   
@@ -190,6 +172,28 @@ public class Quest : MonoBehaviour
         }
 
 
+    }
+
+    public void OnTriggerStay(){
+        //Part four: Replace the wall
+        if(gameObject.name.Contains("Hole") /* HOLE???? */ && GameManager.instance.questTwoPartOne
+        && GameManager.instance.questTwoPartTwo && GameManager.instance.questTwoPartThree)
+        {
+
+            ////////////////// REMOVE ITEMS FROM INVENTORY?????????
+
+            if (Input.GetKey(KeyCode.R))
+            {
+                spriteRenderer.sprite = newSprite;
+                GameManager.instance.questTwoPartFour = true;
+                childText4.color = Color.magenta;
+            }
+
+            if (GameManager.instance.questTwo)
+            {
+                FinishQuest();
+            }
+        }
     }
 
     public void FinishTask()
