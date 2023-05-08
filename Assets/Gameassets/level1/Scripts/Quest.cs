@@ -127,24 +127,7 @@ public class Quest : MonoBehaviour
                 childText.color = Color.magenta;
             }
         }
-        // Task three: Find the kid
-        if (gameObject.name.Contains("Kid") && GameManager.instance.questThreePartOne && GameManager.instance.questThreePartTwo)
-        {
-
-            GameManager.instance.touchDialogue5 = true;
-            if(GameManager.instance.questThreePartThree == false){
-                dialoguescript.dialogue5();
-                
-            }
-            if (GameManager.instance.touchDialogue5){
-                GameManager.instance.questThreePartThree = true;
-            }
-
-            if (GameManager.instance.questThree)
-            {
-                FinishQuest();
-            }
-        }
+        
 
         //////////////////// Quest Four: Resupply the arrows
         // Part one: Talk to fletcher to get arrows
@@ -181,6 +164,7 @@ public class Quest : MonoBehaviour
     }
 
     public void OnTriggerStay(){
+        //////////////////////////////////// QUEST 2
         //Part four: Replace the wall
         if(gameObject.name.Contains("Hole") /* HOLE???? */ && GameManager.instance.questTwoPartOne
         && GameManager.instance.questTwoPartTwo && GameManager.instance.questTwoPartThree)
@@ -196,6 +180,27 @@ public class Quest : MonoBehaviour
             }
 
             if (GameManager.instance.questTwo)
+            {
+                FinishQuest();
+            }
+        }
+
+
+        ///////////////////////////////////////////// QUEST THREE
+        // Task three: Find the kid
+        if (gameObject.name.Contains("Kid") && GameManager.instance.questThreePartOne && GameManager.instance.questThreePartTwo)
+        {
+
+            GameManager.instance.touchDialogue5 = true;
+            if(GameManager.instance.questThreePartThree == false){
+                dialoguescript.dialogue5();
+                
+            }
+            if (GameManager.instance.touchDialogue5){
+                GameManager.instance.questThreePartThree = true; //altijd true?
+            }
+
+            if (GameManager.instance.questThree)
             {
                 FinishQuest();
             }
