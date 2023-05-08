@@ -157,11 +157,11 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-    void OnDrawGizmosSelected(){
-            // Draw a semitransparent red cube at the transforms position
-            Gizmos.color = new Color(1, 0, 0, 0.5f);
-            //Vector3 gizmoPosition = new Vector3(bottom_right.position.x + top_left.position.x, top_left.position.y, top_left.position.z);
-            Vector3 gizmoPosition = (bottom_right.position + top_left.position) / 2;
-            Gizmos.DrawCube(gizmoPosition, new Vector3(Mathf.Abs(bottom_right.position.x - top_left.position.x), Mathf.Abs(top_left.position.y - bottom_right.position.y), 1));
-    }
+    // void OnDrawGizmosSelected(){
+    //         // Draw a semitransparent red cube at the transforms position
+    //         Gizmos.color = new Color(1, 0, 0, 0.5f);
+    //         //Vector3 gizmoPosition = new Vector3(bottom_right.position.x + top_left.position.x, top_left.position.y, top_left.position.z);
+    //         Vector3 gizmoPosition = (bottom_right.position + top_left.position) / 2;
+    //         Gizmos.DrawCube(gizmoPosition, new Vector3(Mathf.Abs(bottom_right.position.x - top_left.position.x), Mathf.Abs(top_left.position.y - bottom_right.position.y), 1));
+    // }
 }
