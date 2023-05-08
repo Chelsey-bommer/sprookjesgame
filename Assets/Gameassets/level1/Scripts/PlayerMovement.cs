@@ -41,8 +41,9 @@ public class PlayerMovement : MonoBehaviour
         Collider[] hitColliders = Physics.OverlapSphere(top_left.position, 2.5f, ground_layers);
         bool isGrounded = hitColliders.Length > 0;
         
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
+
+        horizontalInput = Input.GetAxis("Horizontal");
+        verticalInput = Input.GetAxis("Vertical");
 
         rb.velocity = new Vector3(horizontalInput * movementSpeed, rb.velocity.y, verticalInput * movementSpeed);
 
@@ -63,6 +64,7 @@ public class PlayerMovement : MonoBehaviour
                 }
             }
         }
+        
 
         // // Apply drag
         // rb.drag = drag;
