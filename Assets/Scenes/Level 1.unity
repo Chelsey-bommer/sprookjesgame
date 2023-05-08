@@ -5307,16 +5307,16 @@ Camera:
   m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
+  m_FocalLength: 98.55862
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
     y: 0
     width: 1
     height: 1
-  near clip plane: 19.5
-  far clip plane: 1000
-  field of view: 18
+  near clip plane: 1
+  far clip plane: 3000
+  field of view: 13.883755
   orthographic: 0
   orthographic size: 3
   m_Depth: 0
@@ -7679,7 +7679,7 @@ PrefabInstance:
     - target: {fileID: 5185489846311851505, guid: 73a39f3dd71743c46bb0b0e55da76558,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -105.55998
+      value: -105.83
       objectReference: {fileID: 0}
     - target: {fileID: 5185489846311851505, guid: 73a39f3dd71743c46bb0b0e55da76558,
         type: 3}
@@ -7723,6 +7723,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5185489846311851507, guid: 73a39f3dd71743c46bb0b0e55da76558,
         type: 3}
+      propertyPath: drag
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5185489846311851507, guid: 73a39f3dd71743c46bb0b0e55da76558,
+        type: 3}
+      propertyPath: time
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5185489846311851507, guid: 73a39f3dd71743c46bb0b0e55da76558,
+        type: 3}
       propertyPath: top_left
       value: 
       objectReference: {fileID: 680745413}
@@ -7734,7 +7744,52 @@ PrefabInstance:
     - target: {fileID: 5185489846311851507, guid: 73a39f3dd71743c46bb0b0e55da76558,
         type: 3}
       propertyPath: movementSpeed
-      value: 47.13
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5185489846311851507, guid: 73a39f3dd71743c46bb0b0e55da76558,
+        type: 3}
+      propertyPath: WhatIsGround.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 5185489846311851507, guid: 73a39f3dd71743c46bb0b0e55da76558,
+        type: 3}
+      propertyPath: animCurve.m_Curve.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5185489846311851507, guid: 73a39f3dd71743c46bb0b0e55da76558,
+        type: 3}
+      propertyPath: animCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5185489846311851507, guid: 73a39f3dd71743c46bb0b0e55da76558,
+        type: 3}
+      propertyPath: animCurve.m_Curve.Array.data[0].tangentMode
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 5185489846311851507, guid: 73a39f3dd71743c46bb0b0e55da76558,
+        type: 3}
+      propertyPath: animCurve.m_Curve.Array.data[1].tangentMode
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 5185489846311851511, guid: 73a39f3dd71743c46bb0b0e55da76558,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 1.6083069
+      objectReference: {fileID: 0}
+    - target: {fileID: 5185489846311851511, guid: 73a39f3dd71743c46bb0b0e55da76558,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 3.5815039
+      objectReference: {fileID: 0}
+    - target: {fileID: 5185489846311851511, guid: 73a39f3dd71743c46bb0b0e55da76558,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.019180298
+      objectReference: {fileID: 0}
+    - target: {fileID: 5185489846311851511, guid: 73a39f3dd71743c46bb0b0e55da76558,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.10846281
       objectReference: {fileID: 0}
     - target: {fileID: 5185489846311851517, guid: 73a39f3dd71743c46bb0b0e55da76558,
         type: 3}
