@@ -102,7 +102,6 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             state = MovementState.idle;
-            //anim.SetBool("walking", false);
 
         }
         //backwards walking
@@ -110,19 +109,21 @@ public class PlayerMovement : MonoBehaviour
         {
             state = MovementState.backward;
 
-            if (horizontalInput > 0.1f)
-            {
-                sprite.flipX = true;
-            }
-            else if (horizontalInput < 0f)
-            {
-                sprite.flipX = false;
-            }
+            // if (horizontalInput > 0.1f)
+            // {
+            //     sprite.flipX = true;
+            // }
+            // else if (horizontalInput < 0f)
+            // {
+            //     sprite.flipX = false;
+            // }
         }
-        if (verticalInput < 0f)
+        else if (verticalInput < 0f)
         {
             state = MovementState.forward;
+
         }
+        
         //jumping
         if(rb.velocity.y > .1f){
             state = MovementState.jumping;
