@@ -109,14 +109,16 @@ public class PlayerMovement : MonoBehaviour
         {
             state = MovementState.backward;
 
-            // if (horizontalInput > 0.1f)
-            // {
-            //     sprite.flipX = true;
-            // }
-            // else if (horizontalInput < 0f)
-            // {
-            //     sprite.flipX = false;
-            // }
+          if(gameObject.name.Equals("Player")){
+              if (horizontalInput > 0.1f)
+            {
+                sprite.flipX = true;
+            }
+            else if (horizontalInput < 0f)
+            {
+                sprite.flipX = false;
+            }
+          }
         }
         else if (verticalInput < 0f)
         {
