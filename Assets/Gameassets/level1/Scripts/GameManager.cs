@@ -156,10 +156,10 @@ public class GameManager : MonoBehaviour
             questFour = true; 
         }
     }
-
+    
 
     //////// Level 2
-
+    public bool mandTouch = false;
     public bool ladderDropped = false;
     public bool cupsDropped = false;
     public bool applesDropped = false;

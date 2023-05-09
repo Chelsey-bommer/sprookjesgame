@@ -34,13 +34,22 @@ public class Quest2 : MonoBehaviour
         currentColor = questItem.color;
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void OnTriggerStay(Collider other)
     {
 
         ////////// Quest 1: Grab a pair of cups
-        // Task 1: move ladder -- zie inventory item controller
+        // Task 1: move barrel -- zie inventory item controller
+        
+
         // Task 2: grab cups -- //zie gamemanager r.115
         // Task 3: put cups in basket -- zie inventory item controller
+
+       if(gameObject.name.Contains("Mand")){
+            GameManager.instance.mandTouch = true;
+           if(GameManager.instance.questOne){
+             FinishQuest();
+           }
+       }
 
         //part 2
         if (gameObject.name.Contains("dog"))
@@ -63,18 +72,16 @@ public class Quest2 : MonoBehaviour
     public void Update()
     {
 
-        if (GameManager.instance.questOne){
-            FinishQuest();
-        }
-        if (GameManager.instance.questTwo){
-            FinishQuest();
-        }
-        if (GameManager.instance.questThree){
-            FinishQuest();
-        }
-        if (GameManager.instance.questFour){
-            FinishQuest();
-        }
+        
+        // if (GameManager.instance.questTwo){
+        //     FinishQuest();
+        // }
+        // if (GameManager.instance.questThree){
+        //     FinishQuest();
+        // }
+        // if (GameManager.instance.questFour){
+        //     FinishQuest();
+        // }
     }
 
     public void FinishQuest()

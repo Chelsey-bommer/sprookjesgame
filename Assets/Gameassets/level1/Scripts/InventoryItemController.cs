@@ -45,7 +45,7 @@ public class InventoryItemController : MonoBehaviour
             GameManager.instance.ladderDropped = true;  
         }
 
-        if(item.name == "Cups"){
+        if(item.name == "Cups" &&  GameManager.instance.mandTouch){
             Instantiate(myPrefabCups, new Vector3(335, -105, 700), Quaternion.identity);
             GameManager.instance.cupsDropped = true;
         }
