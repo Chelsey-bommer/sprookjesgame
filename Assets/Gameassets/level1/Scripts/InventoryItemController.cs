@@ -41,7 +41,7 @@ public class InventoryItemController : MonoBehaviour
 
 
         if(item.name == "Ladder"){
-            Instantiate(myPrefabLadder, new Vector3(187, -18, 367), Quaternion.identity);
+            Instantiate(myPrefabLadder, new Vector3(346, -105, 700), Quaternion.identity);
             GameManager.instance.ladderDropped = true;  
         }
 
