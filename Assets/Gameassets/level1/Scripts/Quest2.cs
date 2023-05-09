@@ -40,11 +40,19 @@ public class Quest2 : MonoBehaviour
         if(gameObject.name.Contains("Barrel")){
             if(Input.GetMouseButtonDown(0)){
                 Destroy(gameObject);
+                GameManager.instance.barrelDestroyed = true;
             }
         }
 
         // Task 2: grab cups -- //zie gamemanager r.115
         // Task 3: put cups in basket -- zie inventory item controller
+        if(gameObject.name.Contains("Mand")){
+            GameManager.instance.mandTouch = true;
+
+            if(GameManager.instance.questOne){
+                FinishQuest();
+            }
+        }
 
        
 

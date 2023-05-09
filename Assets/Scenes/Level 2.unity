@@ -16755,6 +16755,7 @@ MonoBehaviour:
   touchDialogue5: 0
   touchDialogue6: 0
   touchDialogue7: 0
+  barrelDestroyed: 0
   mandTouch: 0
   ladderDropped: 0
   cupsDropped: 0
@@ -18200,7 +18201,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Go to the carpenter and move the barrell out of the way.
+  m_text: Go to the carpenter and remove the standing barrel.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

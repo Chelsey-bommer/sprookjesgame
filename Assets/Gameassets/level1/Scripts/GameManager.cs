@@ -107,16 +107,23 @@ public class GameManager : MonoBehaviour
 
         ////////////////////////////////// LEVEL 2
         ///Quest 1
-        if(ladderDropped){
+        if(barrelDestroyed){
             questOnePartOne = true; 
         }
-        if(cupsDropped){
+        if(questOnePartOne){
+            Percentage1.text = "33%";
+        }
+        if(cupsPickedup){
             questOnePartTwo = true; 
         }
-        if(questOnePartOne){
-            Percentage1.text = "50%";
+        if(questOnePartTwo ){
+            Percentage1.text = "66%";
         }
-        if(questOnePartOne && questOnePartTwo){
+        if(cupsDropped){
+            questOnePartThree = true;
+        }
+        
+        if(questOnePartOne && questOnePartTwo && questOnePartThree){
             questOne = true;
             Percentage1.text = "100%";
         }
@@ -167,9 +174,11 @@ public class GameManager : MonoBehaviour
     
 
     //////// Level 2
+    public bool barrelDestroyed = false;
     public bool mandTouch = false;
     public bool ladderDropped = false;
     public bool cupsDropped = false;
+    public bool cupsPickedup = false;
     public bool applesDropped = false;
     public bool grapesDropped = false;
     public bool cakesDropped = false;
@@ -177,6 +186,7 @@ public class GameManager : MonoBehaviour
     public bool dogDropped = false;
     public bool questOnePartOne = false;
     public bool questOnePartTwo = false;
+    public bool questOnePartThree = false;
     public bool TwoPartOne = false;
     public bool TwoPartTwo = false;
     
