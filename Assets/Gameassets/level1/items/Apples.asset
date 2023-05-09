@@ -16,4 +16,4 @@ MonoBehaviour:
   itemName: Apples
   value: 6
   icon: {fileID: -5786164333596270976, guid: b1f24b3bc2e2f1d4b858657ad5c115a0, type: 3}
-  prefab: {fileID: 7177705445102395890, guid: c291ea0e7d08c2b40af2d478582679cb, type: 3}
+  prefab: {fileID: 4363702141524102938, guid: a0f1108feb8236945b4fc74adc175e2a, type: 3}

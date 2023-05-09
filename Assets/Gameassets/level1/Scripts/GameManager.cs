@@ -145,6 +145,7 @@ public class GameManager : MonoBehaviour
         if(cakesDropped){
             questThree = true; 
         }
+        //quest 4
         if(dogDropped){
             questFour = true; 
         }
