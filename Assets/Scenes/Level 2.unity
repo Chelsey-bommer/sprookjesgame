@@ -7127,6 +7127,7 @@ GameObject:
   - component: {fileID: 757675120}
   - component: {fileID: 757675119}
   - component: {fileID: 757675118}
+  - component: {fileID: 757675121}
   m_Layer: 0
   m_Name: Dog
   m_TagString: Untagged
@@ -7214,6 +7215,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &757675121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757675117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 625d03e7f5ee955499bb13c335253f0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questItem: {fileID: 1846979587}
+  completedColor: {r: 0.18687272, g: 1, b: 0, a: 1}
+  activeColor: {r: 1, g: 0.74651915, b: 0, a: 1}
+  currentColor: {r: 1, g: 0.96603775, b: 0.96603775, a: 1}
+  percentage: {fileID: 1326925786}
+  allQuests: []
+  scriptObject: {fileID: 1584651874}
+  scriptObject2: {fileID: 1311441745}
+  child: {fileID: 1188319495}
+  childText: {fileID: 953928977}
+  childText2: {fileID: 182893678}
+  childText3: {fileID: 461210762}
+  childText4: {fileID: 1332093691}
 --- !u!1 &759530163
 GameObject:
   m_ObjectHideFlags: 0
@@ -16757,17 +16783,22 @@ MonoBehaviour:
   touchDialogue7: 0
   barrelDestroyed: 0
   mandTouch: 0
-  ladderDropped: 0
   cupsDropped: 0
+  cupsPickedup: 0
   applesDropped: 0
+  applesPickedup: 0
   grapesDropped: 0
+  grapesPickedup: 0
   cakesDropped: 0
   cakesPickedup: 0
   dogDropped: 0
   questOnePartOne: 0
   questOnePartTwo: 0
+  questOnePartThree: 0
   TwoPartOne: 0
   TwoPartTwo: 0
+  TwoPartThree: 0
+  TwoPartFour: 0
 --- !u!4 &1686571846
 Transform:
   m_ObjectHideFlags: 0

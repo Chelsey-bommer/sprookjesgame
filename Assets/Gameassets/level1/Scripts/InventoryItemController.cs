@@ -39,12 +39,6 @@ public class InventoryItemController : MonoBehaviour
             GameManager.instance.arrowsDropped = true;
         }
 
-
-        // if(item.name == "Barrel"){
-        //     Instantiate(myPrefabLadder, new Vector3(187, -18, 367), Quaternion.identity);
-        //     GameManager.instance.ladderDropped = true;  
-        // }
-
         if(item.name == "Cups" &&  GameManager.instance.mandTouch){
             Instantiate(myPrefabCups, new Vector3(335, -105, 700), Quaternion.identity);
             GameManager.instance.cupsDropped = true;

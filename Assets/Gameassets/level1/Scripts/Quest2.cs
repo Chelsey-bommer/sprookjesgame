@@ -43,7 +43,6 @@ public class Quest2 : MonoBehaviour
                 GameManager.instance.barrelDestroyed = true;
             }
         }
-
         // Task 2: grab cups -- //zie gamemanager r.115
         // Task 3: put cups in basket -- zie inventory item controller
         if(gameObject.name.Contains("Mand")){
@@ -54,13 +53,16 @@ public class Quest2 : MonoBehaviour
             }
         }
 
-       
+       if(gameObject.name.Contains("Dog")){
+            GameManager.instance.mandTouch = true;
+
+            if(GameManager.instance.questTwo){
+                FinishQuest();
+            }
+        }
 
         //part 2
-        if (gameObject.name.Contains("dog"))
-        {
-            //quest something voltooid
-        }
+        
 
         if (gameObject.name.Contains("path1"))
         {
