@@ -141,7 +141,10 @@ public class GameManager : MonoBehaviour
             questTwo = true;
             Percentage1.text = "100%";
         }
-        //quest 3
+        //////////quest 3
+        // if(cakesPickedup){
+        //     questThreePartOne = true;
+        // }
         if(cakesDropped){
             questThree = true; 
         }
