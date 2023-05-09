@@ -102,22 +102,16 @@ public class GameManager : MonoBehaviour
             Percentage3.text = "100%";
         }
 
-        ///////////////////
-        if(questFourPartOne == true){
-            Percentage4.text = "50%";    
-        }
-        if(questFour == true){
-            Percentage4.text = "100%";    
-        }
+        
 
 
-        //////// Level 2
-
-        if(cupsDropped){
-            questOnePartTwo = true; 
-        }
+        ////////////////////////////////// LEVEL 2
+        ///Quest 1
         if(ladderDropped){
             questOnePartOne = true; 
+        }
+        if(cupsDropped){
+            questOnePartTwo = true; 
         }
         if(questOnePartOne){
             Percentage1.text = "50%";
@@ -127,7 +121,9 @@ public class GameManager : MonoBehaviour
             Percentage1.text = "100%";
         }
 
-        //quest 2
+
+
+        ///////////////////////////////////quest 2
         if(applesDropped){
             TwoPartOne = true; 
         }
@@ -141,7 +137,10 @@ public class GameManager : MonoBehaviour
             questTwo = true;
             Percentage2.text = "100%";
         }
-        //////////quest 3
+
+
+
+        ////////////////////////////////quest 3
         if(cakesPickedup){
             questThreePartOne = true;
         }
@@ -151,9 +150,18 @@ public class GameManager : MonoBehaviour
         if(cakesDropped){
             questThree = true; 
         }
-        //quest 4
+
+
+
+        //////////////////////////////quest 4
         if(dogDropped){
             questFour = true; 
+        }
+        if(questFourPartOne == true){
+            Percentage4.text = "50%";    
+        }
+        if(questFour == true){
+            Percentage4.text = "100%";    
         }
     }
     

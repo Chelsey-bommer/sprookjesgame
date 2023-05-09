@@ -40,21 +40,21 @@ public class InventoryItemController : MonoBehaviour
         }
 
 
-        if(item.name == "Barrel"){
-            Instantiate(myPrefabLadder, new Vector3(187, -18, 367), Quaternion.identity);
-            GameManager.instance.ladderDropped = true;  
-        }
+        // if(item.name == "Barrel"){
+        //     Instantiate(myPrefabLadder, new Vector3(187, -18, 367), Quaternion.identity);
+        //     GameManager.instance.ladderDropped = true;  
+        // }
 
         if(item.name == "Cups" &&  GameManager.instance.mandTouch){
             Instantiate(myPrefabCups, new Vector3(335, -105, 700), Quaternion.identity);
             GameManager.instance.cupsDropped = true;
         }
 
-        if(item.name == "Apples"){
+        if(item.name == "Apples" && GameManager.instance.mandTouch){
             Instantiate(myPrefabApples, new Vector3(355, -105, 700), Quaternion.identity);
             GameManager.instance.applesDropped = true;
         }
-        if(item.name == "Grapes"){
+        if(item.name == "Grapes" && GameManager.instance.mandTouch){
             Instantiate(myPrefabApples, new Vector3(365, -105, 700), Quaternion.identity);
             GameManager.instance.grapesDropped = true;
         }

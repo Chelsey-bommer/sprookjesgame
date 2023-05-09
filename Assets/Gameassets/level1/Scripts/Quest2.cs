@@ -23,8 +23,6 @@ public class Quest2 : MonoBehaviour
     public TMP_Text childText3;
     public TMP_Text childText4;
 
-
-
     void Start()
     {
         allQuests = FindObjectsOfType<Quest2>();  // all objects with quest script attached
@@ -39,17 +37,16 @@ public class Quest2 : MonoBehaviour
 
         ////////// Quest 1: Grab a pair of cups
         // Task 1: move barrel -- zie inventory item controller
-        
+        if(gameObject.name.Contains("Barrel")){
+            if(Input.GetMouseButtonDown(0)){
+                Destroy(gameObject);
+            }
+        }
 
         // Task 2: grab cups -- //zie gamemanager r.115
         // Task 3: put cups in basket -- zie inventory item controller
 
-       if(gameObject.name.Contains("Mand")){
-            GameManager.instance.mandTouch = true;
-           if(GameManager.instance.questOne){
-             FinishQuest();
-           }
-       }
+       
 
         //part 2
         if (gameObject.name.Contains("dog"))
