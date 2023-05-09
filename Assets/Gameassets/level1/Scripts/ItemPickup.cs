@@ -9,7 +9,13 @@ public class ItemPickup : MonoBehaviour
     public void Pickup()
     {
         InventoryManager.Instance.Add(item);  // Add item to Item list
+
+        if(gameObject.name.Equals("Cake")){
+            GameManager.instance.cakesPickedup = true;
+        }
+        
         Destroy(gameObject);  // Make object disappear
+
     }
 
     // Update is called once per fram

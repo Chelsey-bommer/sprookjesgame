@@ -1870,6 +1870,7 @@ MonoBehaviour:
   applesDropped: 0
   grapesDropped: 0
   cakesDropped: 0
+  cakesPickedup: 0
   dogDropped: 0
   questOnePartOne: 0
   questOnePartTwo: 0
@@ -5122,7 +5123,7 @@ MonoBehaviour:
   - Welcome to your town, mayor Alban Brooker
   - After the havoc the beast unleashed upon the town..
   - You have a lot to do..
-  - Check the workstation to see your quests!
+  - Check your list (the scroll button) to see your quests!
   - (Use the arrows to walk)
   - (Click on items to pick them up)
   textSpeed: 0

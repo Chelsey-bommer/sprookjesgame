@@ -139,12 +139,15 @@ public class GameManager : MonoBehaviour
         }
         if(TwoPartOne && TwoPartTwo){
             questTwo = true;
-            Percentage1.text = "100%";
+            Percentage2.text = "100%";
         }
         //////////quest 3
-        // if(cakesPickedup){
-        //     questThreePartOne = true;
-        // }
+        if(cakesPickedup){
+            questThreePartOne = true;
+        }
+        if(questThreePartOne){
+            Percentage3.text = "50%";
+        }
         if(cakesDropped){
             questThree = true; 
         }
@@ -162,10 +165,10 @@ public class GameManager : MonoBehaviour
     public bool applesDropped = false;
     public bool grapesDropped = false;
     public bool cakesDropped = false;
+    public bool cakesPickedup = false;
     public bool dogDropped = false;
     public bool questOnePartOne = false;
     public bool questOnePartTwo = false;
-    
     public bool TwoPartOne = false;
     public bool TwoPartTwo = false;
     

@@ -30,46 +30,52 @@ public class Quest2 : MonoBehaviour
         allQuests = FindObjectsOfType<Quest2>();  // all objects with quest script attached
         dialoguescript = scriptObject.GetComponent<TriggerDialogue>();
         itemscript = scriptObject2.GetComponent<ItemPickup>();
-        itemscript.enabled = false;
+        //itemscript.enabled = false;
         currentColor = questItem.color;
     }
 
-    private void OnTriggerEnter(Collider other){
+    private void OnTriggerEnter(Collider other)
+    {
 
         ////////// Quest 1: Grab a pair of cups
         // Task 1: move ladder -- zie inventory item controller
         // Task 2: grab cups -- //zie gamemanager r.115
         // Task 3: put cups in basket -- zie inventory item controller
 
-        if(gameObject.name.Contains("dog")){
+        //part 2
+        if (gameObject.name.Contains("dog"))
+        {
             //quest something voltooid
         }
 
-        if(gameObject.name.Contains("path1")){
+        if (gameObject.name.Contains("path1"))
+        {
             //quest something voltooid
         }
-        if(gameObject.name.Contains("path2")){
+        if (gameObject.name.Contains("path2"))
+        {
             //quest something voltooid
         }
-        
-        
+
+
     }
 
-   public void Update(){
+    public void Update()
+    {
 
-        if(GameManager.instance.questOne){
-             FinishQuest();
+        if (GameManager.instance.questOne){
+            FinishQuest();
         }
-        if(GameManager.instance.questTwo){
-             FinishQuest();
+        if (GameManager.instance.questTwo){
+            FinishQuest();
         }
-        if(GameManager.instance.questThree){
-             FinishQuest();
+        if (GameManager.instance.questThree){
+            FinishQuest();
         }
-        if(GameManager.instance.questFour){
-             FinishQuest();
+        if (GameManager.instance.questFour){
+            FinishQuest();
         }
-   }
+    }
 
     public void FinishQuest()
     {
