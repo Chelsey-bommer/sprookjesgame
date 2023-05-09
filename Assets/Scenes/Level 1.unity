@@ -1865,17 +1865,24 @@ MonoBehaviour:
   touchDialogue5: 0
   touchDialogue6: 0
   touchDialogue7: 0
-  ladderDropped: 0
+  barrelDestroyed: 0
+  mandTouch: 0
   cupsDropped: 0
+  cupsPickedup: 0
   applesDropped: 0
+  applesPickedup: 0
   grapesDropped: 0
+  grapesPickedup: 0
   cakesDropped: 0
   cakesPickedup: 0
   dogDropped: 0
   questOnePartOne: 0
   questOnePartTwo: 0
+  questOnePartThree: 0
   TwoPartOne: 0
   TwoPartTwo: 0
+  TwoPartThree: 0
+  TwoPartFour: 0
 --- !u!4 &213925332
 Transform:
   m_ObjectHideFlags: 0
@@ -5120,7 +5127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 1318231666}
   lines:
-  - Welcome to your town, mayor Alban Brooker
+  - Welcome to your town, mayor Alban Brooker (Enter to continur)
   - After the havoc the beast unleashed upon the town..
   - You have a lot to do..
   - Check your list (the scroll button) to see your quests!

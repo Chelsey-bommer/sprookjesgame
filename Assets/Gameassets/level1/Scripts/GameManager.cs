@@ -162,8 +162,9 @@ public class GameManager : MonoBehaviour
         if(questThreePartOne){
             Percentage3.text = "50%";
         }
-        if(cakesDropped){
+        if(cakesDropped && questThreePartOne){
             questThree = true; 
+            Percentage3.text = "100%";
         }
 
 
@@ -184,6 +185,8 @@ public class GameManager : MonoBehaviour
     //////// Level 2
     public bool barrelDestroyed = false;
     public bool mandTouch = false;
+    public bool dogTouch = false;
+    public bool colliderTouch = false;
     public bool cupsDropped = false;
     public bool cupsPickedup = false;
     public bool applesDropped = false;

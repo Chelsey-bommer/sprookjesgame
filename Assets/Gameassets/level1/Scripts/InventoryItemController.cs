@@ -44,15 +44,15 @@ public class InventoryItemController : MonoBehaviour
             GameManager.instance.cupsDropped = true;
         }
 
-        if(item.name == "Apples" && GameManager.instance.mandTouch){
+        if(item.name == "Apples" && GameManager.instance.dogTouch){
             Instantiate(myPrefabApples, new Vector3(355, -105, 700), Quaternion.identity);
             GameManager.instance.applesDropped = true;
         }
-        if(item.name == "Grapes" && GameManager.instance.mandTouch){
+        if(item.name == "Grapes" && GameManager.instance.dogTouch){
             Instantiate(myPrefabApples, new Vector3(365, -105, 700), Quaternion.identity);
             GameManager.instance.grapesDropped = true;
         }
-        if(item.name == "Cakes"){
+        if(item.name == "Cake" && GameManager.instance.colliderTouch){
             Instantiate(myPrefabCakes, new Vector3(335, -105, 700), Quaternion.identity);
             GameManager.instance.cakesDropped = true;
         }

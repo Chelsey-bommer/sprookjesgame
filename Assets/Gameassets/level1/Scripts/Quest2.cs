@@ -54,9 +54,17 @@ public class Quest2 : MonoBehaviour
         }
 
        if(gameObject.name.Contains("Dog")){
-            GameManager.instance.mandTouch = true;
+            GameManager.instance.dogTouch = true;
 
             if(GameManager.instance.questTwo){
+                FinishQuest();
+            }
+        }
+
+        if(gameObject.name.Equals("colliderobject")){
+            GameManager.instance.colliderTouch = true;
+
+            if(GameManager.instance.questThree){
                 FinishQuest();
             }
         }
