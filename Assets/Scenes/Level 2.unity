@@ -4870,7 +4870,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questItem: {fileID: 2139208591}
   completedColor: {r: 0.21780753, g: 1, b: 0, a: 1}
-  activeColor: {r: 1, g: 0.8173207, b: 0, a: 0}
+  activeColor: {r: 1, g: 0.8173207, b: 0, a: 1}
   currentColor: {r: 1, g: 1, b: 1, a: 1}
   percentage: {fileID: 2139208586}
   allQuests: []
@@ -18602,7 +18602,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2594132727212222962}
+      objectReference: {fileID: 529868674}
     - target: {fileID: 5486772916312116285, guid: c90fd62be11f0224284a9e2adf0c93b8,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -21885,7 +21885,7 @@ MonoBehaviour:
   percentage: {fileID: 1831123143}
   allQuests: []
   scriptObject: {fileID: 1584651874}
-  scriptObject2: {fileID: 1559291175}
+  scriptObject2: {fileID: 529868669}
   child: {fileID: 1703074143}
   childText: {fileID: 1796486986}
   childText2: {fileID: 204284946}

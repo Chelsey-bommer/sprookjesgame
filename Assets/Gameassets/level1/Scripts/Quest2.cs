@@ -12,7 +12,7 @@ public class Quest2 : MonoBehaviour
     public Color activeColor;
     public Color currentColor;
     public TMP_Text percentage;
-    public Quest[] allQuests;
+    public Quest2[] allQuests;
     private TriggerDialogue dialoguescript;
     private ItemPickup itemscript;
     public GameObject scriptObject;
@@ -27,7 +27,7 @@ public class Quest2 : MonoBehaviour
 
     void Start()
     {
-        allQuests = FindObjectsOfType<Quest>();  // all objects with quest script attached
+        allQuests = FindObjectsOfType<Quest2>();  // all objects with quest script attached
         dialoguescript = scriptObject.GetComponent<TriggerDialogue>();
         itemscript = scriptObject2.GetComponent<ItemPickup>();
         itemscript.enabled = false;
@@ -82,7 +82,7 @@ public class Quest2 : MonoBehaviour
     public void OnQuestClick()
     {
 
-        foreach (Quest quest in allQuests)
+        foreach (Quest2 quest in allQuests)
         {
 
             quest.questItem.color = quest.currentColor;
