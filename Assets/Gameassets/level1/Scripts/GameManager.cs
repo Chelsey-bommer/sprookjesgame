@@ -170,11 +170,15 @@ public class GameManager : MonoBehaviour
 
 
         //////////////////////////////quest 4
-        if(dogDropped){
-            questFour = true; 
+        if(dogPickedup){
+            questFourPartOne = true;
         }
+        
         if(questFourPartOne == true){
             Percentage4.text = "50%";    
+        }
+        if(dogDropped && questFourPartOne){
+            questFour = true; 
         }
         if(questFour == true){
             Percentage4.text = "100%";    
@@ -187,6 +191,7 @@ public class GameManager : MonoBehaviour
     public bool mandTouch = false;
     public bool dogTouch = false;
     public bool colliderTouch = false;
+    public bool collider2Touch = false;
     public bool cupsDropped = false;
     public bool cupsPickedup = false;
     public bool applesDropped = false;
@@ -196,6 +201,7 @@ public class GameManager : MonoBehaviour
     public bool cakesDropped = false;
     public bool cakesPickedup = false;
     public bool dogDropped = false;
+    public bool dogPickedup = false;
     public bool questOnePartOne = false;
     public bool questOnePartTwo = false;
     public bool questOnePartThree = false;

@@ -56,7 +56,7 @@ public class InventoryItemController : MonoBehaviour
             Instantiate(myPrefabCakes, new Vector3(335, -105, 700), Quaternion.identity);
             GameManager.instance.cakesDropped = true;
         }
-        if(item.name == "dogfood"){
+        if(item.name == "Dogfood"){
             Instantiate(myPrefabDog, new Vector3(335, -105, 700), Quaternion.identity);
             GameManager.instance.dogDropped = true;
         }

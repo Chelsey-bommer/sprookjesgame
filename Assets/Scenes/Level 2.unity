@@ -10748,7 +10748,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2468934531206961896}
+      objectReference: {fileID: 1087041665}
     - target: {fileID: 5486772916312116285, guid: c90fd62be11f0224284a9e2adf0c93b8,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -16896,6 +16896,8 @@ MonoBehaviour:
   barrelDestroyed: 0
   mandTouch: 0
   dogTouch: 0
+  colliderTouch: 0
+  collider2Touch: 0
   cupsDropped: 0
   cupsPickedup: 0
   applesDropped: 0
@@ -16905,6 +16907,7 @@ MonoBehaviour:
   cakesDropped: 0
   cakesPickedup: 0
   dogDropped: 0
+  dogPickedup: 0
   questOnePartOne: 0
   questOnePartTwo: 0
   questOnePartThree: 0
@@ -22041,7 +22044,7 @@ PrefabInstance:
     - target: {fileID: 4766800253680472869, guid: 3ca69b660a3ae5a43abe9f665e28d6aa,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.42
+      value: 51.4
       objectReference: {fileID: 0}
     - target: {fileID: 4766800253680472869, guid: 3ca69b660a3ae5a43abe9f665e28d6aa,
         type: 3}
@@ -22051,7 +22054,7 @@ PrefabInstance:
     - target: {fileID: 4766800253680472869, guid: 3ca69b660a3ae5a43abe9f665e28d6aa,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 65.1
       objectReference: {fileID: 0}
     - target: {fileID: 4766800253680472869, guid: 3ca69b660a3ae5a43abe9f665e28d6aa,
         type: 3}
@@ -22132,6 +22135,19 @@ MonoBehaviour:
   childText2: {fileID: 347884478}
   childText3: {fileID: 213088850}
   childText4: {fileID: 526433850}
+--- !u!65 &2468934531206961900
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2468934531206961895}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.3143005, y: 0.6882728, z: 2.1459045}
+  m_Center: {x: -0.052627563, y: 0.024136394, z: -0.70259094}
 --- !u!1001 &2594132727212222957
 PrefabInstance:
   m_ObjectHideFlags: 0
