@@ -69,13 +69,15 @@ public class Quest2 : MonoBehaviour
             }
         }
 
-         if(gameObject.name.Equals("colliderobject2")){
+        
+
+        if(gameObject.name.Equals("colliderobject2")){
             GameManager.instance.collider2Touch = true;
 
             if(GameManager.instance.questFour){
                 FinishQuest();
             }
-        }
+        } 
 
         //part 2
         

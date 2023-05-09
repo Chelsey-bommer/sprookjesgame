@@ -7,7 +7,6 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-
     public bool questOne = false;
     public bool questTwo = false;
     public bool questTwoPartOne = false;
@@ -183,6 +182,13 @@ public class GameManager : MonoBehaviour
         if(questFour == true){
             Percentage4.text = "100%";    
         }
+
+        //////////////////
+
+        if(!colliderTouch && !collider2Touch && !mandTouch){
+            Debug.Log("not touching");
+        }
+        
     }
     
 

@@ -15,10 +15,6 @@ public class InventoryItemController : MonoBehaviour
     public GameObject myPrefabGrapes;
     public GameObject myPrefabCakes;
     public GameObject myPrefabDog;
-
-
-    
-
     private Transform playerPos;
     private float dropOffset = 1f;
     void Start()
