@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody rb;
     private SpriteRenderer sprite;
     private Animator anim;
+    private Renderer rend;
     public float movementSpeed = 2f;
     public float jumpingPower = 600f;
     [SerializeField] private LayerMask WhatIsGround;
@@ -32,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+        rend = GetComponent<Renderer>();
         // This will stop the player game object from rotating
         rb.freezeRotation = true;
     }
@@ -72,6 +74,8 @@ public class PlayerMovement : MonoBehaviour
         UpdateAnimation();
         
     }
+
+   
 
     void FixedUpdate(){
 

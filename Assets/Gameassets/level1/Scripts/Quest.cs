@@ -146,10 +146,10 @@ public class Quest : MonoBehaviour
         // Part Two:Bring arrows to the guards post
         if(gameObject.name.Contains("Guardspost")){
             GameManager.instance.touchDialogue7 = true;
-            if(GameManager.instance.arrowsDropped && !GameManager.instance.questFourPartTwo){
+            if(!GameManager.instance.questFourPartTwo){
                 dialoguescript.dialogue7();
             }
-            if (GameManager.instance.touchDialogue7){
+            if (GameManager.instance.touchDialogue7 && GameManager.instance.arrowsDropped){
                 GameManager.instance.questFourPartTwo = true;
                 GameManager.instance.questFour = true;
                 childText.color = Color.magenta; 
