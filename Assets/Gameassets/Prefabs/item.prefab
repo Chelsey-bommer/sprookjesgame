@@ -492,6 +492,14 @@ MonoBehaviour:
     type: 3}
   myPrefabLadder: {fileID: 8876417330303059912, guid: 86efd36638d37e946b1a466658bdf13f,
     type: 3}
+  myPrefabApples: {fileID: 4363702141524102938, guid: a0f1108feb8236945b4fc74adc175e2a,
+    type: 3}
+  myPrefabGrapes: {fileID: 7177705445102395890, guid: c291ea0e7d08c2b40af2d478582679cb,
+    type: 3}
+  myPrefabCakes: {fileID: 5010784971651111149, guid: 57d8dd4d36e56a14b943f589f821154e,
+    type: 3}
+  myPrefabDog: {fileID: 5756964520231297411, guid: 3ca69b660a3ae5a43abe9f665e28d6aa,
+    type: 3}
 --- !u!1 &8546634983442451486
 GameObject:
   m_ObjectHideFlags: 0
