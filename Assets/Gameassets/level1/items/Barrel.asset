@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e6dfe5cd1e10f14897e492da951abe3, type: 3}
-  m_Name: Ladder
+  m_Name: Barrel
   m_EditorClassIdentifier: 
   id: 5
-  itemName: Ladder
+  itemName: Barrel
   value: 5
   icon: {fileID: 3059113826426795209, guid: e242b62e7e6caee439fa1d024a8fa5bb, type: 3}
   prefab: {fileID: 8876417330303059912, guid: 86efd36638d37e946b1a466658bdf13f, type: 3}
