@@ -27,6 +27,8 @@ public class Quest : MonoBehaviour
 
     public SpriteRenderer spriteRenderer;
     public Sprite newSprite;
+    Color greenColor;
+   
 
 
     void Start()
@@ -37,6 +39,9 @@ public class Quest : MonoBehaviour
         currentColor = questItem.color;
 
         findWood = GameObject.FindGameObjectWithTag("Wood");
+
+     
+        ColorUtility.TryParseHtmlString("#009200", out greenColor);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -63,7 +68,7 @@ public class Quest : MonoBehaviour
         if (gameObject.name.Contains("Hole") && !GameManager.instance.questTwoPartOne)
         {
             GameManager.instance.questTwoPartOne = true;
-            childText.color = Color.magenta;
+            childText.color = greenColor;
             Debug.Log("Looked at hole");
         }
         //Part two: Collect wood
@@ -74,7 +79,7 @@ public class Quest : MonoBehaviour
             if (findWood.activeInHierarchy == false)
             { //if all the wood is collected
                 GameManager.instance.questTwoPartTwo = true;
-                childText2.color = Color.magenta;
+                childText2.color = greenColor;
             }
 
         }
@@ -90,7 +95,7 @@ public class Quest : MonoBehaviour
             if (GameManager.instance.dialogue2)
             {
                 GameManager.instance.questTwoPartThree = true;
-                childText3.color = Color.magenta;
+                childText3.color = greenColor;
 
             }
         }
@@ -109,7 +114,7 @@ public class Quest : MonoBehaviour
             if (GameManager.instance.touchDialogue3)
             {
                 GameManager.instance.questThreePartOne = true;
-                childText.color = Color.magenta;
+                childText.color = greenColor;
             }
         }
 
@@ -124,7 +129,7 @@ public class Quest : MonoBehaviour
             if (GameManager.instance.touchDialogue4)
             {
                 GameManager.instance.questThreePartTwo = true;
-                childText.color = Color.magenta;
+                childText.color = greenColor;
             }
         }
         
@@ -140,7 +145,7 @@ public class Quest : MonoBehaviour
 
             if (GameManager.instance.touchDialogue6){
                 GameManager.instance.questFourPartOne = true;
-                childText.color = Color.magenta;
+                childText.color = greenColor;
             }
         }
         // Part Two:Bring arrows to the guards post
@@ -152,7 +157,7 @@ public class Quest : MonoBehaviour
             if (GameManager.instance.touchDialogue7 && GameManager.instance.arrowsDropped){
                 GameManager.instance.questFourPartTwo = true;
                 GameManager.instance.questFour = true;
-                childText.color = Color.magenta; 
+                childText.color = greenColor;
             }
             if (GameManager.instance.questFour)
             {
@@ -176,7 +181,7 @@ public class Quest : MonoBehaviour
             {
                 spriteRenderer.sprite = newSprite;
                 GameManager.instance.questTwoPartFour = true;
-                childText4.color = Color.magenta;
+                childText4.color = greenColor;
             }
 
             if (GameManager.instance.questTwo)

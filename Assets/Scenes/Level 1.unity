@@ -2382,7 +2382,7 @@ PrefabInstance:
     - target: {fileID: 1042483481609575970, guid: c90fd62be11f0224284a9e2adf0c93b8,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 207
+      value: 325
       objectReference: {fileID: 0}
     - target: {fileID: 1597866187800818813, guid: c90fd62be11f0224284a9e2adf0c93b8,
         type: 3}
@@ -2598,6 +2598,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 122
+      objectReference: {fileID: 0}
+    - target: {fileID: 5486772917205882548, guid: c90fd62be11f0224284a9e2adf0c93b8,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -110
       objectReference: {fileID: 0}
     - target: {fileID: 5536041821251686543, guid: c90fd62be11f0224284a9e2adf0c93b8,
         type: 3}
@@ -6677,7 +6682,7 @@ PrefabInstance:
     - target: {fileID: 1042483481609575970, guid: c90fd62be11f0224284a9e2adf0c93b8,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 207
+      value: 323
       objectReference: {fileID: 0}
     - target: {fileID: 1252775620887041515, guid: c90fd62be11f0224284a9e2adf0c93b8,
         type: 3}
@@ -6903,6 +6908,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 122
+      objectReference: {fileID: 0}
+    - target: {fileID: 5486772917205882548, guid: c90fd62be11f0224284a9e2adf0c93b8,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -143
       objectReference: {fileID: 0}
     - target: {fileID: 5730414266072654588, guid: c90fd62be11f0224284a9e2adf0c93b8,
         type: 3}
@@ -10443,7 +10453,7 @@ PrefabInstance:
     - target: {fileID: 1042483481609575970, guid: c90fd62be11f0224284a9e2adf0c93b8,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 207
+      value: 323
       objectReference: {fileID: 0}
     - target: {fileID: 1252775620887041515, guid: c90fd62be11f0224284a9e2adf0c93b8,
         type: 3}
@@ -10669,6 +10679,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 122
+      objectReference: {fileID: 0}
+    - target: {fileID: 5486772917205882548, guid: c90fd62be11f0224284a9e2adf0c93b8,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -144
       objectReference: {fileID: 0}
     - target: {fileID: 5730414266072654588, guid: c90fd62be11f0224284a9e2adf0c93b8,
         type: 3}
@@ -14804,7 +14819,7 @@ PrefabInstance:
     - target: {fileID: 1042483481609575970, guid: c90fd62be11f0224284a9e2adf0c93b8,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 207
+      value: 324
       objectReference: {fileID: 0}
     - target: {fileID: 1252775620887041515, guid: c90fd62be11f0224284a9e2adf0c93b8,
         type: 3}
@@ -15031,6 +15046,11 @@ PrefabInstance:
       propertyPath: m_text
       value: 'Quest 1: Talk to your wounded friend.'
       objectReference: {fileID: 0}
+    - target: {fileID: 5486772917205882507, guid: c90fd62be11f0224284a9e2adf0c93b8,
+        type: 3}
+      propertyPath: m_margin.x
+      value: 168.9234
+      objectReference: {fileID: 0}
     - target: {fileID: 5486772917205882548, guid: c90fd62be11f0224284a9e2adf0c93b8,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -15060,6 +15080,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 122
+      objectReference: {fileID: 0}
+    - target: {fileID: 5486772917205882548, guid: c90fd62be11f0224284a9e2adf0c93b8,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -195
       objectReference: {fileID: 0}
     - target: {fileID: 5486772917205882549, guid: c90fd62be11f0224284a9e2adf0c93b8,
         type: 3}
@@ -18793,7 +18818,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Talk to your wounded friend
+  m_text: 1. Talk to your wounded friend
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

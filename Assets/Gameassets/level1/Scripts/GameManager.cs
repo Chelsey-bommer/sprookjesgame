@@ -185,9 +185,9 @@ public class GameManager : MonoBehaviour
 
         //////////////////
 
-        if(!colliderTouch && !collider2Touch && !mandTouch){
-            Debug.Log("not touching");
-        }
+        // if(!colliderTouch && !collider2Touch && !mandTouch){
+        //     Debug.Log("not touching");
+        // }
         
     }
     
