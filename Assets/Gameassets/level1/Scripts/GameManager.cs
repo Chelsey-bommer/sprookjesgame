@@ -80,11 +80,11 @@ public class GameManager : MonoBehaviour
         if(questTwoPartOne){
             Percentage2.text = "25%";
         }
-        if(questTwoPartTwo){
-            Percentage2.text = "50%";
-        }
         if(woodPickedup){
             questTwoPartTwo = true;
+        }
+        if(questTwoPartTwo){
+            Percentage2.text = "50%";
         }
         if(questTwoPartThree){
             Percentage2.text = "75%";
@@ -111,6 +111,21 @@ public class GameManager : MonoBehaviour
 
         if(questThreePartOne && questThreePartTwo && questThreePartThree){
             questThree = true;
+            Percentage3.text = "100%";
+        }
+
+        ////////////////////// 
+        if(questFourPartOne == true){
+            Percentage3.text = "50%";  
+            
+        }
+
+        if(questFourPartTwo == true){
+            Percentage3.text = "100%";
+        }
+
+        if(questFourPartOne && questFourPartTwo){
+            questFour = true;
             Percentage3.text = "100%";
         }
 

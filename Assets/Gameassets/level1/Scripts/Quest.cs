@@ -60,6 +60,13 @@ public class Quest : MonoBehaviour
         quest4.GetComponent<Button>().interactable = false;
     }
 
+    private void Update(){
+         if (GameManager.instance.questTwoPartTwo)
+            { //if all the wood is collected
+                childText2.color = completedColor;
+            }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if(gameObject.name.Contains("taskboard")){
@@ -149,7 +156,7 @@ public class Quest : MonoBehaviour
         }
 
         // Task two: Talk to the postguard
-        if (gameObject.name.Contains("Postguard") && GameManager.instance.questThreePartOne == true)
+        if (gameObject.name.Contains("Guardspost") && GameManager.instance.questThreePartOne == true)
         {
             GameManager.instance.touchDialogue4 = true;
             if(GameManager.instance.questThreePartTwo == false){
@@ -199,18 +206,6 @@ public class Quest : MonoBehaviour
     }
 
     public void OnTriggerStay(){
-        //Part two: Collect wood
-        if (gameObject.name.Contains("wood") && GameManager.instance.questTwoPartOne)
-        {
-            
-
-            if (GameManager.instance.questTwoPartTwo)
-            { //if all the wood is collected
-                
-                childText2.color = completedColor;
-            }
-
-        }
 
         if (gameObject.name.Contains("Carpenter") && GameManager.instance.questTwoPartOne && GameManager.instance.questTwoPartTwo)
         {
@@ -263,6 +258,7 @@ public class Quest : MonoBehaviour
             }
         }
     }
+
 
     public void FinishTask()
     {
