@@ -17,6 +17,7 @@ public class Quest : MonoBehaviour
     public Quest[] allQuests;
 
     private TriggerDialogue dialoguescript;
+    private InventoryManager inventoryscript;
     public GameObject scriptObject;
 
     public GameObject child;
@@ -40,6 +41,7 @@ public class Quest : MonoBehaviour
     {
         allQuests = FindObjectsOfType<Quest>();  // all objects with quest script attached
         dialoguescript = scriptObject.GetComponent<TriggerDialogue>();
+        inventoryscript = scriptObject.GetComponent<InventoryManager>();
 
         currentColor = questItem.color;
 
@@ -93,14 +95,11 @@ public class Quest : MonoBehaviour
             Debug.Log("Looked at hole");
         }
         //Part two: Collect wood
-        if (gameObject.name.Contains("wood") && GameManager.instance.questTwoPartOne)
+        if (gameObject.name.Contains("wood3") && GameManager.instance.questTwoPartOne)
         {
-            gameObject.SetActive(false);
-
-            if (findWood.activeInHierarchy == false)
-            { //if all the wood is collected
-                GameManager.instance.questTwoPartTwo = true;
-                childText2.color = completedColor;
+            GameManager.instance.touchDialogue10 = true;
+            if(GameManager.instance.touchDialogue10){
+                dialoguescript.dialogue10();
             }
 
         }
@@ -115,6 +114,7 @@ public class Quest : MonoBehaviour
 
             if (GameManager.instance.dialogue2)
             {
+                inventoryscript.clearInv();
                 GameManager.instance.questTwoPartThree = true;
                 childText3.color = completedColor;
 
@@ -199,6 +199,27 @@ public class Quest : MonoBehaviour
     }
 
     public void OnTriggerStay(){
+        //Part two: Collect wood
+        if (gameObject.name.Contains("wood") && GameManager.instance.questTwoPartOne)
+        {
+            
+
+            if (GameManager.instance.questTwoPartTwo)
+            { //if all the wood is collected
+                
+                childText2.color = completedColor;
+            }
+
+        }
+
+        if (gameObject.name.Contains("Carpenter") && GameManager.instance.questTwoPartOne && GameManager.instance.questTwoPartTwo)
+        {
+            if (GameManager.instance.dialogue2)
+            {
+                inventoryscript.clearInv();
+            }
+        }
+
         //////////////////////////////////// QUEST 2
         //Part four: Replace the wall
         if(gameObject.name.Contains("Hole") && GameManager.instance.questTwoPartOne

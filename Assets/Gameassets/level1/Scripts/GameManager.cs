@@ -16,6 +16,10 @@ public class GameManager : MonoBehaviour
     public bool questTwoPartTwo = false;
     public bool questTwoPartThree = false;
     public bool questTwoPartFour = false;
+    public bool woodPickedup = false;
+    public bool wood1Pickedup = false;
+    public bool wood2Pickedup = false;
+    public bool wood3Pickedup = false;
     public bool questThree = false;
     public bool questThreePartOne = false;
     public bool contact = false;
@@ -48,6 +52,8 @@ public class GameManager : MonoBehaviour
     public bool touchDialogue6 = false;
     public bool touchDialogue7 = false;
     public bool touchDialogue9 = false;
+    public bool touchDialogue10 = false;
+
 
     
     
@@ -77,13 +83,16 @@ public class GameManager : MonoBehaviour
         if(questTwoPartTwo){
             Percentage2.text = "50%";
         }
-
+        if(woodPickedup){
+            questTwoPartTwo = true;
+        }
         if(questTwoPartThree){
             Percentage2.text = "75%";
         }
         if(questTwo){
             Percentage2.text = "100%";
         }
+
         
         if(questTwoPartOne && questTwoPartTwo && questTwoPartThree && questTwoPartFour){
             questTwo = true;
