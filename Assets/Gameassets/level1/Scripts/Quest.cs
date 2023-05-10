@@ -37,14 +37,30 @@ public class Quest : MonoBehaviour
     public Image quest3;
     public Image quest4;
 
-    private GameObject randomitem;
+    private GameObject woundedfriend;
+    private GameObject fence;
+    private GameObject wood;
+    private GameObject carpenter;
+    private GameObject parent;
+    private GameObject guard;
+    private GameObject kid;
+    private GameObject fletcher;
+    
 
     void Start()
     {
         allQuests = FindObjectsOfType<Quest>();  // all objects with quest script attached
         dialoguescript = scriptObject.GetComponent<TriggerDialogue>();
         inventoryscript = scriptObject.GetComponent<InventoryManager>();
-        randomitem = GameObject.Find("Fletcher");
+       
+        woundedfriend = GameObject.Find("WoundedFriend");
+        fence = GameObject.Find("Hole");
+        wood = GameObject.Find("wood3");
+        carpenter = GameObject.Find("Carpenter");
+        parent = GameObject.Find("Parent");
+        guard = GameObject.Find("Guardspost");
+        kid = GameObject.Find("kid");
+        fletcher = GameObject.Find("Fletcher");
 
         currentColor = questItem.color;
 
@@ -64,13 +80,44 @@ public class Quest : MonoBehaviour
     }
 
     private void Update(){
-         if (GameManager.instance.questTwoPartTwo)
-            { //if all the wood is collected
-                childText2.color = completedColor;
-            }
-
         
-        TargetArrow.target = randomitem.transform;
+
+        // Set Arrow direction to this object
+        // if(!GameManager.instance.questOne){
+        //     TargetArrow.target = woundedfriend.transform;
+        // }
+        // if(!GameManager.instance.questTwoPartOne && GameManager.instance.questOne){
+        //     TargetArrow.target = fence.transform;
+        // }
+        // if(!GameManager.instance.questTwoPartTwo && GameManager.instance.questTwoPartOne && GameManager.instance.questOne){
+        //     TargetArrow.target = wood.transform;
+        // }
+        // if(!GameManager.instance.questTwoPartThree && GameManager.instance.questTwoPartOne && GameManager.instance.questTwoPartTwo
+        // && GameManager.instance.questOne){
+        //     TargetArrow.target = carpenter.transform;
+        // }
+        // if(!GameManager.instance.questTwoPartFour && GameManager.instance.questTwoPartThree && GameManager.instance.questTwoPartOne && GameManager.instance.questTwoPartTwo
+        // && GameManager.instance.questOne){
+        //     TargetArrow.target = fence.transform;
+        // }
+
+        // if(!GameManager.instance.questThreePartOne && GameManager.instance.questOne && GameManager.instance.questTwo){
+        //     TargetArrow.target = parent.transform;
+        // }
+        // if(!GameManager.instance.questThreePartTwo && GameManager.instance.questThreePartOne && GameManager.instance.questOne && GameManager.instance.questTwo){
+        //     TargetArrow.target = guard.transform;
+        // }
+        // if(!GameManager.instance.questThreePartThree && GameManager.instance.questThreePartTwo && GameManager.instance.questThreePartOne && GameManager.instance.questOne && GameManager.instance.questTwo){
+        //     TargetArrow.target = kid.transform;
+        // }
+
+        // if(!GameManager.instance.questFourPartOne && GameManager.instance.questOne && GameManager.instance.questTwo && GameManager.instance.questThree){
+        //     TargetArrow.target = fletcher.transform;
+        // }
+        //  if(!GameManager.instance.questFourPartTwo && GameManager.instance.questFourPartOne && GameManager.instance.questOne && GameManager.instance.questTwo && GameManager.instance.questThree){
+        //     TargetArrow.target = guard.transform;
+        // }
+        //TargetArrow.target = randomitem.transform;
         
     }
 
@@ -109,13 +156,16 @@ public class Quest : MonoBehaviour
             Debug.Log("Looked at hole");
         }
         //Part two: Collect wood
-        if (gameObject.name.Contains("wood3") && GameManager.instance.questTwoPartOne)
+        if(gameObject.name.Contains("colliderobject") && GameManager.instance.questTwoPartOne)
         {
             GameManager.instance.touchDialogue10 = true;
             if(GameManager.instance.touchDialogue10){
                 dialoguescript.dialogue10();
             }
-
+            if (GameManager.instance.questTwoPartTwo){ 
+            //if all the wood is collected
+            childText2.color = completedColor; 
+            } 
         }
         //Part three: Go to the carpenter
         if (gameObject.name.Contains("Carpenter") && GameManager.instance.questTwoPartOne && GameManager.instance.questTwoPartTwo)
