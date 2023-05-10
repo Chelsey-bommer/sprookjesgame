@@ -60,7 +60,7 @@ public class Quest : MonoBehaviour
 
         //////////////////Quest 2:
         // Part one: Locate hole
-        if (gameObject.name.Contains("Hole"))
+        if (gameObject.name.Contains("Hole") && !GameManager.instance.questTwoPartOne)
         {
             GameManager.instance.questTwoPartOne = true;
             childText.color = Color.magenta;
@@ -94,27 +94,11 @@ public class Quest : MonoBehaviour
 
             }
         }
-        //Part four: Replace the wall
-        if(gameObject.name.Contains("Fence") /* HOLE???? */ && GameManager.instance.questTwoPartOne
-        && GameManager.instance.questTwoPartTwo && GameManager.instance.questTwoPartThree)
-        {
 
-            ////////////////// REMOVE ITEMS FROM INVENTORY?????????
+        // SEE TRIGGERSTAY for part four
+        
 
-            if (Input.GetKey(KeyCode.R))
-            {
-                spriteRenderer.sprite = newSprite;
-                GameManager.instance.questTwoPartFour = true;
-                childText4.color = Color.magenta;
-            }
-
-            if (GameManager.instance.questTwo)
-            {
-                FinishQuest();
-            }
-        }
-
-        ///////////////Quest 3: Find the lost kid
+        /////////////////////Quest 3: Find the lost kid
         // Task one: Talk to the parents
         if (gameObject.name.Contains("Parent"))
         {   
@@ -143,20 +127,7 @@ public class Quest : MonoBehaviour
                 childText.color = Color.magenta;
             }
         }
-        // Task three: Find the kid
-        if (gameObject.name.Contains("Kid") && GameManager.instance.questThreePartOne && GameManager.instance.questThreePartTwo)
-        {
-
-            GameManager.instance.touchDialogue5 = true;
-            if(GameManager.instance.questThreePartThree == false){
-                dialoguescript.dialogue5();
-            }
-
-            if (GameManager.instance.questThree)
-            {
-                FinishQuest();
-            }
-        }
+        
 
         //////////////////// Quest Four: Resupply the arrows
         // Part one: Talk to fletcher to get arrows
@@ -175,10 +146,10 @@ public class Quest : MonoBehaviour
         // Part Two:Bring arrows to the guards post
         if(gameObject.name.Contains("Guardspost")){
             GameManager.instance.touchDialogue7 = true;
-            if(GameManager.instance.arrowsDropped && !GameManager.instance.questFourPartTwo){
+            if(!GameManager.instance.questFourPartTwo && GameManager.instance.questFourPartOne){
                 dialoguescript.dialogue7();
             }
-            if (GameManager.instance.touchDialogue7){
+            if (GameManager.instance.touchDialogue7 && GameManager.instance.arrowsDropped){
                 GameManager.instance.questFourPartTwo = true;
                 GameManager.instance.questFour = true;
                 childText.color = Color.magenta; 
@@ -190,6 +161,50 @@ public class Quest : MonoBehaviour
         }
 
 
+    }
+
+    public void OnTriggerStay(){
+        //////////////////////////////////// QUEST 2
+        //Part four: Replace the wall
+        if(gameObject.name.Contains("Hole") /* HOLE???? */ && GameManager.instance.questTwoPartOne
+        && GameManager.instance.questTwoPartTwo && GameManager.instance.questTwoPartThree)
+        {
+
+            ////////////////// REMOVE ITEMS FROM INVENTORY?????????
+
+            if (Input.GetKey(KeyCode.R))
+            {
+                spriteRenderer.sprite = newSprite;
+                GameManager.instance.questTwoPartFour = true;
+                childText4.color = Color.magenta;
+            }
+
+            if (GameManager.instance.questTwo)
+            {
+                FinishQuest();
+            }
+        }
+
+
+        ///////////////////////////////////////////// QUEST THREE
+        // Task three: Find the kid
+        if (gameObject.name.Contains("Kid") && GameManager.instance.questThreePartOne && GameManager.instance.questThreePartTwo)
+        {
+
+            GameManager.instance.touchDialogue5 = true;
+            if(GameManager.instance.questThreePartThree == false){
+                dialoguescript.dialogue5();
+                
+            }
+            if (GameManager.instance.touchDialogue5){
+                GameManager.instance.questThreePartThree = true; //altijd true?
+            }
+
+            if (GameManager.instance.questThree)
+            {
+                FinishQuest();
+            }
+        }
     }
 
     public void FinishTask()

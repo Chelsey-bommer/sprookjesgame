@@ -12,7 +12,7 @@ public class Quest2 : MonoBehaviour
     public Color activeColor;
     public Color currentColor;
     public TMP_Text percentage;
-    public Quest[] allQuests;
+    public Quest2[] allQuests;
     private TriggerDialogue dialoguescript;
     private ItemPickup itemscript;
     public GameObject scriptObject;
@@ -23,53 +23,91 @@ public class Quest2 : MonoBehaviour
     public TMP_Text childText3;
     public TMP_Text childText4;
 
-
-
     void Start()
     {
-        allQuests = FindObjectsOfType<Quest>();  // all objects with quest script attached
+        allQuests = FindObjectsOfType<Quest2>();  // all objects with quest script attached
         dialoguescript = scriptObject.GetComponent<TriggerDialogue>();
         itemscript = scriptObject2.GetComponent<ItemPickup>();
-        itemscript.enabled = false;
+        //itemscript.enabled = false;
         currentColor = questItem.color;
     }
 
-    private void OnTriggerEnter(Collider other){
+    public void OnTriggerStay(Collider other)
+    {
 
         ////////// Quest 1: Grab a pair of cups
-        // Task 1: move ladder -- zie inventory item controller
+        // Task 1: move barrel -- zie inventory item controller
+        if(gameObject.name.Contains("Barrel")){
+            if(Input.GetMouseButtonDown(0)){
+                Destroy(gameObject);
+                GameManager.instance.barrelDestroyed = true;
+            }
+        }
         // Task 2: grab cups -- //zie gamemanager r.115
         // Task 3: put cups in basket -- zie inventory item controller
+        if(gameObject.name.Contains("Mand")){
+            GameManager.instance.mandTouch = true;
 
-        if(gameObject.name.Contains("dog")){
+            if(GameManager.instance.questOne){
+                FinishQuest();
+            }
+        }
+
+       if(gameObject.name.Contains("Dog")){
+            GameManager.instance.dogTouch = true;
+
+            if(GameManager.instance.questTwo){
+                FinishQuest();
+            }
+        }
+
+        if(gameObject.name.Equals("colliderobject")){
+            GameManager.instance.colliderTouch = true;
+
+            if(GameManager.instance.questThree){
+                FinishQuest();
+            }
+        }
+
+        
+
+        if(gameObject.name.Equals("colliderobject2")){
+            GameManager.instance.collider2Touch = true;
+
+            if(GameManager.instance.questFour){
+                FinishQuest();
+            }
+        } 
+
+        //part 2
+        
+
+        if (gameObject.name.Contains("path1"))
+        {
+            //quest something voltooid
+        }
+        if (gameObject.name.Contains("path2"))
+        {
             //quest something voltooid
         }
 
-        if(gameObject.name.Contains("path1")){
-            //quest something voltooid
-        }
-        if(gameObject.name.Contains("path2")){
-            //quest something voltooid
-        }
-        
-        
+
     }
 
-   public void Update(){
+    public void Update()
+    {
 
-        if(GameManager.instance.questOne){
-             FinishQuest();
-        }
-        if(GameManager.instance.questTwo){
-             FinishQuest();
-        }
-        if(GameManager.instance.questThree){
-             FinishQuest();
-        }
-        if(GameManager.instance.questFour){
-             FinishQuest();
-        }
-   }
+        
+        // if (GameManager.instance.questTwo){
+        //     FinishQuest();
+        // }
+        // if (GameManager.instance.questThree){
+        //     FinishQuest();
+        // }
+        // if (GameManager.instance.questFour){
+        //     FinishQuest();
+        // }
+    }
 
     public void FinishQuest()
     {
@@ -82,7 +120,7 @@ public class Quest2 : MonoBehaviour
     public void OnQuestClick()
     {
 
-        foreach (Quest quest in allQuests)
+        foreach (Quest2 quest in allQuests)
         {
 
             quest.questItem.color = quest.currentColor;

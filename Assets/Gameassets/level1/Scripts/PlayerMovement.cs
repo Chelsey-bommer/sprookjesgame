@@ -15,15 +15,13 @@ public class PlayerMovement : MonoBehaviour
     public Transform bottom_right;
     public LayerMask ground_layers;
 
-
     private Rigidbody rb;
     private SpriteRenderer sprite;
     private Animator anim;
+    private Renderer rend;
     public float movementSpeed = 2f;
     public float jumpingPower = 600f;
     [SerializeField] private LayerMask WhatIsGround;
-    [SerializeField] private AnimationCurve animCurve;
-    [SerializeField] private float time;
 
     public float drag;
     enum MovementState { idle, running, jumping, falling, backward, forward };
@@ -35,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+        rend = GetComponent<Renderer>();
         // This will stop the player game object from rotating
         rb.freezeRotation = true;
     }
@@ -43,10 +42,13 @@ public class PlayerMovement : MonoBehaviour
     {
         Collider[] hitColliders = Physics.OverlapSphere(top_left.position, 2.5f, ground_layers);
         bool isGrounded = hitColliders.Length > 0;
-        // This will detect forward and backward movement
+        
+
         horizontalInput = Input.GetAxis("Horizontal");
-        // This will detect sideways movement
         verticalInput = Input.GetAxis("Vertical");
+
+        rb.velocity = new Vector3(horizontalInput * movementSpeed, rb.velocity.y, verticalInput * movementSpeed);
+
 
         if (Input.GetButtonDown("Jump"))
         {   //If jump button is pressed,
@@ -64,20 +66,16 @@ public class PlayerMovement : MonoBehaviour
                 }
             }
         }
-
-        // Calculate the direction to move the player
-        Vector3 movementDirection = Vector3.forward * verticalInput + transform.right * horizontalInput;
-        // Move the player
-        rb.AddForce(movementDirection * movementSpeed, ForceMode.Force);
-
-        // Apply drag
-        rb.drag = drag;
-
         
 
+        // // Apply drag
+        // rb.drag = drag;
+
         UpdateAnimation();
-        SurfaceAlignment();
+        
     }
+
+   
 
     void FixedUpdate(){
 
@@ -88,6 +86,7 @@ public class PlayerMovement : MonoBehaviour
             doJump = false;
             isGrounded = false;
         }
+
     }
 
     void UpdateAnimation()
@@ -107,7 +106,6 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             state = MovementState.idle;
-            //anim.SetBool("walking", false);
 
         }
         //backwards walking
@@ -115,7 +113,8 @@ public class PlayerMovement : MonoBehaviour
         {
             state = MovementState.backward;
 
-            if (horizontalInput > 0.1f)
+          if(gameObject.name.Equals("Player")){
+              if (horizontalInput > 0.1f)
             {
                 sprite.flipX = true;
             }
@@ -123,11 +122,14 @@ public class PlayerMovement : MonoBehaviour
             {
                 sprite.flipX = false;
             }
+          }
         }
-        if (verticalInput < 0f)
+        else if (verticalInput < 0f)
         {
             state = MovementState.forward;
+
         }
+        
         //jumping
         if(rb.velocity.y > .1f){
             state = MovementState.jumping;
@@ -141,27 +143,4 @@ public class PlayerMovement : MonoBehaviour
 
 
 
-    void SurfaceAlignment()
-    {
-
-        // Ray ray = new Ray(transform.position, -transform.up);
-        // RaycastHit info = new RaycastHit();
-        // Quaternion RotationRef = Quaternion.Euler(0, 0, 0);
-
-
-        // if (Physics.Raycast(ray, out info, WhatIsGround))
-        // {
-        //     RotationRef = Quaternion.Lerp(transform.rotation, Quaternion.FromToRotation(Vector3.up, info.normal), animCurve.Evaluate(time));
-        //     transform.rotation = Quaternion.Euler(RotationRef.eulerAngles.x, transform.eulerAngles.y, RotationRef.eulerAngles.z);
-        // }                                           //^^ 45
-    }
-
-
-    void OnDrawGizmosSelected(){
-            // Draw a semitransparent red cube at the transforms position
-            Gizmos.color = new Color(1, 0, 0, 0.5f);
-            //Vector3 gizmoPosition = new Vector3(bottom_right.position.x + top_left.position.x, top_left.position.y, top_left.position.z);
-            Vector3 gizmoPosition = (bottom_right.position + top_left.position) / 2;
-            Gizmos.DrawCube(gizmoPosition, new Vector3(Mathf.Abs(bottom_right.position.x - top_left.position.x), Mathf.Abs(top_left.position.y - bottom_right.position.y), 1));
-    }
 }

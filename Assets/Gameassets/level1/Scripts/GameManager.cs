@@ -7,7 +7,6 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-
     public bool questOne = false;
     public bool questTwo = false;
     public bool questTwoPartOne = false;
@@ -99,70 +98,123 @@ public class GameManager : MonoBehaviour
 
         if(questThreePartOne && questThreePartTwo && questThreePartThree){
             questThree = true;
+            Percentage3.text = "100%";
         }
 
-        ///////////////////
+        
+
+
+        ////////////////////////////////// LEVEL 2
+        ///Quest 1
+        if(barrelDestroyed){
+            questOnePartOne = true; 
+        }
+        if(questOnePartOne){
+            Percentage1.text = "33%";
+        }
+        if(cupsPickedup){
+            questOnePartTwo = true; 
+        }
+        if(questOnePartTwo ){
+            Percentage1.text = "66%";
+        }
+        if(cupsDropped){
+            questOnePartThree = true;
+        }
+        
+        if(questOnePartOne && questOnePartTwo && questOnePartThree){
+            questOne = true;
+            Percentage1.text = "100%";
+        }
+
+
+
+        ///////////////////////////////////quest 2
+        if(applesPickedup && grapesPickedup){
+            TwoPartOne = true;
+            TwoPartTwo = true; 
+        }
+        if(TwoPartTwo){
+            Percentage2.text = "50%";
+        }
+        if(applesDropped){
+            TwoPartThree = true; 
+        }
+        if(TwoPartThree){
+            Percentage2.text = "75%";
+        }
+        if(grapesDropped){
+            TwoPartFour = true; 
+        }
+        
+        if(TwoPartOne && TwoPartTwo && TwoPartThree && TwoPartFour){
+            questTwo = true;
+            Percentage2.text = "100%";
+        }
+
+
+
+        ////////////////////////////////quest 3
+        if(cakesPickedup){
+            questThreePartOne = true;
+        }
+        if(questThreePartOne){
+            Percentage3.text = "50%";
+        }
+        if(cakesDropped && questThreePartOne){
+            questThree = true; 
+            Percentage3.text = "100%";
+        }
+
+
+
+        //////////////////////////////quest 4
+        if(dogPickedup){
+            questFourPartOne = true;
+        }
+        
         if(questFourPartOne == true){
             Percentage4.text = "50%";    
+        }
+        if(dogDropped && questFourPartOne){
+            questFour = true; 
         }
         if(questFour == true){
             Percentage4.text = "100%";    
         }
 
+        //////////////////
 
-        //////// Level 2
-
-        if(cupsDropped){
-            questOnePartTwo = true; 
+        if(!colliderTouch && !collider2Touch && !mandTouch){
+            Debug.Log("not touching");
         }
-        if(ladderDropped){
-            questOnePartOne = true; 
-        }
-        if(questOnePartOne){
-            Percentage1.text = "50%";
-        }
-        if(questOnePartOne && questOnePartTwo){
-            questOne = true;
-            Percentage1.text = "100%";
-        }
-
-        //quest 2
-        if(applesDropped){
-            TwoPartOne = true; 
-        }
-        if(grapesDropped){
-            TwoPartTwo = true; 
-        }
-        if(TwoPartOne){
-            Percentage2.text = "50%";
-        }
-        if(TwoPartOne && TwoPartTwo){
-            questTwo = true;
-            Percentage1.text = "100%";
-        }
-        //quest 3
-        if(cakesDropped){
-            questThree = true; 
-        }
-        if(dogDropped){
-            questFour = true; 
-        }
+        
     }
-
+    
 
     //////// Level 2
-
-    public bool ladderDropped = false;
+    public bool barrelDestroyed = false;
+    public bool mandTouch = false;
+    public bool dogTouch = false;
+    public bool colliderTouch = false;
+    public bool collider2Touch = false;
     public bool cupsDropped = false;
+    public bool cupsPickedup = false;
     public bool applesDropped = false;
+    public bool applesPickedup = false;
     public bool grapesDropped = false;
+    public bool grapesPickedup = false;
     public bool cakesDropped = false;
+    public bool cakesPickedup = false;
     public bool dogDropped = false;
+    public bool dogPickedup = false;
     public bool questOnePartOne = false;
     public bool questOnePartTwo = false;
-    
+    public bool questOnePartThree = false;
     public bool TwoPartOne = false;
     public bool TwoPartTwo = false;
+    public bool TwoPartThree = false;
+    public bool TwoPartFour = false;
     
 
   
