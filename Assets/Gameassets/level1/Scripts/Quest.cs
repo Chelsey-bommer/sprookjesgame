@@ -57,9 +57,11 @@ public class Quest : MonoBehaviour
         quest2.GetComponent<Button>().interactable = false;
         quest3.GetComponent<Button>().interactable = false;
         quest4.GetComponent<Button>().interactable = false;
-        // quest2.color = inactiveColor;
-        // quest3.color = inactiveColor;
-        // quest4.color = inactiveColor;
+    }
+
+    public void Update(){
+        
+       
     }
 
     private void OnTriggerEnter(Collider other)
@@ -247,18 +249,30 @@ public class Quest : MonoBehaviour
 
     public void FinishQuest()
     {
-        questItem.color = completedColor;
-        currentColor = completedColor;
-        questItem.GetComponent<Button>().interactable = false;  //set quest inactive when completed
+
+        if(GameManager.instance.questOne){
+            quest1.color = completedColor;
+            quest1.GetComponent<Button>().interactable = false;
+            quest2.GetComponent<Button>().interactable = true;
+        }
+        if(GameManager.instance.questTwo){
+            quest2.color = completedColor;
+            quest2.GetComponent<Button>().interactable = false;
+            quest3.GetComponent<Button>().interactable = true;
+        }
+        if(GameManager.instance.questThree){
+            quest3.color = completedColor;
+            quest3.GetComponent<Button>().interactable = false;
+            quest4.GetComponent<Button>().interactable = true;
+        }
+        if(GameManager.instance.questFour){
+            quest4.color = completedColor;
+            quest4.GetComponent<Button>().interactable = false;
+        }
+
         child.SetActive(false);
     }
 
-    public void Update(){
-        
-        if(GameManager.instance.questOne){
-            quest1.color = completedColor;
-        }
-    }
 
     public void OnQuestClick()
     {

@@ -10137,7 +10137,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questItem: {fileID: 1173042181}
   currentColor: {r: 1, g: 1, b: 1, a: 1}
-  percentage: {fileID: 2140846178}
+  percentage: {fileID: 1954280906}
   allQuests: []
   scriptObject: {fileID: 1130137758}
   child: {fileID: 2034642814}
