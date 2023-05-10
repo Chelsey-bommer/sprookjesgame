@@ -8,9 +8,12 @@ using TMPro;
 public class Quest2 : MonoBehaviour
 {
     public Image questItem;
-    public Color completedColor;
-    public Color activeColor;
+    public QuestArrow TargetArrow;
+    private Color completedColor;
+    private Color activeColor;
     public Color currentColor;
+    private Color inactiveColor;
+    private Color normalColor;
     public TMP_Text percentage;
     public Quest2[] allQuests;
     private TriggerDialogue dialoguescript;
@@ -22,6 +25,10 @@ public class Quest2 : MonoBehaviour
     public TMP_Text childText2;
     public TMP_Text childText3;
     public TMP_Text childText4;
+    public Image quest1;
+    public Image quest2;
+    public Image quest3;
+    public Image quest4;
 
     void Start()
     {
@@ -30,6 +37,18 @@ public class Quest2 : MonoBehaviour
         itemscript = scriptObject2.GetComponent<ItemPickup>();
         //itemscript.enabled = false;
         currentColor = questItem.color;
+
+        //SET variable colors
+        ColorUtility.TryParseHtmlString("#009200", out completedColor);
+        ColorUtility.TryParseHtmlString("#BDB7AB", out activeColor);
+        ColorUtility.TryParseHtmlString("#dddddd", out inactiveColor);
+        ColorUtility.TryParseHtmlString("#eeeeee", out normalColor);
+
+        quest1.color = activeColor;
+        quest1.GetComponent<Button>().interactable = true;
+        quest2.GetComponent<Button>().interactable = false;
+        quest3.GetComponent<Button>().interactable = false;
+        quest4.GetComponent<Button>().interactable = false;
     }
 
     public void OnTriggerStay(Collider other)
@@ -109,14 +128,31 @@ public class Quest2 : MonoBehaviour
         // }
     }
 
-    public void FinishQuest()
+   public void FinishQuest()
     {
-        questItem.color = completedColor;
-        currentColor = completedColor;
-        questItem.GetComponent<Button>().interactable = false;  //set quest inactive when completed
+
+        if(GameManager.instance.questOne){
+            quest1.color = completedColor;
+            quest1.GetComponent<Button>().interactable = false;
+            quest2.GetComponent<Button>().interactable = true;
+        }
+        if(GameManager.instance.questTwo){
+            quest2.color = completedColor;
+            quest2.GetComponent<Button>().interactable = false;
+            quest3.GetComponent<Button>().interactable = true;
+        }
+        if(GameManager.instance.questThree){
+            quest3.color = completedColor;
+            quest3.GetComponent<Button>().interactable = false;
+            quest4.GetComponent<Button>().interactable = true;
+        }
+        if(GameManager.instance.questFour){
+            quest4.color = completedColor;
+            quest4.GetComponent<Button>().interactable = false;
+        }
+
         child.SetActive(false);
     }
-
     public void OnQuestClick()
     {
 
