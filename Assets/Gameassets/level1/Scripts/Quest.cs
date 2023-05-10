@@ -122,6 +122,15 @@ public class Quest : MonoBehaviour
         }
 
         // SEE TRIGGERSTAY for part four
+        if(gameObject.name.Contains("Hole") && GameManager.instance.questTwoPartOne
+        && GameManager.instance.questTwoPartTwo && GameManager.instance.questTwoPartThree){
+            
+            GameManager.instance.touchDialogue9 = true;
+
+            if(GameManager.instance.touchDialogue9){
+                dialoguescript.dialogue9();
+            }
+        }
         
 
         /////////////////////Quest 3: Find the lost kid
@@ -192,9 +201,10 @@ public class Quest : MonoBehaviour
     public void OnTriggerStay(){
         //////////////////////////////////// QUEST 2
         //Part four: Replace the wall
-        if(gameObject.name.Contains("Hole") /* HOLE???? */ && GameManager.instance.questTwoPartOne
+        if(gameObject.name.Contains("Hole") && GameManager.instance.questTwoPartOne
         && GameManager.instance.questTwoPartTwo && GameManager.instance.questTwoPartThree)
         {
+            
 
             ////////////////// REMOVE ITEMS FROM INVENTORY?????????
 

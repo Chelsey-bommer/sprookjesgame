@@ -47,6 +47,7 @@ public class GameManager : MonoBehaviour
     public bool touchDialogue5 = false;
     public bool touchDialogue6 = false;
     public bool touchDialogue7 = false;
+    public bool touchDialogue9 = false;
 
     
     
