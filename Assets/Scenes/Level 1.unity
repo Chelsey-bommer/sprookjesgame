@@ -1636,6 +1636,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boardDialogue: 0
+  aQuest: 0
   questOne: 0
   questTwo: 0
   questTwoPartOne: 0
@@ -3985,8 +3986,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questItem: {fileID: 781854349}
-  completedColor: {r: 0, g: 1, b: 0.016062737, a: 1}
-  activeColor: {r: 1, g: 0.84426296, b: 0, a: 1}
   currentColor: {r: 1, g: 0.96603775, b: 0.96603775, a: 1}
   percentage: {fileID: 1992306246}
   allQuests: []
@@ -3998,6 +3997,10 @@ MonoBehaviour:
   childText4: {fileID: 1973211743}
   spriteRenderer: {fileID: 1776558806}
   newSprite: {fileID: 21300000, guid: e16c49d64dd94a8479cadb4976c93e75, type: 3}
+  quest1: {fileID: 1774525584}
+  quest2: {fileID: 781854349}
+  quest3: {fileID: 1768123929}
+  quest4: {fileID: 1173042181}
 --- !u!1001 &422387553
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5254,8 +5257,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questItem: {fileID: 1774525584}
-  completedColor: {r: 0.10684502, g: 1, b: 0, a: 1}
-  activeColor: {r: 1, g: 0.83049023, b: 0, a: 1}
   currentColor: {r: 1, g: 1, b: 1, a: 1}
   percentage: {fileID: 1560016539}
   allQuests: []
@@ -5267,6 +5268,10 @@ MonoBehaviour:
   childText4: {fileID: 391084393}
   spriteRenderer: {fileID: 0}
   newSprite: {fileID: 0}
+  quest1: {fileID: 0}
+  quest2: {fileID: 0}
+  quest3: {fileID: 0}
+  quest4: {fileID: 0}
 --- !u!1 &565278766
 GameObject:
   m_ObjectHideFlags: 0
@@ -5554,8 +5559,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questItem: {fileID: 781854349}
-  completedColor: {r: 0.016892314, g: 1, b: 0, a: 1}
-  activeColor: {r: 1, g: 0.85695124, b: 0, a: 1}
   currentColor: {r: 1, g: 1, b: 1, a: 1}
   percentage: {fileID: 1992306246}
   allQuests: []
@@ -5567,6 +5570,10 @@ MonoBehaviour:
   childText4: {fileID: 1973211743}
   spriteRenderer: {fileID: 1776558806}
   newSprite: {fileID: 21300000, guid: e16c49d64dd94a8479cadb4976c93e75, type: 3}
+  quest1: {fileID: 1774525584}
+  quest2: {fileID: 781854349}
+  quest3: {fileID: 1768123929}
+  quest4: {fileID: 1173042181}
 --- !u!212 &600157972
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8864,8 +8871,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questItem: {fileID: 1768123929}
-  completedColor: {r: 0.09862375, g: 1, b: 0, a: 1}
-  activeColor: {r: 1, g: 0.94317573, b: 0, a: 1}
   currentColor: {r: 1, g: 1, b: 1, a: 1}
   percentage: {fileID: 2140846178}
   allQuests: []
@@ -8877,6 +8882,10 @@ MonoBehaviour:
   childText4: {fileID: 534564765}
   spriteRenderer: {fileID: 0}
   newSprite: {fileID: 0}
+  quest1: {fileID: 1774525584}
+  quest2: {fileID: 781854349}
+  quest3: {fileID: 1768123929}
+  quest4: {fileID: 1173042181}
 --- !u!1 &1033150579
 GameObject:
   m_ObjectHideFlags: 0
@@ -10127,8 +10136,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questItem: {fileID: 1173042181}
-  completedColor: {r: 0.016892314, g: 1, b: 0, a: 1}
-  activeColor: {r: 1, g: 0.85695124, b: 0, a: 1}
   currentColor: {r: 1, g: 1, b: 1, a: 1}
   percentage: {fileID: 2140846178}
   allQuests: []
@@ -10140,6 +10147,10 @@ MonoBehaviour:
   childText4: {fileID: 534564765}
   spriteRenderer: {fileID: 0}
   newSprite: {fileID: 0}
+  quest1: {fileID: 1774525584}
+  quest2: {fileID: 781854349}
+  quest3: {fileID: 1768123929}
+  quest4: {fileID: 1173042181}
 --- !u!212 &1130014913
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10225,8 +10236,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questItem: {fileID: 1774525584}
-  completedColor: {r: 0.016892314, g: 1, b: 0, a: 1}
-  activeColor: {r: 1, g: 0.85695124, b: 0, a: 1}
   currentColor: {r: 1, g: 1, b: 1, a: 1}
   percentage: {fileID: 1560016539}
   allQuests: []
@@ -10238,6 +10247,10 @@ MonoBehaviour:
   childText4: {fileID: 391084393}
   spriteRenderer: {fileID: 0}
   newSprite: {fileID: 0}
+  quest1: {fileID: 1774525584}
+  quest2: {fileID: 781854349}
+  quest3: {fileID: 1768123929}
+  quest4: {fileID: 1173042181}
 --- !u!114 &1130137760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11118,8 +11131,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questItem: {fileID: 1768123929}
-  completedColor: {r: 0.016892314, g: 1, b: 0, a: 1}
-  activeColor: {r: 1, g: 0.85695124, b: 0, a: 1}
   currentColor: {r: 1, g: 1, b: 1, a: 1}
   percentage: {fileID: 2140846178}
   allQuests: []
@@ -11131,6 +11142,10 @@ MonoBehaviour:
   childText4: {fileID: 534564765}
   spriteRenderer: {fileID: 0}
   newSprite: {fileID: 0}
+  quest1: {fileID: 1774525584}
+  quest2: {fileID: 781854349}
+  quest3: {fileID: 1768123929}
+  quest4: {fileID: 1173042181}
 --- !u!65 &1180456354
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12867,8 +12882,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questItem: {fileID: 781854349}
-  completedColor: {r: 0.016892314, g: 1, b: 0, a: 1}
-  activeColor: {r: 1, g: 0.85695124, b: 0, a: 1}
   currentColor: {r: 1, g: 1, b: 1, a: 1}
   percentage: {fileID: 1992306246}
   allQuests: []
@@ -12880,6 +12893,10 @@ MonoBehaviour:
   childText4: {fileID: 1973211743}
   spriteRenderer: {fileID: 1776558806}
   newSprite: {fileID: 21300000, guid: e16c49d64dd94a8479cadb4976c93e75, type: 3}
+  quest1: {fileID: 1774525584}
+  quest2: {fileID: 781854349}
+  quest3: {fileID: 1768123929}
+  quest4: {fileID: 1173042181}
 --- !u!212 &1387253356
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13423,8 +13440,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questItem: {fileID: 781854349}
-  completedColor: {r: 0.016892314, g: 1, b: 0, a: 1}
-  activeColor: {r: 1, g: 0.85695124, b: 0, a: 1}
   currentColor: {r: 1, g: 1, b: 1, a: 1}
   percentage: {fileID: 1992306246}
   allQuests: []
@@ -13436,6 +13451,10 @@ MonoBehaviour:
   childText4: {fileID: 1973211743}
   spriteRenderer: {fileID: 1776558806}
   newSprite: {fileID: 21300000, guid: e16c49d64dd94a8479cadb4976c93e75, type: 3}
+  quest1: {fileID: 1774525584}
+  quest2: {fileID: 781854349}
+  quest3: {fileID: 1768123929}
+  quest4: {fileID: 1173042181}
 --- !u!212 &1434606590
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17100,8 +17119,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questItem: {fileID: 781854349}
-  completedColor: {r: 0.016892314, g: 1, b: 0, a: 1}
-  activeColor: {r: 1, g: 0.85695124, b: 0, a: 1}
   currentColor: {r: 1, g: 1, b: 1, a: 1}
   percentage: {fileID: 1992306246}
   allQuests: []
@@ -17113,6 +17130,10 @@ MonoBehaviour:
   childText4: {fileID: 1973211743}
   spriteRenderer: {fileID: 1776558806}
   newSprite: {fileID: 21300000, guid: e16c49d64dd94a8479cadb4976c93e75, type: 3}
+  quest1: {fileID: 1774525584}
+  quest2: {fileID: 781854349}
+  quest3: {fileID: 1768123929}
+  quest4: {fileID: 1173042181}
 --- !u!212 &1749528989
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17735,8 +17756,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questItem: {fileID: 781854349}
-  completedColor: {r: 0.016892314, g: 1, b: 0, a: 1}
-  activeColor: {r: 1, g: 0.85695124, b: 0, a: 1}
   currentColor: {r: 1, g: 1, b: 1, a: 1}
   percentage: {fileID: 1992306246}
   allQuests: []
@@ -17748,6 +17767,10 @@ MonoBehaviour:
   childText4: {fileID: 1973211743}
   spriteRenderer: {fileID: 1776558806}
   newSprite: {fileID: 21300000, guid: e16c49d64dd94a8479cadb4976c93e75, type: 3}
+  quest1: {fileID: 1774525584}
+  quest2: {fileID: 781854349}
+  quest3: {fileID: 1768123929}
+  quest4: {fileID: 1173042181}
 --- !u!1001 &1806242898
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17882,8 +17905,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questItem: {fileID: 1768123929}
-  completedColor: {r: 0.016892314, g: 1, b: 0, a: 1}
-  activeColor: {r: 1, g: 0.85695124, b: 0, a: 1}
   currentColor: {r: 1, g: 1, b: 1, a: 1}
   percentage: {fileID: 2140846178}
   allQuests: []
@@ -17895,6 +17916,10 @@ MonoBehaviour:
   childText4: {fileID: 534564765}
   spriteRenderer: {fileID: 0}
   newSprite: {fileID: 0}
+  quest1: {fileID: 1774525584}
+  quest2: {fileID: 781854349}
+  quest3: {fileID: 1768123929}
+  quest4: {fileID: 1173042181}
 --- !u!23 &1813292424
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19339,8 +19364,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questItem: {fileID: 1173042181}
-  completedColor: {r: 0.050844908, g: 1, b: 0, a: 1}
-  activeColor: {r: 1, g: 0.8668643, b: 0, a: 1}
   currentColor: {r: 1, g: 1, b: 1, a: 1}
   percentage: {fileID: 1954280906}
   allQuests: []
@@ -19352,6 +19375,10 @@ MonoBehaviour:
   childText4: {fileID: 1676894166}
   spriteRenderer: {fileID: 0}
   newSprite: {fileID: 0}
+  quest1: {fileID: 1774525584}
+  quest2: {fileID: 781854349}
+  quest3: {fileID: 1768123929}
+  quest4: {fileID: 1173042181}
 --- !u!65 &1950088126
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21477,6 +21504,26 @@ PrefabInstance:
       propertyPath: child
       value: 
       objectReference: {fileID: 797885372}
+    - target: {fileID: 1076923657610785133, guid: d11d0a073109e5a409faf8ab5fcb0923,
+        type: 3}
+      propertyPath: quest1
+      value: 
+      objectReference: {fileID: 1774525584}
+    - target: {fileID: 1076923657610785133, guid: d11d0a073109e5a409faf8ab5fcb0923,
+        type: 3}
+      propertyPath: quest2
+      value: 
+      objectReference: {fileID: 781854349}
+    - target: {fileID: 1076923657610785133, guid: d11d0a073109e5a409faf8ab5fcb0923,
+        type: 3}
+      propertyPath: quest3
+      value: 
+      objectReference: {fileID: 1768123929}
+    - target: {fileID: 1076923657610785133, guid: d11d0a073109e5a409faf8ab5fcb0923,
+        type: 3}
+      propertyPath: quest4
+      value: 
+      objectReference: {fileID: 1173042181}
     - target: {fileID: 1076923657610785133, guid: d11d0a073109e5a409faf8ab5fcb0923,
         type: 3}
       propertyPath: childText
