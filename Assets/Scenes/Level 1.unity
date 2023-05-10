@@ -805,7 +805,7 @@ GameObject:
   m_Component:
   - component: {fileID: 78068555}
   m_Layer: 0
-  m_Name: Quest2
+  m_Name: Questgroup2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10140,11 +10140,11 @@ MonoBehaviour:
   percentage: {fileID: 1954280906}
   allQuests: []
   scriptObject: {fileID: 1130137758}
-  child: {fileID: 2034642814}
-  childText: {fileID: 2066675}
-  childText2: {fileID: 1102132421}
-  childText3: {fileID: 410752853}
-  childText4: {fileID: 534564765}
+  child: {fileID: 797885372}
+  childText: {fileID: 1459239754}
+  childText2: {fileID: 1541773159}
+  childText3: {fileID: 1404211661}
+  childText4: {fileID: 1676894166}
   spriteRenderer: {fileID: 0}
   newSprite: {fileID: 0}
   quest1: {fileID: 1774525584}
@@ -11676,7 +11676,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1271972563}
   m_Layer: 0
-  m_Name: Quest3
+  m_Name: Questgroup3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16406,7 +16406,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1690300013}
   m_Layer: 0
-  m_Name: Quest4
+  m_Name: Questgroup4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

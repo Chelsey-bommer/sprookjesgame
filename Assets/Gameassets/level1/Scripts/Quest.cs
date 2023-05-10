@@ -51,17 +51,11 @@ public class Quest : MonoBehaviour
         ColorUtility.TryParseHtmlString("#dddddd", out inactiveColor);
         ColorUtility.TryParseHtmlString("#eeeeee", out normalColor);
 
-
         quest1.color = activeColor;
         quest1.GetComponent<Button>().interactable = true;
         quest2.GetComponent<Button>().interactable = false;
         quest3.GetComponent<Button>().interactable = false;
         quest4.GetComponent<Button>().interactable = false;
-    }
-
-    public void Update(){
-        
-       
     }
 
     private void OnTriggerEnter(Collider other)
@@ -92,7 +86,7 @@ public class Quest : MonoBehaviour
 
         //////////////////Quest 2:
         // Part one: Locate hole
-        if (gameObject.name.Contains("Hole") && !GameManager.instance.questTwoPartOne)
+        if (gameObject.name.Contains("Hole") && !GameManager.instance.questTwoPartOne && GameManager.instance.questOne)
         {
             GameManager.instance.questTwoPartOne = true;
             childText.color = completedColor;
@@ -132,7 +126,7 @@ public class Quest : MonoBehaviour
 
         /////////////////////Quest 3: Find the lost kid
         // Task one: Talk to the parents
-        if (gameObject.name.Contains("Parent"))
+        if (gameObject.name.Contains("Parent") && GameManager.instance.questTwo)
         {   
             GameManager.instance.touchDialogue3 = true;
             if(GameManager.instance.questThreePartOne == false){
@@ -163,7 +157,7 @@ public class Quest : MonoBehaviour
 
         //////////////////// Quest Four: Resupply the arrows
         // Part one: Talk to fletcher to get arrows
-        if(gameObject.name.Contains("Fletcher")){
+        if(gameObject.name.Contains("Fletcher") && GameManager.instance.questThree){
 
             GameManager.instance.touchDialogue6 = true;
             if(GameManager.instance.questFourPartOne == false){
@@ -277,16 +271,6 @@ public class Quest : MonoBehaviour
     public void OnQuestClick()
     {
 
-        // foreach (Quest quest in allQuests)
-        // {
-        //     quest.questItem.color = inactiveColor;
-        //     quest.questItem.GetComponent<Button>().interactable = false;
-        // }
-        // questItem.color = activeColor;
-        // questItem.GetComponent<Button>().interactable = true;
-
-        
-
         if (child.activeInHierarchy)
         {
             child.SetActive(false);
@@ -296,7 +280,6 @@ public class Quest : MonoBehaviour
             child.SetActive(true);
 
         }
-
     }
 
 
