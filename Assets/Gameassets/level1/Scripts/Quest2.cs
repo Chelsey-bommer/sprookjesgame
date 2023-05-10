@@ -29,6 +29,12 @@ public class Quest2 : MonoBehaviour
     public Image quest2;
     public Image quest3;
     public Image quest4;
+    private GameObject cups;
+    private GameObject mand;
+    private GameObject apples;
+    private GameObject grapes;
+    private GameObject cake;
+    private GameObject dogfood;
 
     void Start()
     {
@@ -37,6 +43,14 @@ public class Quest2 : MonoBehaviour
         itemscript = scriptObject2.GetComponent<ItemPickup>();
         //itemscript.enabled = false;
         currentColor = questItem.color;
+
+        cups = GameObject.Find("Cups");
+        mand = GameObject.Find("Mand");
+        apples = GameObject.Find("Apples");
+        grapes = GameObject.Find("Grapes");
+        cake = GameObject.Find("Cake");
+        dogfood = GameObject.Find("Dogfood");
+
 
         //SET variable colors
         ColorUtility.TryParseHtmlString("#009200", out completedColor);
@@ -62,9 +76,9 @@ public class Quest2 : MonoBehaviour
                 GameManager.instance.barrelDestroyed = true;
             }
         }
-        // Task 2: grab cups -- //zie gamemanager r.115
+        // Task 2: grab cups -- //zie gamemanager r.135
         // Task 3: put cups in basket -- zie inventory item controller
-        if(gameObject.name.Contains("Mand")){
+        if(gameObject.name.Contains("Mand") && GameManager.instance.questOnePartTwo){
             GameManager.instance.mandTouch = true;
 
             if(GameManager.instance.questOne){
@@ -87,8 +101,6 @@ public class Quest2 : MonoBehaviour
                 FinishQuest();
             }
         }
-
-        
 
         if(gameObject.name.Equals("colliderobject2")){
             GameManager.instance.collider2Touch = true;
@@ -115,17 +127,47 @@ public class Quest2 : MonoBehaviour
 
     public void Update()
     {
+        // if(gameObject.name.Contains("Barrel")){
 
-        
-        // if (GameManager.instance.questTwo){
-        //     FinishQuest();
         // }
-        // if (GameManager.instance.questThree){
-        //     FinishQuest();
-        // }
-        // if (GameManager.instance.questFour){
-        //     FinishQuest();
-        // }
+        if (GameManager.instance.questOnePartOne){
+            childText.color = completedColor;
+        }
+        if (GameManager.instance.questOnePartTwo){
+            childText2.color = completedColor;
+        }
+
+        if (GameManager.instance.TwoPartOne){
+            childText.color = completedColor;
+        }
+
+        // Set Arrow direction to this object
+        if(!GameManager.instance.questOnePartOne && !GameManager.instance.questOnePartTwo){
+            TargetArrow.target = cups.transform;
+        }
+        if(!GameManager.instance.questOnePartThree && GameManager.instance.questOnePartOne && GameManager.instance.questOnePartTwo){
+            TargetArrow.target = mand.transform;
+        }
+
+        if(!GameManager.instance.TwoPartOne && GameManager.instance.questOne){
+            TargetArrow.target = apples.transform;
+        }
+        if(!GameManager.instance.TwoPartTwo && GameManager.instance.TwoPartOne && GameManager.instance.questOne){
+            TargetArrow.target = grapes.transform;
+        }
+        if(!GameManager.instance.TwoPartThree && !GameManager.instance.TwoPartFour && GameManager.instance.TwoPartTwo && GameManager.instance.TwoPartOne){
+            TargetArrow.target = mand.transform;
+        }
+
+        if(!GameManager.instance.questThree && GameManager.instance.questTwo && GameManager.instance.questOne){
+            TargetArrow.target = cake.transform;
+        }
+
+        if(!GameManager.instance.questFour && GameManager.instance.questThree && GameManager.instance.questTwo && GameManager.instance.questOne){
+            TargetArrow.target = dogfood.transform;
+        }
+
+
     }
 
    public void FinishQuest()
@@ -155,13 +197,6 @@ public class Quest2 : MonoBehaviour
     }
     public void OnQuestClick()
     {
-
-        foreach (Quest2 quest in allQuests)
-        {
-
-            quest.questItem.color = quest.currentColor;
-        }
-        questItem.color = activeColor;
 
 
         if (child.activeInHierarchy)

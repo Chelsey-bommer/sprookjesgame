@@ -139,13 +139,13 @@ public class GameManager : MonoBehaviour
         if(questOnePartOne){
             Percentage1.text = "33%";
         }
-        if(cupsPickedup){
+        if(cupsPickedup && questOnePartOne){
             questOnePartTwo = true; 
         }
         if(questOnePartTwo ){
             Percentage1.text = "66%";
         }
-        if(cupsDropped){
+        if(cupsDropped && questOnePartTwo){
             questOnePartThree = true;
         }
         
@@ -157,7 +157,7 @@ public class GameManager : MonoBehaviour
 
 
         ///////////////////////////////////quest 2
-        if(applesPickedup && grapesPickedup){
+        if(applesPickedup && grapesPickedup && questOne){
             TwoPartOne = true;
             TwoPartTwo = true; 
         }
@@ -182,7 +182,7 @@ public class GameManager : MonoBehaviour
 
 
         ////////////////////////////////quest 3
-        if(cakesPickedup){
+        if(cakesPickedup && questTwo){
             questThreePartOne = true;
         }
         if(questThreePartOne){
@@ -196,7 +196,7 @@ public class GameManager : MonoBehaviour
 
 
         //////////////////////////////quest 4
-        if(dogPickedup){
+        if(dogPickedup && questThree){
             questFourPartOne = true;
         }
         

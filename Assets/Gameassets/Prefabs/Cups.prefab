@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1358464842005238549}
   - component: {fileID: 4168164616387058766}
   - component: {fileID: 4496784691482999288}
+  - component: {fileID: 4310089758259961746}
   m_Layer: 0
   m_Name: Cups
   m_TagString: Untagged
@@ -98,4 +99,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 204b215fd5ff54f4c9c4fbf109738be6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Item: {fileID: 0}
+  Item: {fileID: 11400000, guid: a2b160ddd46c0d341835ef1ac3d5cab8, type: 2}
+--- !u!114 &4310089758259961746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 704645334918536769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eff398d908127f14cb243f5bbd95786b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: a2b160ddd46c0d341835ef1ac3d5cab8, type: 2}
