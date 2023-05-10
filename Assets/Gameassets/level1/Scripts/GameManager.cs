@@ -93,7 +93,6 @@ public class GameManager : MonoBehaviour
             Percentage2.text = "100%";
         }
 
-        
         if(questTwoPartOne && questTwoPartTwo && questTwoPartThree && questTwoPartFour){
             questTwo = true;
         }

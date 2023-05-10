@@ -4086,6 +4086,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questItem: {fileID: 781854349}
+  TargetArrow: {fileID: 2034830450}
   currentColor: {r: 1, g: 0.96603775, b: 0.96603775, a: 1}
   percentage: {fileID: 1992306246}
   allQuests: []
@@ -5453,6 +5454,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questItem: {fileID: 1774525584}
+  TargetArrow: {fileID: 2034830450}
   currentColor: {r: 1, g: 1, b: 1, a: 1}
   percentage: {fileID: 1560016539}
   allQuests: []
@@ -5757,6 +5759,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questItem: {fileID: 781854349}
+  TargetArrow: {fileID: 2034830450}
   currentColor: {r: 1, g: 1, b: 1, a: 1}
   percentage: {fileID: 1992306246}
   allQuests: []
@@ -7678,6 +7681,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4154409404426825433, guid: 73a39f3dd71743c46bb0b0e55da76558,
+        type: 3}
+      propertyPath: m_Name
+      value: TargetArrow
+      objectReference: {fileID: 0}
+    - target: {fileID: 4154409404426825433, guid: 73a39f3dd71743c46bb0b0e55da76558,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5185489846311851504, guid: 73a39f3dd71743c46bb0b0e55da76558,
         type: 3}
       propertyPath: m_Sprite
@@ -7819,6 +7832,37 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6672574310066506649, guid: 73a39f3dd71743c46bb0b0e55da76558,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.494642
+      objectReference: {fileID: 0}
+    - target: {fileID: 6672574310066506649, guid: 73a39f3dd71743c46bb0b0e55da76558,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.5442805
+      objectReference: {fileID: 0}
+    - target: {fileID: 6672574310066506649, guid: 73a39f3dd71743c46bb0b0e55da76558,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.0414
+      objectReference: {fileID: 0}
+    - target: {fileID: 6672574310066506649, guid: 73a39f3dd71743c46bb0b0e55da76558,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.2715
+      objectReference: {fileID: 0}
+    - target: {fileID: 6672574310066506649, guid: 73a39f3dd71743c46bb0b0e55da76558,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 8261392848573477997, guid: 73a39f3dd71743c46bb0b0e55da76558,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -396773824418436554, guid: fc834c17a763e0141b0fec5d598e279b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73a39f3dd71743c46bb0b0e55da76558, type: 3}
 --- !u!1 &842244287
@@ -10325,6 +10369,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questItem: {fileID: 1173042181}
+  TargetArrow: {fileID: 2034830450}
   currentColor: {r: 1, g: 1, b: 1, a: 1}
   percentage: {fileID: 1954280906}
   allQuests: []
@@ -10426,6 +10471,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questItem: {fileID: 1774525584}
+  TargetArrow: {fileID: 2034830450}
   currentColor: {r: 1, g: 1, b: 1, a: 1}
   percentage: {fileID: 1560016539}
   allQuests: []
@@ -11342,6 +11388,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questItem: {fileID: 1768123929}
+  TargetArrow: {fileID: 2034830450}
   currentColor: {r: 1, g: 1, b: 1, a: 1}
   percentage: {fileID: 2140846178}
   allQuests: []
@@ -13230,6 +13277,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questItem: {fileID: 781854349}
+  TargetArrow: {fileID: 2034830450}
   currentColor: {r: 1, g: 1, b: 1, a: 1}
   percentage: {fileID: 1992306246}
   allQuests: []
@@ -17396,6 +17444,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questItem: {fileID: 781854349}
+  TargetArrow: {fileID: 2034830450}
   currentColor: {r: 1, g: 1, b: 1, a: 1}
   percentage: {fileID: 1992306246}
   allQuests: []
@@ -18060,6 +18109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questItem: {fileID: 781854349}
+  TargetArrow: {fileID: 2034830450}
   currentColor: {r: 1, g: 1, b: 1, a: 1}
   percentage: {fileID: 1992306246}
   allQuests: []
@@ -18233,6 +18283,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questItem: {fileID: 1768123929}
+  TargetArrow: {fileID: 2034830450}
   currentColor: {r: 1, g: 1, b: 1, a: 1}
   percentage: {fileID: 2140846178}
   allQuests: []
@@ -19694,6 +19745,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questItem: {fileID: 1173042181}
+  TargetArrow: {fileID: 2034830450}
   currentColor: {r: 1, g: 1, b: 1, a: 1}
   percentage: {fileID: 1954280906}
   allQuests: []
@@ -20299,6 +20351,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2034642814}
   m_CullTransparentMesh: 1
+--- !u!1 &2034830448 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4154409404426825433, guid: 73a39f3dd71743c46bb0b0e55da76558,
+    type: 3}
+  m_PrefabInstance: {fileID: 842228703}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2034830450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2034830448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6caedc863ff991a43b8f051e99665add, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  buffer: 90
 --- !u!1001 &2043800886
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21886,6 +21958,11 @@ PrefabInstance:
       objectReference: {fileID: 1954280906}
     - target: {fileID: 1076923657610785133, guid: d11d0a073109e5a409faf8ab5fcb0923,
         type: 3}
+      propertyPath: TargetArrow
+      value: 
+      objectReference: {fileID: 2034830450}
+    - target: {fileID: 1076923657610785133, guid: d11d0a073109e5a409faf8ab5fcb0923,
+        type: 3}
       propertyPath: scriptObject
       value: 
       objectReference: {fileID: 1130137758}
@@ -22165,6 +22242,11 @@ PrefabInstance:
       propertyPath: percentage
       value: 
       objectReference: {fileID: 1992306246}
+    - target: {fileID: 8033366383024867662, guid: 9d97114c328874b4e8d96519b665e0d3,
+        type: 3}
+      propertyPath: TargetArrow
+      value: 
+      objectReference: {fileID: 2034830450}
     - target: {fileID: 8033366383024867662, guid: 9d97114c328874b4e8d96519b665e0d3,
         type: 3}
       propertyPath: scriptObject

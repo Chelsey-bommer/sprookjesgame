@@ -8,6 +8,7 @@ public class Quest : MonoBehaviour
 {
     // Quest list color and percentage logic
     public Image questItem;
+    public QuestArrow TargetArrow;
     private Color completedColor;
     private Color activeColor;
     public Color currentColor;
@@ -36,12 +37,14 @@ public class Quest : MonoBehaviour
     public Image quest3;
     public Image quest4;
 
+    private GameObject randomitem;
 
     void Start()
     {
         allQuests = FindObjectsOfType<Quest>();  // all objects with quest script attached
         dialoguescript = scriptObject.GetComponent<TriggerDialogue>();
         inventoryscript = scriptObject.GetComponent<InventoryManager>();
+        randomitem = GameObject.Find("Fletcher");
 
         currentColor = questItem.color;
 
@@ -65,6 +68,10 @@ public class Quest : MonoBehaviour
             { //if all the wood is collected
                 childText2.color = completedColor;
             }
+
+        
+        TargetArrow.target = randomitem.transform;
+        
     }
 
     private void OnTriggerEnter(Collider other)
@@ -156,7 +163,7 @@ public class Quest : MonoBehaviour
         }
 
         // Task two: Talk to the postguard
-        if (gameObject.name.Contains("Guardspost") && GameManager.instance.questThreePartOne == true)
+        if (gameObject.name.Contains("Guardspost") && GameManager.instance.questThreePartOne)
         {
             GameManager.instance.touchDialogue4 = true;
             if(GameManager.instance.questThreePartTwo == false){
@@ -166,7 +173,7 @@ public class Quest : MonoBehaviour
             if (GameManager.instance.touchDialogue4)
             {
                 GameManager.instance.questThreePartTwo = true;
-                childText.color = completedColor;
+                childText2.color = completedColor;
             }
         }
         
@@ -186,7 +193,7 @@ public class Quest : MonoBehaviour
             }
         }
         // Part Two:Bring arrows to the guards post
-        if(gameObject.name.Contains("Guardspost")){
+        if(gameObject.name.Contains("Guardspost") && GameManager.instance.questFourPartOne){
             GameManager.instance.touchDialogue7 = true;
             if(!GameManager.instance.questFourPartTwo && GameManager.instance.questFourPartOne){
                 dialoguescript.dialogue7();
@@ -194,7 +201,7 @@ public class Quest : MonoBehaviour
             if (GameManager.instance.touchDialogue7 && GameManager.instance.arrowsDropped){
                 GameManager.instance.questFourPartTwo = true;
                 GameManager.instance.questFour = true;
-                childText.color = completedColor;
+                childText2.color = completedColor;
             }
             if (GameManager.instance.questFour)
             {
