@@ -7,6 +7,8 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+
+    public bool boardDialogue = false;
     public bool questOne = false;
     public bool questTwo = false;
     public bool questTwoPartOne = false;
