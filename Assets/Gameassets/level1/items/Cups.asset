@@ -15,5 +15,5 @@ MonoBehaviour:
   id: 4
   itemName: Cups
   value: 4
-  icon: {fileID: 3211865404380153573, guid: 1ddc9afd21fec77489b1248d18f31b68, type: 3}
+  icon: {fileID: 21300000, guid: 584c5a15bfa46ae4cb08da00680ca871, type: 3}
   prefab: {fileID: 704645334918536769, guid: 5ccc610400d37e54180ee007df7f57b8, type: 3}

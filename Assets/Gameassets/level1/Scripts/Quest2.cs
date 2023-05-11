@@ -147,7 +147,7 @@ public class Quest2 : MonoBehaviour
             if(GameManager.instance.mandTouch){
                 inventoryscript.clearInv();
             }
-            if(GameManager.instance.touchDialogue){
+            if(GameManager.instance.touchDialogue && !GameManager.instance.questOnePartThree){
                 dialoguescript.dialogue1();
             }
         }

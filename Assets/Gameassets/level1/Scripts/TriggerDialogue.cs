@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TriggerDialogue : MonoBehaviour
 {
+    public GameObject DialogueBox;
     public GameObject DialogueBox1;
     public GameObject DialogueBox2;
     public GameObject DialogueBox3;
@@ -15,12 +16,12 @@ public class TriggerDialogue : MonoBehaviour
     public GameObject DialogueBox9;
     public GameObject DialogueBox10;
 
-
+    public bool dialogue;
 
 
     public void Start()
     {
-      
+      DialogueBox.SetActive(false);
       DialogueBox1.SetActive(false);
       DialogueBox2.SetActive(false);
       DialogueBox3.SetActive(false);
@@ -32,8 +33,20 @@ public class TriggerDialogue : MonoBehaviour
       DialogueBox9.SetActive(false);
       DialogueBox10.SetActive(false);
 
+      dialogue = false;
+
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if(!dialogue && !GameManager.instance.touchDialogue){
+           if(gameObject.name.Equals("Dog")){
+             DialogueBox.SetActive(true);
+             dialogue = true;
+           }
+           
+        }
+    }
  
 
     public void dialogue1()
