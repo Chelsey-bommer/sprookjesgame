@@ -143,31 +143,31 @@ public class Quest2 : MonoBehaviour
             childText.color = completedColor;
         }
 
-        // Set Arrow direction to this object
-        // if(!GameManager.instance.questOnePartOne && !GameManager.instance.questOnePartTwo){
-        //     TargetArrow.target = cups.transform;
-        // }
-        // if(!GameManager.instance.questOnePartThree && GameManager.instance.questOnePartOne && GameManager.instance.questOnePartTwo){
-        //     TargetArrow.target = mand.transform;
-        // }
+        //Set Arrow direction to this object
+        if(!GameManager.instance.questOnePartOne && !GameManager.instance.questOnePartTwo){
+            TargetArrow.target = cups.transform;
+        }
+        if(!GameManager.instance.questOnePartThree && GameManager.instance.questOnePartOne && GameManager.instance.questOnePartTwo){
+            TargetArrow.target = mand.transform;
+        }
 
-        // if(!GameManager.instance.TwoPartOne && GameManager.instance.questOne){
-        //     TargetArrow.target = apples.transform;
-        // }
-        // if(!GameManager.instance.TwoPartTwo && GameManager.instance.TwoPartOne && GameManager.instance.questOne){
-        //     TargetArrow.target = grapes.transform;
-        // }
-        // if(!GameManager.instance.TwoPartThree && !GameManager.instance.TwoPartFour && GameManager.instance.TwoPartTwo && GameManager.instance.TwoPartOne){
-        //     TargetArrow.target = mand.transform;
-        // }
+        if(!GameManager.instance.TwoPartOne && GameManager.instance.questOne){
+            TargetArrow.target = apples.transform;
+        }
+        if(!GameManager.instance.TwoPartTwo && GameManager.instance.TwoPartOne && GameManager.instance.questOne){
+            TargetArrow.target = grapes.transform;
+        }
+        if(!GameManager.instance.TwoPartThree && !GameManager.instance.TwoPartFour && GameManager.instance.TwoPartTwo && GameManager.instance.TwoPartOne){
+            TargetArrow.target = mand.transform;
+        }
 
-        // if(!GameManager.instance.questThree && GameManager.instance.questTwo && GameManager.instance.questOne){
-        //     TargetArrow.target = cake.transform;
-        // }
+        if(!GameManager.instance.questThree && GameManager.instance.questTwo && GameManager.instance.questOne){
+            TargetArrow.target = cake.transform;
+        }
 
-        // if(!GameManager.instance.questFour && GameManager.instance.questThree && GameManager.instance.questTwo && GameManager.instance.questOne){
-        //     TargetArrow.target = dogfood.transform;
-        // }
+        if(!GameManager.instance.questFour && GameManager.instance.questThree && GameManager.instance.questTwo && GameManager.instance.questOne){
+            TargetArrow.target = dogfood.transform;
+        }
 
 
     }

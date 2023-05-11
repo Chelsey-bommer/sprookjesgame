@@ -80,43 +80,47 @@ public class Quest : MonoBehaviour
     }
 
     private void Update(){
+
+        if (GameManager.instance.questTwoPartTwo){
+            childText2.color = completedColor;
+        }
         
 
-        // Set Arrow direction to this object
-        // if(!GameManager.instance.questOne){
-        //     TargetArrow.target = woundedfriend.transform;
-        // }
-        // if(!GameManager.instance.questTwoPartOne && GameManager.instance.questOne){
-        //     TargetArrow.target = fence.transform;
-        // }
-        // if(!GameManager.instance.questTwoPartTwo && GameManager.instance.questTwoPartOne && GameManager.instance.questOne){
-        //     TargetArrow.target = wood.transform;
-        // }
-        // if(!GameManager.instance.questTwoPartThree && GameManager.instance.questTwoPartOne && GameManager.instance.questTwoPartTwo
-        // && GameManager.instance.questOne){
-        //     TargetArrow.target = carpenter.transform;
-        // }
-        // if(!GameManager.instance.questTwoPartFour && GameManager.instance.questTwoPartThree && GameManager.instance.questTwoPartOne && GameManager.instance.questTwoPartTwo
-        // && GameManager.instance.questOne){
-        //     TargetArrow.target = fence.transform;
-        // }
+        //Set Arrow direction to this object
+        if(!GameManager.instance.questOne){
+            TargetArrow.target = woundedfriend.transform;
+        }
+        if(!GameManager.instance.questTwoPartOne && GameManager.instance.questOne){
+            TargetArrow.target = fence.transform;
+        }
+        if(!GameManager.instance.questTwoPartTwo && GameManager.instance.questTwoPartOne && GameManager.instance.questOne){
+            TargetArrow.target = wood.transform;
+        }
+        if(!GameManager.instance.questTwoPartThree && GameManager.instance.questTwoPartOne && GameManager.instance.questTwoPartTwo
+        && GameManager.instance.questOne){
+            TargetArrow.target = carpenter.transform;
+        }
+        if(!GameManager.instance.questTwoPartFour && GameManager.instance.questTwoPartThree && GameManager.instance.questTwoPartOne && GameManager.instance.questTwoPartTwo
+        && GameManager.instance.questOne){
+            TargetArrow.target = fence.transform;
+        }
 
-        // if(!GameManager.instance.questThreePartOne && GameManager.instance.questOne && GameManager.instance.questTwo){
-        //     TargetArrow.target = parent.transform;
-        // }
-        // if(!GameManager.instance.questThreePartTwo && GameManager.instance.questThreePartOne && GameManager.instance.questOne && GameManager.instance.questTwo){
-        //     TargetArrow.target = guard.transform;
-        // }
-        // if(!GameManager.instance.questThreePartThree && GameManager.instance.questThreePartTwo && GameManager.instance.questThreePartOne && GameManager.instance.questOne && GameManager.instance.questTwo){
-        //     TargetArrow.target = kid.transform;
-        // }
+        if(!GameManager.instance.questThreePartOne && GameManager.instance.questOne && GameManager.instance.questTwo){
+            TargetArrow.target = parent.transform;
+        }
+        if(!GameManager.instance.questThreePartTwo && GameManager.instance.questThreePartOne && GameManager.instance.questOne && GameManager.instance.questTwo){
+            TargetArrow.target = guard.transform;
+        }
+        if(!GameManager.instance.questThreePartThree && GameManager.instance.questThreePartTwo && GameManager.instance.questThreePartOne && GameManager.instance.questOne && GameManager.instance.questTwo){
+            TargetArrow.target = kid.transform;
+        }
 
-        // if(!GameManager.instance.questFourPartOne && GameManager.instance.questOne && GameManager.instance.questTwo && GameManager.instance.questThree){
-        //     TargetArrow.target = fletcher.transform;
-        // }
-        //  if(!GameManager.instance.questFourPartTwo && GameManager.instance.questFourPartOne && GameManager.instance.questOne && GameManager.instance.questTwo && GameManager.instance.questThree){
-        //     TargetArrow.target = guard.transform;
-        // }
+        if(!GameManager.instance.questFourPartOne && GameManager.instance.questOne && GameManager.instance.questTwo && GameManager.instance.questThree){
+            TargetArrow.target = fletcher.transform;
+        }
+         if(!GameManager.instance.questFourPartTwo && GameManager.instance.questFourPartOne && GameManager.instance.questOne && GameManager.instance.questTwo && GameManager.instance.questThree){
+            TargetArrow.target = guard.transform;
+        }
         //TargetArrow.target = randomitem.transform;
         
     }
