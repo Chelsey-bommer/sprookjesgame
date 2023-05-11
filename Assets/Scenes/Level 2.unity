@@ -6682,7 +6682,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 568211259}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4810533247c8a2f45b060031fa5e5bf0, type: 3}
+  m_Script: {fileID: 11500000, guid: 43ac85667fe116c49bfec7c10e01b6ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   DialogueBox: {fileID: 1543224966}
@@ -9456,6 +9456,7 @@ GameObject:
   - component: {fileID: 925997034}
   - component: {fileID: 925997033}
   - component: {fileID: 925997032}
+  - component: {fileID: 925997035}
   m_Layer: 0
   m_Name: Mand
   m_TagString: Untagged
@@ -9571,6 +9572,30 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &925997035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925997030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43ac85667fe116c49bfec7c10e01b6ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogueBox: {fileID: 1543224966}
+  DialogueBox1: {fileID: 1391022045}
+  DialogueBox2: {fileID: 1396182803}
+  DialogueBox3: {fileID: 266269663}
+  DialogueBox4: {fileID: 989974719}
+  DialogueBox5: {fileID: 759530163}
+  DialogueBox6: {fileID: 1384236912}
+  DialogueBox7: {fileID: 1991037246}
+  DialogueBox8: {fileID: 0}
+  DialogueBox9: {fileID: 0}
+  DialogueBox10: {fileID: 0}
+  dialogue: 0
 --- !u!1 &952596320
 GameObject:
   m_ObjectHideFlags: 0
@@ -10564,7 +10589,7 @@ GameObject:
   - component: {fileID: 1006009620}
   - component: {fileID: 1006009619}
   - component: {fileID: 1006009618}
-  - component: {fileID: 1006009617}
+  - component: {fileID: 1006009622}
   m_Layer: 0
   m_Name: Dog
   m_TagString: Untagged
@@ -10572,30 +10597,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1006009617
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1006009616}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4810533247c8a2f45b060031fa5e5bf0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DialogueBox: {fileID: 1543224966}
-  DialogueBox1: {fileID: 1391022045}
-  DialogueBox2: {fileID: 1396182803}
-  DialogueBox3: {fileID: 266269663}
-  DialogueBox4: {fileID: 989974719}
-  DialogueBox5: {fileID: 759530163}
-  DialogueBox6: {fileID: 1384236912}
-  DialogueBox7: {fileID: 1991037246}
-  DialogueBox8: {fileID: 0}
-  DialogueBox9: {fileID: 0}
-  DialogueBox10: {fileID: 0}
-  dialogue: 0
 --- !u!114 &1006009618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10704,6 +10705,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1006009622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1006009616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43ac85667fe116c49bfec7c10e01b6ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogueBox: {fileID: 1543224966}
+  DialogueBox1: {fileID: 1391022045}
+  DialogueBox2: {fileID: 1396182803}
+  DialogueBox3: {fileID: 266269663}
+  DialogueBox4: {fileID: 989974719}
+  DialogueBox5: {fileID: 759530163}
+  DialogueBox6: {fileID: 1384236912}
+  DialogueBox7: {fileID: 1991037246}
+  DialogueBox8: {fileID: 0}
+  DialogueBox9: {fileID: 0}
+  DialogueBox10: {fileID: 0}
+  dialogue: 0
 --- !u!1001 &1021501031
 PrefabInstance:
   m_ObjectHideFlags: 0

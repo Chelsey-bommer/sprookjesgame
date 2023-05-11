@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TriggerDialogue : MonoBehaviour
+public class TriggerDialogue2 : MonoBehaviour
 {
     public GameObject DialogueBox;
     public GameObject DialogueBox1;
@@ -21,7 +21,7 @@ public class TriggerDialogue : MonoBehaviour
 
     public void Start()
     {
-      //DialogueBox.SetActive(false);
+      DialogueBox.SetActive(false);
       DialogueBox1.SetActive(false);
       DialogueBox2.SetActive(false);
       DialogueBox3.SetActive(false);
