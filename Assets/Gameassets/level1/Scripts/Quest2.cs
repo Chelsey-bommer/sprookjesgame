@@ -99,9 +99,13 @@ public class Quest2 : MonoBehaviour
                 FinishQuest();
             }
         }
-         if(gameObject.name.Contains("empty1") && GameManager.instance.TwoPartTwo && !GameManager.instance.questThree && GameManager.instance.questTwo){
+         if(gameObject.name.Equals("empty1") && GameManager.instance.TwoPartTwo && !GameManager.instance.questThree && !GameManager.instance.questTwo){
             GameManager.instance.mandTouch2 = true;
             GameManager.instance.touchDialogue2 = true;
+
+            if(GameManager.instance.touchDialogue2){
+                dialoguescript.dialogue2();
+            }
     
             
             if(GameManager.instance.questTwo){
@@ -162,16 +166,14 @@ public class Quest2 : MonoBehaviour
             }
         }
 
-        if(gameObject.name.Contains("empty1") && GameManager.instance.TwoPartTwo && !GameManager.instance.questThree && GameManager.instance.questTwo){
+        if(gameObject.name.Equals("empty1") && GameManager.instance.TwoPartTwo && !GameManager.instance.questThree && GameManager.instance.questTwo){
             GameManager.instance.mandTouch2 = true;
             GameManager.instance.touchDialogue2 = true;
     
             if(GameManager.instance.mandTouch2){
                 inventoryscript.clearInv(); //not working correctly
             }
-            if(GameManager.instance.touchDialogue2 && !GameManager.instance.TwoPartTwo){
-                dialoguescript.dialogue2();
-            }
+            
             
         }
    }
