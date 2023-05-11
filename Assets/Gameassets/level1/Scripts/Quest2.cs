@@ -17,6 +17,7 @@ public class Quest2 : MonoBehaviour
     public TMP_Text percentage;
     public Quest2[] allQuests;
     private TriggerDialogue dialoguescript;
+    private InventoryManager inventoryscript;
     private ItemPickup itemscript;
     public GameObject scriptObject;
     public GameObject scriptObject2;
@@ -41,6 +42,7 @@ public class Quest2 : MonoBehaviour
         allQuests = FindObjectsOfType<Quest2>();  // all objects with quest script attached
         dialoguescript = scriptObject.GetComponent<TriggerDialogue>();
         itemscript = scriptObject2.GetComponent<ItemPickup>();
+        inventoryscript = scriptObject.GetComponent<InventoryManager>();
         //itemscript.enabled = false;
         currentColor = questItem.color;
 
@@ -142,30 +144,30 @@ public class Quest2 : MonoBehaviour
         }
 
         // Set Arrow direction to this object
-        if(!GameManager.instance.questOnePartOne && !GameManager.instance.questOnePartTwo){
-            TargetArrow.target = cups.transform;
-        }
-        if(!GameManager.instance.questOnePartThree && GameManager.instance.questOnePartOne && GameManager.instance.questOnePartTwo){
-            TargetArrow.target = mand.transform;
-        }
+        // if(!GameManager.instance.questOnePartOne && !GameManager.instance.questOnePartTwo){
+        //     TargetArrow.target = cups.transform;
+        // }
+        // if(!GameManager.instance.questOnePartThree && GameManager.instance.questOnePartOne && GameManager.instance.questOnePartTwo){
+        //     TargetArrow.target = mand.transform;
+        // }
 
-        if(!GameManager.instance.TwoPartOne && GameManager.instance.questOne){
-            TargetArrow.target = apples.transform;
-        }
-        if(!GameManager.instance.TwoPartTwo && GameManager.instance.TwoPartOne && GameManager.instance.questOne){
-            TargetArrow.target = grapes.transform;
-        }
-        if(!GameManager.instance.TwoPartThree && !GameManager.instance.TwoPartFour && GameManager.instance.TwoPartTwo && GameManager.instance.TwoPartOne){
-            TargetArrow.target = mand.transform;
-        }
+        // if(!GameManager.instance.TwoPartOne && GameManager.instance.questOne){
+        //     TargetArrow.target = apples.transform;
+        // }
+        // if(!GameManager.instance.TwoPartTwo && GameManager.instance.TwoPartOne && GameManager.instance.questOne){
+        //     TargetArrow.target = grapes.transform;
+        // }
+        // if(!GameManager.instance.TwoPartThree && !GameManager.instance.TwoPartFour && GameManager.instance.TwoPartTwo && GameManager.instance.TwoPartOne){
+        //     TargetArrow.target = mand.transform;
+        // }
 
-        if(!GameManager.instance.questThree && GameManager.instance.questTwo && GameManager.instance.questOne){
-            TargetArrow.target = cake.transform;
-        }
+        // if(!GameManager.instance.questThree && GameManager.instance.questTwo && GameManager.instance.questOne){
+        //     TargetArrow.target = cake.transform;
+        // }
 
-        if(!GameManager.instance.questFour && GameManager.instance.questThree && GameManager.instance.questTwo && GameManager.instance.questOne){
-            TargetArrow.target = dogfood.transform;
-        }
+        // if(!GameManager.instance.questFour && GameManager.instance.questThree && GameManager.instance.questTwo && GameManager.instance.questOne){
+        //     TargetArrow.target = dogfood.transform;
+        // }
 
 
     }

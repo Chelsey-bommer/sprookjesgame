@@ -139,7 +139,7 @@ public class GameManager : MonoBehaviour
         if(questOnePartOne){
             Percentage1.text = "33%";
         }
-        if(cupsPickedup && questOnePartOne){
+        if(cupsPickedup ){
             questOnePartTwo = true; 
         }
         if(questOnePartTwo ){
