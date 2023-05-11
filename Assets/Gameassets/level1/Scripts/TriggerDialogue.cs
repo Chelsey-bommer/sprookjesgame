@@ -37,16 +37,16 @@ public class TriggerDialogue : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if(!dialogue && !GameManager.instance.touchDialogue){
-           if(gameObject.name.Equals("Dog")){
-             DialogueBox.SetActive(true);
-             dialogue = true;
-           }
+    // private void OnTriggerEnter(Collider other)
+    // {
+    //     if(!dialogue && !GameManager.instance.touchDialogue){
+    //        if(gameObject.name.Equals("Dog")){
+    //          DialogueBox.SetActive(true);
+    //          dialogue = true;
+    //        }
            
-        }
-    }
+    //     }
+    // }
  
 
     public void dialogue1()

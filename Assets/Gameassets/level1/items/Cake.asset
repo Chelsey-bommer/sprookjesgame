@@ -15,5 +15,5 @@ MonoBehaviour:
   id: 8
   itemName: Cake
   value: 8
-  icon: {fileID: 1192583394799640888, guid: 3d6be91968cb95546ac95aeff5e52f84, type: 3}
+  icon: {fileID: 21300000, guid: 40868851645b9664faa6df59b6261bb3, type: 3}
   prefab: {fileID: 5010784971651111149, guid: 57d8dd4d36e56a14b943f589f821154e, type: 3}

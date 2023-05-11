@@ -183,24 +183,14 @@ public class GameManager : MonoBehaviour
             TwoPartOne = true;
             TwoPartTwo = true;
         }
-        if (TwoPartTwo)
+        if (TwoPartTwo && TwoPartOne)
         {
             Percentage2.text = "50%";
         }
-        if (applesDropped)
-        {
+        if (mandTouch2 && dialogue2){
             TwoPartThree = true;
         }
-        if (TwoPartThree)
-        {
-            Percentage2.text = "75%";
-        }
-        if (grapesDropped)
-        {
-            TwoPartFour = true;
-        }
-
-        if (TwoPartOne && TwoPartTwo && TwoPartThree && TwoPartFour)
+        if (TwoPartOne && TwoPartTwo && TwoPartThree)
         {
             questTwo = true;
             Percentage2.text = "100%";
@@ -256,6 +246,7 @@ public class GameManager : MonoBehaviour
     //////// Level 2
     public bool barrelDestroyed = false;
     public bool mandTouch = false;
+    public bool mandTouch2 = false;
     public bool dogTouch = false;
     public bool colliderTouch = false;
     public bool collider2Touch = false;

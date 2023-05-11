@@ -1249,7 +1249,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 139692, guid: 61fb7c015a745ea42900f99f6f123343, type: 3}
       propertyPath: m_Name
-      value: Tent
+      value: TentFarmer
       objectReference: {fileID: 0}
     - target: {fileID: 447262, guid: 61fb7c015a745ea42900f99f6f123343, type: 3}
       propertyPath: m_RootOrder
@@ -1309,7 +1309,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6489280, guid: 61fb7c015a745ea42900f99f6f123343, type: 3}
       propertyPath: m_Convex
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61fb7c015a745ea42900f99f6f123343, type: 3}
@@ -2023,6 +2023,53 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &179530649 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 139692, guid: 61fb7c015a745ea42900f99f6f123343,
+    type: 3}
+  m_PrefabInstance: {fileID: 107656457}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &179530653
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179530649}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.6665626, y: 4.535833, z: 2.8344631}
+  m_Center: {x: 0.4252103, y: -0.393955, z: 1.1731278}
+--- !u!114 &179530654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179530649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 625d03e7f5ee955499bb13c335253f0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questItem: {fileID: 1846979587}
+  TargetArrow: {fileID: 1234271880}
+  currentColor: {r: 0, g: 0, b: 0, a: 0}
+  percentage: {fileID: 1326925786}
+  allQuests: []
+  scriptObject: {fileID: 862006586}
+  scriptObject2: {fileID: 1311441745}
+  child: {fileID: 1188319495}
+  childText: {fileID: 953928977}
+  childText2: {fileID: 182893678}
+  childText3: {fileID: 461210762}
+  childText4: {fileID: 1332093691}
+  quest1: {fileID: 1831123144}
+  quest2: {fileID: 1846979587}
+  quest3: {fileID: 2139208591}
+  quest4: {fileID: 1101896699}
 --- !u!1 &182893676
 GameObject:
   m_ObjectHideFlags: 0
@@ -2081,7 +2128,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Bring some grapes to the basket
+  m_text: Pick up some grapes from the Farmers tent.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2813,7 +2860,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4810533247c8a2f45b060031fa5e5bf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogueBox: {fileID: 0}
+  DialogueBox: {fileID: 1543224966}
   DialogueBox1: {fileID: 1391022045}
   DialogueBox2: {fileID: 1396182803}
   DialogueBox3: {fileID: 266269663}
@@ -2905,22 +2952,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 625d03e7f5ee955499bb13c335253f0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questItem: {fileID: 0}
-  TargetArrow: {fileID: 0}
+  questItem: {fileID: 1831123144}
+  TargetArrow: {fileID: 1234271880}
   currentColor: {r: 0, g: 0, b: 0, a: 0}
-  percentage: {fileID: 0}
+  percentage: {fileID: 1831123143}
   allQuests: []
-  scriptObject: {fileID: 0}
-  scriptObject2: {fileID: 0}
-  child: {fileID: 0}
-  childText: {fileID: 0}
-  childText2: {fileID: 0}
-  childText3: {fileID: 0}
-  childText4: {fileID: 0}
-  quest1: {fileID: 0}
-  quest2: {fileID: 0}
-  quest3: {fileID: 0}
-  quest4: {fileID: 0}
+  scriptObject: {fileID: 1000844607}
+  scriptObject2: {fileID: 862006586}
+  child: {fileID: 1703074143}
+  childText: {fileID: 1796486986}
+  childText2: {fileID: 204284946}
+  childText3: {fileID: 1754598510}
+  childText4: {fileID: 247466768}
+  quest1: {fileID: 1831123144}
+  quest2: {fileID: 1846979587}
+  quest3: {fileID: 2139208591}
+  quest4: {fileID: 1101896699}
 --- !u!1 &247466766
 GameObject:
   m_ObjectHideFlags: 0
@@ -5185,8 +5232,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.31999993, y: 0.31999993, z: 1.5193115}
-  m_Center: {x: 0.000007638372, y: 0, z: -0.65965575}
+  m_Size: {x: 7.5465155, y: 3.197104, z: 1.5193115}
+  m_Center: {x: -0.35500607, y: 0.6293178, z: -0.65965575}
 --- !u!1001 &422354788
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5673,7 +5720,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &461210761
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5714,7 +5761,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Go to the carpenter
+  m_text: Bring the fruit to your basket.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6426,6 +6473,7 @@ GameObject:
   m_Component:
   - component: {fileID: 568211260}
   - component: {fileID: 568211261}
+  - component: {fileID: 568211262}
   m_Layer: 0
   m_Name: empty1
   m_TagString: Untagged
@@ -6441,7 +6489,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 568211259}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -10.14, y: -3.53, z: 51.82}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6476,6 +6524,19 @@ MonoBehaviour:
   quest2: {fileID: 1846979587}
   quest3: {fileID: 2139208591}
   quest4: {fileID: 1101896699}
+--- !u!65 &568211262
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 568211259}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 12.261734, y: 4.568241, z: 14.063965}
+  m_Center: {x: -2.458168, y: 0.78214455, z: -1.5160522}
 --- !u!1 &624185327
 GameObject:
   m_ObjectHideFlags: 0
@@ -9506,7 +9567,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Bring some apples to the basket
+  m_text: Pick up some apples from the farmers tent.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10325,6 +10386,12 @@ Terrain:
   m_GroupingID: 0
   m_RenderingLayerMask: 1
   m_AllowAutoConnect: 1
+--- !u!1 &1000844607 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5486772916312116287, guid: c90fd62be11f0224284a9e2adf0c93b8,
+    type: 3}
+  m_PrefabInstance: {fileID: 1831123141}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1006009616
 GameObject:
   m_ObjectHideFlags: 0
@@ -14838,8 +14905,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 1790942643}
   lines:
-  - Hi
-  - Planks pls
+  - 'You: And now we have some fruit!'
+  - 'You: My dad will enjoy this so much! Right Cassian?'
+  - 'Cassian: Woof!'
   textSpeed: 0
 --- !u!114 &1396182806
 MonoBehaviour:
@@ -17345,6 +17413,7 @@ MonoBehaviour:
   touchDialogue10: 0
   barrelDestroyed: 0
   mandTouch: 0
+  mandTouch2: 0
   dogTouch: 0
   colliderTouch: 0
   collider2Touch: 0
@@ -20080,7 +20149,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1831123141}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1000844607}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -22174,6 +22243,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1429501091}
     m_Modifications:
+    - target: {fileID: 494235952431607844, guid: a0f1108feb8236945b4fc74adc175e2a,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 080a3d0313bc8f342944cbf7c4dd4373,
+        type: 3}
     - target: {fileID: 4363702141524102938, guid: a0f1108feb8236945b4fc74adc175e2a,
         type: 3}
       propertyPath: m_Name
@@ -22187,22 +22262,22 @@ PrefabInstance:
     - target: {fileID: 5417700365837636483, guid: a0f1108feb8236945b4fc74adc175e2a,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 3.0534
+      value: 0.17585507
       objectReference: {fileID: 0}
     - target: {fileID: 5417700365837636483, guid: a0f1108feb8236945b4fc74adc175e2a,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 3.0052
+      value: 0.22107704
       objectReference: {fileID: 0}
     - target: {fileID: 5417700365837636483, guid: a0f1108feb8236945b4fc74adc175e2a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 44.5
+      value: 44.4224
       objectReference: {fileID: 0}
     - target: {fileID: 5417700365837636483, guid: a0f1108feb8236945b4fc74adc175e2a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.53
+      value: -3.5125
       objectReference: {fileID: 0}
     - target: {fileID: 5417700365837636483, guid: a0f1108feb8236945b4fc74adc175e2a,
         type: 3}
@@ -22291,8 +22366,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.5617778, y: 0.32000002, z: 1.3800354}
-  m_Center: {x: -0.0064015165, y: -0.0000004760121, z: -0.07582092}
+  m_Size: {x: 21.298069, y: 16.642784, z: 8.157745}
+  m_Center: {x: -6.622359, y: -0.22716069, z: -3.464676}
 --- !u!1001 &2468934531206961893
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22544,7 +22619,7 @@ PrefabInstance:
     - target: {fileID: 203134168467786892, guid: 86efd36638d37e946b1a466658bdf13f,
         type: 3}
       propertyPath: m_Size.x
-      value: 12.752932
+      value: 21.705297
       objectReference: {fileID: 0}
     - target: {fileID: 203134168467786892, guid: 86efd36638d37e946b1a466658bdf13f,
         type: 3}
@@ -22554,12 +22629,12 @@ PrefabInstance:
     - target: {fileID: 203134168467786892, guid: 86efd36638d37e946b1a466658bdf13f,
         type: 3}
       propertyPath: m_Size.z
-      value: 1.6498549
+      value: 3.7446318
       objectReference: {fileID: 0}
     - target: {fileID: 203134168467786892, guid: 86efd36638d37e946b1a466658bdf13f,
         type: 3}
       propertyPath: m_Center.x
-      value: 0.1269862
+      value: 0.62095225
       objectReference: {fileID: 0}
     - target: {fileID: 203134168467786892, guid: 86efd36638d37e946b1a466658bdf13f,
         type: 3}
@@ -22569,7 +22644,7 @@ PrefabInstance:
     - target: {fileID: 203134168467786892, guid: 86efd36638d37e946b1a466658bdf13f,
         type: 3}
       propertyPath: m_Center.z
-      value: 0.28762957
+      value: -0.75974727
       objectReference: {fileID: 0}
     - target: {fileID: 203134168467786892, guid: 86efd36638d37e946b1a466658bdf13f,
         type: 3}
@@ -22694,6 +22769,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 984044781}
     m_Modifications:
+    - target: {fileID: 5010784971651111147, guid: 57d8dd4d36e56a14b943f589f821154e,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 40868851645b9664faa6df59b6261bb3,
+        type: 3}
     - target: {fileID: 5010784971651111148, guid: 57d8dd4d36e56a14b943f589f821154e,
         type: 3}
       propertyPath: m_RootOrder
@@ -22701,18 +22782,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5010784971651111148, guid: 57d8dd4d36e56a14b943f589f821154e,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.13115878
+      objectReference: {fileID: 0}
+    - target: {fileID: 5010784971651111148, guid: 57d8dd4d36e56a14b943f589f821154e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.14212118
+      objectReference: {fileID: 0}
+    - target: {fileID: 5010784971651111148, guid: 57d8dd4d36e56a14b943f589f821154e,
+        type: 3}
       propertyPath: m_LocalPosition.x
-      value: 72.27
+      value: 66.19
       objectReference: {fileID: 0}
     - target: {fileID: 5010784971651111148, guid: 57d8dd4d36e56a14b943f589f821154e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.04
+      value: -2.9481
       objectReference: {fileID: 0}
     - target: {fileID: 5010784971651111148, guid: 57d8dd4d36e56a14b943f589f821154e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 74.35
+      value: 92.06
       objectReference: {fileID: 0}
     - target: {fileID: 5010784971651111148, guid: 57d8dd4d36e56a14b943f589f821154e,
         type: 3}
@@ -22898,13 +22989,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3569114028498779885, guid: c291ea0e7d08c2b40af2d478582679cb,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.15067488
+      objectReference: {fileID: 0}
+    - target: {fileID: 3569114028498779885, guid: c291ea0e7d08c2b40af2d478582679cb,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.1379032
+      objectReference: {fileID: 0}
+    - target: {fileID: 3569114028498779885, guid: c291ea0e7d08c2b40af2d478582679cb,
+        type: 3}
       propertyPath: m_LocalPosition.x
-      value: 46.19
+      value: 46.2246
       objectReference: {fileID: 0}
     - target: {fileID: 3569114028498779885, guid: c291ea0e7d08c2b40af2d478582679cb,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.46
+      value: -3.3994
       objectReference: {fileID: 0}
     - target: {fileID: 3569114028498779885, guid: c291ea0e7d08c2b40af2d478582679cb,
         type: 3}
@@ -23010,5 +23111,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.3653564, y: 1, z: 2.8282166}
-  m_Center: {x: 0.10998535, y: 0.21133333, z: -0.267807}
+  m_Size: {x: 17.16936, y: 28.521772, z: 6.3894043}
+  m_Center: {x: 3.753607, y: -0.03049405, z: -2.0484009}
