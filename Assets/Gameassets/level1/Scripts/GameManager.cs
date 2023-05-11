@@ -115,17 +115,17 @@ public class GameManager : MonoBehaviour
 
         ////////////////////// 
         if(questFourPartOne == true){
-            Percentage3.text = "50%";  
+            Percentage4.text = "50%";  
             
         }
 
         if(questFourPartTwo == true){
-            Percentage3.text = "100%";
+            Percentage4.text = "100%";
         }
 
         if(questFourPartOne && questFourPartTwo){
             questFour = true;
-            Percentage3.text = "100%";
+            Percentage4.text = "100%";
         }
 
         

@@ -43,6 +43,7 @@ public class Quest : MonoBehaviour
     private GameObject carpenter;
     private GameObject parent;
     private GameObject guard;
+    private GameObject leftguard;
     private GameObject kid;
     private GameObject fletcher;
     
@@ -59,6 +60,7 @@ public class Quest : MonoBehaviour
         carpenter = GameObject.Find("Carpenter");
         parent = GameObject.Find("Parent");
         guard = GameObject.Find("Guardspost");
+        leftguard = GameObject.Find("leftguard");
         kid = GameObject.Find("kid");
         fletcher = GameObject.Find("Fletcher");
 
@@ -81,10 +83,9 @@ public class Quest : MonoBehaviour
 
     private void Update(){
 
-        if (GameManager.instance.questTwoPartTwo){
+        if (GameManager.instance.questThreePartTwo){
             childText2.color = completedColor;
         }
-        
 
         //Set Arrow direction to this object
         if(!GameManager.instance.questOne){
@@ -109,7 +110,7 @@ public class Quest : MonoBehaviour
             TargetArrow.target = parent.transform;
         }
         if(!GameManager.instance.questThreePartTwo && GameManager.instance.questThreePartOne && GameManager.instance.questOne && GameManager.instance.questTwo){
-            TargetArrow.target = guard.transform;
+            TargetArrow.target = leftguard.transform;
         }
         if(!GameManager.instance.questThreePartThree && GameManager.instance.questThreePartTwo && GameManager.instance.questThreePartOne && GameManager.instance.questOne && GameManager.instance.questTwo){
             TargetArrow.target = kid.transform;
@@ -168,7 +169,7 @@ public class Quest : MonoBehaviour
             }
             if (GameManager.instance.questTwoPartTwo){ 
             //if all the wood is collected
-            childText2.color = completedColor; 
+             childText2.color = completedColor; 
             } 
         }
         //Part three: Go to the carpenter
@@ -217,7 +218,7 @@ public class Quest : MonoBehaviour
         }
 
         // Task two: Talk to the postguard
-        if (gameObject.name.Contains("Guardspost") && GameManager.instance.questThreePartOne)
+        if (gameObject.name.Contains("leftguard") && GameManager.instance.questThreePartOne)
         {
             GameManager.instance.touchDialogue4 = true;
             if(GameManager.instance.questThreePartTwo == false){
@@ -227,6 +228,9 @@ public class Quest : MonoBehaviour
             if (GameManager.instance.touchDialogue4)
             {
                 GameManager.instance.questThreePartTwo = true;
+               
+            }
+            if(GameManager.instance.questThreePartTwo){
                 childText2.color = completedColor;
             }
         }
@@ -257,6 +261,7 @@ public class Quest : MonoBehaviour
                 GameManager.instance.questFour = true;
                 childText2.color = completedColor;
             }
+            
             if (GameManager.instance.questFour)
             {
                 FinishQuest();
@@ -275,6 +280,14 @@ public class Quest : MonoBehaviour
                 inventoryscript.clearInv();
             }
         }
+
+        if(gameObject.name.Contains("colliderobject") && GameManager.instance.questTwoPartOne){
+            if(GameManager.instance.questTwoPartTwo){ 
+            //if all the wood is collected
+             childText2.color = completedColor; 
+          }
+        }
+         
 
         //////////////////////////////////// QUEST 2
         //Part four: Replace the wall
