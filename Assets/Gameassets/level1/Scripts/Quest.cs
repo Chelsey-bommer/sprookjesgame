@@ -210,7 +210,7 @@ public class Quest : MonoBehaviour
             if(GameManager.instance.questThreePartOne == false){
                 dialoguescript.dialogue3();
             }
-            if (GameManager.instance.touchDialogue3)
+            if (GameManager.instance.dialogue3)
             {
                 GameManager.instance.questThreePartOne = true;
                 childText.color = completedColor;
@@ -225,7 +225,7 @@ public class Quest : MonoBehaviour
                 dialoguescript.dialogue4();
             }
 
-            if (GameManager.instance.touchDialogue4)
+            if (GameManager.instance.dialogue4)
             {
                 GameManager.instance.questThreePartTwo = true;
                
@@ -245,7 +245,7 @@ public class Quest : MonoBehaviour
                 dialoguescript.dialogue6();
             }
 
-            if (GameManager.instance.touchDialogue6){
+            if (GameManager.instance.dialogue6){
                 GameManager.instance.questFourPartOne = true;
                 childText.color = completedColor;
             }
@@ -256,7 +256,7 @@ public class Quest : MonoBehaviour
             if(!GameManager.instance.questFourPartTwo && GameManager.instance.questFourPartOne){
                 dialoguescript.dialogue7();
             }
-            if (GameManager.instance.touchDialogue7 && GameManager.instance.arrowsDropped){
+            if (GameManager.instance.dialogue7 && GameManager.instance.arrowsDropped){
                 GameManager.instance.questFourPartTwo = true;
                 GameManager.instance.questFour = true;
                 childText2.color = completedColor;
@@ -273,13 +273,7 @@ public class Quest : MonoBehaviour
 
     public void OnTriggerStay(){
 
-        if (gameObject.name.Contains("Carpenter") && GameManager.instance.questTwoPartOne && GameManager.instance.questTwoPartTwo)
-        {
-            if (GameManager.instance.dialogue2)
-            {
-                inventoryscript.clearInv();
-            }
-        }
+        
 
         if(gameObject.name.Contains("colliderobject") && GameManager.instance.questTwoPartOne){
             if(GameManager.instance.questTwoPartTwo){ 
@@ -329,6 +323,16 @@ public class Quest : MonoBehaviour
             if (GameManager.instance.questThree)
             {
                 FinishQuest();
+            }
+        }
+    }
+
+    public void OnTriggerExit(){
+        if (gameObject.name.Contains("Carpenter") && GameManager.instance.questTwoPartOne && GameManager.instance.questTwoPartTwo)
+        {
+            if (GameManager.instance.dialogue2)
+            {
+                inventoryscript.clearInv();
             }
         }
     }

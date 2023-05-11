@@ -65,7 +65,7 @@ public class Quest2 : MonoBehaviour
         quest2.GetComponent<Button>().interactable = false;
         quest3.GetComponent<Button>().interactable = false;
         quest4.GetComponent<Button>().interactable = false;
-    }
+    }  // inventoryscript.clearInv();
 
     public void OnTriggerStay(Collider other)
     {
@@ -78,10 +78,22 @@ public class Quest2 : MonoBehaviour
                 GameManager.instance.barrelDestroyed = true;
             }
         }
+        if(gameObject.name.Contains("TentCarpenter")){
+            if(GameManager.instance.questOnePartOne){
+             childText.color = completedColor;
+            }
+            if(GameManager.instance.questOnePartTwo){
+             childText2.color = completedColor;
+            }
+        }
         // Task 2: grab cups -- //zie gamemanager r.135
         // Task 3: put cups in basket -- zie inventory item controller
         if(gameObject.name.Contains("Mand") && GameManager.instance.questOnePartTwo){
             GameManager.instance.mandTouch = true;
+
+            // if(GameManager.instance.mandTouch){
+            //     inventoryscript.clearInv();
+            // }
 
             if(GameManager.instance.questOne){
                 FinishQuest();
@@ -127,21 +139,26 @@ public class Quest2 : MonoBehaviour
 
     }
 
+   public void OnTriggerEnter(Collider other){
+    if(gameObject.name.Contains("Mand") && GameManager.instance.questOnePartTwo){
+            GameManager.instance.mandTouch = true;
+            GameManager.instance.touchDialogue = true;
+    
+            if(GameManager.instance.mandTouch){
+                inventoryscript.clearInv();
+            }
+            if(GameManager.instance.touchDialogue){
+                dialoguescript.dialogue1();
+            }
+        }
+   }
+
     public void Update()
     {
         // if(gameObject.name.Contains("Barrel")){
 
         // }
-        if (GameManager.instance.questOnePartOne){
-            childText.color = completedColor;
-        }
-        if (GameManager.instance.questOnePartTwo ){
-            childText2.color = completedColor;
-        }
-
-        if (GameManager.instance.TwoPartOne){
-            childText.color = completedColor;
-        }
+        
 
         //Set Arrow direction to this object
         if(!GameManager.instance.questOnePartOne && !GameManager.instance.questOnePartTwo){

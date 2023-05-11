@@ -55,9 +55,9 @@ public class GameManager : MonoBehaviour
     public bool touchDialogue10 = false;
 
 
-    
-    
-    
+
+
+
     void Start()
     {
         instance = this;
@@ -67,89 +67,110 @@ public class GameManager : MonoBehaviour
         Percentage2.text = "0%";
     }
 
-   
+
     void Update()
     {
         //logic for quests
 
-        if(questOne == true){
+        if (questOne == true)
+        {
             Percentage1.text = "100%";
         }
 
         ///////////////////////////////////////// Quest 2
-        if(questTwoPartOne){
+        if (questTwoPartOne)
+        {
             Percentage2.text = "25%";
         }
-        if(woodPickedup){
+        if (woodPickedup)
+        {
             questTwoPartTwo = true;
         }
-        if(questTwoPartTwo){
+        if (questTwoPartTwo)
+        {
             Percentage2.text = "50%";
         }
-        if(questTwoPartThree){
+        if (questTwoPartThree)
+        {
             Percentage2.text = "75%";
         }
-        if(questTwo){
+        if (questTwo)
+        {
             Percentage2.text = "100%";
         }
 
-        if(questTwoPartOne && questTwoPartTwo && questTwoPartThree && questTwoPartFour){
+        if (questTwoPartOne && questTwoPartTwo && questTwoPartThree && questTwoPartFour)
+        {
             questTwo = true;
         }
 
         /////////////////////////////////////
 
-        if(questThreePartOne == true){
-            Percentage3.text = "33%";  
-            
+        if (questThreePartOne)
+        {
+            Percentage3.text = "33%";
         }
-
-        if(questThreePartTwo == true){
+        else if (questThreePartTwo)
+        {
             Percentage3.text = "66%";
         }
+        else if (questThreePartThree)
+        {
+            Percentage3.text = "100%";
+        }
 
-        if(questThreePartOne && questThreePartTwo && questThreePartThree){
+        if (questThreePartOne && questThreePartTwo && questThreePartThree)
+        {
             questThree = true;
             Percentage3.text = "100%";
         }
 
         ////////////////////// 
-        if(questFourPartOne == true){
-            Percentage4.text = "50%";  
-            
+        if (questFourPartOne == true)
+        {
+            Percentage4.text = "50%";
+
         }
 
-        if(questFourPartTwo == true){
+        if (questFourPartTwo == true)
+        {
             Percentage4.text = "100%";
         }
 
-        if(questFourPartOne && questFourPartTwo){
+        if (questFourPartOne && questFourPartTwo)
+        {
             questFour = true;
             Percentage4.text = "100%";
         }
 
-        
+
 
 
         ////////////////////////////////// LEVEL 2
         ///Quest 1
-        if(barrelDestroyed){
-            questOnePartOne = true; 
+        if (barrelDestroyed)
+        {
+            questOnePartOne = true;
         }
-        if(questOnePartOne){
+        if (questOnePartOne)
+        {
             Percentage1.text = "33%";
         }
-        if(cupsPickedup ){
-            questOnePartTwo = true; 
+        if (cupsPickedup)
+        {
+            questOnePartTwo = true;
         }
-        if(questOnePartTwo ){
+        if (questOnePartTwo)
+        {
             Percentage1.text = "66%";
         }
-        if(cupsDropped && questOnePartTwo){
+        if (mandTouch && dialogue1 && questOnePartTwo)
+        {
             questOnePartThree = true;
         }
-        
-        if(questOnePartOne && questOnePartTwo && questOnePartThree){
+
+        if (questOnePartOne && questOnePartTwo && questOnePartThree)
+        {
             questOne = true;
             Percentage1.text = "100%";
         }
@@ -157,24 +178,30 @@ public class GameManager : MonoBehaviour
 
 
         ///////////////////////////////////quest 2
-        if(applesPickedup && grapesPickedup && questOne){
+        if (applesPickedup && grapesPickedup && questOne)
+        {
             TwoPartOne = true;
-            TwoPartTwo = true; 
+            TwoPartTwo = true;
         }
-        if(TwoPartTwo){
+        if (TwoPartTwo)
+        {
             Percentage2.text = "50%";
         }
-        if(applesDropped){
-            TwoPartThree = true; 
+        if (applesDropped)
+        {
+            TwoPartThree = true;
         }
-        if(TwoPartThree){
+        if (TwoPartThree)
+        {
             Percentage2.text = "75%";
         }
-        if(grapesDropped){
-            TwoPartFour = true; 
+        if (grapesDropped)
+        {
+            TwoPartFour = true;
         }
-        
-        if(TwoPartOne && TwoPartTwo && TwoPartThree && TwoPartFour){
+
+        if (TwoPartOne && TwoPartTwo && TwoPartThree && TwoPartFour)
+        {
             questTwo = true;
             Percentage2.text = "100%";
         }
@@ -182,32 +209,39 @@ public class GameManager : MonoBehaviour
 
 
         ////////////////////////////////quest 3
-        if(cakesPickedup && questTwo){
+        if (cakesPickedup && questTwo)
+        {
             questThreePartOne = true;
         }
-        if(questThreePartOne){
+        if (questThreePartOne && cakesPickedup)
+        {
             Percentage3.text = "50%";
         }
-        if(cakesDropped && questThreePartOne){
-            questThree = true; 
+        if (cakesDropped && questThreePartOne)
+        {
+            questThree = true;
             Percentage3.text = "100%";
         }
 
 
 
         //////////////////////////////quest 4
-        if(dogPickedup && questThree){
+        if (dogPickedup && questThree)
+        {
             questFourPartOne = true;
         }
-        
-        if(questFourPartOne == true){
-            Percentage4.text = "50%";    
+
+        if (questFourPartOne == true)
+        {
+            Percentage4.text = "50%";
         }
-        if(dogDropped && questFourPartOne){
-            questFour = true; 
+        if (dogDropped && questFourPartOne)
+        {
+            questFour = true;
         }
-        if(questFour == true){
-            Percentage4.text = "100%";    
+        if (questFour == true)
+        {
+            Percentage4.text = "100%";
         }
 
         //////////////////
@@ -215,9 +249,9 @@ public class GameManager : MonoBehaviour
         // if(!colliderTouch && !collider2Touch && !mandTouch){
         //     Debug.Log("not touching");
         // }
-        
+
     }
-    
+
 
     //////// Level 2
     public bool barrelDestroyed = false;
@@ -242,7 +276,7 @@ public class GameManager : MonoBehaviour
     public bool TwoPartTwo = false;
     public bool TwoPartThree = false;
     public bool TwoPartFour = false;
-    
 
-  
+
+
 }

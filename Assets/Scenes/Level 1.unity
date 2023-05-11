@@ -18541,7 +18541,7 @@ MonoBehaviour:
   questItem: {fileID: 1768123929}
   TargetArrow: {fileID: 2034830450}
   currentColor: {r: 1, g: 1, b: 1, a: 1}
-  percentage: {fileID: 1954280906}
+  percentage: {fileID: 2140846178}
   allQuests: []
   scriptObject: {fileID: 1130137758}
   child: {fileID: 2034642814}

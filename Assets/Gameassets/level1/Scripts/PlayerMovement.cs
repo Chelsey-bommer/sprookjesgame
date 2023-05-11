@@ -145,6 +145,8 @@ public class PlayerMovement : MonoBehaviour
         if(other.gameObject.name.Contains("taskboard")){
             GameManager.instance.boardDialogue = true;
         }
+
+        
     }
 
      
