@@ -154,11 +154,7 @@ public class Quest2 : MonoBehaviour
    }
 
     public void Update()
-    {
-        // if(gameObject.name.Contains("Barrel")){
-
-        // }
-        
+    {   
 
         //Set Arrow direction to this object
         if(!GameManager.instance.questOnePartOne && !GameManager.instance.questOnePartTwo){
