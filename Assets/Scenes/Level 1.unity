@@ -7936,27 +7936,27 @@ PrefabInstance:
     - target: {fileID: 6672574310066506649, guid: 73a39f3dd71743c46bb0b0e55da76558,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 3.494642
+      value: 0.035525687
       objectReference: {fileID: 0}
     - target: {fileID: 6672574310066506649, guid: 73a39f3dd71743c46bb0b0e55da76558,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 3.5442805
+      value: 0.038592435
       objectReference: {fileID: 0}
     - target: {fileID: 6672574310066506649, guid: 73a39f3dd71743c46bb0b0e55da76558,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.0413971
+      value: -1.3232
       objectReference: {fileID: 0}
     - target: {fileID: 6672574310066506649, guid: 73a39f3dd71743c46bb0b0e55da76558,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.2714996
+      value: -1.3918
       objectReference: {fileID: 0}
     - target: {fileID: 6672574310066506649, guid: 73a39f3dd71743c46bb0b0e55da76558,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.769989
+      value: 0.7583
       objectReference: {fileID: 0}
     - target: {fileID: 6672574310066506649, guid: 73a39f3dd71743c46bb0b0e55da76558,
         type: 3}
@@ -7977,7 +7977,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -396773824418436554, guid: fc834c17a763e0141b0fec5d598e279b,
+      objectReference: {fileID: 21300000, guid: 2c0d96333f9bb044493fb6c204b018fe,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73a39f3dd71743c46bb0b0e55da76558, type: 3}
@@ -20455,7 +20455,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1130137762}
   TargetArrow: {fileID: 2034830450}
-  buffer: 90
+  buffer: 180
 --- !u!1001 &2043800886
 PrefabInstance:
   m_ObjectHideFlags: 0
