@@ -148,28 +148,19 @@ public class GameManager : MonoBehaviour
 
         ////////////////////////////////// LEVEL 2
         ///Quest 1
-        if (barrelDestroyed)
+        if (dialogue1)
         {
             questOnePartOne = true;
         }
         if (questOnePartOne)
         {
-            Percentage1.text = "33%";
+            Percentage1.text = "50%";
         }
         if (cupsPickedup)
         {
             questOnePartTwo = true;
         }
-        if (questOnePartTwo)
-        {
-            Percentage1.text = "66%";
-        }
-        if (mandTouch && dialogue1 && questOnePartTwo)
-        {
-            questOnePartThree = true;
-        }
-
-        if (questOnePartOne && questOnePartTwo && questOnePartThree)
+        if (questOnePartOne && questOnePartTwo)
         {
             questOne = true;
             Percentage1.text = "100%";

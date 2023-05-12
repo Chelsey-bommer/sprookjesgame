@@ -16,7 +16,7 @@ public class Quest2 : MonoBehaviour
     private Color normalColor;
     public TMP_Text percentage;
     public Quest2[] allQuests;
-    private TriggerDialogue dialoguescript;
+    private TriggerDialogue2 dialoguescript;
     private InventoryManager inventoryscript;
     private ItemPickup itemscript;
     public GameObject scriptObject;
@@ -40,10 +40,10 @@ public class Quest2 : MonoBehaviour
     void Start()
     {
         allQuests = FindObjectsOfType<Quest2>();  // all objects with quest script attached
-        dialoguescript = scriptObject.GetComponent<TriggerDialogue>();
+        dialoguescript = scriptObject.GetComponent<TriggerDialogue2>();
         itemscript = scriptObject2.GetComponent<ItemPickup>();
         inventoryscript = scriptObject.GetComponent<InventoryManager>();
-        //itemscript.enabled = false;
+        
         currentColor = questItem.color;
 
         cups = GameObject.Find("Cups");
@@ -60,7 +60,7 @@ public class Quest2 : MonoBehaviour
         ColorUtility.TryParseHtmlString("#dddddd", out inactiveColor);
         ColorUtility.TryParseHtmlString("#eeeeee", out normalColor);
 
-        quest1.color = activeColor;
+      
         quest1.GetComponent<Button>().interactable = true;
         quest2.GetComponent<Button>().interactable = false;
         quest3.GetComponent<Button>().interactable = false;
@@ -71,13 +71,15 @@ public class Quest2 : MonoBehaviour
     {
 
         ////////// Quest 1: Grab a pair of cups
-        // Task 1: move barrel -- zie inventory item controller
-        if(gameObject.name.Contains("Barrel")){
-            if(Input.GetMouseButtonDown(0)){
-                Destroy(gameObject);
-                GameManager.instance.barrelDestroyed = true;
+        if(gameObject.name.Contains("TentCarpenter")){
+            if(GameManager.instance.questOnePartOne){
+             childText.color = completedColor;
+            }
+            if(GameManager.instance.questOnePartTwo){
+             childText2.color = completedColor;
             }
         }
+       
         
         if(gameObject.name.Contains("TentFarmer")){
             if(GameManager.instance.TwoPartOne && GameManager.instance.TwoPartTwo){
@@ -86,57 +88,57 @@ public class Quest2 : MonoBehaviour
             }
             
         }
-        // Task 2: grab cups -- //zie gamemanager r.135
-        // Task 3: put cups in basket -- zie inventory item controller
-        if(gameObject.name.Contains("Mand") && GameManager.instance.questOnePartTwo){
-            GameManager.instance.mandTouch = true;
+    //     // Task 2: grab cups -- //zie gamemanager r.135
+    //     // Task 3: put cups in basket -- zie inventory item controller
+    //     if(gameObject.name.Contains("Mand") && GameManager.instance.questOnePartTwo){
+    //         GameManager.instance.mandTouch = true;
 
-            if(GameManager.instance.mandTouch){
-                inventoryscript.clearInv();/// not working
-            }
+    //         if(GameManager.instance.mandTouch){
+    //             inventoryscript.clearInv();/// not working
+    //         }
 
-            if(GameManager.instance.questOne){
-                FinishQuest();
-            }
-        }
-         if(gameObject.name.Equals("empty1") && GameManager.instance.TwoPartTwo && !GameManager.instance.questThree && !GameManager.instance.questTwo){
-            GameManager.instance.mandTouch2 = true;
-            GameManager.instance.touchDialogue2 = true;
+    //         if(GameManager.instance.questOne){
+    //             FinishQuest();
+    //         }
+    //     }
+    //      if(gameObject.name.Equals("empty1") && GameManager.instance.TwoPartTwo && !GameManager.instance.questThree && !GameManager.instance.questTwo){
+    //         GameManager.instance.mandTouch2 = true;
+    //         GameManager.instance.touchDialogue2 = true;
 
-            if(GameManager.instance.touchDialogue2){
-                dialoguescript.dialogue2();
-            }
+    //         if(GameManager.instance.touchDialogue2){
+    //             dialoguescript.dialogue2();
+    //         }
     
             
-            if(GameManager.instance.questTwo){
-                FinishQuest();
-            }
+    //         if(GameManager.instance.questTwo){
+    //             FinishQuest();
+    //         }
             
-        }
+    //     }
 
-       if(gameObject.name.Contains("Dog")){
-            GameManager.instance.dogTouch = true;
+    //    if(gameObject.name.Contains("Dog")){
+    //         GameManager.instance.dogTouch = true;
 
-            if(GameManager.instance.questTwo){
-                FinishQuest();
-            }
-        }
+    //         if(GameManager.instance.questTwo){
+    //             FinishQuest();
+    //         }
+    //     }
 
-        if(gameObject.name.Equals("colliderobject")){
-            GameManager.instance.colliderTouch = true;
+    //     if(gameObject.name.Equals("colliderobject")){
+    //         GameManager.instance.colliderTouch = true;
 
-            if(GameManager.instance.questThree){
-                FinishQuest();
-            }
-        }
+    //         if(GameManager.instance.questThree){
+    //             FinishQuest();
+    //         }
+    //     }
 
-        if(gameObject.name.Equals("colliderobject2")){
-            GameManager.instance.collider2Touch = true;
+    //     if(gameObject.name.Equals("colliderobject2")){
+    //         GameManager.instance.collider2Touch = true;
 
-            if(GameManager.instance.questFour){
-                FinishQuest();
-            }
-        } 
+    //         if(GameManager.instance.questFour){
+    //             FinishQuest();
+    //         }
+    //     } 
 
         //part 2
         
@@ -154,39 +156,48 @@ public class Quest2 : MonoBehaviour
     }
 
    public void OnTriggerEnter(Collider other){
-     if(gameObject.name.Contains("Mand") && GameManager.instance.questOnePartTwo && !GameManager.instance.questTwo){
-            GameManager.instance.mandTouch = true;
+
+        if(gameObject.name.Equals("Carpenter")){
             GameManager.instance.touchDialogue = true;
-    
-            if(GameManager.instance.mandTouch){
-                inventoryscript.clearInv(); //not working correctly
-            }
-            if(GameManager.instance.touchDialogue && !GameManager.instance.questOnePartThree){
+
+            if(GameManager.instance.touchDialogue){
                 dialoguescript.dialogue1();
             }
         }
-
-        if(gameObject.name.Equals("empty1") && GameManager.instance.TwoPartTwo && !GameManager.instance.questThree && GameManager.instance.questTwo){
-            GameManager.instance.mandTouch2 = true;
-            GameManager.instance.touchDialogue2 = true;
     
-            if(GameManager.instance.mandTouch2){
-                inventoryscript.clearInv(); //not working correctly
-            }
+    //  if(gameObject.name.Contains("Mand") && GameManager.instance.questOnePartTwo && !GameManager.instance.questTwo){
+    //         GameManager.instance.mandTouch = true;
+    //         GameManager.instance.touchDialogue = true;
+    
+    //         if(GameManager.instance.mandTouch){
+    //             inventoryscript.clearInv(); //not working correctly
+    //         }
+    //         if(GameManager.instance.touchDialogue && !GameManager.instance.questOnePartThree){
+    //             dialoguescript.dialogue1();
+    //         }
+    //     }
+
+    //     if(gameObject.name.Equals("empty1") && GameManager.instance.TwoPartTwo && !GameManager.instance.questThree && GameManager.instance.questTwo){
+    //         GameManager.instance.mandTouch2 = true;
+    //         GameManager.instance.touchDialogue2 = true;
+    
+    //         if(GameManager.instance.mandTouch2){
+    //             inventoryscript.clearInv(); //not working correctly
+    //         }
             
             
-        }
+    //     }
    }
 
    public void OnTriggerExit(Collider other){
-        if(gameObject.name.Contains("TentCarpenter")){
-            if(GameManager.instance.questOnePartOne){
-             childText.color = completedColor;
-            }
-            if(GameManager.instance.questOnePartTwo){
-             childText2.color = completedColor;
-            }
-        }
+        // if(gameObject.name.Contains("TentCarpenter")){
+        //     if(GameManager.instance.questOnePartOne){
+        //      childText.color = completedColor;
+        //     }
+        //     if(GameManager.instance.questOnePartTwo){
+        //      childText2.color = completedColor;
+        //     }
+        // }
    }
 
    
