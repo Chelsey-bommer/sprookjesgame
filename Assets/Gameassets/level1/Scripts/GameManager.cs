@@ -209,7 +209,7 @@ public class GameManager : MonoBehaviour
 
 
         //////////////////////////////quest 4
-        if (dogPickedup && questThree)
+        if (dialogue4 && questThree)
         {
             questFourPartOne = true;
         }
@@ -218,7 +218,7 @@ public class GameManager : MonoBehaviour
         {
             Percentage4.text = "50%";
         }
-        if (dogDropped && questFourPartOne)
+        if (dogPickedup && questFourPartOne)
         {
             questFour = true;
         }
@@ -227,32 +227,18 @@ public class GameManager : MonoBehaviour
             Percentage4.text = "100%";
         }
 
-        //////////////////
-
-        // if(!colliderTouch && !collider2Touch && !mandTouch){
-        //     Debug.Log("not touching");
-        // }
 
     }
 
 
     //////// Level 2
-    public bool barrelDestroyed = false;
-    public bool mandTouch = false;
-    public bool mandTouch2 = false;
+    
     public bool dogTouch = false;
-    public bool colliderTouch = false;
-    public bool collider2Touch = false;
-    public bool cupsDropped = false;
     public bool cupsPickedup = false;
-    public bool applesDropped = false;
     public bool applesPickedup = false;
-    public bool grapesDropped = false;
     public bool grapesPickedup = false;
-    public bool cakesDropped = false;
     public bool cakesPickedup = false;
     public bool winePickedup = false;
-    public bool dogDropped = false;
     public bool dogPickedup = false;
     public bool questOnePartOne = false;
     public bool questOnePartTwo = false;

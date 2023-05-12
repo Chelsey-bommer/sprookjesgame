@@ -105,57 +105,15 @@ public class Quest2 : MonoBehaviour
             }
             
         }
-    //     // Task 2: grab cups -- //zie gamemanager r.135
-    //     // Task 3: put cups in basket -- zie inventory item controller
-    //     if(gameObject.name.Contains("Mand") && GameManager.instance.questOnePartTwo){
-    //         GameManager.instance.mandTouch = true;
 
-    //         if(GameManager.instance.mandTouch){
-    //             inventoryscript.clearInv();/// not working
-    //         }
-
-    //         if(GameManager.instance.questOne){
-    //             FinishQuest();
-    //         }
-    //     }
-    //      if(gameObject.name.Equals("empty1") && GameManager.instance.TwoPartTwo && !GameManager.instance.questThree && !GameManager.instance.questTwo){
-    //         GameManager.instance.mandTouch2 = true;
-    //         GameManager.instance.touchDialogue2 = true;
-
-    //         if(GameManager.instance.touchDialogue2){
-    //             dialoguescript.dialogue2();
-    //         }
-    
-            
-    //         if(GameManager.instance.questTwo){
-    //             FinishQuest();
-    //         }
-            
-    //     }
-
-    //    if(gameObject.name.Contains("Dog")){
-    //         GameManager.instance.dogTouch = true;
-
-    //         if(GameManager.instance.questTwo){
-    //             FinishQuest();
-    //         }
-    //     }
-
-    //     if(gameObject.name.Equals("colliderobject")){
-    //         GameManager.instance.colliderTouch = true;
-
-    //         if(GameManager.instance.questThree){
-    //             FinishQuest();
-    //         }
-    //     }
-
-    //     if(gameObject.name.Equals("colliderobject2")){
-    //         GameManager.instance.collider2Touch = true;
-
-    //         if(GameManager.instance.questFour){
-    //             FinishQuest();
-    //         }
-    //     } 
+       if(gameObject.name.Contains("Dog") && GameManager.instance.questOne && GameManager.instance.questTwo && GameManager.instance.questThree ){
+            if(GameManager.instance.questFourPartOne){
+             childText.color = completedColor;
+            }
+            if(GameManager.instance.questFour){
+                FinishQuest();
+            }
+        }
 
         //part 2
         
@@ -198,28 +156,13 @@ public class Quest2 : MonoBehaviour
             }
         }    
     
-    //  if(gameObject.name.Contains("Mand") && GameManager.instance.questOnePartTwo && !GameManager.instance.questTwo){
-    //         GameManager.instance.mandTouch = true;
-    //         GameManager.instance.touchDialogue = true;
+     if(gameObject.name.Contains("Dog") && GameManager.instance.questOne && GameManager.instance.questTwo && GameManager.instance.questThree){
+            GameManager.instance.touchDialogue4 = true;
     
-    //         if(GameManager.instance.mandTouch){
-    //             inventoryscript.clearInv(); //not working correctly
-    //         }
-    //         if(GameManager.instance.touchDialogue && !GameManager.instance.questOnePartThree){
-    //             dialoguescript.dialogue1();
-    //         }
-    //     }
-
-    //     if(gameObject.name.Equals("empty1") && GameManager.instance.TwoPartTwo && !GameManager.instance.questThree && GameManager.instance.questTwo){
-    //         GameManager.instance.mandTouch2 = true;
-    //         GameManager.instance.touchDialogue2 = true;
-    
-    //         if(GameManager.instance.mandTouch2){
-    //             inventoryscript.clearInv(); //not working correctly
-    //         }
-            
-            
-    //     }
+            if(GameManager.instance.touchDialogue4){
+                dialoguescript.dialogue4();
+            }
+        }
    }
 
    public void OnTriggerExit(Collider other){
