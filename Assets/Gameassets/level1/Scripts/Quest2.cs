@@ -78,6 +78,9 @@ public class Quest2 : MonoBehaviour
             if(GameManager.instance.questOnePartTwo){
              childText2.color = completedColor;
             }
+            if(GameManager.instance.questOne){
+                FinishQuest();
+            }
         }
        
         
