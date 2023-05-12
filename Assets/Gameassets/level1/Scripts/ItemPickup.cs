@@ -23,6 +23,9 @@ public class ItemPickup : MonoBehaviour
         if(item.name.Equals("Cake")){
            GameManager.instance.cakesPickedup = true;
         }
+        if(item.name.Equals("Wine")){
+           GameManager.instance.winePickedup = true;
+        }
          if(item.name.Equals("Dogfood")){
            GameManager.instance.dogPickedup = true;
         }

@@ -70,7 +70,7 @@ public class Quest2 : MonoBehaviour
     public void OnTriggerStay(Collider other)
     {
 
-        ////////// Quest 1: Grab a pair of cups
+        ////////// Quest 1: Talk to the carpenter and grab cups
         if(gameObject.name.Contains("TentCarpenter")){
             if(GameManager.instance.questOnePartOne){
              childText.color = completedColor;
@@ -83,12 +83,24 @@ public class Quest2 : MonoBehaviour
             }
         }
        
-        
-        if(gameObject.name.Contains("TentFarmer")){
+        ////////// Quest 2: Talk to the farmer and grab fruit
+        if(gameObject.name.Contains("TentFarmer") && GameManager.instance.questOne){
             if(GameManager.instance.TwoPartOne){
              childText.color = completedColor;
             }
             if(GameManager.instance.questTwo){
+                FinishQuest();
+            }
+            
+        }
+
+        ////////// Quest 3: Get cake and wine from bakery
+        if(gameObject.name.Contains("TentBakery")&& GameManager.instance.questOne && GameManager.instance.questTwo){
+        
+            if(GameManager.instance.questThreePartOne){
+             childText.color = completedColor;
+            }
+            if(GameManager.instance.questThree){
                 FinishQuest();
             }
             
@@ -170,13 +182,21 @@ public class Quest2 : MonoBehaviour
             }
         }
 
-        if(gameObject.name.Equals("farmerdad")){
+        if(gameObject.name.Equals("farmerdad") && GameManager.instance.questOne){
             GameManager.instance.touchDialogue2 = true;
 
             if(GameManager.instance.touchDialogue2){
                 dialoguescript.dialogue2();
             }
         }
+
+        if(gameObject.name.Contains("TentBakery") && GameManager.instance.questOne && GameManager.instance.questTwo){
+            GameManager.instance.touchDialogue3 = true;
+
+            if(GameManager.instance.touchDialogue3){
+                dialoguescript.dialogue3();
+            }
+        }    
     
     //  if(gameObject.name.Contains("Mand") && GameManager.instance.questOnePartTwo && !GameManager.instance.questTwo){
     //         GameManager.instance.mandTouch = true;

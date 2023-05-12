@@ -189,16 +189,19 @@ public class GameManager : MonoBehaviour
 
 
         ////////////////////////////////quest 3
-        if (cakesPickedup && questTwo)
+        if (dialogue3 && questTwo)
         {
             questThreePartOne = true;
         }
-        if (questThreePartOne && cakesPickedup)
+        if (questThreePartOne)
         {
             Percentage3.text = "50%";
         }
-        if (cakesDropped && questThreePartOne)
+        if (cakesPickedup && winePickedup && questThreePartOne)
         {
+            questThreePartTwo = true;
+        }
+        if(questThreePartOne && questThreePartTwo){
             questThree = true;
             Percentage3.text = "100%";
         }
@@ -248,6 +251,7 @@ public class GameManager : MonoBehaviour
     public bool grapesPickedup = false;
     public bool cakesDropped = false;
     public bool cakesPickedup = false;
+    public bool winePickedup = false;
     public bool dogDropped = false;
     public bool dogPickedup = false;
     public bool questOnePartOne = false;
