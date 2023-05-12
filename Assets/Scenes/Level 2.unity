@@ -18080,8 +18080,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1656030915}
   - component: {fileID: 1656030919}
-  - component: {fileID: 1656030918}
-  - component: {fileID: 1656030917}
   - component: {fileID: 1656030916}
   m_Layer: 0
   m_Name: Kid
@@ -18118,57 +18116,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 7.598372, y: 18.930927, z: 0.6046794}
   m_Center: {x: 0.40004277, y: -0.5151342, z: -0.036939815}
---- !u!114 &1656030917
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1656030914}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4810533247c8a2f45b060031fa5e5bf0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DialogueBox1: {fileID: 0}
-  DialogueBox2: {fileID: 0}
-  DialogueBox3: {fileID: 0}
-  DialogueBox4: {fileID: 0}
-  DialogueBox5: {fileID: 0}
-  DialogueBox6: {fileID: 0}
-  DialogueBox7: {fileID: 0}
-  DialogueBox9: {fileID: 0}
-  DialogueBox10: {fileID: 0}
-  dialogue: 0
---- !u!114 &1656030918
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1656030914}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6abcd4b232e546d4c8aca0faa05945eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questItem: {fileID: 0}
-  TargetArrow: {fileID: 0}
-  currentColor: {r: 1, g: 1, b: 1, a: 1}
-  percentage: {fileID: 0}
-  allQuests: []
-  scriptObject: {fileID: 0}
-  child: {fileID: 0}
-  childText: {fileID: 0}
-  childText2: {fileID: 0}
-  childText3: {fileID: 0}
-  childText4: {fileID: 0}
-  spriteRenderer: {fileID: 0}
-  newSprite: {fileID: 0}
-  quest1: {fileID: 0}
-  quest2: {fileID: 0}
-  quest3: {fileID: 0}
-  quest4: {fileID: 0}
 --- !u!212 &1656030919
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18559,8 +18506,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc0268f95a2977c419f9ecbea4ae659f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boardDialogue: 0
-  aQuest: 0
   questOne: 0
   questTwo: 0
   questTwoPartOne: 0
@@ -18573,7 +18518,6 @@ MonoBehaviour:
   wood3Pickedup: 0
   questThree: 0
   questThreePartOne: 0
-  contact: 0
   questThreePartTwo: 0
   questThreePartThree: 0
   questFour: 0
@@ -18611,10 +18555,22 @@ MonoBehaviour:
   questOnePartOne: 0
   questOnePartTwo: 0
   questOnePartThree: 0
+  questOnePartFour: 0
+  questOnePartFive: 0
+  questOnePartSix: 0
+  questOnePartSeven: 0
+  questOnePartEight: 0
   TwoPartOne: 0
   TwoPartTwo: 0
   TwoPartThree: 0
   TwoPartFour: 0
+  pawTouch1: 0
+  pawTouch2: 0
+  pawTouch3: 0
+  pawTouch4: 0
+  pawTouch5: 0
+  pawTouch6: 0
+  pawTouch7: 0
 --- !u!4 &1686571846
 Transform:
   m_ObjectHideFlags: 0
