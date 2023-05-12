@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TriggerDialogue : MonoBehaviour
 {
+    // public GameObject DialogueBox;
     public GameObject DialogueBox1;
     public GameObject DialogueBox2;
     public GameObject DialogueBox3;
@@ -11,12 +12,16 @@ public class TriggerDialogue : MonoBehaviour
     public GameObject DialogueBox5;
     public GameObject DialogueBox6;
     public GameObject DialogueBox7;
+    // public GameObject DialogueBox8;
+    public GameObject DialogueBox9;
+    public GameObject DialogueBox10;
 
-
+    public bool dialogue;
 
 
     public void Start()
     {
+    //   DialogueBox.SetActive(false);
       DialogueBox1.SetActive(false);
       DialogueBox2.SetActive(false);
       DialogueBox3.SetActive(false);
@@ -24,9 +29,24 @@ public class TriggerDialogue : MonoBehaviour
       DialogueBox5.SetActive(false);
       DialogueBox6.SetActive(false);
       DialogueBox7.SetActive(false);
+    //   DialogueBox8.SetActive(false);
+      DialogueBox9.SetActive(false);
+      DialogueBox10.SetActive(false);
+
+      dialogue = false;
 
     }
 
+    // private void OnTriggerEnter(Collider other)
+    // {
+    //     if(!dialogue && !GameManager.instance.touchDialogue){
+    //        if(gameObject.name.Equals("Dog")){
+    //          DialogueBox.SetActive(true);
+    //          dialogue = true;
+    //        }
+           
+    //     }
+    // }
  
 
     public void dialogue1()
@@ -85,6 +105,31 @@ public class TriggerDialogue : MonoBehaviour
             DialogueBox7.SetActive(true);
             GameManager.instance.dialogue7 = true; //active conversation boolean
         }
+     }
+
+    //  public void dialogue8(){
+    //     if(GameManager.instance.boardDialogue){
+            
+    //         DialogueBox8.SetActive(true);
+        
+    //     }
+    //  }
+
+      public void dialogue9(){
+        if(GameManager.instance.touchDialogue9){
+            
+            DialogueBox9.SetActive(true);
+        
+        }
+     }
+
+     public void dialogue10(){
+        if(GameManager.instance.touchDialogue10){
+            
+            DialogueBox10.SetActive(true);
+        
+        }
+        GameManager.instance.touchDialogue10 = false;
      }
 
 }

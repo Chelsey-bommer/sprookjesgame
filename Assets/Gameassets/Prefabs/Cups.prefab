@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 1358464842005238549}
   - component: {fileID: 4168164616387058766}
   - component: {fileID: 4496784691482999288}
+  - component: {fileID: 4310089758259961746}
+  - component: {fileID: 6726535084616650322}
   m_Layer: 0
   m_Name: Cups
   m_TagString: Untagged
@@ -74,8 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4808522734667448011, guid: 1ddc9afd21fec77489b1248d18f31b68,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: 584c5a15bfa46ae4cb08da00680ca871, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,4 +99,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 204b215fd5ff54f4c9c4fbf109738be6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Item: {fileID: 0}
+  Item: {fileID: 11400000, guid: a2b160ddd46c0d341835ef1ac3d5cab8, type: 2}
+--- !u!114 &4310089758259961746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 704645334918536769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eff398d908127f14cb243f5bbd95786b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: a2b160ddd46c0d341835ef1ac3d5cab8, type: 2}
+--- !u!65 &6726535084616650322
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 704645334918536769}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 12.39662, y: 7.596253, z: 4.311244}
+  m_Center: {x: 1.2872097, y: -2.5381258, z: -0.39929292}

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e6dfe5cd1e10f14897e492da951abe3, type: 3}
+  m_Name: Wine
+  m_EditorClassIdentifier: 
+  id: 10
+  itemName: Wine
+  value: 10
+  icon: {fileID: 21300000, guid: 3e4e3d337b61340458240e23815bed0c, type: 3}
+  prefab: {fileID: 1043395875982155793, guid: 41733f37203d24e4ca6018f35a9d1fb2, type: 3}

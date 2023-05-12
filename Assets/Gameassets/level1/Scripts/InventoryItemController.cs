@@ -35,27 +35,27 @@ public class InventoryItemController : MonoBehaviour
             GameManager.instance.arrowsDropped = true;
         }
 
-        if(item.name == "Cups" &&  GameManager.instance.mandTouch){
-            Instantiate(myPrefabCups, new Vector3(335, -105, 700), Quaternion.identity);
-            GameManager.instance.cupsDropped = true;
-        }
+        // if(item.name == "Cups" &&  GameManager.instance.mandTouch){
+        //     Instantiate(myPrefabCups, new Vector3(335, -105, 700), Quaternion.identity);
+        //     GameManager.instance.cupsDropped = true;
+        // }
 
-        if(item.name == "Apples" && GameManager.instance.dogTouch){
-            Instantiate(myPrefabApples, new Vector3(355, -105, 700), Quaternion.identity);
-            GameManager.instance.applesDropped = true;
-        }
-        if(item.name == "Grapes" && GameManager.instance.dogTouch){
-            Instantiate(myPrefabApples, new Vector3(365, -105, 700), Quaternion.identity);
-            GameManager.instance.grapesDropped = true;
-        }
-        if(item.name == "Cake" && GameManager.instance.colliderTouch){
-            Instantiate(myPrefabCakes, new Vector3(335, -105, 700), Quaternion.identity);
-            GameManager.instance.cakesDropped = true;
-        }
-        if(item.name == "Dogfood"){
-            Instantiate(myPrefabDog, new Vector3(335, -105, 700), Quaternion.identity);
-            GameManager.instance.dogDropped = true;
-        }
+        // if(item.name == "Apples" && GameManager.instance.dogTouch){
+        //     Instantiate(myPrefabApples, new Vector3(355, -105, 700), Quaternion.identity);
+        //     GameManager.instance.applesDropped = true;
+        // }
+        // if(item.name == "Grapes" && GameManager.instance.dogTouch){
+        //     Instantiate(myPrefabApples, new Vector3(365, -105, 700), Quaternion.identity);
+        //     GameManager.instance.grapesDropped = true;
+        // }
+        // if(item.name == "Cake" && GameManager.instance.colliderTouch){
+        //     Instantiate(myPrefabCakes, new Vector3(335, -105, 700), Quaternion.identity);
+        //     GameManager.instance.cakesDropped = true;
+        // }
+        // if(item.name == "Dogfood"){
+        //     Instantiate(myPrefabDog, new Vector3(335, -105, 700), Quaternion.identity);
+        //     GameManager.instance.dogDropped = true;
+        // }
         Destroy(gameObject);
 
         

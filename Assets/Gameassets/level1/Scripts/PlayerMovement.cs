@@ -47,7 +47,7 @@ public class PlayerMovement : MonoBehaviour
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
 
-        rb.velocity = new Vector3(horizontalInput * movementSpeed, rb.velocity.y, verticalInput * movementSpeed);
+        rb.velocity = new Vector3(horizontalInput * movementSpeed, rb.velocity.y, verticalInput * movementSpeed * 2f);
 
 
         if (Input.GetButtonDown("Jump"))
@@ -140,6 +140,16 @@ public class PlayerMovement : MonoBehaviour
 
         anim.SetInteger("state", (int)state);
     }
+
+    private void OnTriggerEnter(Collider other){
+        if(other.gameObject.name.Contains("taskboard")){
+            GameManager.instance.boardDialogue = true;
+        }
+
+        
+    }
+
+     
 
 
 
