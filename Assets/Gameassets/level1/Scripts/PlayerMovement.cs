@@ -141,13 +141,8 @@ public class PlayerMovement : MonoBehaviour
         anim.SetInteger("state", (int)state);
     }
 
-    private void OnTriggerEnter(Collider other){
-        if(other.gameObject.name.Contains("taskboard")){
-            GameManager.instance.boardDialogue = true;
-        }
-
-        
-    }
+     
+    
 
      
 

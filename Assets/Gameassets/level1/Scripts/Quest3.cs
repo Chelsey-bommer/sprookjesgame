@@ -15,8 +15,8 @@ public class Quest3 : MonoBehaviour
     private Color inactiveColor;
     private Color normalColor;
     public TMP_Text percentage;
-    public Quest2[] allQuests;
-    private TriggerDialogue2 dialoguescript;
+    public Quest3[] allQuests;
+    private TriggerDialogue3 dialoguescript;
     private InventoryManager inventoryscript;
     private ItemPickup itemscript;
     public GameObject scriptObject;
@@ -30,34 +30,33 @@ public class Quest3 : MonoBehaviour
     public Image quest2;
     public Image quest3;
     public Image quest4;
-    // private GameObject cups;
-    // private GameObject mand;
-    // private GameObject apples;
-    // private GameObject grapes;
-    // private GameObject cake;
-    // private GameObject dogfood;
-    // private GameObject carpenter;
-    // private GameObject farmer;
-    // private GameObject bakery;
+    private GameObject paw1;
+    private GameObject paw2;
+    private GameObject paw3;
+    private GameObject paw4;
+    private GameObject paw5;
+    private GameObject paw6;
+    private GameObject paw7;
+    private GameObject paw8;
+
 
     void Start()
     {
-        allQuests = FindObjectsOfType<Quest2>();  // all objects with quest script attached
-        dialoguescript = scriptObject.GetComponent<TriggerDialogue2>();
+        allQuests = FindObjectsOfType<Quest3>();  // all objects with quest script attached
+        dialoguescript = scriptObject.GetComponent<TriggerDialogue3>();
         itemscript = scriptObject2.GetComponent<ItemPickup>();
         inventoryscript = scriptObject.GetComponent<InventoryManager>();
         
         currentColor = questItem.color;
 
-        // cups = GameObject.Find("Cups");
-        // mand = GameObject.Find("Mand");
-        // apples = GameObject.Find("Apples");
-        // grapes = GameObject.Find("Grapes");
-        // cake = GameObject.Find("Cake");
-        // dogfood = GameObject.Find("Dogfood");
-        // carpenter = GameObject.Find("Carpenter");
-        // farmer = GameObject.Find("farmerdad");
-        // bakery = GameObject.Find("TentBakery");
+        paw1 = GameObject.Find("pawprints");
+        paw2 = GameObject.Find("pawprints2");
+        paw3 = GameObject.Find("pawprints3");
+        paw4 = GameObject.Find("pawprints4");
+        paw5 = GameObject.Find("pawprints5");
+        paw6 = GameObject.Find("pawprints6");
+        paw7 = GameObject.Find("pawprints7");
+        paw8 = GameObject.Find("pawprints8");
 
 
         //SET variable colors
@@ -75,7 +74,12 @@ public class Quest3 : MonoBehaviour
 
     public void OnTriggerStay(Collider other)
     {
-
+        if(gameObject.name.Equals("pawprints")){
+            
+            if(GameManager.instance.questOnePartOne){
+                childText.color = completedColor;
+            }
+        }
        
 
 
@@ -83,6 +87,22 @@ public class Quest3 : MonoBehaviour
 
    public void OnTriggerEnter(Collider other){
 
+        if(gameObject.name.Equals("pawprints")){
+            GameManager.instance.touchDialogue = true;
+            
+            if(GameManager.instance.touchDialogue){
+                dialoguescript.dialogue1();
+            }
+        }
+        if(gameObject.name.Equals("pawprints2")){
+            
+        }
+        if(gameObject.name.Equals("pawprints2")){
+            
+        }
+        if(gameObject.name.Equals("pawprints2")){
+            
+        }
        
    }
 

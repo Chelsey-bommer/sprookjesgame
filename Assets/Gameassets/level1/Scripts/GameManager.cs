@@ -8,8 +8,6 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    public bool boardDialogue = false;
-    public bool aQuest = false;
     public bool questOne = false;
     public bool questTwo = false;
     public bool questTwoPartOne = false;
@@ -22,7 +20,6 @@ public class GameManager : MonoBehaviour
     public bool wood3Pickedup = false;
     public bool questThree = false;
     public bool questThreePartOne = false;
-    public bool contact = false;
     public bool questThreePartTwo = false;
     public bool questThreePartThree = false;
     public bool questFour = false;
@@ -228,10 +225,18 @@ public class GameManager : MonoBehaviour
         }
 
 
+        /////////////////////////////////////////////////////////////LEVEL 3
+        //
+
+        if(dialogue1){
+            questOnePartOne = true;
+        }
+
+
     }
 
 
-    //////// Level 2
+    //////// Level 2 bools
     
     public bool dogTouch = false;
     public bool cupsPickedup = false;
@@ -247,6 +252,7 @@ public class GameManager : MonoBehaviour
     public bool TwoPartTwo = false;
     public bool TwoPartThree = false;
     public bool TwoPartFour = false;
+
 
 
 

@@ -107,13 +107,6 @@ public class TriggerDialogue : MonoBehaviour
         }
      }
 
-    //  public void dialogue8(){
-    //     if(GameManager.instance.boardDialogue){
-            
-    //         DialogueBox8.SetActive(true);
-        
-    //     }
-    //  }
 
       public void dialogue9(){
         if(GameManager.instance.touchDialogue9){
