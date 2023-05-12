@@ -26,10 +26,11 @@ public class Quest3 : MonoBehaviour
     public TMP_Text childText2;
     public TMP_Text childText3;
     public TMP_Text childText4;
+    public TMP_Text childText5;
+    public TMP_Text childText6;
+    public TMP_Text childText7;
+    public TMP_Text childText8;
     public Image quest1;
-    public Image quest2;
-    public Image quest3;
-    public Image quest4;
     private GameObject paw1;
     private GameObject paw2;
     private GameObject paw3;
@@ -67,10 +68,7 @@ public class Quest3 : MonoBehaviour
 
       
         quest1.GetComponent<Button>().interactable = true;
-        quest2.GetComponent<Button>().interactable = false;
-        quest3.GetComponent<Button>().interactable = false;
-        quest4.GetComponent<Button>().interactable = false;
-    }  // inventoryscript.clearInv();
+    }  
 
     public void OnTriggerStay(Collider other)
     {
@@ -80,7 +78,48 @@ public class Quest3 : MonoBehaviour
                 childText.color = completedColor;
             }
         }
-       
+        if(gameObject.name.Equals("pawprints2")){
+            
+            if(GameManager.instance.questOnePartTwo){
+                childText2.color = completedColor;
+            }
+        }
+        if(gameObject.name.Equals("pawprints3")){
+            
+            if(GameManager.instance.questOnePartThree){
+                childText3.color = completedColor;
+            }
+        }
+        if(gameObject.name.Equals("pawprints4")){
+            
+            if(GameManager.instance.questOnePartFour){
+                childText4.color = completedColor;
+            }
+        }
+        if(gameObject.name.Equals("pawprints5")){
+            
+            if(GameManager.instance.questOnePartFive){
+                childText5.color = completedColor;
+            }
+        }
+        if(gameObject.name.Equals("pawprints6")){
+            
+            if(GameManager.instance.questOnePartSix){
+                childText6.color = completedColor;
+            }
+        }
+        if(gameObject.name.Equals("pawprints7")){
+            
+            if(GameManager.instance.questOnePartSeven){
+                childText7.color = completedColor;
+            }
+        }
+        if(gameObject.name.Equals("pawprints8")){
+            
+            if(GameManager.instance.questOnePartEight){
+                childText7.color = completedColor;
+            }
+        }
 
 
     }
@@ -95,27 +134,58 @@ public class Quest3 : MonoBehaviour
             }
         }
         if(gameObject.name.Equals("pawprints2")){
-            
+            GameManager.instance.pawTouch1 = true;
         }
-        if(gameObject.name.Equals("pawprints2")){
-            
+        if(gameObject.name.Equals("pawprints3")){
+            GameManager.instance.pawTouch2 = true;
         }
-        if(gameObject.name.Equals("pawprints2")){
-            
+        if(gameObject.name.Equals("pawprints4")){
+            GameManager.instance.pawTouch3 = true;
+        }
+        if(gameObject.name.Equals("pawprints5")){
+            GameManager.instance.pawTouch4 = true;
+        }
+        if(gameObject.name.Equals("pawprints6")){
+            GameManager.instance.pawTouch5 = true;
+        }
+        if(gameObject.name.Equals("pawprints7")){
+            GameManager.instance.pawTouch6 = true;
+        }
+        if(gameObject.name.Equals("pawprints8")){
+            GameManager.instance.pawTouch7 = true;
         }
        
    }
 
   
 
-   
-
     public void Update()
     {   
 
         //Set Arrow direction to this object
         if(!GameManager.instance.questOnePartOne){
-           // TargetArrow.target = carpenter.transform;
+           TargetArrow.target = paw1.transform;
+        }
+        if(!GameManager.instance.questOnePartTwo && GameManager.instance.questOnePartOne){
+           TargetArrow.target = paw2.transform;
+        }
+        if(!GameManager.instance.questOnePartThree && GameManager.instance.questOnePartTwo && GameManager.instance.questOnePartOne){
+           TargetArrow.target = paw3.transform;
+        }
+        if(!GameManager.instance.questOnePartFour && GameManager.instance.questOnePartThree && GameManager.instance.questOnePartTwo && GameManager.instance.questOnePartOne){
+           TargetArrow.target = paw4.transform;
+        }
+        if(!GameManager.instance.questOnePartFive && GameManager.instance.questOnePartFour && GameManager.instance.questOnePartThree && GameManager.instance.questOnePartTwo && GameManager.instance.questOnePartOne){
+           TargetArrow.target = paw5.transform;
+        }
+        if(!GameManager.instance.questOnePartSix && GameManager.instance.questOnePartFive && GameManager.instance.questOnePartFour && GameManager.instance.questOnePartThree && GameManager.instance.questOnePartTwo && GameManager.instance.questOnePartOne){
+           TargetArrow.target = paw6.transform;
+        }
+        if(!GameManager.instance.questOnePartSeven && GameManager.instance.questOnePartSix && GameManager.instance.questOnePartFive && GameManager.instance.questOnePartFour && GameManager.instance.questOnePartThree && GameManager.instance.questOnePartTwo && GameManager.instance.questOnePartOne){
+           TargetArrow.target = paw7.transform;
+        }
+        if(!GameManager.instance.questOnePartEight && GameManager.instance.questOnePartSeven && GameManager.instance.questOnePartSix && GameManager.instance.questOnePartFive && GameManager.instance.questOnePartFour && GameManager.instance.questOnePartThree && GameManager.instance.questOnePartTwo && GameManager.instance.questOnePartOne){
+           TargetArrow.target = paw8.transform;
         }
 
 
@@ -127,22 +197,9 @@ public class Quest3 : MonoBehaviour
         if(GameManager.instance.questOne){
             quest1.color = completedColor;
             quest1.GetComponent<Button>().interactable = false;
-            quest2.GetComponent<Button>().interactable = true;
+            
         }
-        if(GameManager.instance.questTwo){
-            quest2.color = completedColor;
-            quest2.GetComponent<Button>().interactable = false;
-            quest3.GetComponent<Button>().interactable = true;
-        }
-        if(GameManager.instance.questThree){
-            quest3.color = completedColor;
-            quest3.GetComponent<Button>().interactable = false;
-            quest4.GetComponent<Button>().interactable = true;
-        }
-        if(GameManager.instance.questFour){
-            quest4.color = completedColor;
-            quest4.GetComponent<Button>().interactable = false;
-        }
+        
 
         child.SetActive(false);
     }

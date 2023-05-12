@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -67,6 +68,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        Scene scene = SceneManager.GetActiveScene();
         //logic for quests
 
         if (questOne == true)
@@ -145,23 +147,28 @@ public class GameManager : MonoBehaviour
 
         ////////////////////////////////// LEVEL 2
         ///Quest 1
-        if (dialogue1)
+
+        if (scene.name == "Level 2")
         {
-            questOnePartOne = true;
+            if (dialogue1)
+            {
+                questOnePartOne = true;
+            }
+            if (questOnePartOne)
+            {
+                Percentage1.text = "50%";
+            }
+            if (cupsPickedup)
+            {
+                questOnePartTwo = true;
+            }
+            if (questOnePartOne && questOnePartTwo)
+            {
+                questOne = true;
+                Percentage1.text = "100%";
+            }
         }
-        if (questOnePartOne)
-        {
-            Percentage1.text = "50%";
-        }
-        if (cupsPickedup)
-        {
-            questOnePartTwo = true;
-        }
-        if (questOnePartOne && questOnePartTwo)
-        {
-            questOne = true;
-            Percentage1.text = "100%";
-        }
+
 
 
 
@@ -174,7 +181,8 @@ public class GameManager : MonoBehaviour
         {
             Percentage2.text = "50%";
         }
-        if (applesPickedup && grapesPickedup){
+        if (applesPickedup && grapesPickedup)
+        {
             TwoPartTwo = true;
         }
         if (TwoPartOne && TwoPartTwo)
@@ -198,7 +206,8 @@ public class GameManager : MonoBehaviour
         {
             questThreePartTwo = true;
         }
-        if(questThreePartOne && questThreePartTwo){
+        if (questThreePartOne && questThreePartTwo)
+        {
             questThree = true;
             Percentage3.text = "100%";
         }
@@ -228,16 +237,66 @@ public class GameManager : MonoBehaviour
         /////////////////////////////////////////////////////////////LEVEL 3
         //
 
-        if(dialogue1){
-            questOnePartOne = true;
+        if (scene.name == "Level 3")
+        {
+            if (dialogue1)
+            {
+                questOnePartOne = true;
+            }
+            if (questOnePartOne)
+            {
+                Percentage1.text = "12.5%";
+            }
         }
 
+        if(pawTouch1){
+            questOnePartTwo = true;
+        }
+        if (questOnePartTwo){
+            Percentage1.text = "25%";
+        }
+        if(pawTouch2){
+            questOnePartThree = true;
+        }
+        if (questOnePartThree){
+            Percentage1.text = "37.5%";
+        }
+        if(pawTouch3){
+            questOnePartFour = true;
+        }
+        if (questOnePartFour){
+            Percentage1.text = "50%";
+        }
+        if(pawTouch4){
+            questOnePartFive = true;
+        }
+        if (questOnePartFive){
+            Percentage1.text = "62.5%";
+        }
+        if(pawTouch5){
+            questOnePartSix = true;
+        }
+        if (questOnePartSix){
+            Percentage1.text = "75%";
+        }
+        if(pawTouch6){
+            questOnePartSeven = true;
+        }
+        if (questOnePartSeven){
+            Percentage1.text = "87.5%";
+        }
+        if(pawTouch7){
+            questOnePartEight = true;
+        }
+        if (questOnePartEight){
+            Percentage1.text = "100%";
+        }
 
     }
 
 
     //////// Level 2 bools
-    
+
     public bool dogTouch = false;
     public bool cupsPickedup = false;
     public bool applesPickedup = false;
@@ -248,12 +307,24 @@ public class GameManager : MonoBehaviour
     public bool questOnePartOne = false;
     public bool questOnePartTwo = false;
     public bool questOnePartThree = false;
+    public bool questOnePartFour = false;
+    public bool questOnePartFive = false;
+    public bool questOnePartSix = false;
+    public bool questOnePartSeven = false;
+    public bool questOnePartEight = false;
     public bool TwoPartOne = false;
     public bool TwoPartTwo = false;
     public bool TwoPartThree = false;
     public bool TwoPartFour = false;
 
+    ////// Level 3 bools
 
-
+    public bool pawTouch1 = false;
+    public bool pawTouch2 = false;
+    public bool pawTouch3 = false;
+    public bool pawTouch4 = false;
+    public bool pawTouch5 = false;
+    public bool pawTouch6 = false;
+    public bool pawTouch7 = false;
 
 }

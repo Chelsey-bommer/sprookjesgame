@@ -2382,6 +2382,8 @@ GameObject:
   m_Component:
   - component: {fileID: 105513686}
   - component: {fileID: 105513687}
+  - component: {fileID: 105513688}
+  - component: {fileID: 105513689}
   m_Layer: 0
   m_Name: pawprints6
   m_TagString: Untagged
@@ -2397,7 +2399,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 105513685}
   m_LocalRotation: {x: 0.72372127, y: 0.69002694, z: 0.004366204, w: -0.008451477}
-  m_LocalPosition: {x: 1800.6, y: 2355.9, z: 97}
+  m_LocalPosition: {x: 1800.6, y: 2355.9, z: 97.22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2456,6 +2458,48 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &105513688
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 105513685}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 35.508087, y: 43.066998, z: 1.1201657}
+  m_Center: {x: -3.3292022, y: -0.2286401, z: 0.40997836}
+--- !u!114 &105513689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 105513685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47c6e4f92a438f744954a573ab821f09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questItem: {fileID: 1340791374}
+  TargetArrow: {fileID: 593346267}
+  currentColor: {r: 0, g: 0, b: 0, a: 0}
+  percentage: {fileID: 1340791373}
+  allQuests: []
+  scriptObject: {fileID: 1258228782}
+  scriptObject2: {fileID: 1337796125}
+  child: {fileID: 199953542}
+  childText: {fileID: 2074315586}
+  childText2: {fileID: 1643360142}
+  childText3: {fileID: 769827328}
+  childText4: {fileID: 384442411}
+  childText5: {fileID: 1158078255}
+  childText6: {fileID: 1884307459}
+  childText7: {fileID: 2129197015}
+  childText8: {fileID: 683452173}
+  quest1: {fileID: 1340791374}
 --- !u!1001 &109028475
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2894,10 +2938,22 @@ MonoBehaviour:
   questOnePartOne: 0
   questOnePartTwo: 0
   questOnePartThree: 0
+  questOnePartFour: 0
+  questOnePartFive: 0
+  questOnePartSix: 0
+  questOnePartSeven: 0
+  questOnePartEight: 0
   TwoPartOne: 0
   TwoPartTwo: 0
   TwoPartThree: 0
   TwoPartFour: 0
+  pawTouch1: 0
+  pawTouch2: 0
+  pawTouch3: 0
+  pawTouch4: 0
+  pawTouch5: 0
+  pawTouch6: 0
+  pawTouch7: 0
 --- !u!4 &120860250
 Transform:
   m_ObjectHideFlags: 0
@@ -9853,6 +9909,8 @@ GameObject:
   m_Component:
   - component: {fileID: 492104189}
   - component: {fileID: 492104190}
+  - component: {fileID: 492104191}
+  - component: {fileID: 492104192}
   m_Layer: 0
   m_Name: pawprints4
   m_TagString: Untagged
@@ -9927,6 +9985,48 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &492104191
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492104188}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 37.21015, y: 39.918472, z: 1.0009888}
+  m_Center: {x: -1.0195277, y: 2.2444534, z: 0.36234054}
+--- !u!114 &492104192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492104188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47c6e4f92a438f744954a573ab821f09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questItem: {fileID: 1340791374}
+  TargetArrow: {fileID: 593346267}
+  currentColor: {r: 0, g: 0, b: 0, a: 0}
+  percentage: {fileID: 1340791373}
+  allQuests: []
+  scriptObject: {fileID: 1258228782}
+  scriptObject2: {fileID: 1337796125}
+  child: {fileID: 199953542}
+  childText: {fileID: 2074315586}
+  childText2: {fileID: 1643360142}
+  childText3: {fileID: 769827328}
+  childText4: {fileID: 384442411}
+  childText5: {fileID: 1158078255}
+  childText6: {fileID: 1884307459}
+  childText7: {fileID: 2129197015}
+  childText8: {fileID: 683452173}
+  quest1: {fileID: 1340791374}
 --- !u!1001 &493761382
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12600,6 +12700,8 @@ GameObject:
   m_Component:
   - component: {fileID: 682127748}
   - component: {fileID: 682127749}
+  - component: {fileID: 682127750}
+  - component: {fileID: 682127751}
   m_Layer: 0
   m_Name: pawprints7
   m_TagString: Untagged
@@ -12615,7 +12717,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 682127747}
   m_LocalRotation: {x: 0.817827, y: 0.5753856, z: 0.0030680597, w: -0.009004392}
-  m_LocalPosition: {x: 1731.9999, y: 2733.0002, z: 113.30003}
+  m_LocalPosition: {x: 1732.1, y: 2732.5, z: 117.43}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12674,6 +12776,48 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &682127750
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 682127747}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 35.90956, y: 40.291565, z: 0.88233286}
+  m_Center: {x: 0.9108111, y: 1.3505955, z: 0.34018627}
+--- !u!114 &682127751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 682127747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47c6e4f92a438f744954a573ab821f09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questItem: {fileID: 1340791374}
+  TargetArrow: {fileID: 593346267}
+  currentColor: {r: 0, g: 0, b: 0, a: 0}
+  percentage: {fileID: 1340791373}
+  allQuests: []
+  scriptObject: {fileID: 1258228782}
+  scriptObject2: {fileID: 1337796125}
+  child: {fileID: 199953542}
+  childText: {fileID: 2074315586}
+  childText2: {fileID: 1643360142}
+  childText3: {fileID: 769827328}
+  childText4: {fileID: 384442411}
+  childText5: {fileID: 1158078255}
+  childText6: {fileID: 1884307459}
+  childText7: {fileID: 2129197015}
+  childText8: {fileID: 683452173}
+  quest1: {fileID: 1340791374}
 --- !u!1 &683452171
 GameObject:
   m_ObjectHideFlags: 0
@@ -18963,6 +19107,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1047377849}
   - component: {fileID: 1047377850}
+  - component: {fileID: 1047377851}
+  - component: {fileID: 1047377852}
   m_Layer: 0
   m_Name: pawprints5
   m_TagString: Untagged
@@ -19037,6 +19183,48 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &1047377851
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1047377848}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 32.050488, y: 40.40975, z: 1.3099663}
+  m_Center: {x: 0.67070526, y: 3.2587383, z: 0.52336586}
+--- !u!114 &1047377852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1047377848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47c6e4f92a438f744954a573ab821f09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questItem: {fileID: 1340791374}
+  TargetArrow: {fileID: 593346267}
+  currentColor: {r: 0, g: 0, b: 0, a: 0}
+  percentage: {fileID: 1340791373}
+  allQuests: []
+  scriptObject: {fileID: 1258228782}
+  scriptObject2: {fileID: 1337796125}
+  child: {fileID: 199953542}
+  childText: {fileID: 2074315586}
+  childText2: {fileID: 1643360142}
+  childText3: {fileID: 769827328}
+  childText4: {fileID: 384442411}
+  childText5: {fileID: 1158078255}
+  childText6: {fileID: 1884307459}
+  childText7: {fileID: 2129197015}
+  childText8: {fileID: 683452173}
+  quest1: {fileID: 1340791374}
 --- !u!1001 &1052378841
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20329,10 +20517,11 @@ MonoBehaviour:
   childText2: {fileID: 1643360142}
   childText3: {fileID: 769827328}
   childText4: {fileID: 384442411}
+  childText5: {fileID: 1158078255}
+  childText6: {fileID: 1884307459}
+  childText7: {fileID: 2129197015}
+  childText8: {fileID: 683452173}
   quest1: {fileID: 1340791374}
-  quest2: {fileID: 0}
-  quest3: {fileID: 0}
-  quest4: {fileID: 0}
 --- !u!65 &1121526462
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23016,10 +23205,11 @@ MonoBehaviour:
   childText2: {fileID: 1643360142}
   childText3: {fileID: 769827328}
   childText4: {fileID: 384442411}
+  childText5: {fileID: 0}
+  childText6: {fileID: 0}
+  childText7: {fileID: 0}
+  childText8: {fileID: 0}
   quest1: {fileID: 1340791374}
-  quest2: {fileID: 0}
-  quest3: {fileID: 0}
-  quest4: {fileID: 0}
 --- !u!1001 &1258944581
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23594,6 +23784,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1286291105}
   - component: {fileID: 1286291106}
+  - component: {fileID: 1286291107}
+  - component: {fileID: 1286291108}
   m_Layer: 0
   m_Name: pawprints8
   m_TagString: Untagged
@@ -23609,7 +23801,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1286291104}
   m_LocalRotation: {x: 0.817827, y: 0.5753856, z: 0.0030680597, w: -0.009004392}
-  m_LocalPosition: {x: 2007.4, y: 2816.2, z: 113.2}
+  m_LocalPosition: {x: 2007.6, y: 2815.6, z: 118.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23668,6 +23860,48 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &1286291107
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1286291104}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 31.032032, y: 34.83413, z: 1.5272615}
+  m_Center: {x: -0.888536, y: 3.799584, z: 0.61546147}
+--- !u!114 &1286291108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1286291104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47c6e4f92a438f744954a573ab821f09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questItem: {fileID: 1340791374}
+  TargetArrow: {fileID: 593346267}
+  currentColor: {r: 0, g: 0, b: 0, a: 0}
+  percentage: {fileID: 1340791373}
+  allQuests: []
+  scriptObject: {fileID: 1258228782}
+  scriptObject2: {fileID: 1337796125}
+  child: {fileID: 199953542}
+  childText: {fileID: 2074315586}
+  childText2: {fileID: 1643360142}
+  childText3: {fileID: 769827328}
+  childText4: {fileID: 384442411}
+  childText5: {fileID: 1158078255}
+  childText6: {fileID: 1884307459}
+  childText7: {fileID: 2129197015}
+  childText8: {fileID: 683452173}
+  quest1: {fileID: 1340791374}
 --- !u!1001 &1291625018
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31080,6 +31314,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1623284477}
   - component: {fileID: 1623284478}
+  - component: {fileID: 1623284479}
+  - component: {fileID: 1623284480}
   m_Layer: 0
   m_Name: pawprints3
   m_TagString: Untagged
@@ -31154,6 +31390,48 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &1623284479
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1623284476}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 28.168724, y: 31.06328, z: 0.6932211}
+  m_Center: {x: -0.50433964, y: 3.023732, z: 0.2006314}
+--- !u!114 &1623284480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1623284476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47c6e4f92a438f744954a573ab821f09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questItem: {fileID: 1340791374}
+  TargetArrow: {fileID: 593346267}
+  currentColor: {r: 0, g: 0, b: 0, a: 0}
+  percentage: {fileID: 1340791373}
+  allQuests: []
+  scriptObject: {fileID: 1258228782}
+  scriptObject2: {fileID: 1337796125}
+  child: {fileID: 199953542}
+  childText: {fileID: 2074315586}
+  childText2: {fileID: 1643360142}
+  childText3: {fileID: 769827328}
+  childText4: {fileID: 384442411}
+  childText5: {fileID: 1158078255}
+  childText6: {fileID: 1884307459}
+  childText7: {fileID: 2129197015}
+  childText8: {fileID: 683452173}
+  quest1: {fileID: 1340791374}
 --- !u!1001 &1630756093
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33193,6 +33471,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1713654889}
   - component: {fileID: 1713654890}
+  - component: {fileID: 1713654891}
+  - component: {fileID: 1713654892}
   m_Layer: 0
   m_Name: pawprints2
   m_TagString: Untagged
@@ -33267,6 +33547,48 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &1713654891
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713654888}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 30.211731, y: 32.606155, z: 0.7309246}
+  m_Center: {x: -0.33955207, y: -0.94246477, z: -0.052422576}
+--- !u!114 &1713654892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713654888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47c6e4f92a438f744954a573ab821f09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questItem: {fileID: 1340791374}
+  TargetArrow: {fileID: 593346267}
+  currentColor: {r: 0, g: 0, b: 0, a: 0}
+  percentage: {fileID: 1340791373}
+  allQuests: []
+  scriptObject: {fileID: 1258228782}
+  scriptObject2: {fileID: 1337796125}
+  child: {fileID: 199953542}
+  childText: {fileID: 2074315586}
+  childText2: {fileID: 1643360142}
+  childText3: {fileID: 769827328}
+  childText4: {fileID: 384442411}
+  childText5: {fileID: 1158078255}
+  childText6: {fileID: 1884307459}
+  childText7: {fileID: 2129197015}
+  childText8: {fileID: 683452173}
+  quest1: {fileID: 1340791374}
 --- !u!1 &1713873085
 GameObject:
   m_ObjectHideFlags: 0
