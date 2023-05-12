@@ -169,19 +169,18 @@ public class GameManager : MonoBehaviour
 
 
         ///////////////////////////////////quest 2
-        if (applesPickedup && grapesPickedup && questOne)
+        if (dialogue2 && questOne)
         {
             TwoPartOne = true;
-            TwoPartTwo = true;
         }
-        if (TwoPartTwo && TwoPartOne)
+        if (TwoPartOne)
         {
             Percentage2.text = "50%";
         }
-        if (mandTouch2 && dialogue2){
-            TwoPartThree = true;
+        if (applesPickedup && grapesPickedup){
+            TwoPartTwo = true;
         }
-        if (TwoPartOne && TwoPartTwo && TwoPartThree)
+        if (TwoPartOne && TwoPartTwo)
         {
             questTwo = true;
             Percentage2.text = "100%";

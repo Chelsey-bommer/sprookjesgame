@@ -85,9 +85,11 @@ public class Quest2 : MonoBehaviour
        
         
         if(gameObject.name.Contains("TentFarmer")){
-            if(GameManager.instance.TwoPartOne && GameManager.instance.TwoPartTwo){
+            if(GameManager.instance.TwoPartOne){
              childText.color = completedColor;
-             childText2.color = completedColor;
+            }
+            if(GameManager.instance.questTwo){
+                FinishQuest();
             }
             
         }
@@ -165,6 +167,14 @@ public class Quest2 : MonoBehaviour
 
             if(GameManager.instance.touchDialogue){
                 dialoguescript.dialogue1();
+            }
+        }
+
+        if(gameObject.name.Equals("farmerdad")){
+            GameManager.instance.touchDialogue2 = true;
+
+            if(GameManager.instance.touchDialogue2){
+                dialoguescript.dialogue2();
             }
         }
     
