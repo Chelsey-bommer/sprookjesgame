@@ -36,6 +36,9 @@ public class Quest2 : MonoBehaviour
     private GameObject grapes;
     private GameObject cake;
     private GameObject dogfood;
+    private GameObject carpenter;
+    private GameObject farmer;
+    private GameObject bakery;
 
     void Start()
     {
@@ -52,6 +55,9 @@ public class Quest2 : MonoBehaviour
         grapes = GameObject.Find("Grapes");
         cake = GameObject.Find("Cake");
         dogfood = GameObject.Find("Dogfood");
+        carpenter = GameObject.Find("Carpenter");
+        farmer = GameObject.Find("farmerdad");
+        bakery = GameObject.Find("TentBakery");
 
 
         //SET variable colors
@@ -165,16 +171,7 @@ public class Quest2 : MonoBehaviour
         }
    }
 
-   public void OnTriggerExit(Collider other){
-        // if(gameObject.name.Contains("TentCarpenter")){
-        //     if(GameManager.instance.questOnePartOne){
-        //      childText.color = completedColor;
-        //     }
-        //     if(GameManager.instance.questOnePartTwo){
-        //      childText2.color = completedColor;
-        //     }
-        // }
-   }
+  
 
    
 
@@ -182,24 +179,24 @@ public class Quest2 : MonoBehaviour
     {   
 
         //Set Arrow direction to this object
-        if(!GameManager.instance.questOnePartOne && !GameManager.instance.questOnePartTwo){
-            TargetArrow.target = cups.transform;
+        if(!GameManager.instance.questOnePartOne){
+            TargetArrow.target = carpenter.transform;
         }
-        if(!GameManager.instance.questOnePartThree && GameManager.instance.questOnePartOne && GameManager.instance.questOnePartTwo){
-            TargetArrow.target = mand.transform;
+        if(!GameManager.instance.questOnePartTwo && GameManager.instance.questOnePartOne){
+            TargetArrow.target = cups.transform;;
         }
 
         if(!GameManager.instance.TwoPartOne && GameManager.instance.questOne){
-            TargetArrow.target = apples.transform;
+            TargetArrow.target = farmer.transform;
         }
         if(!GameManager.instance.TwoPartTwo && GameManager.instance.TwoPartOne && GameManager.instance.questOne){
             TargetArrow.target = grapes.transform;
         }
-        if(!GameManager.instance.TwoPartThree && !GameManager.instance.TwoPartFour && GameManager.instance.TwoPartTwo && GameManager.instance.TwoPartOne){
-            TargetArrow.target = mand.transform;
-        }
 
-        if(!GameManager.instance.questThree && GameManager.instance.questTwo && GameManager.instance.questOne){
+        if(!GameManager.instance.questThreePartOne && GameManager.instance.questTwo && GameManager.instance.questOne){
+            TargetArrow.target = bakery.transform;
+        }
+        if(!GameManager.instance.questThreePartTwo && GameManager.instance.questThreePartOne && GameManager.instance.questTwo && GameManager.instance.questOne){
             TargetArrow.target = cake.transform;
         }
 

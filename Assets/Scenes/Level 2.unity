@@ -2807,7 +2807,6 @@ MonoBehaviour:
   DialogueBox5: {fileID: 759530163}
   DialogueBox6: {fileID: 1384236912}
   DialogueBox7: {fileID: 1991037246}
-  DialogueBox8: {fileID: 0}
   DialogueBox9: {fileID: 0}
   DialogueBox10: {fileID: 0}
   dialogue: 0
@@ -10539,8 +10538,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 51.017506, y: 19.999998, z: 16.9057}
-  m_Center: {x: 14.9452, y: 0, z: -0.9143982}
+  m_Size: {x: 38.97174, y: 19.999998, z: 9.147766}
+  m_Center: {x: 8.9223175, y: 0, z: -0.31036377}
 --- !u!212 &1006009620
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17502,7 +17501,6 @@ MonoBehaviour:
   DialogueBox5: {fileID: 0}
   DialogueBox6: {fileID: 0}
   DialogueBox7: {fileID: 0}
-  DialogueBox8: {fileID: 0}
   DialogueBox9: {fileID: 0}
   DialogueBox10: {fileID: 0}
   dialogue: 0
@@ -23310,8 +23308,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.3844912, y: 2.9686594, z: 1.1056213}
-  m_Center: {x: 0.043742567, y: 0.38371485, z: -0.18244934}
+  m_Size: {x: 9.364739, y: 4.7025647, z: 8.55014}
+  m_Center: {x: 3.033862, y: 1.2506675, z: -3.9047089}
 --- !u!1001 &5010784971798146295
 PrefabInstance:
   m_ObjectHideFlags: 0

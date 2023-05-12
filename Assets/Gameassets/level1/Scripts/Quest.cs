@@ -128,13 +128,6 @@ public class Quest : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // if(gameObject.name.Contains("taskboard")){
-        //     GameManager.instance.boardDialogue = true;
-
-        //     if(GameManager.instance.boardDialogue){
-        //         dialoguescript.dialogue8();
-        //     }
-        // }
 
         //////////// Quest 1: Talk to this guy
         if (gameObject.name.Contains("WoundedFriend"))
