@@ -15,5 +15,5 @@ MonoBehaviour:
   id: 10
   itemName: Wine
   value: 10
-  icon: {fileID: 5061900860415834490, guid: 3421078018dc3934a8c1ab3b7bf89aa0, type: 3}
+  icon: {fileID: 21300000, guid: 3e4e3d337b61340458240e23815bed0c, type: 3}
   prefab: {fileID: 1043395875982155793, guid: 41733f37203d24e4ca6018f35a9d1fb2, type: 3}
