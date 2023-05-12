@@ -1678,21 +1678,12 @@ MonoBehaviour:
   touchDialogue7: 0
   touchDialogue9: 0
   touchDialogue10: 0
-  barrelDestroyed: 0
-  mandTouch: 0
-  mandTouch2: 0
   dogTouch: 0
-  colliderTouch: 0
-  collider2Touch: 0
-  cupsDropped: 0
   cupsPickedup: 0
-  applesDropped: 0
   applesPickedup: 0
-  grapesDropped: 0
   grapesPickedup: 0
-  cakesDropped: 0
   cakesPickedup: 0
-  dogDropped: 0
+  winePickedup: 0
   dogPickedup: 0
   questOnePartOne: 0
   questOnePartTwo: 0
@@ -2441,7 +2432,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4810533247c8a2f45b060031fa5e5bf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogueBox: {fileID: 0}
   DialogueBox1: {fileID: 1589329629}
   DialogueBox2: {fileID: 612178288}
   DialogueBox3: {fileID: 1682534312}
@@ -5520,7 +5510,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4810533247c8a2f45b060031fa5e5bf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogueBox: {fileID: 0}
   DialogueBox1: {fileID: 1589329629}
   DialogueBox2: {fileID: 612178288}
   DialogueBox3: {fileID: 1682534312}
@@ -5680,7 +5669,7 @@ Camera:
     height: 1
   near clip plane: 20
   far clip plane: 3000
-  field of view: 13.883755
+  field of view: 11
   orthographic: 0
   orthographic size: 3
   m_Depth: 0
@@ -5821,8 +5810,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 600157968}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 93.97, y: -1.15, z: 41.24}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 93.97, y: -1.65, z: 41.24}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 78068555}
@@ -5840,7 +5829,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4810533247c8a2f45b060031fa5e5bf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogueBox: {fileID: 0}
   DialogueBox1: {fileID: 1589329629}
   DialogueBox2: {fileID: 612178288}
   DialogueBox3: {fileID: 1682534312}
@@ -7349,7 +7337,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1833462397}
     - target: {fileID: 5486772916312116285, guid: c90fd62be11f0224284a9e2adf0c93b8,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -7810,13 +7798,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5185489846311851505, guid: 73a39f3dd71743c46bb0b0e55da76558,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7069515
+      objectReference: {fileID: 0}
+    - target: {fileID: 5185489846311851505, guid: 73a39f3dd71743c46bb0b0e55da76558,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.6972595
+      objectReference: {fileID: 0}
+    - target: {fileID: 5185489846311851505, guid: 73a39f3dd71743c46bb0b0e55da76558,
+        type: 3}
       propertyPath: m_LocalPosition.x
-      value: 194.4
+      value: 194.26
       objectReference: {fileID: 0}
     - target: {fileID: 5185489846311851505, guid: 73a39f3dd71743c46bb0b0e55da76558,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -105.83
+      value: -106.08
       objectReference: {fileID: 0}
     - target: {fileID: 5185489846311851505, guid: 73a39f3dd71743c46bb0b0e55da76558,
         type: 3}
@@ -10435,8 +10433,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1130014908}
   m_LocalRotation: {x: -0, y: 0.69745517, z: -0, w: 0.7166285}
-  m_LocalPosition: {x: -83.27, y: -2.09, z: -23}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -83.27, y: -2.8, z: -23}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1690300013}
@@ -10467,7 +10465,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4810533247c8a2f45b060031fa5e5bf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogueBox: {fileID: 0}
   DialogueBox1: {fileID: 1589329629}
   DialogueBox2: {fileID: 612178288}
   DialogueBox3: {fileID: 1682534312}
@@ -10622,7 +10619,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4810533247c8a2f45b060031fa5e5bf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogueBox: {fileID: 0}
   DialogueBox1: {fileID: 1589329629}
   DialogueBox2: {fileID: 612178288}
   DialogueBox3: {fileID: 1682534312}
@@ -10694,8 +10690,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1130137758}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 144.9, y: -105.44, z: 407.8}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 144.9, y: -106.06, z: 407.8}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -11245,7 +11241,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4810533247c8a2f45b060031fa5e5bf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogueBox: {fileID: 0}
   DialogueBox1: {fileID: 1589329629}
   DialogueBox2: {fileID: 612178288}
   DialogueBox3: {fileID: 1682534312}
@@ -14334,7 +14329,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4810533247c8a2f45b060031fa5e5bf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogueBox: {fileID: 0}
   DialogueBox1: {fileID: 1589329629}
   DialogueBox2: {fileID: 612178288}
   DialogueBox3: {fileID: 1682534312}
@@ -18397,7 +18391,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4810533247c8a2f45b060031fa5e5bf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogueBox: {fileID: 0}
   DialogueBox1: {fileID: 1589329629}
   DialogueBox2: {fileID: 612178288}
   DialogueBox3: {fileID: 1682534312}
@@ -18504,8 +18497,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1833462393}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -47.1, y: -2.0899963, z: 10.82}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -47.1, y: -2.85, z: 10.82}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1271972563}
@@ -18536,7 +18529,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4810533247c8a2f45b060031fa5e5bf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogueBox: {fileID: 0}
   DialogueBox1: {fileID: 1589329629}
   DialogueBox2: {fileID: 612178288}
   DialogueBox3: {fileID: 1682534312}
@@ -19357,7 +19349,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4810533247c8a2f45b060031fa5e5bf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogueBox: {fileID: 0}
   DialogueBox1: {fileID: 1589329629}
   DialogueBox2: {fileID: 612178288}
   DialogueBox3: {fileID: 1682534312}
@@ -20121,8 +20112,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1950088122}
   m_LocalRotation: {x: 0.0066906223, y: 0.624144, z: 0.017764607, w: 0.7810787}
-  m_LocalPosition: {x: -3.609778, y: -2.2307358, z: -29.157484}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -3.598, y: -2.82, z: -29.177}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1690300013}
@@ -20140,7 +20131,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4810533247c8a2f45b060031fa5e5bf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogueBox: {fileID: 0}
   DialogueBox1: {fileID: 1589329629}
   DialogueBox2: {fileID: 612178288}
   DialogueBox3: {fileID: 1682534312}

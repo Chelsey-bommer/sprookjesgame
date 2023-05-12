@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TriggerDialogue : MonoBehaviour
 {
-    public GameObject DialogueBox;
+    // public GameObject DialogueBox;
     public GameObject DialogueBox1;
     public GameObject DialogueBox2;
     public GameObject DialogueBox3;
@@ -21,7 +21,7 @@ public class TriggerDialogue : MonoBehaviour
 
     public void Start()
     {
-      DialogueBox.SetActive(false);
+    //   DialogueBox.SetActive(false);
       DialogueBox1.SetActive(false);
       DialogueBox2.SetActive(false);
       DialogueBox3.SetActive(false);
@@ -29,9 +29,9 @@ public class TriggerDialogue : MonoBehaviour
       DialogueBox5.SetActive(false);
       DialogueBox6.SetActive(false);
       DialogueBox7.SetActive(false);
-    //   DialogueBox8.SetActive(false);
-    //   DialogueBox9.SetActive(false);
-    //   DialogueBox10.SetActive(false);
+      DialogueBox8.SetActive(false);
+      DialogueBox9.SetActive(false);
+      DialogueBox10.SetActive(false);
 
       dialogue = false;
 
