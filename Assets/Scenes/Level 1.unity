@@ -2437,6 +2437,7 @@ MonoBehaviour:
   quest2: {fileID: 781854349}
   quest3: {fileID: 1768123929}
   quest4: {fileID: 1173042181}
+  questSoundeffect: {fileID: 0}
 --- !u!1001 &259974369
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4322,6 +4323,7 @@ MonoBehaviour:
   quest2: {fileID: 781854349}
   quest3: {fileID: 1768123929}
   quest4: {fileID: 1173042181}
+  questSoundeffect: {fileID: 0}
 --- !u!1001 &422387553
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5984,6 +5986,7 @@ MonoBehaviour:
   quest2: {fileID: 781854349}
   quest3: {fileID: 1768123929}
   quest4: {fileID: 1173042181}
+  questSoundeffect: {fileID: 0}
 --- !u!212 &600157972
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11086,6 +11089,7 @@ MonoBehaviour:
   quest2: {fileID: 781854349}
   quest3: {fileID: 1768123929}
   quest4: {fileID: 1173042181}
+  questSoundeffect: {fileID: 0}
 --- !u!1 &1122359704
 GameObject:
   m_ObjectHideFlags: 0
@@ -11357,6 +11361,7 @@ GameObject:
   - component: {fileID: 1130014912}
   - component: {fileID: 1130014911}
   - component: {fileID: 1130014910}
+  - component: {fileID: 1130014914}
   m_Layer: 0
   m_Name: Guardspost
   m_TagString: Untagged
@@ -11443,6 +11448,7 @@ MonoBehaviour:
   quest2: {fileID: 781854349}
   quest3: {fileID: 1768123929}
   quest4: {fileID: 1173042181}
+  questSoundeffect: {fileID: 0}
 --- !u!212 &1130014913
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11495,6 +11501,102 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!82 &1130014914
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130014908}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f2aad03175ecf8f47b2088a1d5e09bac, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.55
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.509
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1137568631
 GameObject:
   m_ObjectHideFlags: 0
@@ -12132,6 +12234,7 @@ MonoBehaviour:
   quest2: {fileID: 781854349}
   quest3: {fileID: 1768123929}
   quest4: {fileID: 1173042181}
+  questSoundeffect: {fileID: 0}
 --- !u!212 &1170746618
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12917,6 +13020,7 @@ MonoBehaviour:
   quest2: {fileID: 0}
   quest3: {fileID: 0}
   quest4: {fileID: 0}
+  questSoundeffect: {fileID: 0}
 --- !u!1001 &1234741368
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14470,6 +14574,7 @@ MonoBehaviour:
   quest2: {fileID: 781854349}
   quest3: {fileID: 1768123929}
   quest4: {fileID: 1173042181}
+  questSoundeffect: {fileID: 0}
 --- !u!212 &1387253356
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15505,6 +15610,7 @@ MonoBehaviour:
   quest2: {fileID: 781854349}
   quest3: {fileID: 1768123929}
   quest4: {fileID: 1173042181}
+  questSoundeffect: {fileID: 0}
 --- !u!212 &1494782362
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16762,6 +16868,102 @@ AudioSource:
     - serializedVersion: 3
       time: 0
       value: 0.503
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &1574013846
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1574013838}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f2aad03175ecf8f47b2088a1d5e09bac, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 1
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -18695,6 +18897,7 @@ GameObject:
   - component: {fileID: 1716542027}
   - component: {fileID: 1716542026}
   - component: {fileID: 1716542025}
+  - component: {fileID: 1716542033}
   m_Layer: 0
   m_Name: WoundedFriend
   m_TagString: Untagged
@@ -18792,6 +18995,7 @@ MonoBehaviour:
   quest2: {fileID: 781854349}
   quest3: {fileID: 1768123929}
   quest4: {fileID: 1173042181}
+  questSoundeffect: {fileID: 1716542033}
 --- !u!114 &1716542030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18881,6 +19085,102 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1716542033
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716542024}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f2aad03175ecf8f47b2088a1d5e09bac, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.55
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.526
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &1719329328
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19261,6 +19561,7 @@ MonoBehaviour:
   quest2: {fileID: 781854349}
   quest3: {fileID: 1768123929}
   quest4: {fileID: 1173042181}
+  questSoundeffect: {fileID: 0}
 --- !u!212 &1749528989
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -19811,6 +20112,7 @@ GameObject:
   - component: {fileID: 1776558807}
   - component: {fileID: 1776558808}
   - component: {fileID: 1776558809}
+  - component: {fileID: 1776558810}
   m_Layer: 0
   m_Name: Hole
   m_TagString: Untagged
@@ -19927,6 +20229,7 @@ MonoBehaviour:
   quest2: {fileID: 781854349}
   quest3: {fileID: 1768123929}
   quest4: {fileID: 1173042181}
+  questSoundeffect: {fileID: 1776558810}
 --- !u!114 &1776558808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19962,6 +20265,102 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.9393942, y: 0.6318181, z: 0.20000097}
   m_Center: {x: 0.0000038146973, y: 0.0000009536743, z: 0.000030517578}
+--- !u!82 &1776558810
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1776558802}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f2aad03175ecf8f47b2088a1d5e09bac, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.55
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.52
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &1806242898
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20518,6 +20917,7 @@ MonoBehaviour:
   quest2: {fileID: 0}
   quest3: {fileID: 0}
   quest4: {fileID: 0}
+  questSoundeffect: {fileID: 0}
 --- !u!1001 &1880317893
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20958,6 +21358,7 @@ GameObject:
   - component: {fileID: 1888334249}
   - component: {fileID: 1888334248}
   - component: {fileID: 1888334247}
+  - component: {fileID: 1888334251}
   m_Layer: 0
   m_Name: Kid
   m_TagString: Untagged
@@ -21044,6 +21445,7 @@ MonoBehaviour:
   quest2: {fileID: 781854349}
   quest3: {fileID: 1768123929}
   quest4: {fileID: 1173042181}
+  questSoundeffect: {fileID: 1888334251}
 --- !u!212 &1888334250
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -21096,6 +21498,102 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!82 &1888334251
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1888334245}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f2aad03175ecf8f47b2088a1d5e09bac, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.55
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.579
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1891719688
 GameObject:
   m_ObjectHideFlags: 0
@@ -21923,6 +22421,7 @@ MonoBehaviour:
   quest2: {fileID: 781854349}
   quest3: {fileID: 1768123929}
   quest4: {fileID: 1173042181}
+  questSoundeffect: {fileID: 0}
 --- !u!65 &1950088126
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22974,6 +23473,7 @@ MonoBehaviour:
   quest2: {fileID: 781854349}
   quest3: {fileID: 1768123929}
   quest4: {fileID: 1173042181}
+  questSoundeffect: {fileID: 0}
 --- !u!212 &2048094540
 SpriteRenderer:
   m_ObjectHideFlags: 0

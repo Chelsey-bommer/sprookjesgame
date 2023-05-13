@@ -50,6 +50,7 @@ public class Quest : MonoBehaviour
     private GameObject fletcher;
     private GameObject arrows;
 
+    [SerializeField] public AudioSource questSoundeffect;
 
     void Start()
     {
@@ -420,7 +421,7 @@ public class Quest : MonoBehaviour
             quest4.color = completedColor;
             quest4.GetComponent<Button>().interactable = false;
         }
-
+        questSoundeffect.Play();
         child.SetActive(false);
     }
 

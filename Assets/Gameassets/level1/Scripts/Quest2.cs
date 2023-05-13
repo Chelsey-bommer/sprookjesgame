@@ -41,7 +41,7 @@ public class Quest2 : MonoBehaviour
     private GameObject carpenter;
     private GameObject farmer;
     private GameObject bakery;
-
+    [SerializeField] public AudioSource questSoundeffect;
     void Start()
     {
         allQuests = FindObjectsOfType<Quest2>();  // all objects with quest script attached
@@ -249,7 +249,7 @@ public class Quest2 : MonoBehaviour
             quest4.color = completedColor;
             quest4.GetComponent<Button>().interactable = false;
         }
-
+        questSoundeffect.Play();
         child.SetActive(false);
     }
     public void OnQuestClick()
