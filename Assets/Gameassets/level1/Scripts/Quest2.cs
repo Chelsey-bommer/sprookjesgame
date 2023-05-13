@@ -42,6 +42,7 @@ public class Quest2 : MonoBehaviour
     private GameObject farmer;
     private GameObject bakery;
     [SerializeField] public AudioSource questSoundeffect;
+  
     void Start()
     {
         allQuests = FindObjectsOfType<Quest2>();  // all objects with quest script attached
@@ -254,8 +255,6 @@ public class Quest2 : MonoBehaviour
     }
     public void OnQuestClick()
     {
-
-
         if (child.activeInHierarchy)
         {
             child.SetActive(false);
@@ -267,4 +266,5 @@ public class Quest2 : MonoBehaviour
         }
 
     }
+
 }
