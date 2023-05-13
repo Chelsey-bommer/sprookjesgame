@@ -32,6 +32,9 @@ public class ItemPickup : MonoBehaviour
         if(item.name.Contains("Wood")){
            GameManager.instance.woodPickedup = true;
         }
+        if(item.name.Contains("Arrows")){
+           GameManager.instance.arrowsPickedup = true;
+        }
        
 
 

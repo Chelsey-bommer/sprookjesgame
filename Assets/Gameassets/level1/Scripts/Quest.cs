@@ -40,12 +40,15 @@ public class Quest : MonoBehaviour
     private GameObject woundedfriend;
     private GameObject fence;
     private GameObject wood;
+    private GameObject wood2;
+    private GameObject wood3;
     private GameObject carpenter;
     private GameObject parent;
     private GameObject guard;
     private GameObject leftguard;
     private GameObject kid;
     private GameObject fletcher;
+    private GameObject arrows;
 
 
     void Start()
@@ -57,12 +60,15 @@ public class Quest : MonoBehaviour
         woundedfriend = GameObject.Find("WoundedFriend");
         fence = GameObject.Find("Hole");
         wood = GameObject.Find("wood3");
+        wood2 = GameObject.Find("wood2");
+        wood3 = GameObject.Find("wood");
         carpenter = GameObject.Find("Carpenter");
         parent = GameObject.Find("Parent");
         guard = GameObject.Find("Guardspost");
         leftguard = GameObject.Find("leftguard");
-        kid = GameObject.Find("kid");
+        kid = GameObject.Find("Kid");
         fletcher = GameObject.Find("Fletcher");
+        arrows = GameObject.Find("Arrows");
 
         //        currentColor = questItem.color;
 
@@ -132,6 +138,10 @@ public class Quest : MonoBehaviour
         }
         if (!GameManager.instance.questFourPartTwo && GameManager.instance.questFourPartOne && GameManager.instance.questOne && GameManager.instance.questTwo && GameManager.instance.questThree)
         {
+            TargetArrow.target = arrows.transform;
+        }
+        if (!GameManager.instance.questFourPartThree && GameManager.instance.questFourPartTwo && GameManager.instance.questFourPartOne && GameManager.instance.questOne && GameManager.instance.questTwo && GameManager.instance.questThree)
+        {
             TargetArrow.target = guard.transform;
         }
         //TargetArrow.target = randomitem.transform;
@@ -168,6 +178,11 @@ public class Quest : MonoBehaviour
             GameManager.instance.questTwoPartOne = true;
             childText.color = completedColor;
             Debug.Log("Looked at hole");
+            if(GameManager.instance.questTwoPartOne){
+                wood.AddComponent<BoxCollider>();
+                wood2.AddComponent<BoxCollider>();
+                wood3.AddComponent<BoxCollider>();
+            }
         }
         //Part two: Collect wood
         if (gameObject.name.Contains("colliderobject") && GameManager.instance.questTwoPartOne)
@@ -197,7 +212,10 @@ public class Quest : MonoBehaviour
             {
                 inventoryscript.clearInv();
                 GameManager.instance.questTwoPartThree = true;
+            }
+            if(GameManager.instance.questTwoPartThree){
                 childText3.color = completedColor;
+                GameManager.instance.Percentage2.text = "75%";
 
             }
         }
@@ -264,25 +282,37 @@ public class Quest : MonoBehaviour
                 dialoguescript.dialogue6();
             }
 
-            if (GameManager.instance.dialogue6)
+            if (GameManager.instance.questFourPartOne)
             {
-                GameManager.instance.questFourPartOne = true;
                 childText.color = completedColor;
             }
         }
+        if(gameObject.name.Contains("TentFletcher") && GameManager.instance.questThree && GameManager.instance.questFourPartOne){
+           
+           if(GameManager.instance.questFourPartOne) {
+                arrows.AddComponent<BoxCollider>();
+           }
+           
+            
+           
+            if(GameManager.instance.questFourPartTwo){
+                childText2.color = completedColor;
+            }
+        }
+
         // Part Two:Bring arrows to the guards post
-        if (gameObject.name.Contains("Guardspost") && GameManager.instance.questFourPartOne)
+        if (gameObject.name.Contains("Guardspost") && GameManager.instance.questFourPartTwo && GameManager.instance.questFourPartOne)
         {
             GameManager.instance.touchDialogue7 = true;
-            if (!GameManager.instance.questFourPartTwo && GameManager.instance.questFourPartOne)
+            if (!GameManager.instance.questFourPartThree && GameManager.instance.questFourPartOne && GameManager.instance.questFourPartTwo)
             {
                 dialoguescript.dialogue7();
             }
-            if (GameManager.instance.dialogue7 && GameManager.instance.arrowsDropped)
+            if (GameManager.instance.dialogue7)
             {
-                GameManager.instance.questFourPartTwo = true;
+                GameManager.instance.questFourPartThree = true;
                 GameManager.instance.questFour = true;
-                childText2.color = completedColor;
+                childText3.color = completedColor;
             }
 
             if (GameManager.instance.questFour)
@@ -299,7 +329,7 @@ public class Quest : MonoBehaviour
 
 
 
-        if (gameObject.name.Contains("colliderobject") && GameManager.instance.questTwoPartOne)
+        if (gameObject.name.Contains("colliderobject") && GameManager.instance.questTwoPartOne && !GameManager.instance.questFourPartOne)
         {
             if (GameManager.instance.questTwoPartTwo)
             {
@@ -314,9 +344,6 @@ public class Quest : MonoBehaviour
         if (gameObject.name.Contains("Hole") && GameManager.instance.questTwoPartOne
         && GameManager.instance.questTwoPartTwo && GameManager.instance.questTwoPartThree)
         {
-
-
-            ////////////////// REMOVE ITEMS FROM INVENTORY?????????
 
             if (Input.GetKey(KeyCode.R))
             {
@@ -366,14 +393,6 @@ public class Quest : MonoBehaviour
         }
     }
 
-
-    public void FinishTask()
-    {
-        childText.text = "<color=green>Done</color>";
-        childText.color = Color.green;
-
-        //works!!
-    }
 
     public void FinishQuest()
     {
