@@ -36,6 +36,7 @@ public class Quest2 : MonoBehaviour
     private GameObject apples;
     private GameObject grapes;
     private GameObject cake;
+    private GameObject wine;
     private GameObject dogfood;
     private GameObject carpenter;
     private GameObject farmer;
@@ -56,6 +57,7 @@ public class Quest2 : MonoBehaviour
         apples = GameObject.Find("Apples");
         grapes = GameObject.Find("Grapes");
         cake = GameObject.Find("Cake");
+        wine = GameObject.Find("Wine");
         dogfood = GameObject.Find("Dogfood");
         carpenter = GameObject.Find("Carpenter");
         farmer = GameObject.Find("farmerdad");
@@ -97,6 +99,8 @@ public class Quest2 : MonoBehaviour
         if(gameObject.name.Contains("TentFarmer") && GameManager.instance.questOne){
             if(GameManager.instance.TwoPartOne){
              childText.color = completedColor;
+              apples.AddComponent<BoxCollider>();
+              grapes.AddComponent<BoxCollider>();
             }
             if(GameManager.instance.questTwo){
                 FinishQuest();
@@ -109,6 +113,8 @@ public class Quest2 : MonoBehaviour
         
             if(GameManager.instance.questThreePartOne){
              childText.color = completedColor;
+             cake.AddComponent<BoxCollider>();
+             wine.AddComponent<BoxCollider>();
             }
             if(GameManager.instance.questThree){
                 FinishQuest();
@@ -119,6 +125,7 @@ public class Quest2 : MonoBehaviour
        if(gameObject.name.Contains("Dog") && GameManager.instance.questOne && GameManager.instance.questTwo && GameManager.instance.questThree ){
             if(GameManager.instance.questFourPartOne){
              childText.color = completedColor;
+             dogfood.AddComponent<BoxCollider>();
             }
             if(GameManager.instance.questFour){
                 FinishQuest();
@@ -172,6 +179,17 @@ public class Quest2 : MonoBehaviour
             if(GameManager.instance.questOne){
                 FinishQuest();
             }
+        }
+
+        if(gameObject.name.Contains("TentFarmer") && GameManager.instance.questOne){
+            if(GameManager.instance.questTwo){
+                FinishQuest();
+            }  
+        }
+        if(gameObject.name.Contains("TentBakery") && GameManager.instance.questOne  && GameManager.instance.questTwo){
+            if(GameManager.instance.questThree){
+                FinishQuest();
+            }  
         }
   }
 
