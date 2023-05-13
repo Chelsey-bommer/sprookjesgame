@@ -51,7 +51,6 @@ public class Quest : MonoBehaviour
     private GameObject arrows;
 
     [SerializeField] public AudioSource questSoundeffect;
-   
 
     void Start()
     {
@@ -82,7 +81,7 @@ public class Quest : MonoBehaviour
         ColorUtility.TryParseHtmlString("#dddddd", out inactiveColor);
         ColorUtility.TryParseHtmlString("#eeeeee", out normalColor);
 
-        
+        quest1.color = activeColor;
         quest1.GetComponent<Button>().interactable = true;
         quest2.GetComponent<Button>().interactable = false;
         quest3.GetComponent<Button>().interactable = false;
