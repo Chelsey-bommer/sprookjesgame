@@ -71,76 +71,81 @@ public class GameManager : MonoBehaviour
         Scene scene = SceneManager.GetActiveScene();
         //logic for quests
 
-        if (questOne == true)
+        if (scene.name == "Level 1")
         {
-            Percentage1.text = "100%";
+            if (questOne == true)
+            {
+                Percentage1.text = "100%";
+            }
+
+            ///////////////////////////////////////// Quest 2
+            if (questTwoPartOne)
+            {
+                Percentage2.text = "25%";
+            }
+            if (woodPickedup)
+            {
+                questTwoPartTwo = true;
+            }
+            if (questTwoPartTwo)
+            {
+                Percentage2.text = "50%";
+            }
+            if (questTwoPartThree)
+            {
+                Percentage2.text = "75%";
+            }
+            if (questTwo)
+            {
+                Percentage2.text = "100%";
+            }
+
+            if (questTwoPartOne && questTwoPartTwo && questTwoPartThree && questTwoPartFour)
+            {
+                questTwo = true;
+            }
+
+            /////////////////////////////////////
+
+            if (questThreePartOne)
+            {
+                Percentage3.text = "33%";
+            }
+            else if (questThreePartTwo)
+            {
+                Percentage3.text = "66%";
+            }
+            else if (questThreePartThree)
+            {
+                Percentage3.text = "100%";
+            }
+
+            if (questThreePartOne && questThreePartTwo && questThreePartThree)
+            {
+                questThree = true;
+                Percentage3.text = "100%";
+            }
+
+            ////////////////////// 
+            if (questFourPartOne == true)
+            {
+                Percentage4.text = "50%";
+
+            }
+
+            if (questFourPartTwo == true)
+            {
+                Percentage4.text = "100%";
+            }
+
+            if (questFourPartOne && questFourPartTwo)
+            {
+                questFour = true;
+                Percentage4.text = "100%";
+            }
         }
 
-        ///////////////////////////////////////// Quest 2
-        if (questTwoPartOne)
-        {
-            Percentage2.text = "25%";
-        }
-        if (woodPickedup)
-        {
-            questTwoPartTwo = true;
-        }
-        if (questTwoPartTwo)
-        {
-            Percentage2.text = "50%";
-        }
-        if (questTwoPartThree)
-        {
-            Percentage2.text = "75%";
-        }
-        if (questTwo)
-        {
-            Percentage2.text = "100%";
-        }
 
-        if (questTwoPartOne && questTwoPartTwo && questTwoPartThree && questTwoPartFour)
-        {
-            questTwo = true;
-        }
-
-        /////////////////////////////////////
-
-        if (questThreePartOne)
-        {
-            Percentage3.text = "33%";
-        }
-        else if (questThreePartTwo)
-        {
-            Percentage3.text = "66%";
-        }
-        else if (questThreePartThree)
-        {
-            Percentage3.text = "100%";
-        }
-
-        if (questThreePartOne && questThreePartTwo && questThreePartThree)
-        {
-            questThree = true;
-            Percentage3.text = "100%";
-        }
-
-        ////////////////////// 
-        if (questFourPartOne == true)
-        {
-            Percentage4.text = "50%";
-
-        }
-
-        if (questFourPartTwo == true)
-        {
-            Percentage4.text = "100%";
-        }
-
-        if (questFourPartOne && questFourPartTwo)
-        {
-            questFour = true;
-            Percentage4.text = "100%";
-        }
 
 
 
@@ -247,50 +252,65 @@ public class GameManager : MonoBehaviour
             {
                 Percentage1.text = "12.5%";
             }
+            if (pawTouch1)
+            {
+                questOnePartTwo = true;
+            }
+            if (questOnePartTwo)
+            {
+                Percentage1.text = "25%";
+            }
+            if (pawTouch2)
+            {
+                questOnePartThree = true;
+            }
+            if (questOnePartThree)
+            {
+                Percentage1.text = "37.5%";
+            }
+            if (pawTouch3)
+            {
+                questOnePartFour = true;
+            }
+            if (questOnePartFour)
+            {
+                Percentage1.text = "50%";
+            }
+            if (pawTouch4)
+            {
+                questOnePartFive = true;
+            }
+            if (questOnePartFive)
+            {
+                Percentage1.text = "62.5%";
+            }
+            if (pawTouch5)
+            {
+                questOnePartSix = true;
+            }
+            if (questOnePartSix)
+            {
+                Percentage1.text = "75%";
+            }
+            if (pawTouch6)
+            {
+                questOnePartSeven = true;
+            }
+            if (questOnePartSeven)
+            {
+                Percentage1.text = "87.5%";
+            }
+            if (pawTouch7)
+            {
+                questOnePartEight = true;
+            }
+            if (questOnePartEight)
+            {
+                Percentage1.text = "100%";
+            }
         }
 
-        if(pawTouch1){
-            questOnePartTwo = true;
-        }
-        if (questOnePartTwo){
-            Percentage1.text = "25%";
-        }
-        if(pawTouch2){
-            questOnePartThree = true;
-        }
-        if (questOnePartThree){
-            Percentage1.text = "37.5%";
-        }
-        if(pawTouch3){
-            questOnePartFour = true;
-        }
-        if (questOnePartFour){
-            Percentage1.text = "50%";
-        }
-        if(pawTouch4){
-            questOnePartFive = true;
-        }
-        if (questOnePartFive){
-            Percentage1.text = "62.5%";
-        }
-        if(pawTouch5){
-            questOnePartSix = true;
-        }
-        if (questOnePartSix){
-            Percentage1.text = "75%";
-        }
-        if(pawTouch6){
-            questOnePartSeven = true;
-        }
-        if (questOnePartSeven){
-            Percentage1.text = "87.5%";
-        }
-        if(pawTouch7){
-            questOnePartEight = true;
-        }
-        if (questOnePartEight){
-            Percentage1.text = "100%";
-        }
+
 
     }
 

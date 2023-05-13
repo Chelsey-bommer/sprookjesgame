@@ -31,6 +31,7 @@ public class Quest2 : MonoBehaviour
     public Image quest3;
     public Image quest4;
     private GameObject cups;
+    private GameObject cups2;
     private GameObject mand;
     private GameObject apples;
     private GameObject grapes;
@@ -50,6 +51,7 @@ public class Quest2 : MonoBehaviour
         currentColor = questItem.color;
 
         cups = GameObject.Find("Cups");
+        cups2 = GameObject.Find("Cups2");
         mand = GameObject.Find("Mand");
         apples = GameObject.Find("Apples");
         grapes = GameObject.Find("Grapes");
@@ -80,6 +82,8 @@ public class Quest2 : MonoBehaviour
         if(gameObject.name.Contains("TentCarpenter")){
             if(GameManager.instance.questOnePartOne){
              childText.color = completedColor;
+             cups.AddComponent<BoxCollider>();
+             cups2.AddComponent<BoxCollider>();
             }
             if(GameManager.instance.questOnePartTwo){
              childText2.color = completedColor;
@@ -121,17 +125,6 @@ public class Quest2 : MonoBehaviour
             }
         }
 
-        //part 2
-        
-
-        if (gameObject.name.Contains("path1"))
-        {
-            //quest something voltooid
-        }
-        if (gameObject.name.Contains("path2"))
-        {
-            //quest something voltooid
-        }
 
 
     }
@@ -171,7 +164,16 @@ public class Quest2 : MonoBehaviour
         }
    }
 
-  
+  public void OnTriggerExit(){
+     ////////// Quest 1: Talk to the carpenter and grab cups
+        if(gameObject.name.Contains("TentCarpenter")){
+            
+            
+            if(GameManager.instance.questOne){
+                FinishQuest();
+            }
+        }
+  }
 
    
 
