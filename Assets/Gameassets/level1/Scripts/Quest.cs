@@ -82,7 +82,7 @@ public class Quest : MonoBehaviour
         ColorUtility.TryParseHtmlString("#dddddd", out inactiveColor);
         ColorUtility.TryParseHtmlString("#eeeeee", out normalColor);
 
-        quest1.color = activeColor;
+       
         quest1.GetComponent<Button>().interactable = true;
         quest2.GetComponent<Button>().interactable = false;
         quest3.GetComponent<Button>().interactable = false;
@@ -92,10 +92,6 @@ public class Quest : MonoBehaviour
     private void Update()
     {
 
-        // if (GameManager.instance.questThreePartTwo)
-        // {
-        //     childText2.color = completedColor;
-        // }
 
         //Set Arrow direction to this object
         if (!GameManager.instance.questOne)
@@ -108,7 +104,7 @@ public class Quest : MonoBehaviour
         }
         if (!GameManager.instance.questTwoPartTwo && GameManager.instance.questTwoPartOne && GameManager.instance.questOne)
         {
-            TargetArrow.target = wood.transform;
+            TargetArrow.target = wood3.transform;
         }
         if (!GameManager.instance.questTwoPartThree && GameManager.instance.questTwoPartOne && GameManager.instance.questTwoPartTwo
         && GameManager.instance.questOne)
@@ -183,7 +179,12 @@ public class Quest : MonoBehaviour
         {
             GameManager.instance.questTwoPartOne = true;
             childText.color = completedColor;
-            Debug.Log("Looked at hole");
+            GameManager.instance.touchDialogue11 = true;
+            
+             if (GameManager.instance.touchDialogue11)
+            {
+                dialoguescript.dialogue11();
+            }
             if(GameManager.instance.questTwoPartOne){
                 wood.AddComponent<BoxCollider>();
                 wood2.AddComponent<BoxCollider>();

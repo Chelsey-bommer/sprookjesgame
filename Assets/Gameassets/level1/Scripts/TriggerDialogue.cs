@@ -15,6 +15,7 @@ public class TriggerDialogue : MonoBehaviour
     // public GameObject DialogueBox8;
     public GameObject DialogueBox9;
     public GameObject DialogueBox10;
+    public GameObject DialogueBox11;
 
     public bool dialogue;
 
@@ -32,6 +33,7 @@ public class TriggerDialogue : MonoBehaviour
     //   DialogueBox8.SetActive(false);
       DialogueBox9.SetActive(false);
       DialogueBox10.SetActive(false);
+      DialogueBox11.SetActive(false);
 
       dialogue = false;
 
@@ -120,6 +122,15 @@ public class TriggerDialogue : MonoBehaviour
         if(GameManager.instance.touchDialogue10){
             
             DialogueBox10.SetActive(true);
+        
+        }
+        GameManager.instance.touchDialogue10 = false;
+     }
+
+      public void dialogue11(){
+        if(GameManager.instance.touchDialogue11){
+            
+            DialogueBox11.SetActive(true);
         
         }
         GameManager.instance.touchDialogue10 = false;
