@@ -5,11 +5,15 @@ using UnityEngine;
 public class ItemPickup : MonoBehaviour
 {
     [SerializeField] public Item item;
+    public AudioClip pickupAudio;// Sound clip to play when picking up the item
+
   
     public void Pickup()
     {
         InventoryManager.Instance.Add(item);  // Add item to Item list
         Destroy(gameObject);  // Make object disappear
+
+         AudioManager.Instance.PlaySound(pickupAudio);
 
         if(item.name.Equals("Cups")){
            GameManager.instance.cupsPickedup = true;
