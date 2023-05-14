@@ -31,15 +31,17 @@ public class Quest2 : MonoBehaviour
     public Image quest3;
     public Image quest4;
     private GameObject cups;
+    private GameObject cups2;
     private GameObject mand;
     private GameObject apples;
     private GameObject grapes;
     private GameObject cake;
+    private GameObject wine;
     private GameObject dogfood;
     private GameObject carpenter;
     private GameObject farmer;
     private GameObject bakery;
-
+    [SerializeField] public AudioSource questSoundeffect;
     void Start()
     {
         allQuests = FindObjectsOfType<Quest2>();  // all objects with quest script attached
@@ -50,10 +52,12 @@ public class Quest2 : MonoBehaviour
         currentColor = questItem.color;
 
         cups = GameObject.Find("Cups");
+        cups2 = GameObject.Find("Cups2");
         mand = GameObject.Find("Mand");
         apples = GameObject.Find("Apples");
         grapes = GameObject.Find("Grapes");
         cake = GameObject.Find("Cake");
+        wine = GameObject.Find("Wine");
         dogfood = GameObject.Find("Dogfood");
         carpenter = GameObject.Find("Carpenter");
         farmer = GameObject.Find("farmerdad");
@@ -80,6 +84,8 @@ public class Quest2 : MonoBehaviour
         if(gameObject.name.Contains("TentCarpenter")){
             if(GameManager.instance.questOnePartOne){
              childText.color = completedColor;
+             cups.AddComponent<BoxCollider>();
+             cups2.AddComponent<BoxCollider>();
             }
             if(GameManager.instance.questOnePartTwo){
              childText2.color = completedColor;
@@ -93,6 +99,8 @@ public class Quest2 : MonoBehaviour
         if(gameObject.name.Contains("TentFarmer") && GameManager.instance.questOne){
             if(GameManager.instance.TwoPartOne){
              childText.color = completedColor;
+              apples.AddComponent<BoxCollider>();
+              grapes.AddComponent<BoxCollider>();
             }
             if(GameManager.instance.questTwo){
                 FinishQuest();
@@ -105,6 +113,8 @@ public class Quest2 : MonoBehaviour
         
             if(GameManager.instance.questThreePartOne){
              childText.color = completedColor;
+             cake.AddComponent<BoxCollider>();
+             wine.AddComponent<BoxCollider>();
             }
             if(GameManager.instance.questThree){
                 FinishQuest();
@@ -115,23 +125,13 @@ public class Quest2 : MonoBehaviour
        if(gameObject.name.Contains("Dog") && GameManager.instance.questOne && GameManager.instance.questTwo && GameManager.instance.questThree ){
             if(GameManager.instance.questFourPartOne){
              childText.color = completedColor;
+             dogfood.AddComponent<BoxCollider>();
             }
             if(GameManager.instance.questFour){
                 FinishQuest();
             }
         }
 
-        //part 2
-        
-
-        if (gameObject.name.Contains("path1"))
-        {
-            //quest something voltooid
-        }
-        if (gameObject.name.Contains("path2"))
-        {
-            //quest something voltooid
-        }
 
 
     }
@@ -171,7 +171,27 @@ public class Quest2 : MonoBehaviour
         }
    }
 
-  
+  public void OnTriggerExit(){
+     ////////// Quest 1: Talk to the carpenter and grab cups
+        if(gameObject.name.Contains("TentCarpenter")){
+            
+            
+            if(GameManager.instance.questOne){
+                FinishQuest();
+            }
+        }
+
+        if(gameObject.name.Contains("TentFarmer") && GameManager.instance.questOne){
+            if(GameManager.instance.questTwo){
+                FinishQuest();
+            }  
+        }
+        if(gameObject.name.Contains("TentBakery") && GameManager.instance.questOne  && GameManager.instance.questTwo){
+            if(GameManager.instance.questThree){
+                FinishQuest();
+            }  
+        }
+  }
 
    
 
@@ -229,7 +249,7 @@ public class Quest2 : MonoBehaviour
             quest4.color = completedColor;
             quest4.GetComponent<Button>().interactable = false;
         }
-
+        questSoundeffect.Play();
         child.SetActive(false);
     }
     public void OnQuestClick()

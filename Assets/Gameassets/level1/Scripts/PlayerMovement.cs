@@ -26,6 +26,8 @@ public class PlayerMovement : MonoBehaviour
     public float drag;
     enum MovementState { idle, running, jumping, falling, backward, forward };
 
+    [SerializeField] public AudioSource walkingSoundeffect;
+
 
     void Start()
     {
@@ -97,11 +99,13 @@ public class PlayerMovement : MonoBehaviour
         {
             state = MovementState.running;
             sprite.flipX = false;
+            
         }
         else if (horizontalInput < 0f)
         {
             state = MovementState.running;
             sprite.flipX = true;
+        
         }
         else
         {
@@ -112,6 +116,7 @@ public class PlayerMovement : MonoBehaviour
         if (verticalInput > 0.1f)
         {
             state = MovementState.backward;
+           
 
           if(gameObject.name.Equals("Player")){
               if (horizontalInput > 0.1f)
@@ -127,6 +132,7 @@ public class PlayerMovement : MonoBehaviour
         else if (verticalInput < 0f)
         {
             state = MovementState.forward;
+            
 
         }
         
@@ -139,15 +145,14 @@ public class PlayerMovement : MonoBehaviour
         }
 
         anim.SetInteger("state", (int)state);
+
+        if(state == MovementState.idle){
+            walkingSoundeffect.Play();
+        } 
     }
 
-    private void OnTriggerEnter(Collider other){
-        if(other.gameObject.name.Contains("taskboard")){
-            GameManager.instance.boardDialogue = true;
-        }
-
-        
-    }
+     
+    
 
      
 

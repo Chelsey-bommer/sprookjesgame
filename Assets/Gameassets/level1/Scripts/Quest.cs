@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Quest : MonoBehaviour
 {
@@ -31,7 +32,7 @@ public class Quest : MonoBehaviour
 
     public SpriteRenderer spriteRenderer;
     public Sprite newSprite;
-    
+
     public Image quest1;
     public Image quest2;
     public Image quest3;
@@ -40,31 +41,38 @@ public class Quest : MonoBehaviour
     private GameObject woundedfriend;
     private GameObject fence;
     private GameObject wood;
+    private GameObject wood2;
+    private GameObject wood3;
     private GameObject carpenter;
     private GameObject parent;
     private GameObject guard;
     private GameObject leftguard;
     private GameObject kid;
     private GameObject fletcher;
-    
+    private GameObject arrows;
+
+    [SerializeField] public AudioSource questSoundeffect;
 
     void Start()
     {
         allQuests = FindObjectsOfType<Quest>();  // all objects with quest script attached
         dialoguescript = scriptObject.GetComponent<TriggerDialogue>();
         inventoryscript = scriptObject.GetComponent<InventoryManager>();
-       
+
         woundedfriend = GameObject.Find("WoundedFriend");
         fence = GameObject.Find("Hole");
         wood = GameObject.Find("wood3");
+        wood2 = GameObject.Find("wood2");
+        wood3 = GameObject.Find("wood");
         carpenter = GameObject.Find("Carpenter");
         parent = GameObject.Find("Parent");
         guard = GameObject.Find("Guardspost");
         leftguard = GameObject.Find("leftguard");
-        kid = GameObject.Find("kid");
+        kid = GameObject.Find("Kid");
         fletcher = GameObject.Find("Fletcher");
+        arrows = GameObject.Find("Arrows");
 
-//        currentColor = questItem.color;
+        //        currentColor = questItem.color;
 
         findWood = GameObject.FindGameObjectWithTag("Wood");
 
@@ -81,49 +89,69 @@ public class Quest : MonoBehaviour
         quest4.GetComponent<Button>().interactable = false;
     }
 
-    private void Update(){
+    private void Update()
+    {
 
-        if (GameManager.instance.questThreePartTwo){
-            childText2.color = completedColor;
-        }
+        // if (GameManager.instance.questThreePartTwo)
+        // {
+        //     childText2.color = completedColor;
+        // }
 
         //Set Arrow direction to this object
-        if(!GameManager.instance.questOne){
+        if (!GameManager.instance.questOne)
+        {
             TargetArrow.target = woundedfriend.transform;
         }
-        if(!GameManager.instance.questTwoPartOne && GameManager.instance.questOne){
+        if (!GameManager.instance.questTwoPartOne && GameManager.instance.questOne)
+        {
             TargetArrow.target = fence.transform;
         }
-        if(!GameManager.instance.questTwoPartTwo && GameManager.instance.questTwoPartOne && GameManager.instance.questOne){
+        if (!GameManager.instance.questTwoPartTwo && GameManager.instance.questTwoPartOne && GameManager.instance.questOne)
+        {
             TargetArrow.target = wood.transform;
         }
-        if(!GameManager.instance.questTwoPartThree && GameManager.instance.questTwoPartOne && GameManager.instance.questTwoPartTwo
-        && GameManager.instance.questOne){
+        if (!GameManager.instance.questTwoPartThree && GameManager.instance.questTwoPartOne && GameManager.instance.questTwoPartTwo
+        && GameManager.instance.questOne)
+        {
             TargetArrow.target = carpenter.transform;
         }
-        if(!GameManager.instance.questTwoPartFour && GameManager.instance.questTwoPartThree && GameManager.instance.questTwoPartOne && GameManager.instance.questTwoPartTwo
-        && GameManager.instance.questOne){
+        if (!GameManager.instance.questTwoPartFour && GameManager.instance.questTwoPartThree && GameManager.instance.questTwoPartOne && GameManager.instance.questTwoPartTwo
+        && GameManager.instance.questOne)
+        {
             TargetArrow.target = fence.transform;
         }
 
-        if(!GameManager.instance.questThreePartOne && GameManager.instance.questOne && GameManager.instance.questTwo){
+        if (!GameManager.instance.questThreePartOne && GameManager.instance.questOne && GameManager.instance.questTwo)
+        {
             TargetArrow.target = parent.transform;
         }
-        if(!GameManager.instance.questThreePartTwo && GameManager.instance.questThreePartOne && GameManager.instance.questOne && GameManager.instance.questTwo){
+        if (!GameManager.instance.questThreePartTwo && GameManager.instance.questThreePartOne && GameManager.instance.questOne && GameManager.instance.questTwo)
+        {
             TargetArrow.target = leftguard.transform;
         }
-        if(!GameManager.instance.questThreePartThree && GameManager.instance.questThreePartTwo && GameManager.instance.questThreePartOne && GameManager.instance.questOne && GameManager.instance.questTwo){
+        if (!GameManager.instance.questThreePartThree && GameManager.instance.questThreePartTwo && GameManager.instance.questThreePartOne && GameManager.instance.questOne && GameManager.instance.questTwo)
+        {
             TargetArrow.target = kid.transform;
         }
 
-        if(!GameManager.instance.questFourPartOne && GameManager.instance.questOne && GameManager.instance.questTwo && GameManager.instance.questThree){
+        if (!GameManager.instance.questFourPartOne && GameManager.instance.questOne && GameManager.instance.questTwo && GameManager.instance.questThree)
+        {
             TargetArrow.target = fletcher.transform;
         }
-         if(!GameManager.instance.questFourPartTwo && GameManager.instance.questFourPartOne && GameManager.instance.questOne && GameManager.instance.questTwo && GameManager.instance.questThree){
+        if (!GameManager.instance.questFourPartTwo && GameManager.instance.questFourPartOne && GameManager.instance.questOne && GameManager.instance.questTwo && GameManager.instance.questThree)
+        {
+            TargetArrow.target = arrows.transform;
+        }
+        if (!GameManager.instance.questFourPartThree && GameManager.instance.questFourPartTwo && GameManager.instance.questFourPartOne && GameManager.instance.questOne && GameManager.instance.questTwo && GameManager.instance.questThree)
+        {
             TargetArrow.target = guard.transform;
         }
         //TargetArrow.target = randomitem.transform;
-        
+
+
+        // if(GameManager.instance.questOne && GameManager.instance.questTwo && GameManager.instance.questThree && GameManager.instance.questFour){
+        //     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        // }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -132,18 +160,22 @@ public class Quest : MonoBehaviour
         //////////// Quest 1: Talk to this guy
         if (gameObject.name.Contains("WoundedFriend"))
         {
-            GameManager.instance.touchDialogue = true;
-            if(GameManager.instance.questOne == false){
-                dialoguescript.dialogue1();
-            }
-            if (GameManager.instance.dialogue1)
+            if (other.gameObject.name.Contains("Player"))
             {
-                GameManager.instance.questOne = true;
-                FinishQuest();
+                GameManager.instance.touchDialogue = true;
+                if (!GameManager.instance.questOne && GameManager.instance.touchDialogue == true)
+                {
+                    dialoguescript.dialogue1();
+                }
+                if (GameManager.instance.dialogue1)
+                {
+                    GameManager.instance.questOne = true;
+                    FinishQuest();
+                }
             }
-            
+
         }
-        
+
 
         //////////////////Quest 2:
         // Part one: Locate hole
@@ -152,25 +184,33 @@ public class Quest : MonoBehaviour
             GameManager.instance.questTwoPartOne = true;
             childText.color = completedColor;
             Debug.Log("Looked at hole");
+            if(GameManager.instance.questTwoPartOne){
+                wood.AddComponent<BoxCollider>();
+                wood2.AddComponent<BoxCollider>();
+                wood3.AddComponent<BoxCollider>();
+            }
         }
         //Part two: Collect wood
-        if(gameObject.name.Contains("colliderobject") && GameManager.instance.questTwoPartOne)
+        if (gameObject.name.Contains("colliderobject") && GameManager.instance.questTwoPartOne)
         {
             GameManager.instance.touchDialogue10 = true;
-            if(GameManager.instance.touchDialogue10){
+            if (GameManager.instance.touchDialogue10)
+            {
                 dialoguescript.dialogue10();
             }
-            if (GameManager.instance.questTwoPartTwo){ 
-            //if all the wood is collected
-             childText2.color = completedColor; 
-            } 
+            if (GameManager.instance.questTwoPartTwo)
+            {
+                //if all the wood is collected
+                childText2.color = completedColor;
+            }
         }
         //Part three: Go to the carpenter
         if (gameObject.name.Contains("Carpenter") && GameManager.instance.questTwoPartOne && GameManager.instance.questTwoPartTwo)
         {
 
-           GameManager.instance.touchDialogue2 = true;
-           if(GameManager.instance.questTwoPartThree == false){
+            GameManager.instance.touchDialogue2 = true;
+            if (GameManager.instance.questTwoPartThree == false)
+            {
                 dialoguescript.dialogue2();
             }
 
@@ -178,29 +218,35 @@ public class Quest : MonoBehaviour
             {
                 inventoryscript.clearInv();
                 GameManager.instance.questTwoPartThree = true;
+            }
+            if(GameManager.instance.questTwoPartThree){
                 childText3.color = completedColor;
+                GameManager.instance.Percentage2.text = "75%";
 
             }
         }
 
         // SEE TRIGGERSTAY for part four
-        if(gameObject.name.Contains("Hole") && GameManager.instance.questTwoPartOne
-        && GameManager.instance.questTwoPartTwo && GameManager.instance.questTwoPartThree){
-            
+        if (gameObject.name.Contains("Hole") && GameManager.instance.questTwoPartOne
+        && GameManager.instance.questTwoPartTwo && GameManager.instance.questTwoPartThree)
+        {
+
             GameManager.instance.touchDialogue9 = true;
 
-            if(GameManager.instance.touchDialogue9){
+            if (GameManager.instance.touchDialogue9)
+            {
                 dialoguescript.dialogue9();
             }
         }
-        
+
 
         /////////////////////Quest 3: Find the lost kid
         // Task one: Talk to the parents
         if (gameObject.name.Contains("Parent") && GameManager.instance.questTwo)
-        {   
+        {
             GameManager.instance.touchDialogue3 = true;
-            if(GameManager.instance.questThreePartOne == false){
+            if (GameManager.instance.questThreePartOne == false)
+            {
                 dialoguescript.dialogue3();
             }
             if (GameManager.instance.dialogue3)
@@ -214,47 +260,67 @@ public class Quest : MonoBehaviour
         if (gameObject.name.Contains("leftguard") && GameManager.instance.questThreePartOne)
         {
             GameManager.instance.touchDialogue4 = true;
-            if(GameManager.instance.questThreePartTwo == false){
+            if (GameManager.instance.questThreePartTwo == false)
+            {
                 dialoguescript.dialogue4();
             }
 
             if (GameManager.instance.dialogue4)
             {
                 GameManager.instance.questThreePartTwo = true;
-               
+
             }
-            if(GameManager.instance.questThreePartTwo){
+            if (GameManager.instance.questThreePartTwo)
+            {
                 childText2.color = completedColor;
             }
         }
-        
+
 
         //////////////////// Quest Four: Resupply the arrows
         // Part one: Talk to fletcher to get arrows
-        if(gameObject.name.Contains("Fletcher") && GameManager.instance.questThree){
+        if (gameObject.name.Contains("Fletcher") && GameManager.instance.questThree)
+        {
 
             GameManager.instance.touchDialogue6 = true;
-            if(GameManager.instance.questFourPartOne == false){
+            if (GameManager.instance.questFourPartOne == false)
+            {
                 dialoguescript.dialogue6();
             }
 
-            if (GameManager.instance.dialogue6){
-                GameManager.instance.questFourPartOne = true;
+            if (GameManager.instance.questFourPartOne)
+            {
                 childText.color = completedColor;
             }
         }
-        // Part Two:Bring arrows to the guards post
-        if(gameObject.name.Contains("Guardspost") && GameManager.instance.questFourPartOne){
-            GameManager.instance.touchDialogue7 = true;
-            if(!GameManager.instance.questFourPartTwo && GameManager.instance.questFourPartOne){
-                dialoguescript.dialogue7();
-            }
-            if (GameManager.instance.dialogue7 && GameManager.instance.arrowsDropped){
-                GameManager.instance.questFourPartTwo = true;
-                GameManager.instance.questFour = true;
+        if(gameObject.name.Contains("TentFletcher") && GameManager.instance.questThree && GameManager.instance.questFourPartOne){
+           
+           if(GameManager.instance.questFourPartOne) {
+                arrows.AddComponent<BoxCollider>();
+           }
+           
+            
+           
+            if(GameManager.instance.questFourPartTwo){
                 childText2.color = completedColor;
             }
-            
+        }
+
+        // Part Two:Bring arrows to the guards post
+        if (gameObject.name.Contains("Guardspost") && GameManager.instance.questFourPartTwo && GameManager.instance.questFourPartOne)
+        {
+            GameManager.instance.touchDialogue7 = true;
+            if (!GameManager.instance.questFourPartThree && GameManager.instance.questFourPartOne && GameManager.instance.questFourPartTwo)
+            {
+                dialoguescript.dialogue7();
+            }
+            if (GameManager.instance.dialogue7)
+            {
+                GameManager.instance.questFourPartThree = true;
+                GameManager.instance.questFour = true;
+                childText3.color = completedColor;
+            }
+
             if (GameManager.instance.questFour)
             {
                 FinishQuest();
@@ -264,26 +330,26 @@ public class Quest : MonoBehaviour
 
     }
 
-    public void OnTriggerStay(){
+    public void OnTriggerStay()
+    {
 
-        
 
-        if(gameObject.name.Contains("colliderobject") && GameManager.instance.questTwoPartOne){
-            if(GameManager.instance.questTwoPartTwo){ 
-            //if all the wood is collected
-             childText2.color = completedColor; 
-          }
+
+        if (gameObject.name.Contains("colliderobject") && GameManager.instance.questTwoPartOne && !GameManager.instance.questFourPartOne)
+        {
+            if (GameManager.instance.questTwoPartTwo)
+            {
+                //if all the wood is collected
+                childText2.color = completedColor;
+            }
         }
-         
+
 
         //////////////////////////////////// QUEST 2
         //Part four: Replace the wall
-        if(gameObject.name.Contains("Hole") && GameManager.instance.questTwoPartOne
+        if (gameObject.name.Contains("Hole") && GameManager.instance.questTwoPartOne
         && GameManager.instance.questTwoPartTwo && GameManager.instance.questTwoPartThree)
         {
-            
-
-            ////////////////// REMOVE ITEMS FROM INVENTORY?????????
 
             if (Input.GetKey(KeyCode.R))
             {
@@ -305,11 +371,13 @@ public class Quest : MonoBehaviour
         {
 
             GameManager.instance.touchDialogue5 = true;
-            if(GameManager.instance.questThreePartThree == false){
+            if (GameManager.instance.questThreePartThree == false)
+            {
                 dialoguescript.dialogue5();
-                
+
             }
-            if (GameManager.instance.touchDialogue5){
+            if (GameManager.instance.touchDialogue5)
+            {
                 GameManager.instance.questThreePartThree = true; //altijd true?
             }
 
@@ -320,7 +388,8 @@ public class Quest : MonoBehaviour
         }
     }
 
-    public void OnTriggerExit(){
+    public void OnTriggerExit()
+    {
         if (gameObject.name.Contains("Carpenter") && GameManager.instance.questTwoPartOne && GameManager.instance.questTwoPartTwo)
         {
             if (GameManager.instance.dialogue2)
@@ -331,37 +400,33 @@ public class Quest : MonoBehaviour
     }
 
 
-    public void FinishTask()
-    {
-        childText.text = "<color=green>Done</color>";
-        childText.color = Color.green;
-
-        //works!!
-    }
-
     public void FinishQuest()
     {
 
-        if(GameManager.instance.questOne){
+        if (GameManager.instance.questOne)
+        {
             quest1.color = completedColor;
             quest1.GetComponent<Button>().interactable = false;
             quest2.GetComponent<Button>().interactable = true;
         }
-        if(GameManager.instance.questTwo){
+        if (GameManager.instance.questTwo)
+        {
             quest2.color = completedColor;
             quest2.GetComponent<Button>().interactable = false;
             quest3.GetComponent<Button>().interactable = true;
         }
-        if(GameManager.instance.questThree){
+        if (GameManager.instance.questThree)
+        {
             quest3.color = completedColor;
             quest3.GetComponent<Button>().interactable = false;
             quest4.GetComponent<Button>().interactable = true;
         }
-        if(GameManager.instance.questFour){
+        if (GameManager.instance.questFour)
+        {
             quest4.color = completedColor;
             quest4.GetComponent<Button>().interactable = false;
         }
-
+        questSoundeffect.Play();
         child.SetActive(false);
     }
 
