@@ -144,7 +144,9 @@ public class Quest : MonoBehaviour
         }
         //TargetArrow.target = randomitem.transform;
 
-
+        if(GameManager.instance.questOne && GameManager.instance.questTwo && GameManager.instance.questThree && GameManager.instance.questFour){
+            Invoke("CompleteLevel", 10f);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -427,9 +429,7 @@ public class Quest : MonoBehaviour
         questSoundeffect.Play();
         child.SetActive(false);
 
-        if(GameManager.instance.questOne && GameManager.instance.questTwo && GameManager.instance.questThree && GameManager.instance.questFour){
-            Invoke("CompleteLevel", 10f);
-        }
+        
     }
 
     private void CompleteLevel(){

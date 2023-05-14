@@ -4215,7 +4215,7 @@ GameObject:
   - component: {fileID: 160664033}
   - component: {fileID: 160664032}
   - component: {fileID: 160664031}
-  - component: {fileID: 160664030}
+  - component: {fileID: 160664035}
   m_Layer: 0
   m_Name: Kid
   m_TagString: Untagged
@@ -4238,29 +4238,6 @@ Transform:
   m_Father: {fileID: 1271972563}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
---- !u!114 &160664030
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 160664028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4810533247c8a2f45b060031fa5e5bf0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DialogueBox1: {fileID: 2122903971}
-  DialogueBox2: {fileID: 612178288}
-  DialogueBox3: {fileID: 1682534312}
-  DialogueBox4: {fileID: 81310922}
-  DialogueBox5: {fileID: 130216698}
-  DialogueBox6: {fileID: 899513368}
-  DialogueBox7: {fileID: 977049272}
-  DialogueBox9: {fileID: 276377107}
-  DialogueBox10: {fileID: 495977829}
-  DialogueBox11: {fileID: 551862758}
-  dialogue: 0
 --- !u!82 &160664031
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4452,6 +4429,29 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &160664035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160664028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4810533247c8a2f45b060031fa5e5bf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogueBox1: {fileID: 2122903971}
+  DialogueBox2: {fileID: 612178288}
+  DialogueBox3: {fileID: 1682534312}
+  DialogueBox4: {fileID: 81310922}
+  DialogueBox5: {fileID: 130216698}
+  DialogueBox6: {fileID: 899513368}
+  DialogueBox7: {fileID: 977049272}
+  DialogueBox9: {fileID: 276377107}
+  DialogueBox10: {fileID: 495977829}
+  DialogueBox11: {fileID: 551862758}
+  dialogue: 0
 --- !u!1 &163087391
 GameObject:
   m_ObjectHideFlags: 0
