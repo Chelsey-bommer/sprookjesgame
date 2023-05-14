@@ -316,6 +316,9 @@ public class GameManager : MonoBehaviour
             {
                 Percentage1.text = "100%";
             }
+            if(questOnePartOne && questOnePartTwo && questOnePartThree && questOnePartFour && questOnePartFive && questOnePartSix && questOnePartSeven && questOnePartEight ){
+                questOne = true;
+            }
         }
 
 

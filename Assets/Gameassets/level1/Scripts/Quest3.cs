@@ -191,12 +191,12 @@ public class Quest3 : MonoBehaviour
         }
 
         if(GameManager.instance.questOne){
-            Invoke("CompleteLevel", 10f);
+            Invoke("CompleteLevel", 1f);
         }
     }
 
     private void CompleteLevel(){
-        if(GameManager.instance.questOne && GameManager.instance.questTwo && GameManager.instance.questThree && GameManager.instance.questFour){
+        if(GameManager.instance.questOne){
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
