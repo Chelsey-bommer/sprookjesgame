@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEditor;
 using TMPro;
+using UnityEngine.SceneManagement;
+
 
 public class Quest2 : MonoBehaviour
 {
@@ -133,8 +135,18 @@ public class Quest2 : MonoBehaviour
         }
 
 
-
+        if(GameManager.instance.questOne && GameManager.instance.questTwo && GameManager.instance.questThree && GameManager.instance.questFour){
+            Invoke("CompleteLevel", 10f);
+        }
     }
+
+    private void CompleteLevel(){
+        if(GameManager.instance.questOne && GameManager.instance.questTwo && GameManager.instance.questThree && GameManager.instance.questFour){
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+    }
+
+    
 
    public void OnTriggerEnter(Collider other){
 
