@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Quest : MonoBehaviour
 {
@@ -147,6 +148,10 @@ public class Quest : MonoBehaviour
         }
         //TargetArrow.target = randomitem.transform;
 
+
+        // if(GameManager.instance.questOne && GameManager.instance.questTwo && GameManager.instance.questThree && GameManager.instance.questFour){
+        //     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        // }
     }
 
     private void OnTriggerEnter(Collider other)
