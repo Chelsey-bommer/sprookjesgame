@@ -6160,6 +6160,7 @@ MonoBehaviour:
   touchDialogue7: 0
   touchDialogue9: 0
   touchDialogue10: 0
+  touchDialogue11: 0
   dogTouch: 0
   cupsPickedup: 0
   applesPickedup: 0
@@ -24494,9 +24495,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c1c8423feb9448041892ca5d1aeaebf3, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 9c2d37e77f148b34a90f6c997ab27c52, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.901
+  m_Volume: 0.103
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -24540,7 +24541,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0.497
+      value: 0.479
       inSlope: 0
       outSlope: 0
       tangentMode: 0
