@@ -149,10 +149,6 @@ public class PlayerMovement : MonoBehaviour
         if(state == MovementState.idle){
             walkingSoundeffect.Play();
         }
-
-        // if(state == MovementState.idle){
-        //     walkingSoundeffect.Play();
-        // } 
     }
 
      
