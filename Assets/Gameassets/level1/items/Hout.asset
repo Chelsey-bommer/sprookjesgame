@@ -15,5 +15,5 @@ MonoBehaviour:
   id: 2
   itemName: Hout
   value: 2
-  icon: {fileID: 21300000, guid: ca6a66f8e2ae9c24c8c6b39c49206a0d, type: 3}
+  icon: {fileID: 21300000, guid: 81222d56212103a4886cbf553d065f34, type: 3}
   prefab: {fileID: 9046170840842516282, guid: 45f3cb19b858c274bb51d3d1fd0f1340, type: 3}
