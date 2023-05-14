@@ -91,10 +91,10 @@ public class Quest : MonoBehaviour
     private void Update()
     {
 
-        if (GameManager.instance.questThreePartTwo)
-        {
-            childText2.color = completedColor;
-        }
+        // if (GameManager.instance.questThreePartTwo)
+        // {
+        //     childText2.color = completedColor;
+        // }
 
         //Set Arrow direction to this object
         if (!GameManager.instance.questOne)

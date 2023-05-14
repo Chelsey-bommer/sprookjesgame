@@ -11457,19 +11457,6 @@ MonoBehaviour:
   quest3: {fileID: 2139208591}
   quest4: {fileID: 1101896699}
   questSoundeffect: {fileID: 0}
---- !u!65 &1007893011
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1007893005}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.24, y: 2.5199997, z: 0.2}
-  m_Center: {x: 0.000030517578, y: 0, z: 0}
 --- !u!1001 &1021501031
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17082,19 +17069,6 @@ MonoBehaviour:
   quest3: {fileID: 2139208591}
   quest4: {fileID: 1101896699}
   questSoundeffect: {fileID: 0}
---- !u!65 &1546568887
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1546568882}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.24, y: 2.5199997, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1547241267
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20043,8 +20017,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: a040e6f7a87dd87449e3f880371809a0, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
